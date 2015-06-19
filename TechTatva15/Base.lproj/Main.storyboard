@@ -1,25 +1,202 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cdC-Ij-OAN">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <!--Splash View Controller-->
+        <scene sceneID="eV0-sP-iMh">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="cdC-Ij-OAN" customClass="SplashViewController" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OLs-S5-R4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1235" y="432"/>
+        </scene>
+        <!--Login Main Page View Controller-->
+        <scene sceneID="kRL-j6-n4p">
+            <objects>
+                <viewController id="Rrb-x7-sJP" customClass="loginMainPageViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="EN1-AR-Daz"/>
+                        <viewControllerLayoutGuide type="bottom" id="uAf-lJ-x28"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="bFo-Ky-HfQ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0kS-Am-zLG">
+                                <rect key="frame" x="59" y="88" width="228" height="30"/>
+                                <state key="normal" title="Log In With Facebook">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="facebookLoginPressed:" destination="Rrb-x7-sJP" eventType="touchUpInside" id="3LW-BC-aN6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQH-Vw-2Lf">
+                                <rect key="frame" x="59" y="275" width="228" height="30"/>
+                                <state key="normal" title="Log In With Email">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="emailLoginPressed:" destination="Rrb-x7-sJP" eventType="touchUpInside" id="WPh-UY-756"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62C-s4-HCh">
+                                <rect key="frame" x="59" y="181" width="228" height="30"/>
+                                <state key="normal" title="Log In With Google+">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="googleLoginPressed:" destination="Rrb-x7-sJP" eventType="touchUpInside" id="ovW-j4-Jtk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiW-Dr-FuT">
+                                <rect key="frame" x="59" y="360" width="228" height="30"/>
+                                <state key="normal" title="Create Account">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="createAccountPressed:" destination="Rrb-x7-sJP" eventType="touchUpInside" id="jw9-dL-msR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gaL-Nx-LcR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2020" y="432"/>
+        </scene>
+        <!--Createaccount View Controller-->
+        <scene sceneID="nzs-w2-IrQ">
+            <objects>
+                <viewController id="8go-1i-KGp" customClass="createaccountViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xrZ-Gd-iSO"/>
+                        <viewControllerLayoutGuide type="bottom" id="NyC-9V-C4W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eNq-Pu-GZM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="efs-xY-T0e">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of Birth" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dBE-TP-get">
+                                        <rect key="frame" x="101" y="202" width="155" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone Number" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OIv-tv-oUq">
+                                        <rect key="frame" x="101" y="146" width="155" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <connections>
+                                            <action selector="phoneNumberTextField:" destination="8go-1i-KGp" eventType="editingDidEnd" id="Aac-mh-MDN"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NAL-Ww-ii3">
+                                        <rect key="frame" x="101" y="23" width="155" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="numbersAndPunctuation"/>
+                                        <connections>
+                                            <action selector="nameTextField:" destination="8go-1i-KGp" eventType="editingDidEnd" id="MGu-2F-g8G"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZoJ-aD-fqO">
+                                        <rect key="frame" x="101" y="87" width="155" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="no" keyboardType="emailAddress"/>
+                                        <connections>
+                                            <action selector="emailTextField:" destination="8go-1i-KGp" eventType="editingDidEnd" id="beo-VX-AeZ"/>
+                                        </connections>
+                                    </textField>
+                                    <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tdR-gb-Afv">
+                                        <rect key="frame" x="-122" y="320" width="600" height="162"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="8go-1i-KGp" id="FVo-vZ-rFe"/>
+                                            <outlet property="delegate" destination="8go-1i-KGp" id="1TB-W1-6JT"/>
+                                        </connections>
+                                    </pickerView>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Gender" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="juG-pX-lg2">
+                                        <rect key="frame" x="101" y="254" width="155" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0F-jw-Ma5">
+                                        <rect key="frame" x="96" y="253" width="155" height="30"/>
+                                        <state key="normal" title="genderButon">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="genderButtonPressed:" destination="8go-1i-KGp" eventType="touchUpInside" id="epc-i7-6VE"/>
+                                            <action selector="gendrButonPressed:" destination="8go-1i-KGp" eventType="touchUpInside" id="Iq7-JH-Cw2"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EdQ-Lg-dWF">
+                                        <rect key="frame" x="101" y="302" width="155" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="College" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8KJ-xW-mWW">
+                                        <rect key="frame" x="101" y="365" width="155" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Year of Study" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6rP-12-DkP">
+                                        <rect key="frame" x="101" y="423" width="155" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IL7-SY-Ttw">
+                                        <rect key="frame" x="101" y="301" width="150" height="30"/>
+                                        <state key="normal" title="cityButton">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AbR-Zj-RYu">
+                                        <rect key="frame" x="101" y="364" width="155" height="30"/>
+                                        <state key="normal" title="collegeButton">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hsM-q5-Dg4">
+                                        <rect key="frame" x="101" y="422" width="155" height="30"/>
+                                        <state key="normal" title="yearOfStudyButton">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zID-1O-bcc">
+                                        <rect key="frame" x="58" y="476" width="240" height="30"/>
+                                        <state key="normal" title="Register">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="registerPressed:" destination="8go-1i-KGp" eventType="touchUpInside" id="as8-GZ-xXn"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateOfBirthTextField" destination="dBE-TP-get" id="TX2-gV-ly5"/>
+                        <outlet property="emailTextField" destination="ZoJ-aD-fqO" id="D81-q3-jV3"/>
+                        <outlet property="genderButtonPressed" destination="l0F-jw-Ma5" id="4AI-zA-OBx"/>
+                        <outlet property="genderTextField" destination="juG-pX-lg2" id="beb-13-CWB"/>
+                        <outlet property="nameTextField" destination="NAL-Ww-ii3" id="U9o-Qa-aGQ"/>
+                        <outlet property="phoneNumberTextField" destination="OIv-tv-oUq" id="ld6-21-6VH"/>
+                        <outlet property="pickerGender" destination="tdR-gb-Afv" id="ZIP-Xi-SmQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M9W-Dh-Qqy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2856" y="432"/>
         </scene>
     </scenes>
 </document>

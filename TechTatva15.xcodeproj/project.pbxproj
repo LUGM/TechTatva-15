@@ -14,6 +14,10 @@
 		1829222A1B236AFB00F95AE0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182922291B236AFB00F95AE0 /* Images.xcassets */; };
 		1829222D1B236AFB00F95AE0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1829222B1B236AFB00F95AE0 /* LaunchScreen.xib */; };
 		182922391B236AFB00F95AE0 /* TechTatva15Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 182922381B236AFB00F95AE0 /* TechTatva15Tests.m */; };
+		182922441B236B2800F95AE0 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182922431B236B2800F95AE0 /* SplashViewController.m */; };
+		18B5ECE51B23793E00055A3F /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 18B5ECE41B23793E00055A3F /* video.mov */; };
+		18B5ECEB1B2380AD00055A3F /* loginMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B5ECEA1B2380AD00055A3F /* loginMainPageViewController.m */; };
+		18B5ECEE1B2380C000055A3F /* createaccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B5ECED1B2380C000055A3F /* createaccountViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +44,13 @@
 		182922321B236AFB00F95AE0 /* TechTatva15Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechTatva15Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		182922371B236AFB00F95AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182922381B236AFB00F95AE0 /* TechTatva15Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TechTatva15Tests.m; sourceTree = "<group>"; };
+		182922421B236B2800F95AE0 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplashViewController.h; path = ../SplashViewController.h; sourceTree = "<group>"; };
+		182922431B236B2800F95AE0 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SplashViewController.m; path = ../SplashViewController.m; sourceTree = "<group>"; };
+		18B5ECE41B23793E00055A3F /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
+		18B5ECE91B2380AD00055A3F /* loginMainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginMainPageViewController.h; sourceTree = "<group>"; };
+		18B5ECEA1B2380AD00055A3F /* loginMainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginMainPageViewController.m; sourceTree = "<group>"; };
+		18B5ECEC1B2380C000055A3F /* createaccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = createaccountViewController.h; sourceTree = "<group>"; };
+		18B5ECED1B2380C000055A3F /* createaccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = createaccountViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,9 +94,16 @@
 			children = (
 				182922201B236AFB00F95AE0 /* AppDelegate.h */,
 				182922211B236AFB00F95AE0 /* AppDelegate.m */,
+				182922421B236B2800F95AE0 /* SplashViewController.h */,
+				182922431B236B2800F95AE0 /* SplashViewController.m */,
 				182922231B236AFB00F95AE0 /* ViewController.h */,
 				182922241B236AFB00F95AE0 /* ViewController.m */,
+				18B5ECE41B23793E00055A3F /* video.mov */,
 				182922261B236AFB00F95AE0 /* Main.storyboard */,
+				18B5ECEC1B2380C000055A3F /* createaccountViewController.h */,
+				18B5ECED1B2380C000055A3F /* createaccountViewController.m */,
+				18B5ECE91B2380AD00055A3F /* loginMainPageViewController.h */,
+				18B5ECEA1B2380AD00055A3F /* loginMainPageViewController.m */,
 				182922291B236AFB00F95AE0 /* Images.xcassets */,
 				1829222B1B236AFB00F95AE0 /* LaunchScreen.xib */,
 				1829221C1B236AFB00F95AE0 /* Supporting Files */,
@@ -199,6 +217,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B5ECE51B23793E00055A3F /* video.mov in Resources */,
 				182922281B236AFB00F95AE0 /* Main.storyboard in Resources */,
 				1829222D1B236AFB00F95AE0 /* LaunchScreen.xib in Resources */,
 				1829222A1B236AFB00F95AE0 /* Images.xcassets in Resources */,
@@ -219,9 +238,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B5ECEE1B2380C000055A3F /* createaccountViewController.m in Sources */,
 				182922251B236AFB00F95AE0 /* ViewController.m in Sources */,
 				182922221B236AFB00F95AE0 /* AppDelegate.m in Sources */,
+				18B5ECEB1B2380AD00055A3F /* loginMainPageViewController.m in Sources */,
 				1829221F1B236AFB00F95AE0 /* main.m in Sources */,
+				182922441B236B2800F95AE0 /* SplashViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +434,7 @@
 				1829223E1B236AFB00F95AE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1829223F1B236AFB00F95AE0 /* Build configuration list for PBXNativeTarget "TechTatva15Tests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +443,7 @@
 				182922411B236AFB00F95AE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
