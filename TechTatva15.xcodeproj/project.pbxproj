@@ -18,6 +18,8 @@
 		18B5ECE51B23793E00055A3F /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 18B5ECE41B23793E00055A3F /* video.mov */; };
 		18B5ECEB1B2380AD00055A3F /* loginMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B5ECEA1B2380AD00055A3F /* loginMainPageViewController.m */; };
 		18B5ECEE1B2380C000055A3F /* createaccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B5ECED1B2380C000055A3F /* createaccountViewController.m */; };
+		18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E282721B373C4D0084DCDE /* ResultsViewController.m */; };
+		18E282761B373FFF0084DCDE /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E282751B373FFF0084DCDE /* DataModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,10 @@
 		18B5ECEA1B2380AD00055A3F /* loginMainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginMainPageViewController.m; sourceTree = "<group>"; };
 		18B5ECEC1B2380C000055A3F /* createaccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = createaccountViewController.h; sourceTree = "<group>"; };
 		18B5ECED1B2380C000055A3F /* createaccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = createaccountViewController.m; sourceTree = "<group>"; };
+		18E282711B373C4D0084DCDE /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
+		18E282721B373C4D0084DCDE /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
+		18E282741B373FFF0084DCDE /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
+		18E282751B373FFF0084DCDE /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +106,10 @@
 				182922241B236AFB00F95AE0 /* ViewController.m */,
 				18B5ECE41B23793E00055A3F /* video.mov */,
 				182922261B236AFB00F95AE0 /* Main.storyboard */,
+				18E282711B373C4D0084DCDE /* ResultsViewController.h */,
+				18E282721B373C4D0084DCDE /* ResultsViewController.m */,
+				18E282741B373FFF0084DCDE /* DataModel.h */,
+				18E282751B373FFF0084DCDE /* DataModel.m */,
 				18B5ECEC1B2380C000055A3F /* createaccountViewController.h */,
 				18B5ECED1B2380C000055A3F /* createaccountViewController.m */,
 				18B5ECE91B2380AD00055A3F /* loginMainPageViewController.h */,
@@ -239,6 +249,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B5ECEE1B2380C000055A3F /* createaccountViewController.m in Sources */,
+				18E282761B373FFF0084DCDE /* DataModel.m in Sources */,
+				18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */,
 				182922251B236AFB00F95AE0 /* ViewController.m in Sources */,
 				182922221B236AFB00F95AE0 /* AppDelegate.m in Sources */,
 				18B5ECEB1B2380AD00055A3F /* loginMainPageViewController.m in Sources */,

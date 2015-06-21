@@ -27,7 +27,8 @@
 @end
 
 
-
+// try to rewrite whole view except name, email, phone
+// implement textFieldDidBeginEditing method for pickers, like Shubham suggested
 
 /* only gender picker has been implemented even that doesnt work for some reason. implement the rest by adding them to storyboard and linking to view controller then defining data source and delegate protocols for each of them individually.
  youtube video that could help is at https://www.youtube.com/watch?v=BtmQp5aP304
