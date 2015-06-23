@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DataModel.h"
 
-@interface ResultsViewController : UIViewController <UITableViewDataSource,UITableViewDelegate,DataModelDelegate>
+@interface ResultsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchDisplayDelegate, DataModelDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *resultsTable;
 

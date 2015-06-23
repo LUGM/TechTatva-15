@@ -18,6 +18,9 @@
 		18B5ECE51B23793E00055A3F /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 18B5ECE41B23793E00055A3F /* video.mov */; };
 		18B5ECEB1B2380AD00055A3F /* loginMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B5ECEA1B2380AD00055A3F /* loginMainPageViewController.m */; };
 		18B5ECEE1B2380C000055A3F /* createaccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B5ECED1B2380C000055A3F /* createaccountViewController.m */; };
+		18C4EDAD1B39C366004350CF /* eventViewDayButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C4EDAC1B39C366004350CF /* eventViewDayButtons.xib */; };
+		18C4EDB01B39C5DC004350CF /* eventViewDayButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C4EDAF1B39C5DC004350CF /* eventViewDayButtons.m */; };
+		18C4EDB21B39CA79004350CF /* Search Button.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18C4EDB11B39CA79004350CF /* Search Button.jpeg */; };
 		18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E282721B373C4D0084DCDE /* ResultsViewController.m */; };
 		18E282761B373FFF0084DCDE /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E282751B373FFF0084DCDE /* DataModel.m */; };
 /* End PBXBuildFile section */
@@ -53,6 +56,10 @@
 		18B5ECEA1B2380AD00055A3F /* loginMainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginMainPageViewController.m; sourceTree = "<group>"; };
 		18B5ECEC1B2380C000055A3F /* createaccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = createaccountViewController.h; sourceTree = "<group>"; };
 		18B5ECED1B2380C000055A3F /* createaccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = createaccountViewController.m; sourceTree = "<group>"; };
+		18C4EDAC1B39C366004350CF /* eventViewDayButtons.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eventViewDayButtons.xib; sourceTree = "<group>"; };
+		18C4EDAE1B39C5DC004350CF /* eventViewDayButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventViewDayButtons.h; sourceTree = "<group>"; };
+		18C4EDAF1B39C5DC004350CF /* eventViewDayButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventViewDayButtons.m; sourceTree = "<group>"; };
+		18C4EDB11B39CA79004350CF /* Search Button.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Search Button.jpeg"; sourceTree = "<group>"; };
 		18E282711B373C4D0084DCDE /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
 		18E282721B373C4D0084DCDE /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
 		18E282741B373FFF0084DCDE /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
@@ -112,6 +119,10 @@
 				18E282751B373FFF0084DCDE /* DataModel.m */,
 				18B5ECEC1B2380C000055A3F /* createaccountViewController.h */,
 				18B5ECED1B2380C000055A3F /* createaccountViewController.m */,
+				18C4EDAC1B39C366004350CF /* eventViewDayButtons.xib */,
+				18C4EDAE1B39C5DC004350CF /* eventViewDayButtons.h */,
+				18C4EDAF1B39C5DC004350CF /* eventViewDayButtons.m */,
+				18C4EDB11B39CA79004350CF /* Search Button.jpeg */,
 				18B5ECE91B2380AD00055A3F /* loginMainPageViewController.h */,
 				18B5ECEA1B2380AD00055A3F /* loginMainPageViewController.m */,
 				182922291B236AFB00F95AE0 /* Images.xcassets */,
@@ -227,9 +238,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18C4EDB21B39CA79004350CF /* Search Button.jpeg in Resources */,
 				18B5ECE51B23793E00055A3F /* video.mov in Resources */,
 				182922281B236AFB00F95AE0 /* Main.storyboard in Resources */,
 				1829222D1B236AFB00F95AE0 /* LaunchScreen.xib in Resources */,
+				18C4EDAD1B39C366004350CF /* eventViewDayButtons.xib in Resources */,
 				1829222A1B236AFB00F95AE0 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,6 +266,7 @@
 				18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */,
 				182922251B236AFB00F95AE0 /* ViewController.m in Sources */,
 				182922221B236AFB00F95AE0 /* AppDelegate.m in Sources */,
+				18C4EDB01B39C5DC004350CF /* eventViewDayButtons.m in Sources */,
 				18B5ECEB1B2380AD00055A3F /* loginMainPageViewController.m in Sources */,
 				1829221F1B236AFB00F95AE0 /* main.m in Sources */,
 				182922441B236B2800F95AE0 /* SplashViewController.m in Sources */,
@@ -378,6 +392,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TechTatva15/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -388,6 +403,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TechTatva15/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

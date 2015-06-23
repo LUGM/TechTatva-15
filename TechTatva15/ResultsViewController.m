@@ -6,8 +6,6 @@
 //  Copyright (c) 2015 AppDev. All rights reserved.
 //
 
-/* Sushant, ye files ko storyboard se connect kar de, nahi ho raha humse :p
- Code samajhne mei problem ho toh batana, theek hi lag raha generally */
 
 // UI customisations to be added, loads to do in this view still, check last year's app, it's a good reference //
 
@@ -24,6 +22,8 @@
     NSArray *json;
     
 }
+
+@property (strong, nonatomic) NSArray *resultViewSearchResults;  // Variable will store results of search in resultView
 
 @end
 
@@ -50,7 +50,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSURL *resultsUrl = [NSURL URLWithString:@"xyz"];              // xyz is url of results page of website
+    self.resultViewSearchResults = [[NSArray alloc] init];
+    
+    NSURL *resultsUrl = [NSURL URLWithString:@"http://results.techtatva.in"];              // this has to be url of results page of website
     
     dataModelInstance = [[DataModel alloc] init];
     [dataModelInstance sendRequestWithUrl:resultsUrl];
@@ -100,6 +102,8 @@
     
 }
 
+# pragma mark Table View Methods
+
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
 {
     
@@ -110,7 +114,19 @@
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return json.count;
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        
+        return [self.resultViewSearchResults count];
+        
+    }
+    
+    else
+    {
+        
+        return json.count;
+        
+    }
     
 }
 
@@ -120,9 +136,18 @@
     static NSString *cellId = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        
+        cell.textLabel.text = [self.resultViewSearchResults objectAtIndex:indexPath.row];
+        
+    }
     
-    cell.textLabel.text = [categoryNames objectAtIndex:indexPath.row];          // Category names shown in cell
-    cell.detailTextLabel.text = [eventNames objectAtIndex:indexPath.row];       // Event name corresponding to category
+    else
+    {
+        cell.detailTextLabel.text = [categoryNames objectAtIndex:indexPath.row];          // Event names shown in cell
+        cell.textLabel.text = [eventNames objectAtIndex:indexPath.row];       // Category name corresponding to event
+    }
     
     return cell;
     
@@ -140,6 +165,24 @@
     
     UIView *emptyView = [[ UIView alloc] initWithFrame:CGRectZero];
     return emptyView;
+    
+}
+
+# pragma mark Search Methods
+
+- (void) filterContentForSearchText:(NSString *) searchText scope:(NSString *) scope
+{
+    
+    NSPredicate *resultViewPredicate = [NSPredicate predicateWithFormat:@"SELF beginswith[c] %@", searchText];
+    self.resultViewSearchResults = [self->eventNames filteredArrayUsingPredicate:resultViewPredicate];
+    
+}
+
+- (BOOL) searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    
+    [self filterContentForSearchText:searchString scope:[[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    return YES;
     
 }
 
