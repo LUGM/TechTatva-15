@@ -9,6 +9,7 @@
 
 // UI customisations to be added, loads to do in this view still, check last year's app, it's a good reference //
 
+
 #import "ResultsViewController.h"
 
 @interface ResultsViewController ()
@@ -23,11 +24,11 @@
     
 }
 
-@property (strong, nonatomic) NSArray *resultViewSearchResults;  // Variable will store results of search in resultView
-
 @end
 
 @implementation ResultsViewController
+
+@synthesize resultsSearchBar, myTable, resultViewSearchResult, areResultsFiltered;
 
 - (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -50,7 +51,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.resultViewSearchResults = [[NSArray alloc] init];
+    // self.resultViewSearchResults = [[NSArray alloc] init];
     
     NSURL *resultsUrl = [NSURL URLWithString:@"http://results.techtatva.in"];              // this has to be url of results page of website
     
@@ -96,13 +97,13 @@
         
     }
     
-    [_resultsTable reloadData];
+    [myTable reloadData];
     
     // When data is finished loading, hide activity monitor here
     
 }
 
-# pragma mark Table View Methods
+# pragma mark UITableView Data Source Methods
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -114,13 +115,12 @@
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    if (tableView == self.searchDisplayController.searchResultsTableView)
+    if (areResultsFiltered == YES)
     {
         
-        return [self.resultViewSearchResults count];
+        return resultViewSearchResult.count;
         
     }
-    
     else
     {
         
@@ -136,22 +136,44 @@
     static NSString *cellId = @"cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     
-    if (tableView == self.searchDisplayController.searchResultsTableView)
+    if (cell == nil)
     {
         
-        cell.textLabel.text = [self.resultViewSearchResults objectAtIndex:indexPath.row];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
         
     }
     
+    if (areResultsFiltered == YES)
+    {
+        
+        cell.textLabel.text = [resultViewSearchResult objectAtIndex:indexPath.row];
+        
+    }
     else
     {
-        cell.detailTextLabel.text = [categoryNames objectAtIndex:indexPath.row];          // Event names shown in cell
-        cell.textLabel.text = [eventNames objectAtIndex:indexPath.row];       // Category name corresponding to event
+        
+        cell.textLabel.text = [eventNames objectAtIndex:indexPath.row];
+        
     }
+    
+    
+    cell.textLabel.text = [eventNames objectAtIndex:indexPath.row];
+    cell.detailTextLabel.text = [categoryNames objectAtIndex:indexPath.row];
     
     return cell;
     
 }
+
+# pragma mark UITableView Delegate Methods
+
+-(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    
+    
+}
+
+# pragma  mark Extra UITableView Methods
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -168,21 +190,48 @@
     
 }
 
-# pragma mark Search Methods
+# pragma mark UISearchBar Delegate Methods
 
-- (void) filterContentForSearchText:(NSString *) searchText scope:(NSString *) scope
+- (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
     
-    NSPredicate *resultViewPredicate = [NSPredicate predicateWithFormat:@"SELF beginswith[c] %@", searchText];
-    self.resultViewSearchResults = [self->eventNames filteredArrayUsingPredicate:resultViewPredicate];
+    if (searchText.length == 0)
+    {
+        
+        // Set boolean flag
+        areResultsFiltered = NO;
+        
+    }
     
-}
-
-- (BOOL) searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
-{
+    else
+    {
+        
+        // Set boolean flag
+        areResultsFiltered = YES;
+        
+        // Alloc and init search result data
+        resultViewSearchResult = [[NSMutableArray alloc] init];
+        
+        // Fast enumeration to loop through category names in table view
+        for (NSString *eventName in eventNames)          // equivalent example is : for ( i in array)
+        {
+            
+            NSRange eventNamesRange = [eventName rangeOfString:searchText options:NSCaseInsensitiveSearch];
+            
+            // If category is found in search, it is added to search results array
+            if (eventNamesRange.location != NSNotFound)
+            {
+                
+                [resultViewSearchResult addObject:eventName];
+                
+            }
+            
+        }
+        
+    }
     
-    [self filterContentForSearchText:searchString scope:[[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
-    return YES;
+    // Reload table view
+    [myTable reloadData];
     
 }
 

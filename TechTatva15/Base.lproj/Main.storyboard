@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BGT-Vw-D6L">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -71,10 +70,10 @@
             </objects>
             <point key="canvasLocation" x="2020" y="432"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="sQj-BJ-6i7">
             <objects>
-                <viewController id="BGT-Vw-D6L" sceneMemberID="viewController">
+                <viewController id="BGT-Vw-D6L" customClass="ResultsViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="J05-4L-eq8"/>
                         <viewControllerLayoutGuide type="bottom" id="PFw-w7-2Kc"/>
@@ -83,36 +82,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="FHx-Xc-VkS">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="BGT-Vw-D6L" id="RJo-93-OSk"/>
-                                    <outlet property="delegate" destination="BGT-Vw-D6L" id="NEw-G3-AeH"/>
-                                </connections>
-                            </tableView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CSv-7Z-won">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4ha-Bn-Ytu">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <outlet property="delegate" destination="BGT-Vw-D6L" id="9AF-re-YSv"/>
+                                    <outlet property="delegate" destination="BGT-Vw-D6L" id="ZSQ-rq-Xl1"/>
                                 </connections>
                             </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="8NS-HS-bNb">
+                                <rect key="frame" x="0.0" y="72" width="606" height="528"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BGT-Vw-D6L" id="atr-OK-JCe"/>
+                                    <outlet property="delegate" destination="BGT-Vw-D6L" id="amt-Hy-Vg4"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="searchDisplayController" destination="Q7p-0E-AJd" id="toQ-p6-IzJ"/>
+                        <outlet property="myTable" destination="8NS-HS-bNb" id="jf1-rl-wp0"/>
+                        <outlet property="resultsSearchBar" destination="4ha-Bn-Ytu" id="ekq-31-tM7"/>
+                        <outlet property="resultsTable" destination="8NS-HS-bNb" id="ff1-DW-vf9"/>
+                        <outlet property="searchDisplayController" destination="zEP-1b-UsR" id="ID5-1w-3ny"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDU-GA-Djk" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <searchDisplayController id="Q7p-0E-AJd">
                     <connections>
                         <outlet property="delegate" destination="BGT-Vw-D6L" id="wzS-JG-Maa"/>
-                        <outlet property="searchBar" destination="CSv-7Z-won" id="5n2-tB-EwO"/>
                         <outlet property="searchContentsController" destination="BGT-Vw-D6L" id="LpQ-21-f7r"/>
                         <outlet property="searchResultsDataSource" destination="BGT-Vw-D6L" id="xmJ-77-jZJ"/>
                         <outlet property="searchResultsDelegate" destination="BGT-Vw-D6L" id="X4e-A3-Wka"/>
+                    </connections>
+                </searchDisplayController>
+                <searchDisplayController id="zEP-1b-UsR">
+                    <connections>
+                        <outlet property="delegate" destination="BGT-Vw-D6L" id="Waf-hy-9b4"/>
+                        <outlet property="searchContentsController" destination="BGT-Vw-D6L" id="Pca-Nk-Dl4"/>
+                        <outlet property="searchResultsDataSource" destination="BGT-Vw-D6L" id="dcH-HO-aY1"/>
+                        <outlet property="searchResultsDelegate" destination="BGT-Vw-D6L" id="2Bm-Dv-KBE"/>
                     </connections>
                 </searchDisplayController>
             </objects>

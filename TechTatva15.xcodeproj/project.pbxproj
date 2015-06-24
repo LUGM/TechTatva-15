@@ -20,7 +20,6 @@
 		18B5ECEE1B2380C000055A3F /* createaccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B5ECED1B2380C000055A3F /* createaccountViewController.m */; };
 		18C4EDAD1B39C366004350CF /* eventViewDayButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C4EDAC1B39C366004350CF /* eventViewDayButtons.xib */; };
 		18C4EDB01B39C5DC004350CF /* eventViewDayButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C4EDAF1B39C5DC004350CF /* eventViewDayButtons.m */; };
-		18C4EDB21B39CA79004350CF /* Search Button.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18C4EDB11B39CA79004350CF /* Search Button.jpeg */; };
 		18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E282721B373C4D0084DCDE /* ResultsViewController.m */; };
 		18E282761B373FFF0084DCDE /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E282751B373FFF0084DCDE /* DataModel.m */; };
 /* End PBXBuildFile section */
@@ -59,7 +58,6 @@
 		18C4EDAC1B39C366004350CF /* eventViewDayButtons.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eventViewDayButtons.xib; sourceTree = "<group>"; };
 		18C4EDAE1B39C5DC004350CF /* eventViewDayButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventViewDayButtons.h; sourceTree = "<group>"; };
 		18C4EDAF1B39C5DC004350CF /* eventViewDayButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventViewDayButtons.m; sourceTree = "<group>"; };
-		18C4EDB11B39CA79004350CF /* Search Button.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Search Button.jpeg"; sourceTree = "<group>"; };
 		18E282711B373C4D0084DCDE /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
 		18E282721B373C4D0084DCDE /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
 		18E282741B373FFF0084DCDE /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 				18C4EDAC1B39C366004350CF /* eventViewDayButtons.xib */,
 				18C4EDAE1B39C5DC004350CF /* eventViewDayButtons.h */,
 				18C4EDAF1B39C5DC004350CF /* eventViewDayButtons.m */,
-				18C4EDB11B39CA79004350CF /* Search Button.jpeg */,
 				18B5ECE91B2380AD00055A3F /* loginMainPageViewController.h */,
 				18B5ECEA1B2380AD00055A3F /* loginMainPageViewController.m */,
 				182922291B236AFB00F95AE0 /* Images.xcassets */,
@@ -238,7 +235,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18C4EDB21B39CA79004350CF /* Search Button.jpeg in Resources */,
 				18B5ECE51B23793E00055A3F /* video.mov in Resources */,
 				182922281B236AFB00F95AE0 /* Main.storyboard in Resources */,
 				1829222D1B236AFB00F95AE0 /* LaunchScreen.xib in Resources */,
