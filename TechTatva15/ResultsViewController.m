@@ -235,4 +235,19 @@
     
 }
 
+- (void) searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    
+    [searchBar resignFirstResponder];
+    
+}
+
+// Implement this as well
+//- (void) searchBarCancelButtonClicked:(UISearchBar *)searchBar
+//{
+//    
+//    
+//    
+//}
+
 @end
