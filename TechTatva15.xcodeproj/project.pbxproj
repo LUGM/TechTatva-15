@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1821AAB11B3BDEAA00745E48 /* FirstLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821AAB01B3BDEAA00745E48 /* FirstLoginViewController.m */; };
+		1821AAB41B3BE1D800745E48 /* MakeAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821AAB31B3BE1D800745E48 /* MakeAccountViewController.m */; };
 		1829221F1B236AFB00F95AE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1829221E1B236AFB00F95AE0 /* main.m */; };
 		182922221B236AFB00F95AE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182922211B236AFB00F95AE0 /* AppDelegate.m */; };
 		182922251B236AFB00F95AE0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182922241B236AFB00F95AE0 /* ViewController.m */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1821AAAF1B3BDEAA00745E48 /* FirstLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstLoginViewController.h; sourceTree = "<group>"; };
+		1821AAB01B3BDEAA00745E48 /* FirstLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLoginViewController.m; sourceTree = "<group>"; };
+		1821AAB21B3BE1D800745E48 /* MakeAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeAccountViewController.h; sourceTree = "<group>"; };
+		1821AAB31B3BE1D800745E48 /* MakeAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeAccountViewController.m; sourceTree = "<group>"; };
 		182922191B236AFB00F95AE0 /* TechTatva15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechTatva15.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1829221D1B236AFB00F95AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1829221E1B236AFB00F95AE0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -111,6 +117,10 @@
 				182922241B236AFB00F95AE0 /* ViewController.m */,
 				18B5ECE41B23793E00055A3F /* video.mov */,
 				182922261B236AFB00F95AE0 /* Main.storyboard */,
+				1821AAB21B3BE1D800745E48 /* MakeAccountViewController.h */,
+				1821AAB31B3BE1D800745E48 /* MakeAccountViewController.m */,
+				1821AAAF1B3BDEAA00745E48 /* FirstLoginViewController.h */,
+				1821AAB01B3BDEAA00745E48 /* FirstLoginViewController.m */,
 				18E282711B373C4D0084DCDE /* ResultsViewController.h */,
 				18E282721B373C4D0084DCDE /* ResultsViewController.m */,
 				18E282741B373FFF0084DCDE /* DataModel.h */,
@@ -262,8 +272,10 @@
 				18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */,
 				182922251B236AFB00F95AE0 /* ViewController.m in Sources */,
 				182922221B236AFB00F95AE0 /* AppDelegate.m in Sources */,
+				1821AAB41B3BE1D800745E48 /* MakeAccountViewController.m in Sources */,
 				18C4EDB01B39C5DC004350CF /* eventViewDayButtons.m in Sources */,
 				18B5ECEB1B2380AD00055A3F /* loginMainPageViewController.m in Sources */,
+				1821AAB11B3BDEAA00745E48 /* FirstLoginViewController.m in Sources */,
 				1829221F1B236AFB00F95AE0 /* main.m in Sources */,
 				182922441B236B2800F95AE0 /* SplashViewController.m in Sources */,
 			);

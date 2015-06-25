@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstLoginViewController : UITableViewController
+@interface FirstLoginViewController : UITableViewController <UITableViewDataSource, UITabBarDelegate>
 
 @end
