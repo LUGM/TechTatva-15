@@ -11,17 +11,16 @@
 
 
 #import "ResultsViewController.h"
+#import "SSJSONModel.h"
 
-@interface ResultsViewController ()
+@interface ResultsViewController () <SSJSONModelDelegate>
 {
-    
-    DataModel *dataModelInstance;
-    
     NSMutableArray *categoryNames;
     NSMutableArray *eventNames;
     NSMutableArray *particularEventResults;
     NSArray *json;
     
+    SSJSONModel *myJsonInstance;
 }
 
 @end
@@ -54,10 +53,8 @@
     // self.resultViewSearchResults = [[NSArray alloc] init];
     
     NSURL *resultsUrl = [NSURL URLWithString:@"http://results.techtatva.in"];              // this has to be url of results page of website
-    
-    dataModelInstance = [[DataModel alloc] init];
-    [dataModelInstance sendRequestWithUrl:resultsUrl];
-    
+    myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
+    [myJsonInstance sendRequestWithUrl:resultsUrl];
     // Insert activity monitor here, which comes on screen and shows loading
     
 }
@@ -78,29 +75,25 @@
 */
 
 
-- (void) jsonRequestDidCompleteWithDict:(NSArray *)array model:(DataModel *)JSONModel
+#pragma mark Helper Methods
+
+-(void)jsonRequestDidCompleteWithResponse:(id)response model:(SSJSONModel *)JSONModel
 {
-    
-    json = [[NSMutableArray alloc] init];
-    json = dataModelInstance.jsonDictionary;
-    
-    categoryNames = [[NSMutableArray alloc] init];
-    eventNames = [[NSMutableArray alloc] init];
-    particularEventResults = [[NSMutableArray alloc] init];
-    
-    for (int x = 0; x < [json count]; x++)
-    {
+    if (JSONModel == myJsonInstance) {
+        NSLog(@"%@",myJsonInstance.parsedJsonData);
+        json = myJsonInstance.parsedJsonData;
+        categoryNames =[NSMutableArray new];
+        eventNames = [NSMutableArray new];
+        particularEventResults = [NSMutableArray new];
         
-        [categoryNames addObject:[[json objectAtIndex:x] objectForKey:@"Category"]];
-        [eventNames addObject:[[json objectAtIndex:x] objectForKey:@"Event"]];
-        [particularEventResults addObject:[[json objectAtIndex:x] objectForKey:@"Result"]];
+        for (NSDictionary * dict in json) {
+            [categoryNames addObject:[dict objectForKey:@"Category"]];
+            [eventNames addObject:[dict objectForKey:@"Event"]];
+            [particularEventResults addObject:[dict objectForKey:@"Result"]];
+            [myTable reloadData];
+        }
         
     }
-    
-    [myTable reloadData];
-    
-    // When data is finished loading, hide activity monitor here
-    
 }
 
 # pragma mark UITableView Data Source Methods
@@ -124,7 +117,7 @@
     else
     {
         
-        return json.count;
+       return json.count;
         
     }
     
@@ -133,7 +126,7 @@
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    static NSString *cellId = @"cell";
+    static NSString *cellId = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     
     if (cell == nil)
@@ -153,12 +146,13 @@
     {
         
         cell.textLabel.text = [eventNames objectAtIndex:indexPath.row];
+        cell.detailTextLabel.text = [categoryNames objectAtIndex:indexPath.row];
         
     }
     
     
-    cell.textLabel.text = [eventNames objectAtIndex:indexPath.row];
-    cell.detailTextLabel.text = [categoryNames objectAtIndex:indexPath.row];
+//    cell.textLabel.text = [eventNames objectAtIndex:indexPath.row];
+//    cell.detailTextLabel.text = [categoryNames objectAtIndex:indexPath.row];
     
     return cell;
     
@@ -169,11 +163,11 @@
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:[eventNames objectAtIndex:indexPath.row] message:[particularEventResults objectAtIndex:indexPath.row] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [alert show];
     
 }
-
-# pragma  mark Extra UITableView Methods
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {

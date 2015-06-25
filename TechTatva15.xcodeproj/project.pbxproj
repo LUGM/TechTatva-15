@@ -23,7 +23,7 @@
 		18C4EDAD1B39C366004350CF /* eventViewDayButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C4EDAC1B39C366004350CF /* eventViewDayButtons.xib */; };
 		18C4EDB01B39C5DC004350CF /* eventViewDayButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C4EDAF1B39C5DC004350CF /* eventViewDayButtons.m */; };
 		18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E282721B373C4D0084DCDE /* ResultsViewController.m */; };
-		18E282761B373FFF0084DCDE /* DataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E282751B373FFF0084DCDE /* DataModel.m */; };
+		A3CD67DD1B3C466B00DACD83 /* SSJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CD67DC1B3C466B00DACD83 /* SSJSONModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,8 +66,8 @@
 		18C4EDAF1B39C5DC004350CF /* eventViewDayButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventViewDayButtons.m; sourceTree = "<group>"; };
 		18E282711B373C4D0084DCDE /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
 		18E282721B373C4D0084DCDE /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
-		18E282741B373FFF0084DCDE /* DataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataModel.h; sourceTree = "<group>"; };
-		18E282751B373FFF0084DCDE /* DataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataModel.m; sourceTree = "<group>"; };
+		A3CD67DB1B3C466B00DACD83 /* SSJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSJSONModel.h; sourceTree = "<group>"; };
+		A3CD67DC1B3C466B00DACD83 /* SSJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSJSONModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +109,7 @@
 		1829221B1B236AFB00F95AE0 /* TechTatva15 */ = {
 			isa = PBXGroup;
 			children = (
+				A3CD67D91B3C465700DACD83 /* Libraries */,
 				182922201B236AFB00F95AE0 /* AppDelegate.h */,
 				182922211B236AFB00F95AE0 /* AppDelegate.m */,
 				182922421B236B2800F95AE0 /* SplashViewController.h */,
@@ -123,8 +124,6 @@
 				1821AAB01B3BDEAA00745E48 /* FirstLoginViewController.m */,
 				18E282711B373C4D0084DCDE /* ResultsViewController.h */,
 				18E282721B373C4D0084DCDE /* ResultsViewController.m */,
-				18E282741B373FFF0084DCDE /* DataModel.h */,
-				18E282751B373FFF0084DCDE /* DataModel.m */,
 				18B5ECEC1B2380C000055A3F /* createaccountViewController.h */,
 				18B5ECED1B2380C000055A3F /* createaccountViewController.m */,
 				18C4EDAC1B39C366004350CF /* eventViewDayButtons.xib */,
@@ -163,6 +162,23 @@
 				182922371B236AFB00F95AE0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3CD67D91B3C465700DACD83 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				A3CD67DA1B3C465D00DACD83 /* SSJSONParse */,
+			);
+			name = Libraries;
+			sourceTree = "<group>";
+		};
+		A3CD67DA1B3C465D00DACD83 /* SSJSONParse */ = {
+			isa = PBXGroup;
+			children = (
+				A3CD67DB1B3C466B00DACD83 /* SSJSONModel.h */,
+				A3CD67DC1B3C466B00DACD83 /* SSJSONModel.m */,
+			);
+			name = SSJSONParse;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,13 +284,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B5ECEE1B2380C000055A3F /* createaccountViewController.m in Sources */,
-				18E282761B373FFF0084DCDE /* DataModel.m in Sources */,
 				18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */,
 				182922251B236AFB00F95AE0 /* ViewController.m in Sources */,
 				182922221B236AFB00F95AE0 /* AppDelegate.m in Sources */,
 				1821AAB41B3BE1D800745E48 /* MakeAccountViewController.m in Sources */,
 				18C4EDB01B39C5DC004350CF /* eventViewDayButtons.m in Sources */,
 				18B5ECEB1B2380AD00055A3F /* loginMainPageViewController.m in Sources */,
+				A3CD67DD1B3C466B00DACD83 /* SSJSONModel.m in Sources */,
 				1821AAB11B3BDEAA00745E48 /* FirstLoginViewController.m in Sources */,
 				1829221F1B236AFB00F95AE0 /* main.m in Sources */,
 				182922441B236B2800F95AE0 /* SplashViewController.m in Sources */,
