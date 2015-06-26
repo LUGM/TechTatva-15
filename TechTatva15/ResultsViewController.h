@@ -12,7 +12,7 @@
 @interface ResultsViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *myTable;
-@property (weak, nonatomic) IBOutlet UISearchBar * resultsSearchBar;
+@property (weak, nonatomic) IBOutlet UISearchBar *resultsSearchBar;
 
 @property (strong, nonatomic) NSMutableArray *resultViewSearchResult;
 @property BOOL areResultsFiltered;

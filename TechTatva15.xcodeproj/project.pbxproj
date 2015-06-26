@@ -23,6 +23,9 @@
 		18C4EDAD1B39C366004350CF /* eventViewDayButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C4EDAC1B39C366004350CF /* eventViewDayButtons.xib */; };
 		18C4EDB01B39C5DC004350CF /* eventViewDayButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C4EDAF1B39C5DC004350CF /* eventViewDayButtons.m */; };
 		18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E282721B373C4D0084DCDE /* ResultsViewController.m */; };
+		4CC9F6D01B3DBB4F002F9C1D /* eventViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */; };
+		4CC9F6D11B3DBB4F002F9C1D /* eventViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */; };
+		4CC9F6D41B3DC61A002F9C1D /* eventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F6D31B3DC61A002F9C1D /* eventTableViewController.m */; };
 		A3CD67DD1B3C466B00DACD83 /* SSJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CD67DC1B3C466B00DACD83 /* SSJSONModel.m */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +69,11 @@
 		18C4EDAF1B39C5DC004350CF /* eventViewDayButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventViewDayButtons.m; sourceTree = "<group>"; };
 		18E282711B373C4D0084DCDE /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
 		18E282721B373C4D0084DCDE /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
+		4CC9F6CD1B3DBB4F002F9C1D /* eventViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventViewTableViewCell.h; sourceTree = "<group>"; };
+		4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventViewTableViewCell.m; sourceTree = "<group>"; };
+		4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eventViewTableViewCell.xib; sourceTree = "<group>"; };
+		4CC9F6D21B3DC61A002F9C1D /* eventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventTableViewController.h; sourceTree = "<group>"; };
+		4CC9F6D31B3DC61A002F9C1D /* eventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventTableViewController.m; sourceTree = "<group>"; };
 		A3CD67DB1B3C466B00DACD83 /* SSJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSJSONModel.h; sourceTree = "<group>"; };
 		A3CD67DC1B3C466B00DACD83 /* SSJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSJSONModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -110,14 +118,15 @@
 			isa = PBXGroup;
 			children = (
 				A3CD67D91B3C465700DACD83 /* Libraries */,
+				A3CD67DA1B3C465D00DACD83 /* SSJSONParse */,
+				182922261B236AFB00F95AE0 /* Main.storyboard */,
 				182922201B236AFB00F95AE0 /* AppDelegate.h */,
+				182922231B236AFB00F95AE0 /* ViewController.h */,
 				182922211B236AFB00F95AE0 /* AppDelegate.m */,
 				182922421B236B2800F95AE0 /* SplashViewController.h */,
 				182922431B236B2800F95AE0 /* SplashViewController.m */,
-				182922231B236AFB00F95AE0 /* ViewController.h */,
 				182922241B236AFB00F95AE0 /* ViewController.m */,
 				18B5ECE41B23793E00055A3F /* video.mov */,
-				182922261B236AFB00F95AE0 /* Main.storyboard */,
 				1821AAB21B3BE1D800745E48 /* MakeAccountViewController.h */,
 				1821AAB31B3BE1D800745E48 /* MakeAccountViewController.m */,
 				1821AAAF1B3BDEAA00745E48 /* FirstLoginViewController.h */,
@@ -131,6 +140,11 @@
 				18C4EDAF1B39C5DC004350CF /* eventViewDayButtons.m */,
 				18B5ECE91B2380AD00055A3F /* loginMainPageViewController.h */,
 				18B5ECEA1B2380AD00055A3F /* loginMainPageViewController.m */,
+				4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */,
+				4CC9F6CD1B3DBB4F002F9C1D /* eventViewTableViewCell.h */,
+				4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */,
+				4CC9F6D21B3DC61A002F9C1D /* eventTableViewController.h */,
+				4CC9F6D31B3DC61A002F9C1D /* eventTableViewController.m */,
 				182922291B236AFB00F95AE0 /* Images.xcassets */,
 				1829222B1B236AFB00F95AE0 /* LaunchScreen.xib */,
 				1829221C1B236AFB00F95AE0 /* Supporting Files */,
@@ -167,7 +181,6 @@
 		A3CD67D91B3C465700DACD83 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				A3CD67DA1B3C465D00DACD83 /* SSJSONParse */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -266,6 +279,7 @@
 				1829222D1B236AFB00F95AE0 /* LaunchScreen.xib in Resources */,
 				18C4EDAD1B39C366004350CF /* eventViewDayButtons.xib in Resources */,
 				1829222A1B236AFB00F95AE0 /* Images.xcassets in Resources */,
+				4CC9F6D11B3DBB4F002F9C1D /* eventViewTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,8 +304,10 @@
 				1821AAB41B3BE1D800745E48 /* MakeAccountViewController.m in Sources */,
 				18C4EDB01B39C5DC004350CF /* eventViewDayButtons.m in Sources */,
 				18B5ECEB1B2380AD00055A3F /* loginMainPageViewController.m in Sources */,
+				4CC9F6D01B3DBB4F002F9C1D /* eventViewTableViewCell.m in Sources */,
 				A3CD67DD1B3C466B00DACD83 /* SSJSONModel.m in Sources */,
 				1821AAB11B3BDEAA00745E48 /* FirstLoginViewController.m in Sources */,
+				4CC9F6D41B3DC61A002F9C1D /* eventTableViewController.m in Sources */,
 				1829221F1B236AFB00F95AE0 /* main.m in Sources */,
 				182922441B236B2800F95AE0 /* SplashViewController.m in Sources */,
 			);
