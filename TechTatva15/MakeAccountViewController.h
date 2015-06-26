@@ -9,5 +9,14 @@
 #import <UIKit/UIKit.h>
 
 @interface MakeAccountViewController : UITableViewController
+{
+    
+    IBOutlet UITextField *nameTextField;
+    IBOutlet UITextField *emailTextField;
+    IBOutlet UITextField *phoneTextField;
+    
+}
+
+- (IBAction)registerButton:(UIButton *)sender;
 
 @end

@@ -18,8 +18,6 @@
 		182922391B236AFB00F95AE0 /* TechTatva15Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 182922381B236AFB00F95AE0 /* TechTatva15Tests.m */; };
 		182922441B236B2800F95AE0 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182922431B236B2800F95AE0 /* SplashViewController.m */; };
 		18B5ECE51B23793E00055A3F /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 18B5ECE41B23793E00055A3F /* video.mov */; };
-		18B5ECEB1B2380AD00055A3F /* loginMainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B5ECEA1B2380AD00055A3F /* loginMainPageViewController.m */; };
-		18B5ECEE1B2380C000055A3F /* createaccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B5ECED1B2380C000055A3F /* createaccountViewController.m */; };
 		18C4EDAD1B39C366004350CF /* eventViewDayButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C4EDAC1B39C366004350CF /* eventViewDayButtons.xib */; };
 		18C4EDB01B39C5DC004350CF /* eventViewDayButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C4EDAF1B39C5DC004350CF /* eventViewDayButtons.m */; };
 		18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E282721B373C4D0084DCDE /* ResultsViewController.m */; };
@@ -60,10 +58,6 @@
 		182922421B236B2800F95AE0 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplashViewController.h; path = ../SplashViewController.h; sourceTree = "<group>"; };
 		182922431B236B2800F95AE0 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SplashViewController.m; path = ../SplashViewController.m; sourceTree = "<group>"; };
 		18B5ECE41B23793E00055A3F /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
-		18B5ECE91B2380AD00055A3F /* loginMainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loginMainPageViewController.h; sourceTree = "<group>"; };
-		18B5ECEA1B2380AD00055A3F /* loginMainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loginMainPageViewController.m; sourceTree = "<group>"; };
-		18B5ECEC1B2380C000055A3F /* createaccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = createaccountViewController.h; sourceTree = "<group>"; };
-		18B5ECED1B2380C000055A3F /* createaccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = createaccountViewController.m; sourceTree = "<group>"; };
 		18C4EDAC1B39C366004350CF /* eventViewDayButtons.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eventViewDayButtons.xib; sourceTree = "<group>"; };
 		18C4EDAE1B39C5DC004350CF /* eventViewDayButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventViewDayButtons.h; sourceTree = "<group>"; };
 		18C4EDAF1B39C5DC004350CF /* eventViewDayButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventViewDayButtons.m; sourceTree = "<group>"; };
@@ -121,11 +115,11 @@
 				A3CD67DA1B3C465D00DACD83 /* SSJSONParse */,
 				182922261B236AFB00F95AE0 /* Main.storyboard */,
 				182922201B236AFB00F95AE0 /* AppDelegate.h */,
-				182922231B236AFB00F95AE0 /* ViewController.h */,
 				182922211B236AFB00F95AE0 /* AppDelegate.m */,
+				182922231B236AFB00F95AE0 /* ViewController.h */,
+				182922241B236AFB00F95AE0 /* ViewController.m */,
 				182922421B236B2800F95AE0 /* SplashViewController.h */,
 				182922431B236B2800F95AE0 /* SplashViewController.m */,
-				182922241B236AFB00F95AE0 /* ViewController.m */,
 				18B5ECE41B23793E00055A3F /* video.mov */,
 				1821AAB21B3BE1D800745E48 /* MakeAccountViewController.h */,
 				1821AAB31B3BE1D800745E48 /* MakeAccountViewController.m */,
@@ -133,13 +127,9 @@
 				1821AAB01B3BDEAA00745E48 /* FirstLoginViewController.m */,
 				18E282711B373C4D0084DCDE /* ResultsViewController.h */,
 				18E282721B373C4D0084DCDE /* ResultsViewController.m */,
-				18B5ECEC1B2380C000055A3F /* createaccountViewController.h */,
-				18B5ECED1B2380C000055A3F /* createaccountViewController.m */,
 				18C4EDAC1B39C366004350CF /* eventViewDayButtons.xib */,
 				18C4EDAE1B39C5DC004350CF /* eventViewDayButtons.h */,
 				18C4EDAF1B39C5DC004350CF /* eventViewDayButtons.m */,
-				18B5ECE91B2380AD00055A3F /* loginMainPageViewController.h */,
-				18B5ECEA1B2380AD00055A3F /* loginMainPageViewController.m */,
 				4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */,
 				4CC9F6CD1B3DBB4F002F9C1D /* eventViewTableViewCell.h */,
 				4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */,
@@ -297,13 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18B5ECEE1B2380C000055A3F /* createaccountViewController.m in Sources */,
 				18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */,
 				182922251B236AFB00F95AE0 /* ViewController.m in Sources */,
 				182922221B236AFB00F95AE0 /* AppDelegate.m in Sources */,
 				1821AAB41B3BE1D800745E48 /* MakeAccountViewController.m in Sources */,
 				18C4EDB01B39C5DC004350CF /* eventViewDayButtons.m in Sources */,
-				18B5ECEB1B2380AD00055A3F /* loginMainPageViewController.m in Sources */,
 				4CC9F6D01B3DBB4F002F9C1D /* eventViewTableViewCell.m in Sources */,
 				A3CD67DD1B3C466B00DACD83 /* SSJSONModel.m in Sources */,
 				1821AAB11B3BDEAA00745E48 /* FirstLoginViewController.m in Sources */,
