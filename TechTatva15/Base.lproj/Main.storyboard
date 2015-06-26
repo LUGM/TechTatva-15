@@ -579,7 +579,7 @@
             </objects>
             <point key="canvasLocation" x="2156" y="2368"/>
         </scene>
-        <!--Event Table View Controller-->
+        <!--Events-->
         <scene sceneID="E0m-c1-uLK">
             <objects>
                 <tableViewController id="Yat-aH-jT9" customClass="eventTableViewController" sceneMemberID="viewController">
@@ -600,7 +600,7 @@
                             <outlet property="delegate" destination="Yat-aH-jT9" id="VJ8-Za-0dd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="iVf-mr-7XV"/>
+                    <navigationItem key="navigationItem" title="Events" id="iVf-mr-7XV"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kEU-Hm-xMe" userLabel="First Responder" sceneMemberID="firstResponder"/>
