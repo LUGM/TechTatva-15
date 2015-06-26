@@ -21,8 +21,13 @@
 @property (strong, nonatomic) IBOutlet UIImageView *contactImageView;
 @property (strong, nonatomic) IBOutlet UILabel *contactLabel;
 
-@property (strong, nonatomic) IBOutlet UIButton *callButtonPressed;    // Button represented as 'CB'
-@property (strong, nonatomic) IBOutlet UIButton *detailsButtonPressed; // Button represented as 'D'
-@property (strong, nonatomic) IBOutlet UIButton *resultsButtonPressed; // Button represented as 'R'
+
+- (IBAction)detailsButtonPressed:(UIButton *)sender;
+- (IBAction)resultsButtonPressed:(UIButton *)sender;
+- (IBAction)callButtonPressed:(UIButton *)sender;
+
+//-----------------------------------------------------------------------//
+
+@property (strong, nonatomic) NSIndexPath *indexPathForCell;
 
 @end

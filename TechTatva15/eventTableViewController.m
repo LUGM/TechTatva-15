@@ -99,6 +99,8 @@
     
     //Feed all data here.
     
+    cell.indexPathForCell = indexPath;
+    
     cell.eventLabel.text = @"Event Name BLA";
     cell.categoryLabel.text = @"Category Name";
     
