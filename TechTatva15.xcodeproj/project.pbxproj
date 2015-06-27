@@ -20,13 +20,13 @@
 		18B5ECE51B23793E00055A3F /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 18B5ECE41B23793E00055A3F /* video.mov */; };
 		18C4EDAD1B39C366004350CF /* eventViewDayButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C4EDAC1B39C366004350CF /* eventViewDayButtons.xib */; };
 		18C4EDB01B39C5DC004350CF /* eventViewDayButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C4EDAF1B39C5DC004350CF /* eventViewDayButtons.m */; };
-		18CCFCA21B3DEE0A007DAE87 /* CategoryEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CCFCA11B3DEE0A007DAE87 /* CategoryEventCell.xib */; };
-		18CCFCA51B3DF005007DAE87 /* CategoryEventViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CCFCA41B3DF005007DAE87 /* CategoryEventViewTableViewCell.m */; };
 		18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E282721B373C4D0084DCDE /* ResultsViewController.m */; };
-		18EB0F221B3E8BDC003F70D1 /* CategoryEventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB0F211B3E8BDC003F70D1 /* CategoryEventTableViewController.m */; };
 		4CC9F6D01B3DBB4F002F9C1D /* eventViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */; };
 		4CC9F6D11B3DBB4F002F9C1D /* eventViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */; };
 		4CC9F6D41B3DC61A002F9C1D /* eventTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F6D31B3DC61A002F9C1D /* eventTableViewController.m */; };
+		4CC9F7141B3F275D002F9C1D /* CategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F7101B3F275D002F9C1D /* CategoryTableViewCell.m */; };
+		4CC9F7151B3F275D002F9C1D /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC9F7111B3F275D002F9C1D /* CategoryTableViewCell.xib */; };
+		4CC9F7161B3F275D002F9C1D /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F7131B3F275D002F9C1D /* CategoryTableViewController.m */; };
 		A3CD67DD1B3C466B00DACD83 /* SSJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CD67DC1B3C466B00DACD83 /* SSJSONModel.m */; };
 /* End PBXBuildFile section */
 
@@ -64,18 +64,18 @@
 		18C4EDAC1B39C366004350CF /* eventViewDayButtons.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eventViewDayButtons.xib; sourceTree = "<group>"; };
 		18C4EDAE1B39C5DC004350CF /* eventViewDayButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventViewDayButtons.h; sourceTree = "<group>"; };
 		18C4EDAF1B39C5DC004350CF /* eventViewDayButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventViewDayButtons.m; sourceTree = "<group>"; };
-		18CCFCA11B3DEE0A007DAE87 /* CategoryEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryEventCell.xib; sourceTree = "<group>"; };
-		18CCFCA31B3DF005007DAE87 /* CategoryEventViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryEventViewTableViewCell.h; sourceTree = "<group>"; };
-		18CCFCA41B3DF005007DAE87 /* CategoryEventViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryEventViewTableViewCell.m; sourceTree = "<group>"; };
 		18E282711B373C4D0084DCDE /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
 		18E282721B373C4D0084DCDE /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
-		18EB0F201B3E8BDC003F70D1 /* CategoryEventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryEventTableViewController.h; sourceTree = "<group>"; };
-		18EB0F211B3E8BDC003F70D1 /* CategoryEventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryEventTableViewController.m; sourceTree = "<group>"; };
 		4CC9F6CD1B3DBB4F002F9C1D /* eventViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventViewTableViewCell.h; sourceTree = "<group>"; };
 		4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventViewTableViewCell.m; sourceTree = "<group>"; };
 		4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eventViewTableViewCell.xib; sourceTree = "<group>"; };
 		4CC9F6D21B3DC61A002F9C1D /* eventTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventTableViewController.h; sourceTree = "<group>"; };
 		4CC9F6D31B3DC61A002F9C1D /* eventTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventTableViewController.m; sourceTree = "<group>"; };
+		4CC9F70F1B3F275D002F9C1D /* CategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewCell.h; sourceTree = "<group>"; };
+		4CC9F7101B3F275D002F9C1D /* CategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewCell.m; sourceTree = "<group>"; };
+		4CC9F7111B3F275D002F9C1D /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		4CC9F7121B3F275D002F9C1D /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewController.h; sourceTree = "<group>"; };
+		4CC9F7131B3F275D002F9C1D /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
 		A3CD67DB1B3C466B00DACD83 /* SSJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSJSONModel.h; sourceTree = "<group>"; };
 		A3CD67DC1B3C466B00DACD83 /* SSJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSJSONModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,10 +135,10 @@
 				1821AAB01B3BDEAA00745E48 /* FirstLoginViewController.m */,
 				18E282711B373C4D0084DCDE /* ResultsViewController.h */,
 				18E282721B373C4D0084DCDE /* ResultsViewController.m */,
-				18CCFCA91B3E0DD1007DAE87 /* Category View */,
 				18C4EDAC1B39C366004350CF /* eventViewDayButtons.xib */,
 				18C4EDAE1B39C5DC004350CF /* eventViewDayButtons.h */,
 				18C4EDAF1B39C5DC004350CF /* eventViewDayButtons.m */,
+				4CC9F7171B3F276C002F9C1D /* Category View */,
 				18CCFCAA1B3E0DEB007DAE87 /* Event View */,
 				182922291B236AFB00F95AE0 /* Images.xcassets */,
 				1829222B1B236AFB00F95AE0 /* LaunchScreen.xib */,
@@ -173,18 +173,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		18CCFCA91B3E0DD1007DAE87 /* Category View */ = {
-			isa = PBXGroup;
-			children = (
-				18CCFCA11B3DEE0A007DAE87 /* CategoryEventCell.xib */,
-				18CCFCA31B3DF005007DAE87 /* CategoryEventViewTableViewCell.h */,
-				18CCFCA41B3DF005007DAE87 /* CategoryEventViewTableViewCell.m */,
-				18EB0F201B3E8BDC003F70D1 /* CategoryEventTableViewController.h */,
-				18EB0F211B3E8BDC003F70D1 /* CategoryEventTableViewController.m */,
-			);
-			name = "Category View";
-			sourceTree = "<group>";
-		};
 		18CCFCAA1B3E0DEB007DAE87 /* Event View */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +183,19 @@
 				4CC9F6D31B3DC61A002F9C1D /* eventTableViewController.m */,
 			);
 			name = "Event View";
+			sourceTree = "<group>";
+		};
+		4CC9F7171B3F276C002F9C1D /* Category View */ = {
+			isa = PBXGroup;
+			children = (
+				4CC9F70F1B3F275D002F9C1D /* CategoryTableViewCell.h */,
+				4CC9F7101B3F275D002F9C1D /* CategoryTableViewCell.m */,
+				4CC9F7111B3F275D002F9C1D /* CategoryTableViewCell.xib */,
+				4CC9F7121B3F275D002F9C1D /* CategoryTableViewController.h */,
+				4CC9F7131B3F275D002F9C1D /* CategoryTableViewController.m */,
+			);
+			name = "Category View";
+			path = ..;
 			sourceTree = "<group>";
 		};
 		A3CD67D91B3C465700DACD83 /* Libraries */ = {
@@ -294,12 +295,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				18B5ECE51B23793E00055A3F /* video.mov in Resources */,
+				4CC9F7151B3F275D002F9C1D /* CategoryTableViewCell.xib in Resources */,
 				182922281B236AFB00F95AE0 /* Main.storyboard in Resources */,
 				1829222D1B236AFB00F95AE0 /* LaunchScreen.xib in Resources */,
 				18C4EDAD1B39C366004350CF /* eventViewDayButtons.xib in Resources */,
 				1829222A1B236AFB00F95AE0 /* Images.xcassets in Resources */,
 				4CC9F6D11B3DBB4F002F9C1D /* eventViewTableViewCell.xib in Resources */,
-				18CCFCA21B3DEE0A007DAE87 /* CategoryEventCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,15 +320,15 @@
 			files = (
 				18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */,
 				182922251B236AFB00F95AE0 /* ViewController.m in Sources */,
-				18CCFCA51B3DF005007DAE87 /* CategoryEventViewTableViewCell.m in Sources */,
 				182922221B236AFB00F95AE0 /* AppDelegate.m in Sources */,
-				18EB0F221B3E8BDC003F70D1 /* CategoryEventTableViewController.m in Sources */,
 				1821AAB41B3BE1D800745E48 /* MakeAccountViewController.m in Sources */,
 				18C4EDB01B39C5DC004350CF /* eventViewDayButtons.m in Sources */,
 				4CC9F6D01B3DBB4F002F9C1D /* eventViewTableViewCell.m in Sources */,
 				A3CD67DD1B3C466B00DACD83 /* SSJSONModel.m in Sources */,
+				4CC9F7141B3F275D002F9C1D /* CategoryTableViewCell.m in Sources */,
 				1821AAB11B3BDEAA00745E48 /* FirstLoginViewController.m in Sources */,
 				4CC9F6D41B3DC61A002F9C1D /* eventTableViewController.m in Sources */,
+				4CC9F7161B3F275D002F9C1D /* CategoryTableViewController.m in Sources */,
 				1829221F1B236AFB00F95AE0 /* main.m in Sources */,
 				182922441B236B2800F95AE0 /* SplashViewController.m in Sources */,
 			);
