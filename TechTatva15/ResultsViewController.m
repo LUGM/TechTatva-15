@@ -28,7 +28,7 @@
 
 @implementation ResultsViewController
 
-@synthesize resultsSearchBar, myTable, resultViewSearchResult, areResultsFiltered;
+@synthesize myTable, resultsSearchBar, searchResults, areResultsFiltered;
 
 - (void)viewDidLoad
 {
@@ -42,7 +42,6 @@
     myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
     [myJsonInstance sendRequestWithUrl:resultsUrl];
     [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-    // Insert activity monitor here, which comes on screen and shows loading
     
 }
 
@@ -64,24 +63,32 @@
 
 #pragma mark Helper Methods
 
--(void)jsonRequestDidCompleteWithResponse:(id)response model:(SSJSONModel *)JSONModel
+- (void)jsonRequestDidCompleteWithResponse:(id)response model:(SSJSONModel *)JSONModel
 {
-    if (JSONModel == myJsonInstance) {
+    
+    if (JSONModel == myJsonInstance)
+    {
+        
         NSLog(@"%@",myJsonInstance.parsedJsonData);
         json = myJsonInstance.parsedJsonData;
         categoryNames =[NSMutableArray new];
         eventNames = [NSMutableArray new];
         particularEventResults = [NSMutableArray new];
         
-        for (NSDictionary * dict in json) {
+        for (NSDictionary * dict in json)
+        {
+            
             [categoryNames addObject:[dict objectForKey:@"Category"]];
             [eventNames addObject:[dict objectForKey:@"Event"]];
             [particularEventResults addObject:[dict objectForKey:@"Result"]];
             [myTable reloadData];
+        
         }
+        
         [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
         
     }
+    
 }
 
 # pragma mark UITableView Data Source Methods
@@ -95,17 +102,16 @@
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    
     if (areResultsFiltered == YES)
     {
         
-        return resultViewSearchResult.count;
+        return searchResults.count;
         
     }
     else
     {
         
-       return json.count;
+        return json.count;
         
     }
     
@@ -117,30 +123,19 @@
     static NSString *cellId = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
     
-    if (cell == nil)
-    {
-        
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-        
-    }
-    
     if (areResultsFiltered == YES)
-    {
-        
-        cell.textLabel.text = [resultViewSearchResult objectAtIndex:indexPath.row];
-        
-    }
-    else
     {
         
         cell.textLabel.text = [eventNames objectAtIndex:indexPath.row];
         cell.detailTextLabel.text = [categoryNames objectAtIndex:indexPath.row];
         
     }
-    
-    
-//    cell.textLabel.text = [eventNames objectAtIndex:indexPath.row];
-//    cell.detailTextLabel.text = [categoryNames objectAtIndex:indexPath.row];
+    else
+    {
+        
+        cell.textLabel.text = [searchResults objectAtIndex:indexPath.row];
+        
+    }
     
     return cell;
     
@@ -148,7 +143,7 @@
 
 # pragma mark UITableView Delegate Methods
 
--(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
@@ -160,7 +155,7 @@
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    return 50;                  // Check this value according to wanted size of cell
+    return 40;                  // Check this value according to wanted size of cell
     
 }
 
@@ -172,7 +167,7 @@
     
 }
 
-# pragma mark UISearchBar Delegate Methods
+# pragma UISearchBar Delegate Methods
 
 - (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
@@ -180,31 +175,25 @@
     if (searchText.length == 0)
     {
         
-        // Set boolean flag
         areResultsFiltered = NO;
         
     }
-    
     else
     {
         
-        // Set boolean flag
         areResultsFiltered = YES;
         
-        // Alloc and init search result data
-        resultViewSearchResult = [[NSMutableArray alloc] init];
+        searchResults = [[NSMutableArray alloc] init];
         
-        // Fast enumeration to loop through category names in table view
-        for (NSString *eventName in eventNames)          // equivalent example is : for ( i in array)
+        for (NSString *searchResult in eventNames)
         {
             
-            NSRange eventNamesRange = [eventName rangeOfString:searchText options:NSCaseInsensitiveSearch];
+            NSRange searchResultRange = [searchResult rangeOfString:searchText options:NSCaseInsensitiveSearch];
             
-            // If category is found in search, it is added to search results array
-            if (eventNamesRange.location != NSNotFound)
+            if (searchResultRange.location != NSNotFound)
             {
                 
-                [resultViewSearchResult addObject:eventName];
+                [searchResults addObject:searchResult];
                 
             }
             
@@ -212,7 +201,6 @@
         
     }
     
-    // Reload table view
     [myTable reloadData];
     
 }
@@ -223,13 +211,5 @@
     [searchBar resignFirstResponder];
     
 }
-
-// Implement this as well
-//- (void) searchBarCancelButtonClicked:(UISearchBar *)searchBar
-//{
-//    
-//    
-//    
-//}
 
 @end

@@ -100,14 +100,14 @@
     //Feed all data here.
     
     cell.indexPathForCell = indexPath;
-    
+
     cell.eventLabel.text = @"Event Name BLA";
     cell.categoryLabel.text = @"Category Name";
     
     cell.venueLabel.text = @"304, NLH";
     cell.timeLabel.text = @"3:30 PM";
     cell.contactLabel.text = @"+91 8424998388";
-    cell.dateLabel.text = @" 13/08/2015";
+    cell.dateLabel.text = @"13/08/2015";
     
     return cell;
 }

@@ -10,4 +10,9 @@
 
 @interface DayButtonsTableViewCell : UITableViewCell
 
+- (IBAction)dayOneButtonPressed:(UIButton *)sender;
+- (IBAction)dayTwoButtonPressed:(UIButton *)sender;
+- (IBAction)dayThreeButtonPressed:(UIButton *)sender;
+- (IBAction)dayFourButtonPressed:(UIButton *)sender;
+
 @end

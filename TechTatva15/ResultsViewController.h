@@ -14,7 +14,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *myTable;
 @property (weak, nonatomic) IBOutlet UISearchBar *resultsSearchBar;
 
-@property (strong, nonatomic) NSMutableArray *resultViewSearchResult;
+@property (strong, nonatomic) NSMutableArray *searchResults;
 @property BOOL areResultsFiltered;
 
 @end

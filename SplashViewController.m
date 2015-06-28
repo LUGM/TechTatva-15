@@ -92,7 +92,7 @@
 -(void)playbackFinished
 {
     
-    [self performSegueWithIdentifier:@"firstView" sender:self];
+    [self performSegueWithIdentifier:@"firstView" sender:self];       // segue into first view (still to be decided)
     
 }
 - (void)didReceiveMemoryWarning

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Aso-tL-rO9">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="meb-wY-Kn6">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Splash View Controller-->
@@ -28,6 +28,9 @@
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            <connections>
+                                <outlet property="delegate" destination="BGT-Vw-D6L" id="ICD-hW-SOG"/>
+                            </connections>
                         </searchBar>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="SXX-0C-Ywv" detailTextLabel="vir-lk-maF" style="IBUITableViewCellStyleSubtitle" id="ATq-oW-bFO">
@@ -63,26 +66,10 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="myTable" destination="u4g-2r-JF1" id="gjW-dZ-MSb"/>
-                        <outlet property="resultsSearchBar" destination="3qh-Ss-KC1" id="HgU-6Q-qVA"/>
+                        <outlet property="resultsSearchBar" destination="3qh-Ss-KC1" id="Pow-ap-sXz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDU-GA-Djk" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="Q7p-0E-AJd">
-                    <connections>
-                        <outlet property="delegate" destination="BGT-Vw-D6L" id="wzS-JG-Maa"/>
-                        <outlet property="searchContentsController" destination="BGT-Vw-D6L" id="LpQ-21-f7r"/>
-                        <outlet property="searchResultsDataSource" destination="BGT-Vw-D6L" id="xmJ-77-jZJ"/>
-                        <outlet property="searchResultsDelegate" destination="BGT-Vw-D6L" id="X4e-A3-Wka"/>
-                    </connections>
-                </searchDisplayController>
-                <searchDisplayController id="zEP-1b-UsR">
-                    <connections>
-                        <outlet property="delegate" destination="BGT-Vw-D6L" id="Waf-hy-9b4"/>
-                        <outlet property="searchContentsController" destination="BGT-Vw-D6L" id="Pca-Nk-Dl4"/>
-                        <outlet property="searchResultsDataSource" destination="BGT-Vw-D6L" id="dcH-HO-aY1"/>
-                        <outlet property="searchResultsDelegate" destination="BGT-Vw-D6L" id="2Bm-Dv-KBE"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2730" y="1122"/>
         </scene>
