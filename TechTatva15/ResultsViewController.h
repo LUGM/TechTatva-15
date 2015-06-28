@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UISearchBar *resultsSearchBar;
 
 @property (strong, nonatomic) NSMutableArray *searchResults;
+@property (strong, nonatomic) NSMutableArray *searchResultsResult;    // result of event that has been searched
 @property BOOL areResultsFiltered;
 
 @end

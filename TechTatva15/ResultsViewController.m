@@ -28,15 +28,13 @@
 
 @implementation ResultsViewController
 
-@synthesize myTable, resultsSearchBar, searchResults, areResultsFiltered;
+@synthesize myTable, resultsSearchBar, searchResults, areResultsFiltered, searchResultsResult;
 
 - (void)viewDidLoad
 {
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-    // self.resultViewSearchResults = [[NSArray alloc] init];
     
     NSURL *resultsUrl = [NSURL URLWithString:@"http://results.techtatva.in"];              // this has to be url of results page of website
     myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
@@ -147,8 +145,21 @@
 {
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:[eventNames objectAtIndex:indexPath.row] message:[particularEventResults objectAtIndex:indexPath.row] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-    [alert show];
+    
+    if (areResultsFiltered == NO)
+    {
+
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[eventNames objectAtIndex:indexPath.row] message:[particularEventResults objectAtIndex:indexPath.row] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        
+    }
+    else
+    {
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[searchResults objectAtIndex:indexPath.row] message:[searchResultsResult objectAtIndex:indexPath.row] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
+        
+    }
     
 }
 
@@ -184,16 +195,23 @@
         areResultsFiltered = YES;
         
         searchResults = [[NSMutableArray alloc] init];
+        searchResultsResult = [[NSMutableArray alloc] init];
         
         for (NSString *searchResult in eventNames)
         {
             
-            NSRange searchResultRange = [searchResult rangeOfString:searchText options:NSCaseInsensitiveSearch];
-            
-            if (searchResultRange.location != NSNotFound)
+            for (NSString *searchEventResult in particularEventResults)
             {
                 
-                [searchResults addObject:searchResult];
+                NSRange searchResultRange = [searchResult rangeOfString:searchText options:NSCaseInsensitiveSearch];
+                
+                if (searchResultRange.location != NSNotFound)
+                {
+                    
+                    [searchResults addObject:searchResult];
+                    [searchResultsResult addObject:searchEventResult];
+                     
+                }
                 
             }
             
