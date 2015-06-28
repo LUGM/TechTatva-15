@@ -27,6 +27,7 @@
 		4CC9F7141B3F275D002F9C1D /* CategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F7101B3F275D002F9C1D /* CategoryTableViewCell.m */; };
 		4CC9F7151B3F275D002F9C1D /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC9F7111B3F275D002F9C1D /* CategoryTableViewCell.xib */; };
 		4CC9F7161B3F275D002F9C1D /* CategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F7131B3F275D002F9C1D /* CategoryTableViewController.m */; };
+		A3BF3C011B3FD2DF00E1F436 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF3C001B3FD2DF00E1F436 /* MBProgressHUD.m */; };
 		A3CD67DD1B3C466B00DACD83 /* SSJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CD67DC1B3C466B00DACD83 /* SSJSONModel.m */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +77,8 @@
 		4CC9F7111B3F275D002F9C1D /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
 		4CC9F7121B3F275D002F9C1D /* CategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewController.h; sourceTree = "<group>"; };
 		4CC9F7131B3F275D002F9C1D /* CategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewController.m; sourceTree = "<group>"; };
+		A3BF3BFF1B3FD2DF00E1F436 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		A3BF3C001B3FD2DF00E1F436 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		A3CD67DB1B3C466B00DACD83 /* SSJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSJSONModel.h; sourceTree = "<group>"; };
 		A3CD67DC1B3C466B00DACD83 /* SSJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSJSONModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,7 +123,6 @@
 			isa = PBXGroup;
 			children = (
 				A3CD67D91B3C465700DACD83 /* Libraries */,
-				A3CD67DA1B3C465D00DACD83 /* SSJSONParse */,
 				182922261B236AFB00F95AE0 /* Main.storyboard */,
 				182922201B236AFB00F95AE0 /* AppDelegate.h */,
 				182922211B236AFB00F95AE0 /* AppDelegate.m */,
@@ -198,9 +200,20 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		A3BF3BFE1B3FD2C600E1F436 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				A3BF3BFF1B3FD2DF00E1F436 /* MBProgressHUD.h */,
+				A3BF3C001B3FD2DF00E1F436 /* MBProgressHUD.m */,
+			);
+			name = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 		A3CD67D91B3C465700DACD83 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				A3BF3BFE1B3FD2C600E1F436 /* MBProgressHUD */,
+				A3CD67DA1B3C465D00DACD83 /* SSJSONParse */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -331,6 +344,7 @@
 				4CC9F7161B3F275D002F9C1D /* CategoryTableViewController.m in Sources */,
 				1829221F1B236AFB00F95AE0 /* main.m in Sources */,
 				182922441B236B2800F95AE0 /* SplashViewController.m in Sources */,
+				A3BF3C011B3FD2DF00E1F436 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

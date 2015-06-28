@@ -12,6 +12,7 @@
 
 #import "ResultsViewController.h"
 #import "SSJSONModel.h"
+#import "MBProgressHUD.h"
 
 @interface ResultsViewController () <SSJSONModelDelegate>
 {
@@ -29,21 +30,6 @@
 
 @synthesize resultsSearchBar, myTable, resultViewSearchResult, areResultsFiltered;
 
-- (id) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self)
-    {
-        
-        // Custom initialisation
-        
-    }
-    
-    return self;
-    
-}
-
 - (void)viewDidLoad
 {
     
@@ -55,6 +41,7 @@
     NSURL *resultsUrl = [NSURL URLWithString:@"http://results.techtatva.in"];              // this has to be url of results page of website
     myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
     [myJsonInstance sendRequestWithUrl:resultsUrl];
+    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     // Insert activity monitor here, which comes on screen and shows loading
     
 }
@@ -92,6 +79,7 @@
             [particularEventResults addObject:[dict objectForKey:@"Result"]];
             [myTable reloadData];
         }
+        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
         
     }
 }
