@@ -20,6 +20,8 @@
     NSMutableArray *eventNames;
     NSMutableArray *particularEventResults;
     NSArray *json;
+    NSString *searchResult;
+    NSString *searchEventResult;
     
     SSJSONModel *myJsonInstance;
 }
@@ -197,21 +199,16 @@
         searchResults = [[NSMutableArray alloc] init];
         searchResultsResult = [[NSMutableArray alloc] init];
         
-        for (NSString *searchResult in eventNames)
+        for (searchResult in eventNames)
         {
             
-            for (NSString *searchEventResult in particularEventResults)
+            NSRange searchResultRange = [searchResult rangeOfString:searchText options:NSCaseInsensitiveSearch];
+            
+            if (searchResultRange.location != NSNotFound)
             {
                 
-                NSRange searchResultRange = [searchResult rangeOfString:searchText options:NSCaseInsensitiveSearch];
-                
-                if (searchResultRange.location != NSNotFound)
-                {
-                    
-                    [searchResults addObject:searchResult];
-                    [searchResultsResult addObject:searchEventResult];
-                     
-                }
+                [searchResults addObject:searchResult];
+                [searchResultsResult addObject:searchEventResult];
                 
             }
             
