@@ -19,6 +19,7 @@
 		182922441B236B2800F95AE0 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182922431B236B2800F95AE0 /* SplashViewController.m */; };
 		18B5ECE51B23793E00055A3F /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 18B5ECE41B23793E00055A3F /* video.mov */; };
 		18C4EDAD1B39C366004350CF /* DayButtons.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C4EDAC1B39C366004350CF /* DayButtons.xib */; };
+		18DBD09D1B44571B00749AD6 /* CategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD09C1B44571B00749AD6 /* CategoriesTableViewController.m */; };
 		18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E282721B373C4D0084DCDE /* ResultsViewController.m */; };
 		18F1BD501B3FE17100473E1A /* DayButtonsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F1BD4F1B3FE17100473E1A /* DayButtonsTableViewCell.m */; };
 		4CC9F6D01B3DBB4F002F9C1D /* eventViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */; };
@@ -63,6 +64,8 @@
 		182922431B236B2800F95AE0 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SplashViewController.m; path = ../SplashViewController.m; sourceTree = "<group>"; };
 		18B5ECE41B23793E00055A3F /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
 		18C4EDAC1B39C366004350CF /* DayButtons.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayButtons.xib; sourceTree = "<group>"; };
+		18DBD09B1B44571B00749AD6 /* CategoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoriesTableViewController.h; path = ../CategoriesTableViewController.h; sourceTree = "<group>"; };
+		18DBD09C1B44571B00749AD6 /* CategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoriesTableViewController.m; path = ../CategoriesTableViewController.m; sourceTree = "<group>"; };
 		18E282711B373C4D0084DCDE /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
 		18E282721B373C4D0084DCDE /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
 		18F1BD4E1B3FE17100473E1A /* DayButtonsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DayButtonsTableViewCell.h; path = ../DayButtonsTableViewCell.h; sourceTree = "<group>"; };
@@ -169,6 +172,8 @@
 				182922241B236AFB00F95AE0 /* ViewController.m */,
 				182922421B236B2800F95AE0 /* SplashViewController.h */,
 				182922431B236B2800F95AE0 /* SplashViewController.m */,
+				18DBD09B1B44571B00749AD6 /* CategoriesTableViewController.h */,
+				18DBD09C1B44571B00749AD6 /* CategoriesTableViewController.m */,
 				1821AAB21B3BE1D800745E48 /* MakeAccountViewController.h */,
 				1821AAB31B3BE1D800745E48 /* MakeAccountViewController.m */,
 				1821AAAF1B3BDEAA00745E48 /* FirstLoginViewController.h */,
@@ -362,6 +367,7 @@
 				4CC9F6D01B3DBB4F002F9C1D /* eventViewTableViewCell.m in Sources */,
 				A3CD67DD1B3C466B00DACD83 /* SSJSONModel.m in Sources */,
 				4CC9F7141B3F275D002F9C1D /* CategoryTableViewCell.m in Sources */,
+				18DBD09D1B44571B00749AD6 /* CategoriesTableViewController.m in Sources */,
 				1821AAB11B3BDEAA00745E48 /* FirstLoginViewController.m in Sources */,
 				4CC9F6D41B3DC61A002F9C1D /* eventTableViewController.m in Sources */,
 				4CC9F7161B3F275D002F9C1D /* CategoryTableViewController.m in Sources */,

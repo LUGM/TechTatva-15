@@ -104,6 +104,6 @@
 
 - (IBAction)developDetailsButtonPressed:(id)sender
 {
-    //Segue from here to developer page.
+    // Segue from here to developer page.
 }
 @end

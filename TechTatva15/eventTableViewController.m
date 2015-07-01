@@ -122,6 +122,12 @@
 }
 
 
+- (IBAction)developerDetails:(UIBarButtonItem *)sender
+{
+    
+    // Segue from here to developer page.
+    
+}
 
 
 

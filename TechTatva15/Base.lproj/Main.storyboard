@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="meb-wY-Kn6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SmP-IE-zZc">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -61,7 +60,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Results" id="6j8-zJ-STw">
                         <barButtonItem key="leftBarButtonItem" id="fHr-b0-wIh"/>
-                        <barButtonItem key="rightBarButtonItem" title="Dev" width="20" id="6yr-nq-ipn"/>
+                        <barButtonItem key="rightBarButtonItem" title="Dev" width="20" id="6yr-nq-ipn">
+                            <connections>
+                                <action selector="developerDetails:" destination="BGT-Vw-D6L" id="JMU-UH-HT8"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -436,7 +439,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Events" id="iVf-mr-7XV">
-                        <barButtonItem key="rightBarButtonItem" title="Dev" width="20" id="GoW-FG-mqL"/>
+                        <barButtonItem key="rightBarButtonItem" title="Dev" width="20" id="GoW-FG-mqL">
+                            <connections>
+                                <action selector="developerDetails:" destination="Yat-aH-jT9" id="pEp-MG-pEv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
@@ -444,7 +451,7 @@
             </objects>
             <point key="canvasLocation" x="2730" y="3001"/>
         </scene>
-        <!--Categories-->
+        <!--Specific Category Name-->
         <scene sceneID="3gM-pO-7ef">
             <objects>
                 <tableViewController id="XAd-zS-7iJ" customClass="CategoryTableViewController" sceneMemberID="viewController">
@@ -465,7 +472,7 @@
                             <outlet property="delegate" destination="XAd-zS-7iJ" id="KdF-s9-LkU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Categories" id="Wz0-Dk-Ikj">
+                    <navigationItem key="navigationItem" title="Specific Category Name" id="Wz0-Dk-Ikj">
                         <barButtonItem key="rightBarButtonItem" title="Dev" id="skD-1y-Hmr">
                             <connections>
                                 <action selector="developDetailsButtonPressed:" destination="XAd-zS-7iJ" id="qRT-be-Ilb"/>
@@ -515,6 +522,61 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L8G-Qt-0cY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2156" y="3631"/>
+        </scene>
+        <!--Categories-->
+        <scene sceneID="XR6-4J-W8n">
+            <objects>
+                <tableViewController id="SlK-De-5MX" customClass="CategoriesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jD9-SR-azX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="yK9-eJ-QmC">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yK9-eJ-QmC" id="wVv-5K-DWu">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="SlK-De-5MX" id="C20-5q-wbC"/>
+                            <outlet property="delegate" destination="SlK-De-5MX" id="A4p-se-BMi"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Categories" id="xgN-St-4Mx">
+                        <barButtonItem key="rightBarButtonItem" title="Dev" width="20" id="aE1-mJ-5od">
+                            <connections>
+                                <action selector="developerDetails:" destination="SlK-De-5MX" id="G69-oN-rHO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rnj-gk-of0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2730" y="4309"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="CT7-Nq-mM9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pR4-NR-Phw" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6UW-TG-RQQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="SlK-De-5MX" kind="relationship" relationship="rootViewController" id="1Nc-8U-6JH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hb4-rb-294" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2156" y="4309"/>
         </scene>
     </scenes>
 </document>

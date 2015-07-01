@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MakeAccountViewController : UITableViewController
+@interface MakeAccountViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
 {
     
     IBOutlet UITextField *nameTextField;

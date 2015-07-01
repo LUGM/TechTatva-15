@@ -193,6 +193,13 @@
 // In this method, find a way to loop over particularEventResults array together with eventNames array
 // What is to be done is that if event 3 of eventNames array is stored in event 2 of searchResults array, object 3 of particularEventResults array should be stored as object 2 of searchEventResult array
 
+- (IBAction)developerDetails:(UIBarButtonItem *)sender
+{
+    
+    // Segue from here to developer page.
+    
+}
+
 # pragma UISearchBar Delegate Methods
 
 - (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
