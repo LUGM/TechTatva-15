@@ -24,6 +24,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    //    Load nib for DayView here.
+    //    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DayView" owner:self options:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning {
