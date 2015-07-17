@@ -61,18 +61,8 @@
         NSLog(@"For %@ ,the response is not a valid JSON\nCheck your URL or API response over a browser",(NSString*)currentUrl);
     }
     
-    //Check for JSON Array or Object
-    else{
-        if ([_parsedJsonData isKindOfClass:[NSArray class]]) {
-            NSLog(@"For %@ ,the Response JSON Data is an Array.\nAssign it to a NSArray",(NSString*)currentUrl);
-        }
-        else if([_parsedJsonData isKindOfClass:[NSDictionary class]]) {
-            NSLog(@"For %@ ,the Response JSON Data is a JSON Object or Dicitionary.\nAssign it to a NSDictionary",(NSString*)currentUrl);
-        }
-        
-        [self.delegate jsonRequestDidCompleteWithResponse:_parsedJsonData model:self];
-    }
-
+    [self.delegate jsonRequestDidCompleteWithDict:_parsedJsonData model:self];
+    
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {

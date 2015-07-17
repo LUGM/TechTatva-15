@@ -8,14 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MakeAccountViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource>
-{
+@interface MakeAccountViewController : UITableViewController <UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate>
     
-    IBOutlet UITextField *nameTextField;
-    IBOutlet UITextField *emailTextField;
-    IBOutlet UITextField *phoneTextField;
-    
-}
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *emailTextField;
+@property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
+
 
 - (IBAction)registerButton:(UIButton *)sender;
 

@@ -12,7 +12,7 @@
 
 @protocol SSJSONModelDelegate
 
-- (void)jsonRequestDidCompleteWithResponse:(id)response model:(SSJSONModel*)JSONModel;
+- (void)jsonRequestDidCompleteWithDict:(id)response model:(SSJSONModel*)JSONModel;
 
 @end
 

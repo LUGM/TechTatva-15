@@ -14,6 +14,8 @@
 
 @implementation MakeAccountViewController
 
+@synthesize nameTextField, emailTextField, phoneTextField;
+
 - (void)viewDidLoad
 {
     
