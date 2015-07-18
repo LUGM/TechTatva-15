@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aeG-YH-oa6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cdC-Ij-OAN">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
@@ -10,10 +11,13 @@
                 <viewController id="cdC-Ij-OAN" customClass="SplashViewController" sceneMemberID="viewController">
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <segue destination="Tr7-T9-LYu" kind="show" identifier="FirstView" id="eq5-c4-PAn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OLs-S5-R4I" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2156" y="483"/>
+            <point key="canvasLocation" x="1601" y="1744"/>
         </scene>
         <!--Results-->
         <scene sceneID="sQj-BJ-6i7">
@@ -158,6 +162,7 @@
                                                     </state>
                                                     <connections>
                                                         <action selector="emailLogin:" destination="OF5-lB-I6I" eventType="touchUpInside" id="RtD-5T-qTi"/>
+                                                        <segue destination="JFr-Vl-Joc" kind="show" identifier="EmailSignInView" id="f5r-aV-osG"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -199,6 +204,100 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6x-JN-yrn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2730" y="1741"/>
+        </scene>
+        <!--Email Sign In Table View Controller-->
+        <scene sceneID="zkg-Zk-Sfa">
+            <objects>
+                <tableViewController id="JFr-Vl-Joc" customClass="EmailSignInTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wam-Xu-nNm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <sections>
+                            <tableViewSection id="Yux-44-hsw">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="qvW-7y-7ai">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qvW-7y-7ai" id="tFd-gD-Bsp">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="3QC-I7-IcG">
+                                <cells/>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Email" id="dJ3-Qe-X7l">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="av6-Qs-WKZ">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="av6-Qs-WKZ" id="dJf-5j-noI">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vp1-yE-ba9">
+                                                    <rect key="frame" x="0.0" y="-1" width="320" height="46"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection headerTitle="Password" id="hDf-kC-77K">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pqR-P0-RZ7">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pqR-P0-RZ7" id="dfI-V9-rPk">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZzM-bg-iFf">
+                                                    <rect key="frame" x="0.0" y="-1" width="320" height="45"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                            <tableViewSection id="xy2-yf-VBw">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="S0Z-mI-jTe">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="S0Z-mI-jTe" id="jtA-ED-Buw">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wmf-L1-Jjg">
+                                                    <rect key="frame" x="0.0" y="-1" width="320" height="45"/>
+                                                    <state key="normal" title="Sign In">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="signInButton:" destination="JFr-Vl-Joc" eventType="touchUpInside" id="ufG-a0-0qX"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="JFr-Vl-Joc" id="gTl-P4-znG"/>
+                            <outlet property="delegate" destination="JFr-Vl-Joc" id="a3C-mO-7JN"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="hFT-3s-HdN"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="vp1-yE-ba9" id="6cQ-J5-ze1"/>
+                        <outlet property="passwordTextField" destination="ZzM-bg-iFf" id="iYa-3x-zBK"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2t1-69-d2p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3311" y="1742"/>
         </scene>
         <!--Create Account-->
         <scene sceneID="pGY-F1-ptO">
@@ -542,7 +641,7 @@
             </objects>
             <point key="canvasLocation" x="2730" y="5021"/>
         </scene>
-        <!--#TechTatva15-->
+        <!--#techtatva15-->
         <scene sceneID="Rdg-Nf-Cpd">
             <objects>
                 <viewController id="Eg6-h5-4aW" customClass="InstagramViewController" sceneMemberID="viewController">
@@ -555,10 +654,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="#TechTatva15" id="pef-9P-4Kd"/>
+                    <navigationItem key="navigationItem" title="#techtatva15" id="pef-9P-4Kd"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <segue destination="ypG-aR-IRn" kind="show" identifier="detailImage" id="kSj-IC-RzG"/>
+                        <segue destination="ypG-aR-IRn" kind="show" identifier="FullScreenImage" id="kSj-IC-RzG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y43-pu-07j" userLabel="First Responder" sceneMemberID="firstResponder"/>

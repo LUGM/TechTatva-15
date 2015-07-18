@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1821AAB11B3BDEAA00745E48 /* FirstLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821AAB01B3BDEAA00745E48 /* FirstLoginViewController.m */; };
 		1821AAB41B3BE1D800745E48 /* MakeAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821AAB31B3BE1D800745E48 /* MakeAccountViewController.m */; };
+		1822727B1B5A265200CD52B8 /* TTlogomain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1822727A1B5A265200CD52B8 /* TTlogomain.jpg */; };
 		1829221F1B236AFB00F95AE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1829221E1B236AFB00F95AE0 /* main.m */; };
 		182922221B236AFB00F95AE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182922211B236AFB00F95AE0 /* AppDelegate.m */; };
 		182922251B236AFB00F95AE0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182922241B236AFB00F95AE0 /* ViewController.m */; };
@@ -46,6 +47,7 @@
 		18B5ECE51B23793E00055A3F /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 18B5ECE41B23793E00055A3F /* video.mov */; };
 		18BF0E8B1B5574B00088DA84 /* InstagramCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BF0E8A1B5574B00088DA84 /* InstagramCustomCell.xib */; };
 		18BF0E8E1B5578220088DA84 /* InstagramCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BF0E8D1B5578220088DA84 /* InstagramCustomTableViewCell.m */; };
+		18C5EF011B5A2B950084259E /* EmailSignInTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5EF001B5A2B950084259E /* EmailSignInTableViewController.m */; };
 		18DBD09D1B44571B00749AD6 /* CategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD09C1B44571B00749AD6 /* CategoriesTableViewController.m */; };
 		18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E282721B373C4D0084DCDE /* ResultsViewController.m */; };
 		4CC9F6D01B3DBB4F002F9C1D /* eventViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */; };
@@ -71,6 +73,7 @@
 		1821AAB01B3BDEAA00745E48 /* FirstLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLoginViewController.m; sourceTree = "<group>"; };
 		1821AAB21B3BE1D800745E48 /* MakeAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeAccountViewController.h; sourceTree = "<group>"; };
 		1821AAB31B3BE1D800745E48 /* MakeAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeAccountViewController.m; sourceTree = "<group>"; };
+		1822727A1B5A265200CD52B8 /* TTlogomain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TTlogomain.jpg; sourceTree = "<group>"; };
 		182922191B236AFB00F95AE0 /* TechTatva15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechTatva15.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1829221D1B236AFB00F95AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1829221E1B236AFB00F95AE0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -143,6 +146,8 @@
 		18BF0E8A1B5574B00088DA84 /* InstagramCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InstagramCustomCell.xib; path = ../InstagramCustomCell.xib; sourceTree = "<group>"; };
 		18BF0E8C1B5578220088DA84 /* InstagramCustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramCustomTableViewCell.h; path = ../InstagramCustomTableViewCell.h; sourceTree = "<group>"; };
 		18BF0E8D1B5578220088DA84 /* InstagramCustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramCustomTableViewCell.m; path = ../InstagramCustomTableViewCell.m; sourceTree = "<group>"; };
+		18C5EEFF1B5A2B950084259E /* EmailSignInTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EmailSignInTableViewController.h; sourceTree = "<group>"; };
+		18C5EF001B5A2B950084259E /* EmailSignInTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EmailSignInTableViewController.m; sourceTree = "<group>"; };
 		18DBD09B1B44571B00749AD6 /* CategoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoriesTableViewController.h; path = ../CategoriesTableViewController.h; sourceTree = "<group>"; };
 		18DBD09C1B44571B00749AD6 /* CategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoriesTableViewController.m; path = ../CategoriesTableViewController.m; sourceTree = "<group>"; };
 		18E282711B373C4D0084DCDE /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
@@ -204,6 +209,7 @@
 				18F1BD561B3FE3EF00473E1A /* Views */,
 				18F1BD521B3FE35000473E1A /* Controllers */,
 				182922291B236AFB00F95AE0 /* Images.xcassets */,
+				1822727A1B5A265200CD52B8 /* TTlogomain.jpg */,
 				18B5ECE41B23793E00055A3F /* video.mov */,
 				1829222B1B236AFB00F95AE0 /* LaunchScreen.xib */,
 				1829221C1B236AFB00F95AE0 /* Supporting Files */,
@@ -330,6 +336,8 @@
 				182922241B236AFB00F95AE0 /* ViewController.m */,
 				182922421B236B2800F95AE0 /* SplashViewController.h */,
 				182922431B236B2800F95AE0 /* SplashViewController.m */,
+				18C5EEFF1B5A2B950084259E /* EmailSignInTableViewController.h */,
+				18C5EF001B5A2B950084259E /* EmailSignInTableViewController.m */,
 				18DBD09B1B44571B00749AD6 /* CategoriesTableViewController.h */,
 				18DBD09C1B44571B00749AD6 /* CategoriesTableViewController.m */,
 				182D3F471B56AFB30008F4BB /* InstagramViewController.h */,
@@ -493,6 +501,7 @@
 				18B5ECE51B23793E00055A3F /* video.mov in Resources */,
 				18BF0E8B1B5574B00088DA84 /* InstagramCustomCell.xib in Resources */,
 				184FF8191B484723007B8E46 /* DayView.xib in Resources */,
+				1822727B1B5A265200CD52B8 /* TTlogomain.jpg in Resources */,
 				4CC9F7151B3F275D002F9C1D /* CategoryTableViewCell.xib in Resources */,
 				182922281B236AFB00F95AE0 /* Main.storyboard in Resources */,
 				1829222D1B236AFB00F95AE0 /* LaunchScreen.xib in Resources */,
@@ -520,6 +529,7 @@
 				18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */,
 				18B4FC621B5958A5004647DA /* UIImage+WebP.m in Sources */,
 				18B4FC641B5958A5004647DA /* UIImageView+WebCache.m in Sources */,
+				18C5EF011B5A2B950084259E /* EmailSignInTableViewController.m in Sources */,
 				18B4FC5C1B5958A5004647DA /* SDWebImageDownloaderOperation.m in Sources */,
 				182D3F4F1B56B21C0008F4BB /* InstagramImage.m in Sources */,
 				18B4FC631B5958A5004647DA /* UIImageView+HighlightedWebCache.m in Sources */,

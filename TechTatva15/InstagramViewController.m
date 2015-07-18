@@ -157,8 +157,8 @@
     cell.profileName.text = user.profileName;
     
     InstagramImage * img = [profilePictureArray objectAtIndex:indexPath.row];
-    [cell.imageTBD sd_setImageWithURL:[NSURL URLWithString:img.url] placeholderImage:[UIImage imageNamed:@"logo"]];
-    [cell.userImage sd_setImageWithURL:[NSURL URLWithString:user.profilePicture] placeholderImage:[UIImage imageNamed:@"logo"]];
+    [cell.imageTBD sd_setImageWithURL:[NSURL URLWithString:img.url] placeholderImage:[UIImage imageNamed:@"TTlogomain"]];
+    [cell.userImage sd_setImageWithURL:[NSURL URLWithString:user.profilePicture] placeholderImage:[UIImage imageNamed:@"TTlogomain"]];
     
     return cell;
     
@@ -191,14 +191,14 @@
     
     [instagramTable deselectRowAtIndexPath:indexPath animated:YES];
     selectedIndex = indexPath;
-    [self performSegueWithIdentifier:@"detailImage" sender:self];
+    [self performSegueWithIdentifier:@"FullScreenImage" sender:self];
     
 }
 
 - (void )prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     
-    if ([[segue identifier] isEqual: @"detailImage"])
+    if ([[segue identifier] isEqual: @"FullScreenImage"])
     {
         
         FullScreenImageViewController *destination = segue.destinationViewController;
