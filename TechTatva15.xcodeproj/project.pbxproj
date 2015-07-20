@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		1821AAB11B3BDEAA00745E48 /* FirstLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821AAB01B3BDEAA00745E48 /* FirstLoginViewController.m */; };
-		1821AAB41B3BE1D800745E48 /* MakeAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821AAB31B3BE1D800745E48 /* MakeAccountViewController.m */; };
 		1822727B1B5A265200CD52B8 /* TTlogomain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1822727A1B5A265200CD52B8 /* TTlogomain.jpg */; };
 		1829221F1B236AFB00F95AE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1829221E1B236AFB00F95AE0 /* main.m */; };
 		182922221B236AFB00F95AE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182922211B236AFB00F95AE0 /* AppDelegate.m */; };
@@ -50,6 +49,7 @@
 		18C5EF011B5A2B950084259E /* EmailSignInTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C5EF001B5A2B950084259E /* EmailSignInTableViewController.m */; };
 		18DBD09D1B44571B00749AD6 /* CategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD09C1B44571B00749AD6 /* CategoriesTableViewController.m */; };
 		18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E282721B373C4D0084DCDE /* ResultsViewController.m */; };
+		4C9D64571B5D56C4001DDB5F /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D64561B5D56C4001DDB5F /* CreateAccountViewController.m */; };
 		4CC9F6D01B3DBB4F002F9C1D /* eventViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */; };
 		4CC9F6D11B3DBB4F002F9C1D /* eventViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */; };
 		4CC9F7141B3F275D002F9C1D /* CategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F7101B3F275D002F9C1D /* CategoryTableViewCell.m */; };
@@ -71,8 +71,6 @@
 /* Begin PBXFileReference section */
 		1821AAAF1B3BDEAA00745E48 /* FirstLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstLoginViewController.h; sourceTree = "<group>"; };
 		1821AAB01B3BDEAA00745E48 /* FirstLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLoginViewController.m; sourceTree = "<group>"; };
-		1821AAB21B3BE1D800745E48 /* MakeAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MakeAccountViewController.h; sourceTree = "<group>"; };
-		1821AAB31B3BE1D800745E48 /* MakeAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MakeAccountViewController.m; sourceTree = "<group>"; };
 		1822727A1B5A265200CD52B8 /* TTlogomain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TTlogomain.jpg; sourceTree = "<group>"; };
 		182922191B236AFB00F95AE0 /* TechTatva15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechTatva15.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1829221D1B236AFB00F95AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -152,6 +150,8 @@
 		18DBD09C1B44571B00749AD6 /* CategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoriesTableViewController.m; path = ../CategoriesTableViewController.m; sourceTree = "<group>"; };
 		18E282711B373C4D0084DCDE /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
 		18E282721B373C4D0084DCDE /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
+		4C9D64551B5D56C4001DDB5F /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateAccountViewController.h; path = ../CreateAccountViewController.h; sourceTree = "<group>"; };
+		4C9D64561B5D56C4001DDB5F /* CreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateAccountViewController.m; path = ../CreateAccountViewController.m; sourceTree = "<group>"; };
 		4CC9F6CD1B3DBB4F002F9C1D /* eventViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventViewTableViewCell.h; sourceTree = "<group>"; };
 		4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventViewTableViewCell.m; sourceTree = "<group>"; };
 		4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eventViewTableViewCell.xib; sourceTree = "<group>"; };
@@ -338,14 +338,14 @@
 				182922431B236B2800F95AE0 /* SplashViewController.m */,
 				18C5EEFF1B5A2B950084259E /* EmailSignInTableViewController.h */,
 				18C5EF001B5A2B950084259E /* EmailSignInTableViewController.m */,
+				4C9D64551B5D56C4001DDB5F /* CreateAccountViewController.h */,
+				4C9D64561B5D56C4001DDB5F /* CreateAccountViewController.m */,
 				18DBD09B1B44571B00749AD6 /* CategoriesTableViewController.h */,
 				18DBD09C1B44571B00749AD6 /* CategoriesTableViewController.m */,
 				182D3F471B56AFB30008F4BB /* InstagramViewController.h */,
 				182D3F481B56AFB30008F4BB /* InstagramViewController.m */,
 				18B4FC661B595E67004647DA /* FullScreenImageViewController.h */,
 				18B4FC671B595E67004647DA /* FullScreenImageViewController.m */,
-				1821AAB21B3BE1D800745E48 /* MakeAccountViewController.h */,
-				1821AAB31B3BE1D800745E48 /* MakeAccountViewController.m */,
 				1821AAAF1B3BDEAA00745E48 /* FirstLoginViewController.h */,
 				1821AAB01B3BDEAA00745E48 /* FirstLoginViewController.m */,
 				18E282711B373C4D0084DCDE /* ResultsViewController.h */,
@@ -532,6 +532,7 @@
 				18C5EF011B5A2B950084259E /* EmailSignInTableViewController.m in Sources */,
 				18B4FC5C1B5958A5004647DA /* SDWebImageDownloaderOperation.m in Sources */,
 				182D3F4F1B56B21C0008F4BB /* InstagramImage.m in Sources */,
+				4C9D64571B5D56C4001DDB5F /* CreateAccountViewController.m in Sources */,
 				18B4FC631B5958A5004647DA /* UIImageView+HighlightedWebCache.m in Sources */,
 				182922251B236AFB00F95AE0 /* ViewController.m in Sources */,
 				18B4FC5A1B5958A5004647DA /* SDWebImageDecoder.m in Sources */,
@@ -539,7 +540,6 @@
 				182D3F491B56AFB30008F4BB /* InstagramViewController.m in Sources */,
 				182922221B236AFB00F95AE0 /* AppDelegate.m in Sources */,
 				18B4FC581B5958A5004647DA /* SDImageCache.m in Sources */,
-				1821AAB41B3BE1D800745E48 /* MakeAccountViewController.m in Sources */,
 				4CC9F6D01B3DBB4F002F9C1D /* eventViewTableViewCell.m in Sources */,
 				18B4FC5D1B5958A5004647DA /* SDWebImageManager.m in Sources */,
 				18B4FC651B5958A5004647DA /* UIView+WebCacheOperation.m in Sources */,
