@@ -32,12 +32,12 @@
     
     self.optionsPickerView.hidden = YES;
     
-    self.genderOptionsArray = @[@"Male", @"Female", @"Transgender"];
-    self.yearOfStudyOptionsArray = @[@"1", @"2", @"3", @"4", @"5"];
+    self.genderOptionsArray = @[@"Male", @"Female", @"Transgender", @"Other"];
+    self.yearOfStudyOptionsArray = @[@"First Year", @"Second Year", @"Third Year", @"Fourth Year", @"Fifth Year"];
    
     //Update the following arrays from backend; The following is dummy data.
-    self.cityOptionsArray = @[@"City1", @"City2", @"City3"];
-    self.collegeOptionsArray = @[@"College1", @"College2", @"College3"];
+    self.cityOptionsArray = @[@"Mumbai", @"New Delhi", @"Manipal", @"Chennai", @"Patna", @"Hyderabad", @"Bangalore", @"Indore"];
+    self.collegeOptionsArray = @[@"MIT, Manipal", @"TAPMI, Manipal", @"WGSHA, Manipal"];
     
 }
 

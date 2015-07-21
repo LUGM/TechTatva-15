@@ -9,11 +9,14 @@
 // Fix placement of table view in this. Problem is visible when it runs
 
 #import "EventListViewController.h"
+#import "eventViewTableViewCell.h"
+#import "DayView.h"
 
 @interface EventListViewController ()
 
 @property NSIndexPath *previousSelectedCellIndexPath;
 @property NSIndexPath *currentSelectedCellIndexPath;
+@property DayView *DayView;
 
 @end
 
@@ -27,8 +30,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-//    Load nib for DayView here.
-//    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DayView" owner:self options:nil];
+    // Load nib for DayView here. Still not loading in view though.
+    
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DayView.xib" owner:self options:nil];
+    _DayView = [nib objectAtIndex:0];
+    _DayView.frame = CGRectMake(0, 64, 320, 50);
+    _DayView.alpha = 0.85;
+    
+    // Add functionality i.e. change date when specific buttons are pressed
     
 }
 

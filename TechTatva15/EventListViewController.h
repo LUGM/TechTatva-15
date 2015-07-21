@@ -7,8 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "eventViewTableViewCell.h"
-#import "DayView.h"
 
 @interface EventListViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 

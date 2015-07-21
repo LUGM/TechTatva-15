@@ -10,8 +10,8 @@
 
 @interface InstagramUser : NSObject
 
-@property (strong, nonatomic) NSString *profileName;
-@property (strong, nonatomic) NSString *profilePicture;
+@property (strong, nonatomic) NSString *username;
+@property (strong, nonatomic) NSString *profile_picture;
 
 - (id) initWithDictionary : (NSDictionary *) dict;
 
