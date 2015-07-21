@@ -157,12 +157,12 @@
 
 - (IBAction)submitButtonPressed:(UIButton *)sender
 {
-    UIAlertView *incompleteDeatailsAlert = [[UIAlertView alloc] initWithTitle:@"Incomplete Details" message:@"Please enter all the details appropriately and then continue" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+    UIAlertView *incompleteDetailsAlert = [[UIAlertView alloc] initWithTitle:@"Incomplete Details" message:@"Please enter all the details appropriately and then continue" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
     
     
     if([self.nameTextField.text isEqual:@"" ]|| [self.emailTextLabel.text isEqual:@""] || [self.phoneNumberTextLabel.text isEqual:@""] || [self.genderTextLabel.text isEqual:@""] || [self.cityTextLabel.text isEqual:@""] || [self.collegeTextLabel.text isEqual:@""] || [self.yearOfStudyTextLabel.text isEqual:@""] )
     
-        [incompleteDeatailsAlert show];
+        [incompleteDetailsAlert show];
     
     else
     {
