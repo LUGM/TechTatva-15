@@ -30,6 +30,16 @@
 //    Load nib for DayView here.
 //    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DayView" owner:self options:nil];
     
+    self.selectedDay = @1;
+    
+    [self.daySelector removeAllSegments];
+    [self.daySelector insertSegmentWithTitle:@"DAY 1" atIndex:0 animated:NO];
+    [self.daySelector insertSegmentWithTitle:@"DAY 2" atIndex:1 animated:NO];
+    [self.daySelector insertSegmentWithTitle:@"DAY 3" atIndex:2 animated:NO];
+    [self.daySelector insertSegmentWithTitle:@"DAY 4" atIndex:3 animated:NO];
+    
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -58,7 +68,7 @@
     
     static NSString * cellIdentifier = @"Cell";
     
-    eventViewTableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    eventViewTableViewCell * cell = (eventViewTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     NSArray * nib = [[NSBundle mainBundle] loadNibNamed:@"eventViewTableViewCell" owner:self options:nil];
     
@@ -76,7 +86,9 @@
     
     cell.indexPathForCell = indexPath;
     
-    cell.eventLabel.text = @"Event Name BLA";
+    //Day is diplayed in the event name text. Later, can be used to filter out results. Just use the self.selctedDay property wisely. TEEHEE :3
+    cell.eventLabel.text =[NSString stringWithFormat:@"Event NAME %@", self.selectedDay];
+    
     cell.categoryLabel.text = @"Category Name";
     
     cell.venueLabel.text = @"304, NLH";
@@ -142,4 +154,34 @@
 }
 */
 
+- (IBAction)daySelectorIndexChanged:(id)sender
+{
+    
+    //Stting day using the segmented controller.
+    
+    switch (self.daySelector.selectedSegmentIndex)
+    {
+        case 0:
+            self.selectedDay = @1;
+            break;
+            
+        case 1:
+            self.selectedDay = @2;
+            break;
+            
+        case 2:
+            self.selectedDay = @3;
+            break;
+            
+        case 3:
+            self.selectedDay = @4;
+            break;
+            
+        default:
+            break;
+    
+    }
+    
+    [self.eventsTable reloadData];
+}
 @end

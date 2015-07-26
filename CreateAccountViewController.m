@@ -44,13 +44,13 @@
 -(void) textFieldDidBeginEditing:(UITextField *)textField
 {
     
-    
-    
-    if([textField isEqual:self.genderTextLabel])
+       if([textField isEqual:self.genderTextLabel])
     {
         [textField resignFirstResponder];
         self.activeTextField = self.genderTextLabel;
         self.activeOptionsArray = self.genderOptionsArray;
+        self.optionsPickerView.hidden = NO;
+        self.submitButtonObject.hidden = YES;
     }
     
     else if([textField isEqual:self.cityTextLabel])
@@ -58,6 +58,8 @@
         [textField resignFirstResponder];
         self.activeTextField = self.cityTextLabel;
         self.activeOptionsArray = self.cityOptionsArray;
+        self.optionsPickerView.hidden = NO;
+        self.submitButtonObject.hidden = YES;
     }
     
     else if([textField isEqual:self.collegeTextLabel])
@@ -65,19 +67,22 @@
         [textField resignFirstResponder];
         self.activeTextField = self.collegeTextLabel;
         self.activeOptionsArray = self.collegeOptionsArray;
+        self.optionsPickerView.hidden = NO;
+        self.submitButtonObject.hidden = YES;
     }
+    
     
     else if([textField isEqual:self.yearOfStudyTextLabel])
     {
         [textField resignFirstResponder];
         self.activeTextField = self.yearOfStudyTextLabel;
         self.activeOptionsArray = self.yearOfStudyOptionsArray;
+        self.optionsPickerView.hidden = NO;
+        self.submitButtonObject.hidden = YES;
     }
     
     [self.optionsPickerView reloadAllComponents];
-    self.optionsPickerView.hidden = NO;
-    self.optionsPickerView.hidden = NO;
-    self.submitButtonObject.hidden = YES;
+    
     
 }
 
@@ -169,7 +174,7 @@
         self.name = self.nameTextField.text;
         self.email = self.emailTextLabel.text;
         self.phoneNumber = self.phoneNumberTextLabel.text;
-        //DOB SAVING HERE
+        self.dateOfBirth = self.dateOfBirthTextLabel.text;
         self.city = self.cityTextLabel.text;
         self.college = self.collegeTextLabel.text;
         self.gender = self.genderTextLabel.text;
@@ -177,4 +182,5 @@
     }
         
 }
+
 @end

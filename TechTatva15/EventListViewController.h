@@ -14,5 +14,10 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *eventsTable;
 @property (weak, nonatomic) IBOutlet UISearchBar *eventsSearchBar;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *daySelector;
+
+@property (strong, nonatomic) NSNumber *selectedDay;
+
+- (IBAction)daySelectorIndexChanged:(id)sender;
 
 @end

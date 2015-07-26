@@ -22,6 +22,7 @@
 
 @property (strong, nonatomic) IBOutlet UIPickerView *optionsPickerView;
 
+
 @property (strong, nonatomic) IBOutlet UIButton *submitButtonObject;
 
 //DATA ARRAYS
@@ -45,7 +46,7 @@
 @property (strong, nonatomic) NSString *city;
 @property (strong, nonatomic) NSString *college;
 @property (strong, nonatomic) NSString *yearOfStudy;
-@property (strong, nonatomic) NSDate *dateOfBirth;
+@property (strong, nonatomic) NSString *dateOfBirth;
 
 - (IBAction)submitButtonPressed:(UIButton *)sender;
 
