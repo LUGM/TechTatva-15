@@ -27,9 +27,9 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
-                <outlet property="imageTBD" destination="K5o-Rh-h3H" id="AOq-UV-KRJ"/>
-                <outlet property="profileName" destination="li2-Rm-66h" id="hDY-Nl-6ml"/>
+                <outlet property="mainImage" destination="K5o-Rh-h3H" id="cGP-2l-dwn"/>
                 <outlet property="userImage" destination="e2O-br-FZn" id="7VD-dz-pii"/>
+                <outlet property="userName" destination="li2-Rm-66h" id="Ye4-6F-ZtS"/>
             </connections>
             <point key="canvasLocation" x="322" y="495.5"/>
         </tableViewCell>

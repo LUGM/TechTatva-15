@@ -6,6 +6,9 @@
 //  Copyright (c) 2015 AppDev. All rights reserved.
 //
 
+#define LOWRES @"low_resolution"
+#define HIGHDEF @"standard_resolution"
+
 #import "InstagramViewController.h"
 #import "InstagramCustomTableViewCell.h"
 #import "SSJSONModel.h"
@@ -14,18 +17,20 @@
 #import "UIImageView+WebCache.h"
 #import "FullScreenImageViewController.h"
 #import "PQFCirclesInTriangle.h"
+#import "Reachability.h"
 
 @interface InstagramViewController () <SSJSONModelDelegate>
 {
 
     SSJSONModel *jsonRequest;
     NSMutableArray *userArray;
-    NSMutableArray *profilePictureArray;
+    NSMutableArray *imagesArray;
     
     UITableView *instagramTable;
     UIView *background;
     
     NSIndexPath *selectedIndex;
+    NSString *imgQualityStringForUrl;
     UIRefreshControl *refreshControl;
 
 }
@@ -41,6 +46,8 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.title = @"#techtatva15";
     
     instagramTable = [[UITableView alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width-20, self.view.frame.size.height)];
     instagramTable.delegate = self;
@@ -63,6 +70,25 @@
     [self.circlesInTriangles show];
     
     [self sendDataRequest];
+    
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    [reachability startNotifier];
+    
+    NetworkStatus status = [reachability currentReachabilityStatus];
+    if (status == ReachableViaWiFi||status == ReachableViaWWAN)
+    {
+        
+        imgQualityStringForUrl = HIGHDEF;
+        
+    }
+    
+    else
+    {
+        
+        imgQualityStringForUrl = LOWRES;
+        
+    }
+
     
 }
 
@@ -97,15 +123,15 @@
     {
         
         userArray = [[NSMutableArray alloc] init];
-        profilePictureArray = [[NSMutableArray alloc] init];
+        imagesArray = [[NSMutableArray alloc]init];
         for (NSDictionary * dictionary in [dict objectForKey:@"data"])
         {
             
-            InstagramUser *user = [[InstagramUser alloc] initWithDictionary:[dictionary objectForKey:@"user"]];
+            InstagramUser * user = [[InstagramUser alloc]initWithDictionary:[dictionary objectForKey:@"user"]];
             [userArray addObject:user];
             
-            InstagramImage *image = [[InstagramImage alloc] initWithDictionary:[dictionary objectForKey:@"images"]];
-            [profilePictureArray addObject:image];
+            InstagramImage * img = [[InstagramImage alloc]initWithDictionary:[[dictionary objectForKey:@"images"] objectForKey:imgQualityStringForUrl]];
+            [imagesArray addObject:img];
             
             [refreshControl endRefreshing];
             
@@ -114,8 +140,10 @@
         }
         
         [instagramTable reloadData];
+        
         [self.circlesInTriangles hide];
         [self.circlesInTriangles remove];
+        
         [background removeFromSuperview];
         background = nil;
         
@@ -135,7 +163,7 @@
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return  userArray.count;
+    return  [userArray count];
     
 }
 
@@ -146,19 +174,20 @@
     
     InstagramCustomTableViewCell * cell = (InstagramCustomTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    if (cell==nil)
+    if (cell == nil)
     {
         
         NSArray * nib = [[NSBundle mainBundle]loadNibNamed:@"InstagramCustomCell" owner:self options:nil];
         cell = [nib objectAtIndex:0];
         
     }
-    InstagramUser * user = [userArray objectAtIndex:indexPath.row];
-    cell.profileName.text = user.profileName;
     
-    InstagramImage * img = [profilePictureArray objectAtIndex:indexPath.row];
-    [cell.imageTBD sd_setImageWithURL:[NSURL URLWithString:img.url] placeholderImage:[UIImage imageNamed:@"TTlogomain"]];
-    [cell.userImage sd_setImageWithURL:[NSURL URLWithString:user.profilePicture] placeholderImage:[UIImage imageNamed:@"TTlogomain"]];
+    InstagramUser * user = [userArray objectAtIndex:indexPath.row];
+    cell.userName.text = user.username;
+    
+    InstagramImage * img = [imagesArray objectAtIndex:indexPath.row];
+    [cell.mainImage sd_setImageWithURL:[NSURL URLWithString:img.url] placeholderImage:[UIImage imageNamed:@"TT15logomain"]];
+    [cell.userImage sd_setImageWithURL:[NSURL URLWithString:user.profile_picture] placeholderImage:[UIImage imageNamed:@"TT15logomain"]];
     
     return cell;
     
@@ -202,7 +231,7 @@
     {
         
         FullScreenImageViewController *destination = segue.destinationViewController;
-        InstagramImage * imageUrl = [profilePictureArray objectAtIndex:selectedIndex.row];
+        InstagramImage * imageUrl = [imagesArray objectAtIndex:selectedIndex.row];
         destination.requiredUrl = imageUrl.url;
         
     }

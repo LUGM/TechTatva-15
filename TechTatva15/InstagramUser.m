@@ -17,8 +17,8 @@
     if (self)
     {
         
-        _profileName = [dict objectForKey:@"username"];
-        _profilePicture = [dict objectForKey:@"profile_picture"];
+        _username = [dict objectForKey:@"username"];
+        _profile_picture = [dict objectForKey:@"profile_picture"];
     
     }
     

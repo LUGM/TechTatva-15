@@ -32,12 +32,12 @@
     
     self.optionsPickerView.hidden = YES;
     
-    self.genderOptionsArray = @[@"Male", @"Female", @"Transgender"];
-    self.yearOfStudyOptionsArray = @[@"1", @"2", @"3", @"4", @"5"];
+    self.genderOptionsArray = @[@"Male", @"Female", @"Transgender", @"Other"];
+    self.yearOfStudyOptionsArray = @[@"First Year", @"Second Year", @"Third Year", @"Fourth Year", @"Fifth Year"];
    
     //Update the following arrays from backend; The following is dummy data.
-    self.cityOptionsArray = @[@"City1", @"City2", @"City3"];
-    self.collegeOptionsArray = @[@"College1", @"College2", @"College3"];
+    self.cityOptionsArray = @[@"Mumbai", @"New Delhi", @"Manipal", @"Chennai", @"Patna", @"Hyderabad", @"Bangalore", @"Indore"];
+    self.collegeOptionsArray = @[@"MIT, Manipal", @"TAPMI, Manipal", @"WGSHA, Manipal"];
     
 }
 
@@ -162,12 +162,12 @@
 
 - (IBAction)submitButtonPressed:(UIButton *)sender
 {
-    UIAlertView *incompleteDeatailsAlert = [[UIAlertView alloc] initWithTitle:@"Incomplete Details" message:@"Please enter all the details appropriately and then continue" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
+    UIAlertView *incompleteDetailsAlert = [[UIAlertView alloc] initWithTitle:@"Incomplete Details" message:@"Please enter all the details appropriately and then continue" delegate:self cancelButtonTitle:@"Okay" otherButtonTitles: nil];
     
     
     if([self.nameTextField.text isEqual:@"" ]|| [self.emailTextLabel.text isEqual:@""] || [self.phoneNumberTextLabel.text isEqual:@""] || [self.genderTextLabel.text isEqual:@""] || [self.cityTextLabel.text isEqual:@""] || [self.collegeTextLabel.text isEqual:@""] || [self.yearOfStudyTextLabel.text isEqual:@""] )
     
-        [incompleteDeatailsAlert show];
+        [incompleteDetailsAlert show];
     
     else
     {

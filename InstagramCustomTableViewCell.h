@@ -10,8 +10,8 @@
 
 @interface InstagramCustomTableViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *imageTBD;
+@property (weak, nonatomic) IBOutlet UIImageView *mainImage;
 @property (weak, nonatomic) IBOutlet UIImageView *userImage;
-@property (weak, nonatomic) IBOutlet UILabel *profileName;
+@property (weak, nonatomic) IBOutlet UILabel *userName;
 
 @end
