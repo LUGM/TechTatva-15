@@ -12,5 +12,9 @@
 @interface CategoryEventViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *categoryEventTable;
+@property (strong, nonatomic) NSNumber *selectedDay;
+@property (strong, nonatomic) IBOutlet UISegmentedControl *daySelector;
+
+- (IBAction)daySelectorIndexChanged:(id)sender;
 
 @end

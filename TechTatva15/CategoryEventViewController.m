@@ -28,6 +28,15 @@
     //    Load nib for DayView here.
     //    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DayView" owner:self options:nil];
     
+    [self.daySelector removeAllSegments];
+    [self.daySelector insertSegmentWithTitle:@"DAY 1" atIndex:0 animated:NO];
+    [self.daySelector insertSegmentWithTitle:@"DAY 2" atIndex:1 animated:NO];
+    [self.daySelector insertSegmentWithTitle:@"DAY 3" atIndex:2 animated:NO];
+    [self.daySelector insertSegmentWithTitle:@"DAY 4" atIndex:3 animated:NO];
+    
+    self.selectedDay = @1;
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,8 +72,14 @@
     cell = [nib objectAtIndex:0];
     cell.indexPathForCell = indexPath;
     
+    //EXAMPLE OF HOW TO USE THE selectedDay property
     
-    cell.eventNameLabel.text = [NSString stringWithFormat:@"Event No. %li", ((long)indexPath.row + 1)];
+    cell.eventNameLabel.text = [NSString stringWithFormat:@"Event No. %li on day %@", ((long)indexPath.row + 1), self.selectedDay];
+    
+    
+    
+    
+    
     cell.eventDetailsTextView.text = @"Details go here";
     return cell;
     
@@ -124,4 +139,30 @@
 }
 */
 
+- (IBAction)daySelectorIndexChanged:(id)sender
+{
+    switch(self.daySelector.selectedSegmentIndex)
+    {
+        case 0:
+            self.selectedDay = @1;
+            break;
+            
+        case 1:
+            self.selectedDay = @2;
+            break;
+            
+        case 2:
+            self.selectedDay = @3;
+            break;
+            
+        case 3:
+            self.selectedDay = @4;
+            break;
+            
+        default: break;
+            
+    }
+    
+    [self.categoryEventTable reloadData];
+}
 @end
