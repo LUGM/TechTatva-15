@@ -64,11 +64,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Results" id="6j8-zJ-STw">
                         <barButtonItem key="leftBarButtonItem" id="fHr-b0-wIh"/>
-                        <barButtonItem key="rightBarButtonItem" title="Dev" width="20" id="6yr-nq-ipn">
-                            <connections>
-                                <action selector="developerDetails:" destination="BGT-Vw-D6L" id="JMU-UH-HT8"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -416,13 +411,7 @@
                             <outlet property="delegate" destination="SlK-De-5MX" id="A4p-se-BMi"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Categories" id="xgN-St-4Mx">
-                        <barButtonItem key="rightBarButtonItem" title="Dev" width="20" id="aE1-mJ-5od">
-                            <connections>
-                                <action selector="developerDetails:" destination="SlK-De-5MX" id="G69-oN-rHO"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Categories" id="xgN-St-4Mx"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>

@@ -36,7 +36,6 @@
     
     self.selectedDay = @1;
     
-    
 }
 
 - (void)didReceiveMemoryWarning {
