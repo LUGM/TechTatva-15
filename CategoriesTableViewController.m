@@ -93,12 +93,6 @@
     
 }
 
-- (IBAction)developerDetails:(UIBarButtonItem *)sender
-{
-    
-    // Segue from here to developer page.
-    
-}
 
 /*
 // Override to support conditional editing of the table view.
