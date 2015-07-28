@@ -21,8 +21,6 @@
 		182D3F4C1B56B0C80008F4BB /* InstagramUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D3F4B1B56B0C80008F4BB /* InstagramUser.m */; };
 		182D3F4F1B56B21C0008F4BB /* InstagramImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D3F4E1B56B21C0008F4BB /* InstagramImage.m */; };
 		184FF8171B484041007B8E46 /* EventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FF8161B484041007B8E46 /* EventListViewController.m */; };
-		184FF8191B484723007B8E46 /* DayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184FF8181B484723007B8E46 /* DayView.xib */; };
-		184FF81C1B48476D007B8E46 /* DayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FF81B1B48476D007B8E46 /* DayView.m */; };
 		184FF8201B484D04007B8E46 /* CategoryEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FF81F1B484D04007B8E46 /* CategoryEventViewController.m */; };
 		18ADE1781B5ECC4B00CCD46D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ADE1771B5ECC4B00CCD46D /* Reachability.m */; };
 		18B4FC561B5958A5004647DA /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4FC361B5958A5004647DA /* MKAnnotationView+WebCache.m */; };
@@ -97,9 +95,6 @@
 		182D3F4E1B56B21C0008F4BB /* InstagramImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramImage.m; path = TechTatva15/InstagramImage.m; sourceTree = "<group>"; };
 		184FF8151B484041007B8E46 /* EventListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListViewController.h; sourceTree = "<group>"; };
 		184FF8161B484041007B8E46 /* EventListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListViewController.m; sourceTree = "<group>"; };
-		184FF8181B484723007B8E46 /* DayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayView.xib; sourceTree = "<group>"; };
-		184FF81A1B48476D007B8E46 /* DayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DayView.h; sourceTree = "<group>"; };
-		184FF81B1B48476D007B8E46 /* DayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DayView.m; sourceTree = "<group>"; };
 		184FF81E1B484D04007B8E46 /* CategoryEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryEventViewController.h; sourceTree = "<group>"; };
 		184FF81F1B484D04007B8E46 /* CategoryEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryEventViewController.m; sourceTree = "<group>"; };
 		18ADE1761B5ECC4B00CCD46D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -262,17 +257,6 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		184FF81D1B484916007B8E46 /* Day Buttons */ = {
-			isa = PBXGroup;
-			children = (
-				184FF8181B484723007B8E46 /* DayView.xib */,
-				184FF81A1B48476D007B8E46 /* DayView.h */,
-				184FF81B1B48476D007B8E46 /* DayView.m */,
-			);
-			name = "Day Buttons";
-			path = ..;
-			sourceTree = "<group>";
-		};
 		18ADE1751B5ECC4B00CCD46D /* Reachability Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -407,7 +391,6 @@
 			children = (
 				18E5599E1B5EE5060004011A /* Navigation Menu View */,
 				18BF0E8F1B5579320088DA84 /* Instagram Cells */,
-				184FF81D1B484916007B8E46 /* Day Buttons */,
 				18F1BD541B3FE37900473E1A /* Event View Cells */,
 				18F1BD551B3FE38A00473E1A /* Category Event View Cells */,
 			);
@@ -526,7 +509,6 @@
 			files = (
 				18B5ECE51B23793E00055A3F /* video.mov in Resources */,
 				18BF0E8B1B5574B00088DA84 /* InstagramCustomCell.xib in Resources */,
-				184FF8191B484723007B8E46 /* DayView.xib in Resources */,
 				1822727B1B5A265200CD52B8 /* TTlogomain.jpg in Resources */,
 				4CC9F7151B3F275D002F9C1D /* CategoryTableViewCell.xib in Resources */,
 				182922281B236AFB00F95AE0 /* Main.storyboard in Resources */,
@@ -582,7 +564,6 @@
 				1829221F1B236AFB00F95AE0 /* main.m in Sources */,
 				18B4FC611B5958A5004647DA /* UIImage+MultiFormat.m in Sources */,
 				18B4FC731B5962E4004647DA /* UIColor+FlatColors.m in Sources */,
-				184FF81C1B48476D007B8E46 /* DayView.m in Sources */,
 				18B4FC721B5962E4004647DA /* PQFCirclesInTriangle.m in Sources */,
 				18ADE1781B5ECC4B00CCD46D /* Reachability.m in Sources */,
 				18B4FC591B5958A5004647DA /* SDWebImageCompat.m in Sources */,
