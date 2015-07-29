@@ -39,7 +39,7 @@
     blurView = nil;
     _navigationDropDown = nil;
     
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Explore" style:UIBarButtonItemStylePlain target:self action:@selector(loadDropDown)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Explore" style:UIBarButtonItemStylePlain target:self action:@selector(loadDropDown)];
     
     self.selectedDay = @1;
     
@@ -208,7 +208,7 @@
         [blurView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeExtraViews)]];
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"NavigationMenuView" owner:self options:nil];
         _navigationDropDown = [nib objectAtIndex:0];
-        _navigationDropDown.frame = CGRectMake(190, 74, 128, 280);
+        _navigationDropDown.frame = CGRectMake(0, 65, 128, 280);
         
         [self.view addSubview:_navigationDropDown];
         
