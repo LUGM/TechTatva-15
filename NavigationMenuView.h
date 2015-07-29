@@ -19,4 +19,6 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *profilePhotoSidebar;
 
+@property (weak, nonatomic) IBOutlet UILabel *userNameSidebar;
+
 @end

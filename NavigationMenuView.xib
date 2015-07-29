@@ -68,6 +68,7 @@
                 <outlet property="instafeedButtonPressed" destination="FMd-le-Mbv" id="vxu-M9-b4W"/>
                 <outlet property="profilePhotoSidebar" destination="xf3-rS-Hcq" id="qcd-bK-eyf"/>
                 <outlet property="resultsButtonPressed" destination="rEp-XP-QSJ" id="8g5-Xy-fGX"/>
+                <outlet property="userNameSidebar" destination="Azg-QC-f1Y" id="oBm-63-gcu"/>
             </connections>
             <point key="canvasLocation" x="975" y="10"/>
         </view>
