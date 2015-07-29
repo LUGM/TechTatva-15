@@ -14,6 +14,7 @@
 #import "ResultsViewController.h"
 #import "SSJSONModel.h"
 #import "MBProgressHUD.h"
+#import "NavigationMenuView.h"
 
 @interface ResultsViewController () <SSJSONModelDelegate>
 {
@@ -25,7 +26,11 @@
 //    NSMutableArray *searchEventResult;                                               change NSString to NSMutableArray
     
     SSJSONModel *myJsonInstance;
+    
+    UIView *blurView;
 }
+
+@property NavigationMenuView *navigationDropDown;
 
 @end
 
@@ -38,6 +43,11 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    blurView = nil;
+    _navigationDropDown = nil;
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Explore" style:UIBarButtonItemStylePlain target:self action:@selector(loadDropDown)];
     
     NSURL *resultsUrl = [NSURL URLWithString:@"http://results.techtatva.in"];              // this has to be url of results page of website
     myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
@@ -190,6 +200,110 @@
 }
 
 
+- (void) loadDropDown
+{
+    
+    if (self.navigationDropDown == nil)
+    {
+        
+        blurView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        blurView.alpha = 0.9;
+        [self.view addSubview:blurView];
+        [blurView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeExtraViews)]];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"NavigationMenuView" owner:self options:nil];
+        _navigationDropDown = [nib objectAtIndex:0];
+        _navigationDropDown.frame = CGRectMake(190, 74, 128, 280);
+        
+        [self.view addSubview:_navigationDropDown];
+        
+        [_navigationDropDown.categoryButtonPressed addTarget:self action:@selector(categoryButton) forControlEvents:UIControlEventTouchUpInside];
+        [_navigationDropDown.eventButtonPressed addTarget:self action:@selector(eventButton) forControlEvents:UIControlEventTouchUpInside];
+        [_navigationDropDown.favouritesButtonPressed addTarget:self action:@selector(favouritesButton) forControlEvents:UIControlEventTouchUpInside];
+        [_navigationDropDown.resultsButtonPressed addTarget:self action:@selector(resultsButton) forControlEvents:UIControlEventTouchUpInside];
+        [_navigationDropDown.instafeedButtonPressed addTarget:self action:@selector(instafeedButton) forControlEvents:UIControlEventTouchUpInside];
+        [_navigationDropDown.aboutUsButtonPressed addTarget:self action:@selector(aboutUsButton) forControlEvents:UIControlEventTouchUpInside];
+        
+    }
+    
+}
+
+- (void) categoryButton
+{
+    [self.navigationDropDown removeFromSuperview];
+    self.navigationDropDown = nil;
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *resultsViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"categoryView"];
+    [self presentViewController:resultsViewController animated:YES completion:nil];
+    
+}
+
+- (void) eventButton
+{
+    [self.navigationDropDown removeFromSuperview];
+    self.navigationDropDown = nil;
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *resultsViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"eventView"];
+    [self presentViewController:resultsViewController animated:YES completion:nil];
+    
+}
+
+- (void) favouritesButton
+{
+    [self.navigationDropDown removeFromSuperview];
+    self.navigationDropDown = nil;
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *resultsViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"favouritesView"];
+    [self presentViewController:resultsViewController animated:YES completion:nil];
+    
+}
+
+- (void) resultsButton
+{
+    [self.navigationDropDown removeFromSuperview];
+    self.navigationDropDown = nil;
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *resultsViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"resultsView"];
+    [self presentViewController:resultsViewController animated:YES completion:nil];
+    
+}
+
+- (void) instafeedButton
+{
+    
+    [self.navigationDropDown removeFromSuperview];
+    self.navigationDropDown = nil;
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *resultsViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"instagramView"];
+    [self presentViewController:resultsViewController animated:YES completion:nil];
+    
+}
+
+- (void) aboutUsButton
+{
+    
+    [self.navigationDropDown removeFromSuperview];
+    self.navigationDropDown = nil;
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *resultsViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"aboutUsView"];
+    [self presentViewController:resultsViewController animated:YES completion:nil];
+    
+}
+
+- (void) removeExtraViews
+{
+    
+    [blurView removeFromSuperview];
+    [_navigationDropDown removeFromSuperview];
+    blurView = nil;
+    _navigationDropDown = nil;
+    
+}
 
 // In this method, find a way to loop over particularEventResults array together with eventNames array
 // What is to be done is that if event 3 of eventNames array is stored in event 2 of searchResults array, object 3 of particularEventResults array should be stored as object 2 of searchEventResult array

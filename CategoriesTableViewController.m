@@ -7,6 +7,7 @@
 //
 
 #import "CategoriesTableViewController.h"
+#import "NavigationMenuView.h"
 
 @interface CategoriesTableViewController ()
 {
@@ -14,7 +15,11 @@
     NSArray *categoriesArray;
     // NSArray *imagesArray;
     
+    UIView *blurView;
+    
 }
+
+@property NavigationMenuView *navigationDropDown;
 
 @end
 
@@ -28,8 +33,10 @@
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    blurView = nil;
+    _navigationDropDown = nil;
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Explore" style:UIBarButtonItemStylePlain target:self action:@selector(loadDropDown)];
     
     categoriesTable = [[UITableView alloc] init];
     categoriesTable.delegate = self;
@@ -90,6 +97,111 @@
 {
     
     return 50;          // check wanted cell size
+    
+}
+
+- (void) loadDropDown
+{
+    
+    if (self.navigationDropDown == nil)
+    {
+        
+        blurView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        blurView.alpha = 0.9;
+        [self.view addSubview:blurView];
+        [blurView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeExtraViews)]];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"NavigationMenuView" owner:self options:nil];
+        _navigationDropDown = [nib objectAtIndex:0];
+        _navigationDropDown.frame = CGRectMake(190, 74, 128, 280);
+        
+        [self.view addSubview:_navigationDropDown];
+        
+        [_navigationDropDown.categoryButtonPressed addTarget:self action:@selector(categoryButton) forControlEvents:UIControlEventTouchUpInside];
+        [_navigationDropDown.eventButtonPressed addTarget:self action:@selector(eventButton) forControlEvents:UIControlEventTouchUpInside];
+        [_navigationDropDown.favouritesButtonPressed addTarget:self action:@selector(favouritesButton) forControlEvents:UIControlEventTouchUpInside];
+        [_navigationDropDown.resultsButtonPressed addTarget:self action:@selector(resultsButton) forControlEvents:UIControlEventTouchUpInside];
+        [_navigationDropDown.instafeedButtonPressed addTarget:self action:@selector(instafeedButton) forControlEvents:UIControlEventTouchUpInside];
+        [_navigationDropDown.aboutUsButtonPressed addTarget:self action:@selector(aboutUsButton) forControlEvents:UIControlEventTouchUpInside];
+        
+    }
+    
+}
+
+- (void) categoryButton
+{
+    [self.navigationDropDown removeFromSuperview];
+    self.navigationDropDown = nil;
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *categoriestableViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"categoryView"];
+    [self presentViewController:categoriestableViewController animated:YES completion:nil];
+    
+}
+
+- (void) eventButton
+{
+    [self.navigationDropDown removeFromSuperview];
+    self.navigationDropDown = nil;
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *categoriestableViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"eventView"];
+    [self presentViewController:categoriestableViewController animated:YES completion:nil];
+    
+}
+
+- (void) favouritesButton
+{
+    [self.navigationDropDown removeFromSuperview];
+    self.navigationDropDown = nil;
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *categoriestableViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"favouritesView"];
+    [self presentViewController:categoriestableViewController animated:YES completion:nil];
+    
+}
+
+- (void) resultsButton
+{
+    [self.navigationDropDown removeFromSuperview];
+    self.navigationDropDown = nil;
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *categoriestableViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"resultsView"];
+    [self presentViewController:categoriestableViewController animated:YES completion:nil];
+    
+}
+
+- (void) instafeedButton
+{
+    
+    [self.navigationDropDown removeFromSuperview];
+    self.navigationDropDown = nil;
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *categoriestableViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"instagramView"];
+    [self presentViewController:categoriestableViewController animated:YES completion:nil];
+    
+}
+
+- (void) aboutUsButton
+{
+    
+    [self.navigationDropDown removeFromSuperview];
+    self.navigationDropDown = nil;
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *categoriestableViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"aboutUsView"];
+    [self presentViewController:categoriestableViewController animated:YES completion:nil];
+    
+}
+
+- (void) removeExtraViews
+{
+    
+    [blurView removeFromSuperview];
+    [_navigationDropDown removeFromSuperview];
+    blurView = nil;
+    _navigationDropDown = nil;
     
 }
 

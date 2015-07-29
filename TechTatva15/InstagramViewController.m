@@ -18,6 +18,7 @@
 #import "FullScreenImageViewController.h"
 #import "PQFCirclesInTriangle.h"
 #import "Reachability.h"
+#import "NavigationMenuView.h"
 
 @interface InstagramViewController () <SSJSONModelDelegate>
 {
@@ -28,6 +29,7 @@
     
     UITableView *instagramTable;
     UIView *background;
+    UIView *blurView;
     
     NSIndexPath *selectedIndex;
     NSString *imgQualityStringForUrl;
@@ -36,6 +38,8 @@
 }
 
 @property (nonatomic, strong) PQFCirclesInTriangle *circlesInTriangles;
+
+@property NavigationMenuView *navigationDropDown;
 
 @end
 
@@ -48,6 +52,11 @@
     // Do any additional setup after loading the view.
     
     self.title = @"#techtatva15";
+    
+    blurView = nil;
+    _navigationDropDown = nil;
+    
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Explore" style:UIBarButtonItemStylePlain target:self action:@selector(loadDropDown)];
     
     instagramTable = [[UITableView alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width-20, self.view.frame.size.height)];
     instagramTable.delegate = self;
@@ -236,6 +245,111 @@
         
     }
 
+}
+
+- (void) loadDropDown
+{
+    
+    if (self.navigationDropDown == nil)
+    {
+        
+        blurView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        blurView.alpha = 0.9;
+        [self.view addSubview:blurView];
+        [blurView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeExtraViews)]];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"NavigationMenuView" owner:self options:nil];
+        _navigationDropDown = [nib objectAtIndex:0];
+        _navigationDropDown.frame = CGRectMake(190, 74, 128, 280);
+        
+        [self.view addSubview:_navigationDropDown];
+        
+        [_navigationDropDown.categoryButtonPressed addTarget:self action:@selector(categoryButton) forControlEvents:UIControlEventTouchUpInside];
+        [_navigationDropDown.eventButtonPressed addTarget:self action:@selector(eventButton) forControlEvents:UIControlEventTouchUpInside];
+        [_navigationDropDown.favouritesButtonPressed addTarget:self action:@selector(favouritesButton) forControlEvents:UIControlEventTouchUpInside];
+        [_navigationDropDown.resultsButtonPressed addTarget:self action:@selector(resultsButton) forControlEvents:UIControlEventTouchUpInside];
+        [_navigationDropDown.instafeedButtonPressed addTarget:self action:@selector(instafeedButton) forControlEvents:UIControlEventTouchUpInside];
+        [_navigationDropDown.aboutUsButtonPressed addTarget:self action:@selector(aboutUsButton) forControlEvents:UIControlEventTouchUpInside];
+        
+    }
+    
+}
+
+- (void) categoryButton
+{
+    [self.navigationDropDown removeFromSuperview];
+    self.navigationDropDown = nil;
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *instagramViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"categoryView"];
+    [self presentViewController:instagramViewController animated:YES completion:nil];
+    
+}
+
+- (void) eventButton
+{
+    [self.navigationDropDown removeFromSuperview];
+    self.navigationDropDown = nil;
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *instagramViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"eventView"];
+    [self presentViewController:instagramViewController animated:YES completion:nil];
+    
+}
+
+- (void) favouritesButton
+{
+    [self.navigationDropDown removeFromSuperview];
+    self.navigationDropDown = nil;
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *instagramViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"favouritesView"];
+    [self presentViewController:instagramViewController animated:YES completion:nil];
+    
+}
+
+- (void) resultsButton
+{
+    [self.navigationDropDown removeFromSuperview];
+    self.navigationDropDown = nil;
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *instagramViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"resultsView"];
+    [self presentViewController:instagramViewController animated:YES completion:nil];
+    
+}
+
+- (void) instafeedButton
+{
+    
+    [self.navigationDropDown removeFromSuperview];
+    self.navigationDropDown = nil;
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *instagramViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"instagramView"];
+    [self presentViewController:instagramViewController animated:YES completion:nil];
+    
+}
+
+- (void) aboutUsButton
+{
+    
+    [self.navigationDropDown removeFromSuperview];
+    self.navigationDropDown = nil;
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *instagramViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"aboutUsView"];
+    [self presentViewController:instagramViewController animated:YES completion:nil];
+    
+}
+
+- (void) removeExtraViews
+{
+    
+    [blurView removeFromSuperview];
+    [_navigationDropDown removeFromSuperview];
+    blurView = nil;
+    _navigationDropDown = nil;
+    
 }
 
 /*

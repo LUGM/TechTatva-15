@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bos-KZ-9tR">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aeG-YH-oa6">
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
@@ -78,7 +78,7 @@
         <!--Navigation Controller-->
         <scene sceneID="CYm-qe-449">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Aso-tL-rO9" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="resultsView" automaticallyAdjustsScrollViewInsets="NO" id="Aso-tL-rO9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -533,7 +533,7 @@
         <!--Navigation Controller-->
         <scene sceneID="CT7-Nq-mM9">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pR4-NR-Phw" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="categoryView" automaticallyAdjustsScrollViewInsets="NO" id="pR4-NR-Phw" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -553,7 +553,7 @@
         <!--Navigation Controller-->
         <scene sceneID="fLi-B5-eTm">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bos-KZ-9tR" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="eventView" automaticallyAdjustsScrollViewInsets="NO" id="bos-KZ-9tR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CHq-av-NdE">
@@ -591,7 +591,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Yut-QA-KSv">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aeG-YH-oa6" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="instagramView" automaticallyAdjustsScrollViewInsets="NO" id="aeG-YH-oa6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yIM-or-PEm">
