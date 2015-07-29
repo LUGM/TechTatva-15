@@ -8,45 +8,54 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="FRa-SY-Ky0" customClass="NavigationMenuView">
-            <rect key="frame" x="0.0" y="0.0" width="126" height="280"/>
+            <rect key="frame" x="0.0" y="0.0" width="170" height="602"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oM8-zs-J3b">
-                    <rect key="frame" x="0.0" y="48" width="125" height="40"/>
+                    <rect key="frame" x="0.0" y="357" width="170" height="40"/>
                     <state key="normal" title="Events">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVA-Pg-2yr">
-                    <rect key="frame" x="0.0" y="0.0" width="125" height="40"/>
+                    <rect key="frame" x="0.0" y="309" width="170" height="40"/>
                     <state key="normal" title="Categories">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEp-XP-QSJ">
-                    <rect key="frame" x="0.0" y="144" width="125" height="40"/>
+                    <rect key="frame" x="0.0" y="453" width="170" height="40"/>
                     <state key="normal" title="Results">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8z-V9-Dot">
-                    <rect key="frame" x="0.0" y="240" width="125" height="40"/>
+                    <rect key="frame" x="0.0" y="549" width="170" height="40"/>
                     <state key="normal" title="About Us">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phW-5A-fjT">
-                    <rect key="frame" x="0.0" y="96" width="125" height="40"/>
+                    <rect key="frame" x="0.0" y="405" width="170" height="40"/>
                     <state key="normal" title="Favourites">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMd-le-Mbv">
-                    <rect key="frame" x="0.0" y="192" width="125" height="40"/>
+                    <rect key="frame" x="0.0" y="501" width="170" height="40"/>
                     <state key="normal" title="InstaFeed">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xf3-rS-Hcq">
+                    <rect key="frame" x="30" y="35" width="110" height="123"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azg-QC-f1Y">
+                    <rect key="frame" x="30" y="217" width="110" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <nil key="simulatedStatusBarMetrics"/>
@@ -57,9 +66,10 @@
                 <outlet property="eventButtonPressed" destination="oM8-zs-J3b" id="mie-Ge-6ld"/>
                 <outlet property="favouritesButtonPressed" destination="phW-5A-fjT" id="w8a-14-Xlf"/>
                 <outlet property="instafeedButtonPressed" destination="FMd-le-Mbv" id="vxu-M9-b4W"/>
+                <outlet property="profilePhotoSidebar" destination="xf3-rS-Hcq" id="qcd-bK-eyf"/>
                 <outlet property="resultsButtonPressed" destination="rEp-XP-QSJ" id="8g5-Xy-fGX"/>
             </connections>
-            <point key="canvasLocation" x="953" y="164"/>
+            <point key="canvasLocation" x="975" y="10"/>
         </view>
     </objects>
 </document>

@@ -112,7 +112,7 @@
         [blurView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeExtraViews)]];
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"NavigationMenuView" owner:self options:nil];
         _navigationDropDown = [nib objectAtIndex:0];
-        _navigationDropDown.frame = CGRectMake(0, 0, 128, 280);
+        _navigationDropDown.frame = CGRectMake(0, 0, 170, 602);
         
         [self.view addSubview:_navigationDropDown];
         
