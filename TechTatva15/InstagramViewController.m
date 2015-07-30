@@ -276,28 +276,63 @@
 
 - (void) categoryButton
 {
-    [self.navigationDropDown removeFromSuperview];
-    self.navigationDropDown = nil;
     
-    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    UINavigationController *instagramViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"categoryView"];
-    [self presentViewController:instagramViewController animated:YES completion:nil];
+    if (![self isInternetAvailable])
+    {
+        
+        UIAlertView *categoryViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable"
+                                                                              message:@"Please recheck connection"
+                                                                             delegate:self
+                                                                    cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [categoryViewConnectionAlert show];
+        
+    }
+    
+    else
+    {
+        
+        [self.navigationDropDown removeFromSuperview];
+        self.navigationDropDown = nil;
+        
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController *instagramViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"categoryView"];
+        [self presentViewController:instagramViewController animated:YES completion:nil];
+        
+    }
     
 }
 
 - (void) eventButton
 {
-    [self.navigationDropDown removeFromSuperview];
-    self.navigationDropDown = nil;
     
-    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    UINavigationController *instagramViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"eventView"];
-    [self presentViewController:instagramViewController animated:YES completion:nil];
+    if (![self isInternetAvailable])
+    {
+        
+        UIAlertView *eventViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable"
+                                                                           message:@"Please recheck connection"
+                                                                          delegate:self
+                                                                 cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [eventViewConnectionAlert show];
+        
+    }
+    
+    else
+    {
+        
+        [self.navigationDropDown removeFromSuperview];
+        self.navigationDropDown = nil;
+        
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController *instagramViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"eventView"];
+        [self presentViewController:instagramViewController animated:YES completion:nil];
+        
+    }
     
 }
 
 - (void) favouritesButton
 {
+    
     [self.navigationDropDown removeFromSuperview];
     self.navigationDropDown = nil;
     
@@ -309,24 +344,57 @@
 
 - (void) resultsButton
 {
-    [self.navigationDropDown removeFromSuperview];
-    self.navigationDropDown = nil;
     
-    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    UINavigationController *instagramViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"resultsView"];
-    [self presentViewController:instagramViewController animated:YES completion:nil];
+    if (![self isInternetAvailable])
+    {
+        
+        UIAlertView *resultsViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable"
+                                                                             message:@"Please recheck connection"
+                                                                            delegate:self
+                                                                   cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [resultsViewConnectionAlert show];
+        
+    }
+    
+    else
+    {
+        
+        [self.navigationDropDown removeFromSuperview];
+        self.navigationDropDown = nil;
+        
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController *instagramViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"resultsView"];
+        [self presentViewController:instagramViewController animated:YES completion:nil];
+        
+    }
     
 }
 
 - (void) instafeedButton
 {
     
-    [self.navigationDropDown removeFromSuperview];
-    self.navigationDropDown = nil;
+    if (![self isInternetAvailable])
+    {
+        
+        UIAlertView *instagramViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable"
+                                                                               message:@"Please recheck connection"
+                                                                              delegate:self
+                                                                     cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [instagramViewConnectionAlert show];
+        
+    }
     
-    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    UINavigationController *instagramViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"instagramView"];
-    [self presentViewController:instagramViewController animated:YES completion:nil];
+    else
+    {
+        
+        [self.navigationDropDown removeFromSuperview];
+        self.navigationDropDown = nil;
+        
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController *instagramViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"instagramView"];
+        [self presentViewController:instagramViewController animated:YES completion:nil];
+        
+    }
     
 }
 
@@ -349,6 +417,17 @@
     [_navigationDropDown removeFromSuperview];
     blurView = nil;
     _navigationDropDown = nil;
+    
+}
+
+# pragma mark Connection Check
+
+- (BOOL) isInternetAvailable
+{
+    
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [reachability currentReachabilityStatus];
+    return !(networkStatus == NotReachable);
     
 }
 

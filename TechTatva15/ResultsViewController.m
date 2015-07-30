@@ -15,6 +15,7 @@
 #import "SSJSONModel.h"
 #import "MBProgressHUD.h"
 #import "NavigationMenuView.h"
+#import "Reachability.h"
 
 @interface ResultsViewController () <SSJSONModelDelegate>
 {
@@ -229,28 +230,63 @@
 
 - (void) categoryButton
 {
-    [self.navigationDropDown removeFromSuperview];
-    self.navigationDropDown = nil;
     
-    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    UINavigationController *resultsViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"categoryView"];
-    [self presentViewController:resultsViewController animated:YES completion:nil];
+    if (![self isInternetAvailable])
+    {
+        
+        UIAlertView *categoryViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable"
+                                                                              message:@"Please recheck connection"
+                                                                             delegate:self
+                                                                    cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [categoryViewConnectionAlert show];
+        
+    }
+    
+    else
+    {
+        
+        [self.navigationDropDown removeFromSuperview];
+        self.navigationDropDown = nil;
+        
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController *resultsViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"categoryView"];
+        [self presentViewController:resultsViewController animated:YES completion:nil];
+        
+    }
     
 }
 
 - (void) eventButton
 {
-    [self.navigationDropDown removeFromSuperview];
-    self.navigationDropDown = nil;
     
-    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    UINavigationController *resultsViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"eventView"];
-    [self presentViewController:resultsViewController animated:YES completion:nil];
+    if (![self isInternetAvailable])
+    {
+        
+        UIAlertView *eventViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable"
+                                                                           message:@"Please recheck connection"
+                                                                          delegate:self
+                                                                 cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [eventViewConnectionAlert show];
+        
+    }
+    
+    else
+    {
+        
+        [self.navigationDropDown removeFromSuperview];
+        self.navigationDropDown = nil;
+        
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController *resultsViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"eventView"];
+        [self presentViewController:resultsViewController animated:YES completion:nil];
+        
+    }
     
 }
 
 - (void) favouritesButton
 {
+    
     [self.navigationDropDown removeFromSuperview];
     self.navigationDropDown = nil;
     
@@ -262,24 +298,57 @@
 
 - (void) resultsButton
 {
-    [self.navigationDropDown removeFromSuperview];
-    self.navigationDropDown = nil;
     
-    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    UINavigationController *resultsViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"resultsView"];
-    [self presentViewController:resultsViewController animated:YES completion:nil];
+    if (![self isInternetAvailable])
+    {
+        
+        UIAlertView *resultsViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable"
+                                                                             message:@"Please recheck connection"
+                                                                            delegate:self
+                                                                   cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [resultsViewConnectionAlert show];
+        
+    }
+    
+    else
+    {
+        
+        [self.navigationDropDown removeFromSuperview];
+        self.navigationDropDown = nil;
+        
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController *resultsViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"resultsView"];
+        [self presentViewController:resultsViewController animated:YES completion:nil];
+        
+    }
     
 }
 
 - (void) instafeedButton
 {
     
-    [self.navigationDropDown removeFromSuperview];
-    self.navigationDropDown = nil;
+    if (![self isInternetAvailable])
+    {
+        
+        UIAlertView *instagramViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable"
+                                                                               message:@"Please recheck connection"
+                                                                              delegate:self
+                                                                     cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [instagramViewConnectionAlert show];
+        
+    }
     
-    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    UINavigationController *resultsViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"instagramView"];
-    [self presentViewController:resultsViewController animated:YES completion:nil];
+    else
+    {
+        
+        [self.navigationDropDown removeFromSuperview];
+        self.navigationDropDown = nil;
+        
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController *resultsViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"instagramView"];
+        [self presentViewController:resultsViewController animated:YES completion:nil];
+        
+    }
     
 }
 
@@ -304,6 +373,18 @@
     _navigationDropDown = nil;
     
 }
+
+# pragma mark Connection Check
+
+- (BOOL) isInternetAvailable
+{
+    
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [reachability currentReachabilityStatus];
+    return !(networkStatus == NotReachable);
+    
+}
+
 
 // In this method, find a way to loop over particularEventResults array together with eventNames array
 // What is to be done is that if event 3 of eventNames array is stored in event 2 of searchResults array, object 3 of particularEventResults array should be stored as object 2 of searchEventResult array

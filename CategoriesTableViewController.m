@@ -6,16 +6,21 @@
 //  Copyright (c) 2015 AppDev. All rights reserved.
 //
 
+
+// When data from APIs is ready to be loaded, uncomment the required commented lines.
+
+
 #import "CategoriesTableViewController.h"
 #import "NavigationMenuView.h"
 #import "SSJSONModel.h"
 #import "MBProgressHUD.h"
+#import "Reachability.h"
 
 @interface CategoriesTableViewController () <SSJSONModelDelegate>
 {
     
     NSArray *json;
-//  NSArray *categoriesArray;
+    NSArray *categoriesArray;
 //  NSArray *imagesArray;
     
     SSJSONModel *myJsonInstance;
@@ -51,14 +56,14 @@
     categoriesTable.delegate = self;
     categoriesTable.dataSource = self;
     
-//  categoriesArray = @[@"Acumen", @"Airborne", @"Alacrity", @"Bizzmaestro", @"Cheminova", @"Constructure", @"Cryptoss", @"Electrific", @"Energia", @"Epsilon", @"Kraftwagen", @"Mechanize", @"Mechatron", @"Robotrek", @"Turing"];
+    categoriesArray = @[@"Acumen", @"Airborne", @"Alacrity", @"Bizzmaestro", @"Cheminova", @"Constructure", @"Cryptoss", @"Electrific", @"Energia", @"Epsilon", @"Kraftwagen", @"Mechanize", @"Mechatron", @"Robotrek", @"Turing"];
     
-//  imagesArray = @[""];     category image names to be entered in same order as categories named in array
+//    imagesArray = @[""];     category image names to be entered in same order as categories named in array
     
-    NSURL *categoriesUrl = [NSURL URLWithString:@"http://api.techtatva.in/categories"];
-    myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
-    [myJsonInstance sendRequestWithUrl:categoriesUrl];
-    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+//    NSURL *categoriesUrl = [NSURL URLWithString:@"http://api.techtatva.in/categories"];
+//    myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
+//    [myJsonInstance sendRequestWithUrl:categoriesUrl];
+//    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     
 }
 
@@ -81,9 +86,9 @@
 {
 
     // Return the number of rows in the section.
-    return json.count;
+//    return json.count;
     
-//  return [categoriesArray count];
+  return [categoriesArray count];
     
 }
 
@@ -101,10 +106,10 @@
         
     }
     
-    cell.textLabel.text = [categoryNames objectAtIndex:indexPath.row];
+//    cell.textLabel.text = [categoryNames objectAtIndex:indexPath.row];
     
-//  cell.textLabel.text = [categoriesArray objectAtIndex:indexPath.row];
-//  cell.imageView.image = [UIImage imageNamed:[imagesArray objectAtIndex:indexPath.row]];
+    cell.textLabel.text = [categoriesArray objectAtIndex:indexPath.row];
+//    cell.imageView.image = [UIImage imageNamed:[imagesArray objectAtIndex:indexPath.row]];
     
     return cell;
     
@@ -188,28 +193,63 @@
 
 - (void) categoryButton
 {
-    [self.navigationDropDown removeFromSuperview];
-    self.navigationDropDown = nil;
     
-    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    UINavigationController *categoriestableViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"categoryView"];
-    [self presentViewController:categoriestableViewController animated:YES completion:nil];
+    if (![self isInternetAvailable])
+    {
+        
+        UIAlertView *categoryViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable"
+                                                                              message:@"Please recheck connection"
+                                                                             delegate:self
+                                                                    cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [categoryViewConnectionAlert show];
+        
+    }
+    
+    else
+    {
+        
+        [self.navigationDropDown removeFromSuperview];
+        self.navigationDropDown = nil;
+        
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController *categoriestableViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"categoryView"];
+        [self presentViewController:categoriestableViewController animated:YES completion:nil];
+        
+    }
     
 }
 
 - (void) eventButton
 {
-    [self.navigationDropDown removeFromSuperview];
-    self.navigationDropDown = nil;
     
-    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    UINavigationController *categoriestableViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"eventView"];
-    [self presentViewController:categoriestableViewController animated:YES completion:nil];
+    if (![self isInternetAvailable])
+    {
+        
+        UIAlertView *eventViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable"
+                                                                           message:@"Please recheck connection"
+                                                                          delegate:self
+                                                                 cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [eventViewConnectionAlert show];
+        
+    }
+    
+    else
+    {
+        
+        [self.navigationDropDown removeFromSuperview];
+        self.navigationDropDown = nil;
+        
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController *categoriestableViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"eventView"];
+        [self presentViewController:categoriestableViewController animated:YES completion:nil];
+        
+    }
     
 }
 
 - (void) favouritesButton
 {
+    
     [self.navigationDropDown removeFromSuperview];
     self.navigationDropDown = nil;
     
@@ -221,24 +261,56 @@
 
 - (void) resultsButton
 {
-    [self.navigationDropDown removeFromSuperview];
-    self.navigationDropDown = nil;
     
-    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    UINavigationController *categoriestableViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"resultsView"];
-    [self presentViewController:categoriestableViewController animated:YES completion:nil];
+    if (![self isInternetAvailable])
+    {
+        
+        UIAlertView *resultsViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable"
+                                                                             message:@"Please recheck connection"
+                                                                            delegate:self
+                                                                   cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [resultsViewConnectionAlert show];
+        
+    }
+    
+    else
+    {
+        
+        [self.navigationDropDown removeFromSuperview];
+        self.navigationDropDown = nil;
+        
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController *categoriestableViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"resultsView"];
+        [self presentViewController:categoriestableViewController animated:YES completion:nil];
+        
+    }
     
 }
 
 - (void) instafeedButton
 {
+    if (![self isInternetAvailable])
+    {
+        
+        UIAlertView *instagramViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable"
+                                                                               message:@"Please recheck connection"
+                                                                              delegate:self
+                                                                     cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [instagramViewConnectionAlert show];
+        
+    }
     
-    [self.navigationDropDown removeFromSuperview];
-    self.navigationDropDown = nil;
-    
-    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    UINavigationController *categoriestableViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"instagramView"];
-    [self presentViewController:categoriestableViewController animated:YES completion:nil];
+    else
+    {
+        
+        [self.navigationDropDown removeFromSuperview];
+        self.navigationDropDown = nil;
+        
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController *categoriestableViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"instagramView"];
+        [self presentViewController:categoriestableViewController animated:YES completion:nil];
+        
+    }
     
 }
 
@@ -261,6 +333,17 @@
     [_navigationDropDown removeFromSuperview];
     blurView = nil;
     _navigationDropDown = nil;
+    
+}
+
+# pragma mark Connection Check
+
+- (BOOL) isInternetAvailable
+{
+    
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [reachability currentReachabilityStatus];
+    return !(networkStatus == NotReachable);
     
 }
 
