@@ -8,12 +8,21 @@
 
 #import "CategoriesTableViewController.h"
 #import "NavigationMenuView.h"
+#import "SSJSONModel.h"
+#import "MBProgressHUD.h"
 
-@interface CategoriesTableViewController ()
+@interface CategoriesTableViewController () <SSJSONModelDelegate>
 {
     
+    NSArray *json;
     NSArray *categoriesArray;
     // NSArray *imagesArray;
+    
+    SSJSONModel *myJsonInstance;
+    
+    NSMutableArray *categoryNames;
+    NSMutableArray *categoryDescriptions;
+    NSMutableArray *categoryCodes;
     
     UIView *blurView;
     
@@ -46,6 +55,11 @@
     
     // imagesArray = @[""];     category image names to be entered in same order as categories named in array
     
+    NSURL *categoriesUrl = [NSURL URLWithString:@"http://api.techtatva.in/categories"];
+    myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
+    [myJsonInstance sendRequestWithUrl:categoriesUrl];
+    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -67,7 +81,7 @@
 {
 
     // Return the number of rows in the section.
-    return [categoriesArray count];
+    return json.count;
     
 }
 
@@ -85,7 +99,7 @@
         
     }
     
-    cell.textLabel.text = [categoriesArray objectAtIndex:indexPath.row];
+    cell.textLabel.text = [categoryNames objectAtIndex:indexPath.row];
     
     // cell.imageView.image = [UIImage imageNamed:[imagesArray objectAtIndex:indexPath.row]];
     
@@ -99,6 +113,48 @@
     return 50;          // check wanted cell size
     
 }
+
+- (IBAction)categoryInfoButton:(UIButton *)sender
+{
+    
+    UIAlertView *categoryDetails = [[UIAlertView alloc] initWithTitle:@"Details" message:@"[categoryDetails objectAtIndex:indexPath.row]" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [categoryDetails show];
+    
+}
+
+
+# pragma mark Data Helper Methods
+
+- (void)jsonRequestDidCompleteWithDict:(id)response model:(SSJSONModel *)JSONModel
+{
+    
+    if (JSONModel == myJsonInstance)
+    {
+        
+        NSLog(@"%@",myJsonInstance.parsedJsonData);
+        json = myJsonInstance.parsedJsonData;
+        categoryNames =[NSMutableArray new];
+        categoryCodes = [NSMutableArray new];
+        categoryDescriptions = [NSMutableArray new];
+        
+        for (NSDictionary * dict in json)
+        {
+            
+            [categoryNames addObject:[dict objectForKey:@"category"]];
+            [categoryCodes addObject:[dict objectForKey:@"description"]];
+            [categoryDescriptions addObject:[dict objectForKey:@"category_code"]];
+            
+            [categoriesTable reloadData];
+            
+        }
+        
+        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+        
+    }
+    
+}
+
+# pragma mark Sidebar Methods
 
 - (void) loadDropDown
 {
@@ -204,7 +260,6 @@
     _navigationDropDown = nil;
     
 }
-
 
 /*
 // Override to support conditional editing of the table view.

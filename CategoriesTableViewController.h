@@ -14,4 +14,7 @@
     UITableView *categoriesTable;
     
 }
+
+- (IBAction)categoryInfoButton:(UIButton *)sender;
+
 @end
