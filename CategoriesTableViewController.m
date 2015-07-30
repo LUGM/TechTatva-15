@@ -15,8 +15,8 @@
 {
     
     NSArray *json;
-    NSArray *categoriesArray;
-    // NSArray *imagesArray;
+//  NSArray *categoriesArray;
+//  NSArray *imagesArray;
     
     SSJSONModel *myJsonInstance;
     
@@ -51,9 +51,9 @@
     categoriesTable.delegate = self;
     categoriesTable.dataSource = self;
     
-    categoriesArray = @[@"Acumen", @"Airborne", @"Alacrity", @"Bizzmaestro", @"Cheminova", @"Constructure", @"Cryptoss", @"Electrific", @"Energia", @"Epsilon", @"Kraftwagen", @"Mechanize", @"Mechatron", @"Robotrek", @"Turing"];
+//  categoriesArray = @[@"Acumen", @"Airborne", @"Alacrity", @"Bizzmaestro", @"Cheminova", @"Constructure", @"Cryptoss", @"Electrific", @"Energia", @"Epsilon", @"Kraftwagen", @"Mechanize", @"Mechatron", @"Robotrek", @"Turing"];
     
-    // imagesArray = @[""];     category image names to be entered in same order as categories named in array
+//  imagesArray = @[""];     category image names to be entered in same order as categories named in array
     
     NSURL *categoriesUrl = [NSURL URLWithString:@"http://api.techtatva.in/categories"];
     myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
@@ -83,6 +83,8 @@
     // Return the number of rows in the section.
     return json.count;
     
+//  return [categoriesArray count];
+    
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -101,7 +103,8 @@
     
     cell.textLabel.text = [categoryNames objectAtIndex:indexPath.row];
     
-    // cell.imageView.image = [UIImage imageNamed:[imagesArray objectAtIndex:indexPath.row]];
+//  cell.textLabel.text = [categoriesArray objectAtIndex:indexPath.row];
+//  cell.imageView.image = [UIImage imageNamed:[imagesArray objectAtIndex:indexPath.row]];
     
     return cell;
     
