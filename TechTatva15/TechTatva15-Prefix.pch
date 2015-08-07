@@ -1,0 +1,34 @@
+//
+//  TechTatva15-Prefix.pch
+//  TechTatva15
+//
+//  Created by YASH on 08/08/15.
+//  Copyright (c) 2015 AppDev. All rights reserved.
+//
+
+#import "CreateAccountViewController.h"
+#import "CategoriesTableViewController.h"
+#import "CategoryEventViewController.h"
+#import "InstagramViewController.h"
+#import "FullScreenImageViewController.h"
+#import "FirstLoginViewController.h"
+#import "ResultsViewController.h"
+#import "EventListViewController.h"
+
+#ifndef TechTatva15_TechTatva15_Prefix_pch
+#define TechTatva15_TechTatva15_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+
+#endif
+
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "TechTatva15Macro.h"
+
+#endif

@@ -129,21 +129,16 @@
 - (IBAction)categoryInfoButton:(UIButton *)sender
 {
     
-    UIAlertView *categoryDetails = [[UIAlertView alloc] initWithTitle:@"Details" message:@"[categoryDetails objectAtIndex:indexPath.row]" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    UIAlertView *categoryDetails = [[UIAlertView alloc] initWithTitle:@"Details" message:@"[categoryDescriptions objectAtIndex:indexPath.row]" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
     [categoryDetails show];
     
 }
 
-# pragma mark Table View Delegate Methods
-//
-//- (void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//    \
-//}
-
 -(void) tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
+    
     [self performSegueWithIdentifier:@"push to category-events" sender:indexPath];
+    
 }
 
 # pragma mark Data Helper Methods

@@ -69,6 +69,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1811F1AB1B7553EC00B6BE2E /* TechTatva15-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TechTatva15-Prefix.pch"; sourceTree = "<group>"; };
+		1811F1AC1B75545500B6BE2E /* TechTatva15Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TechTatva15Macro.h; sourceTree = "<group>"; };
 		1821AAAF1B3BDEAA00745E48 /* FirstLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstLoginViewController.h; sourceTree = "<group>"; };
 		1821AAB01B3BDEAA00745E48 /* FirstLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLoginViewController.m; sourceTree = "<group>"; };
 		1822727A1B5A265200CD52B8 /* TTlogomain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TTlogomain.jpg; sourceTree = "<group>"; };
@@ -182,6 +184,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1811F1A91B75534900B6BE2E /* Event Data Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C1034481B753B5800CE97F3 /* EventDataModel.h */,
+				4C1034491B753B5800CE97F3 /* EventDataModel.m */,
+			);
+			name = "Event Data Model";
+			sourceTree = "<group>";
+		};
+		1811F1AA1B75535B00B6BE2E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1811F1A91B75534900B6BE2E /* Event Data Model */,
+				182D3F501B56B2BF0008F4BB /* Instagram Model */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		182922101B236AFB00F95AE0 = {
 			isa = PBXGroup;
 			children = (
@@ -203,7 +223,7 @@
 		1829221B1B236AFB00F95AE0 /* TechTatva15 */ = {
 			isa = PBXGroup;
 			children = (
-				182D3F501B56B2BF0008F4BB /* Instagram Model */,
+				1811F1AA1B75535B00B6BE2E /* Model */,
 				A3CD67D91B3C465700DACD83 /* Libraries */,
 				182922261B236AFB00F95AE0 /* Main.storyboard */,
 				18F1BD561B3FE3EF00473E1A /* Views */,
@@ -220,8 +240,8 @@
 		1829221C1B236AFB00F95AE0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4C1034481B753B5800CE97F3 /* EventDataModel.h */,
-				4C1034491B753B5800CE97F3 /* EventDataModel.m */,
+				1811F1AB1B7553EC00B6BE2E /* TechTatva15-Prefix.pch */,
+				1811F1AC1B75545500B6BE2E /* TechTatva15Macro.h */,
 				182922201B236AFB00F95AE0 /* AppDelegate.h */,
 				182922211B236AFB00F95AE0 /* AppDelegate.m */,
 				1829221D1B236AFB00F95AE0 /* Info.plist */,
@@ -694,6 +714,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TechTatva15/TechTatva15-Prefix.pch";
 				INFOPLIST_FILE = TechTatva15/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -706,6 +728,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TechTatva15/TechTatva15-Prefix.pch";
 				INFOPLIST_FILE = TechTatva15/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
