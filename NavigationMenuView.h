@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *instafeedButtonPressed;
 @property (weak, nonatomic) IBOutlet UIButton *aboutUsButtonPressed;
 @property (weak, nonatomic) IBOutlet UIButton *favouritesButtonPressed;
+@property (weak, nonatomic) IBOutlet UIButton *logoutButtonPressed;
 
 @property (weak, nonatomic) IBOutlet UIImageView *profilePhotoSidebar;
 

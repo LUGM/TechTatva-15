@@ -15,6 +15,7 @@
 #import "SSJSONModel.h"
 #import "MBProgressHUD.h"
 #import "Reachability.h"
+#import "CategoryEventViewController.h"
 
 @interface CategoriesTableViewController () <SSJSONModelDelegate>
 {
@@ -115,6 +116,9 @@
     
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self performSegueWithIdentifier:@"categoryDetail" sender:self];
+}
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -130,6 +134,17 @@
     
 }
 
+# pragma mark Table View Delegate Methods
+//
+//- (void) tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    \
+//}
+
+-(void) tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
+{
+    [self performSegueWithIdentifier:@"push to category-events" sender:indexPath];
+}
 
 # pragma mark Data Helper Methods
 
@@ -186,6 +201,7 @@
         [_navigationDropDown.resultsButtonPressed addTarget:self action:@selector(resultsButton) forControlEvents:UIControlEventTouchUpInside];
         [_navigationDropDown.instafeedButtonPressed addTarget:self action:@selector(instafeedButton) forControlEvents:UIControlEventTouchUpInside];
         [_navigationDropDown.aboutUsButtonPressed addTarget:self action:@selector(aboutUsButton) forControlEvents:UIControlEventTouchUpInside];
+        [_navigationDropDown.logoutButtonPressed addTarget:self action:@selector(logoutButton) forControlEvents:UIControlEventTouchUpInside];
         
     }
     
@@ -314,7 +330,7 @@
     
 }
 
-- (void) aboutUsButton
+- (void)aboutUsButton
 {
     
     [self.navigationDropDown removeFromSuperview];
@@ -326,7 +342,21 @@
     
 }
 
-- (void) removeExtraViews
+- (void)logoutButton
+{
+    
+    [self.navigationDropDown removeFromSuperview];
+    self.navigationDropDown = nil;
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *categoriestableViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"firstLoginView"];
+    [self presentViewController:categoriestableViewController animated:YES completion:nil];
+    
+    // Clear Favourites array here
+    
+}
+
+- (void)removeExtraViews
 {
     
     [blurView removeFromSuperview];
@@ -347,6 +377,17 @@
     
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"categoryDetail"]) {
+        UINavigationController * navController = segue.destinationViewController;
+        CategoryEventViewController * destController = [navController viewControllers][0];
+        destController.title = [categoriesArray objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+    }
+    NSLog(@" %@ ", sender);
+    
+    
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

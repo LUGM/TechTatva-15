@@ -219,6 +219,7 @@
         [_navigationDropDown.resultsButtonPressed addTarget:self action:@selector(resultsButton) forControlEvents:UIControlEventTouchUpInside];
         [_navigationDropDown.instafeedButtonPressed addTarget:self action:@selector(instafeedButton) forControlEvents:UIControlEventTouchUpInside];
         [_navigationDropDown.aboutUsButtonPressed addTarget:self action:@selector(aboutUsButton) forControlEvents:UIControlEventTouchUpInside];
+        [_navigationDropDown.logoutButtonPressed addTarget:self action:@selector(logoutButton) forControlEvents:UIControlEventTouchUpInside];
         
     }
     
@@ -230,10 +231,8 @@
     if (![self isInternetAvailable])
     {
         
-        UIAlertView *categoryViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable"
-                                                                              message:@"Please recheck connection"
-                                                                             delegate:self
-                                                                    cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        UIAlertView *categoryViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable" message:@"Please recheck connection"delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
         [categoryViewConnectionAlert show];
         
     }
@@ -357,6 +356,20 @@
     UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     UINavigationController *eventListViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"aboutUsView"];
     [self presentViewController:eventListViewController animated:YES completion:nil];
+    
+}
+
+- (void) logoutButton
+{
+    
+    [self.navigationDropDown removeFromSuperview];
+    self.navigationDropDown = nil;
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *eventListViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"firstLoginView"];
+    [self presentViewController:eventListViewController animated:YES completion:nil];
+    
+    // Clear Favourites array here
     
 }
 

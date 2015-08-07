@@ -48,6 +48,7 @@
 		18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E282721B373C4D0084DCDE /* ResultsViewController.m */; };
 		18E559971B5EE2FA0004011A /* NavigationMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E559961B5EE2FA0004011A /* NavigationMenuView.xib */; };
 		18E5599D1B5EE4690004011A /* NavigationMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E5599C1B5EE4690004011A /* NavigationMenuView.m */; };
+		4C1034411B74E83F00CE97F3 /* EventLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1034401B74E83F00CE97F3 /* EventLibrary.m */; };
 		4C9D64571B5D56C4001DDB5F /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D64561B5D56C4001DDB5F /* CreateAccountViewController.m */; };
 		4CC9F6D01B3DBB4F002F9C1D /* eventViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */; };
 		4CC9F6D11B3DBB4F002F9C1D /* eventViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */; };
@@ -147,6 +148,8 @@
 		18E559961B5EE2FA0004011A /* NavigationMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationMenuView.xib; sourceTree = "<group>"; };
 		18E5599B1B5EE4690004011A /* NavigationMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationMenuView.h; sourceTree = "<group>"; };
 		18E5599C1B5EE4690004011A /* NavigationMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationMenuView.m; sourceTree = "<group>"; };
+		4C10343F1B74E83F00CE97F3 /* EventLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventLibrary.h; path = ../EventLibrary.h; sourceTree = "<group>"; };
+		4C1034401B74E83F00CE97F3 /* EventLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventLibrary.m; path = ../EventLibrary.m; sourceTree = "<group>"; };
 		4C9D64551B5D56C4001DDB5F /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateAccountViewController.h; path = ../CreateAccountViewController.h; sourceTree = "<group>"; };
 		4C9D64561B5D56C4001DDB5F /* CreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateAccountViewController.m; path = ../CreateAccountViewController.m; sourceTree = "<group>"; };
 		4CC9F6CD1B3DBB4F002F9C1D /* eventViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventViewTableViewCell.h; sourceTree = "<group>"; };
@@ -219,6 +222,8 @@
 			children = (
 				182922201B236AFB00F95AE0 /* AppDelegate.h */,
 				182922211B236AFB00F95AE0 /* AppDelegate.m */,
+				4C10343F1B74E83F00CE97F3 /* EventLibrary.h */,
+				4C1034401B74E83F00CE97F3 /* EventLibrary.m */,
 				1829221D1B236AFB00F95AE0 /* Info.plist */,
 				1829221E1B236AFB00F95AE0 /* main.m */,
 			);
@@ -548,6 +553,7 @@
 				A3CD67DD1B3C466B00DACD83 /* SSJSONModel.m in Sources */,
 				184FF8201B484D04007B8E46 /* CategoryEventViewController.m in Sources */,
 				182D3F4C1B56B0C80008F4BB /* InstagramUser.m in Sources */,
+				4C1034411B74E83F00CE97F3 /* EventLibrary.m in Sources */,
 				18B4FC5B1B5958A5004647DA /* SDWebImageDownloader.m in Sources */,
 				18B4FC601B5958A5004647DA /* UIImage+GIF.m in Sources */,
 				4CC9F7141B3F275D002F9C1D /* CategoryTableViewCell.m in Sources */,

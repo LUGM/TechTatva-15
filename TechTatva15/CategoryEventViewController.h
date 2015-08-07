@@ -15,6 +15,9 @@
 @property (strong, nonatomic) NSNumber *selectedDay;
 @property (strong, nonatomic) IBOutlet UISegmentedControl *daySelector;
 
+@property (strong, nonatomic) NSIndexPath *dataForNavigationBarTitle;
+
+
 - (IBAction)daySelectorIndexChanged:(id)sender;
 
 @end

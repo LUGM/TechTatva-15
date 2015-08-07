@@ -269,6 +269,7 @@
         [_navigationDropDown.resultsButtonPressed addTarget:self action:@selector(resultsButton) forControlEvents:UIControlEventTouchUpInside];
         [_navigationDropDown.instafeedButtonPressed addTarget:self action:@selector(instafeedButton) forControlEvents:UIControlEventTouchUpInside];
         [_navigationDropDown.aboutUsButtonPressed addTarget:self action:@selector(aboutUsButton) forControlEvents:UIControlEventTouchUpInside];
+        [_navigationDropDown.logoutButtonPressed addTarget:self action:@selector(logoutButton) forControlEvents:UIControlEventTouchUpInside];
         
     }
     
@@ -407,6 +408,20 @@
     UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     UINavigationController *instagramViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"aboutUsView"];
     [self presentViewController:instagramViewController animated:YES completion:nil];
+    
+}
+
+- (void) logoutButton
+{
+    
+    [self.navigationDropDown removeFromSuperview];
+    self.navigationDropDown = nil;
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController *instagramViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"firstLoginView"];
+    [self presentViewController:instagramViewController animated:YES completion:nil];
+    
+    // Clear Favourites array here
     
 }
 

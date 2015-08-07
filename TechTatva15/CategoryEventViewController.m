@@ -23,10 +23,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view.
     
     //    Load nib for DayView here.
     //    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DayView" owner:self options:nil];
+    
+//    NSArray *categoriesArray = @[@"Acumen", @"Airborne", @"Alacrity", @"Bizzmaestro", @"Cheminova", @"Constructure", @"Cryptoss", @"Electrific", @"Energia", @"Epsilon", @"Kraftwagen", @"Mechanize", @"Mechatron", @"Robotrek", @"Turing"];
+    
+//    self.title = @"Fuck This Shit";
     
     [self.daySelector removeAllSegments];
     [self.daySelector insertSegmentWithTitle:@"DAY 1" atIndex:0 animated:NO];
