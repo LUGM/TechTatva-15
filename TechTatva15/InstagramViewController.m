@@ -271,6 +271,8 @@
         [_navigationDropDown.aboutUsButtonPressed addTarget:self action:@selector(aboutUsButton) forControlEvents:UIControlEventTouchUpInside];
         [_navigationDropDown.logoutButtonPressed addTarget:self action:@selector(logoutButton) forControlEvents:UIControlEventTouchUpInside];
         
+        _navigationDropDown.profilePhotoSidebar.layer.cornerRadius = 25;
+        
     }
     
 }
