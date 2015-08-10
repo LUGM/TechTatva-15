@@ -6,12 +6,10 @@
 //  Copyright (c) 2015 AppDev. All rights reserved.
 //
 
-#import "CreateAccountViewController.h"
 #import "CategoriesTableViewController.h"
 #import "CategoryEventViewController.h"
 #import "InstagramViewController.h"
 #import "FullScreenImageViewController.h"
-#import "FirstLoginViewController.h"
 #import "ResultsViewController.h"
 #import "EventListViewController.h"
 

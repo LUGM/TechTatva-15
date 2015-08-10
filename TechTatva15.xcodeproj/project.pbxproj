@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1821AAB11B3BDEAA00745E48 /* FirstLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1821AAB01B3BDEAA00745E48 /* FirstLoginViewController.m */; };
 		1822727B1B5A265200CD52B8 /* TTlogomain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1822727A1B5A265200CD52B8 /* TTlogomain.jpg */; };
 		1829221F1B236AFB00F95AE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1829221E1B236AFB00F95AE0 /* main.m */; };
 		182922221B236AFB00F95AE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182922211B236AFB00F95AE0 /* AppDelegate.m */; };
@@ -48,8 +47,7 @@
 		18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E282721B373C4D0084DCDE /* ResultsViewController.m */; };
 		18E559971B5EE2FA0004011A /* NavigationMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E559961B5EE2FA0004011A /* NavigationMenuView.xib */; };
 		18E5599D1B5EE4690004011A /* NavigationMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E5599C1B5EE4690004011A /* NavigationMenuView.m */; };
-		4C10344A1B753B5800CE97F3 /* EventDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C1034491B753B5800CE97F3 /* EventDataModel.m */; };
-		4C9D64571B5D56C4001DDB5F /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9D64561B5D56C4001DDB5F /* CreateAccountViewController.m */; };
+		18FDACA51B76386F00C23742 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDACA41B76386F00C23742 /* Event.m */; };
 		4CC9F6D01B3DBB4F002F9C1D /* eventViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */; };
 		4CC9F6D11B3DBB4F002F9C1D /* eventViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */; };
 		4CC9F7141B3F275D002F9C1D /* CategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F7101B3F275D002F9C1D /* CategoryTableViewCell.m */; };
@@ -71,8 +69,6 @@
 /* Begin PBXFileReference section */
 		1811F1AB1B7553EC00B6BE2E /* TechTatva15-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TechTatva15-Prefix.pch"; sourceTree = "<group>"; };
 		1811F1AC1B75545500B6BE2E /* TechTatva15Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TechTatva15Macro.h; sourceTree = "<group>"; };
-		1821AAAF1B3BDEAA00745E48 /* FirstLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstLoginViewController.h; sourceTree = "<group>"; };
-		1821AAB01B3BDEAA00745E48 /* FirstLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstLoginViewController.m; sourceTree = "<group>"; };
 		1822727A1B5A265200CD52B8 /* TTlogomain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TTlogomain.jpg; sourceTree = "<group>"; };
 		182922191B236AFB00F95AE0 /* TechTatva15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechTatva15.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1829221D1B236AFB00F95AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -150,10 +146,8 @@
 		18E559961B5EE2FA0004011A /* NavigationMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationMenuView.xib; sourceTree = "<group>"; };
 		18E5599B1B5EE4690004011A /* NavigationMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationMenuView.h; sourceTree = "<group>"; };
 		18E5599C1B5EE4690004011A /* NavigationMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationMenuView.m; sourceTree = "<group>"; };
-		4C1034481B753B5800CE97F3 /* EventDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EventDataModel.h; path = ../EventDataModel.h; sourceTree = "<group>"; };
-		4C1034491B753B5800CE97F3 /* EventDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EventDataModel.m; path = ../EventDataModel.m; sourceTree = "<group>"; };
-		4C9D64551B5D56C4001DDB5F /* CreateAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CreateAccountViewController.h; path = ../CreateAccountViewController.h; sourceTree = "<group>"; };
-		4C9D64561B5D56C4001DDB5F /* CreateAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CreateAccountViewController.m; path = ../CreateAccountViewController.m; sourceTree = "<group>"; };
+		18FDACA31B76386F00C23742 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		18FDACA41B76386F00C23742 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		4CC9F6CD1B3DBB4F002F9C1D /* eventViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventViewTableViewCell.h; sourceTree = "<group>"; };
 		4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventViewTableViewCell.m; sourceTree = "<group>"; };
 		4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eventViewTableViewCell.xib; sourceTree = "<group>"; };
@@ -187,8 +181,8 @@
 		1811F1A91B75534900B6BE2E /* Event Data Model */ = {
 			isa = PBXGroup;
 			children = (
-				4C1034481B753B5800CE97F3 /* EventDataModel.h */,
-				4C1034491B753B5800CE97F3 /* EventDataModel.m */,
+				18FDACA31B76386F00C23742 /* Event.h */,
+				18FDACA41B76386F00C23742 /* Event.m */,
 			);
 			name = "Event Data Model";
 			sourceTree = "<group>";
@@ -366,8 +360,6 @@
 			children = (
 				182922421B236B2800F95AE0 /* SplashViewController.h */,
 				182922431B236B2800F95AE0 /* SplashViewController.m */,
-				4C9D64551B5D56C4001DDB5F /* CreateAccountViewController.h */,
-				4C9D64561B5D56C4001DDB5F /* CreateAccountViewController.m */,
 				18DBD09B1B44571B00749AD6 /* CategoriesTableViewController.h */,
 				18DBD09C1B44571B00749AD6 /* CategoriesTableViewController.m */,
 				184FF81E1B484D04007B8E46 /* CategoryEventViewController.h */,
@@ -376,8 +368,6 @@
 				182D3F481B56AFB30008F4BB /* InstagramViewController.m */,
 				18B4FC661B595E67004647DA /* FullScreenImageViewController.h */,
 				18B4FC671B595E67004647DA /* FullScreenImageViewController.m */,
-				1821AAAF1B3BDEAA00745E48 /* FirstLoginViewController.h */,
-				1821AAB01B3BDEAA00745E48 /* FirstLoginViewController.m */,
 				18E282711B373C4D0084DCDE /* ResultsViewController.h */,
 				18E282721B373C4D0084DCDE /* ResultsViewController.m */,
 				184FF8151B484041007B8E46 /* EventListViewController.h */,
@@ -559,8 +549,8 @@
 				18B4FC621B5958A5004647DA /* UIImage+WebP.m in Sources */,
 				18B4FC641B5958A5004647DA /* UIImageView+WebCache.m in Sources */,
 				18B4FC5C1B5958A5004647DA /* SDWebImageDownloaderOperation.m in Sources */,
+				18FDACA51B76386F00C23742 /* Event.m in Sources */,
 				182D3F4F1B56B21C0008F4BB /* InstagramImage.m in Sources */,
-				4C9D64571B5D56C4001DDB5F /* CreateAccountViewController.m in Sources */,
 				18B4FC631B5958A5004647DA /* UIImageView+HighlightedWebCache.m in Sources */,
 				18B4FC5A1B5958A5004647DA /* SDWebImageDecoder.m in Sources */,
 				18B4FC571B5958A5004647DA /* NSData+ImageContentType.m in Sources */,
@@ -578,12 +568,10 @@
 				4CC9F7141B3F275D002F9C1D /* CategoryTableViewCell.m in Sources */,
 				18DBD09D1B44571B00749AD6 /* CategoriesTableViewController.m in Sources */,
 				18B4FC561B5958A5004647DA /* MKAnnotationView+WebCache.m in Sources */,
-				1821AAB11B3BDEAA00745E48 /* FirstLoginViewController.m in Sources */,
 				18B4FC681B595E67004647DA /* FullScreenImageViewController.m in Sources */,
 				1829221F1B236AFB00F95AE0 /* main.m in Sources */,
 				18B4FC611B5958A5004647DA /* UIImage+MultiFormat.m in Sources */,
 				18B4FC731B5962E4004647DA /* UIColor+FlatColors.m in Sources */,
-				4C10344A1B753B5800CE97F3 /* EventDataModel.m in Sources */,
 				18B4FC721B5962E4004647DA /* PQFCirclesInTriangle.m in Sources */,
 				18ADE1781B5ECC4B00CCD46D /* Reachability.m in Sources */,
 				18B4FC591B5958A5004647DA /* SDWebImageCompat.m in Sources */,

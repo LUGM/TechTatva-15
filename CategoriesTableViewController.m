@@ -20,15 +20,18 @@
 @interface CategoriesTableViewController () <SSJSONModelDelegate>
 {
     
-    NSArray *json;
+    NSDictionary *json;
+    
     NSArray *categoriesArray;
-//  NSArray *imagesArray;
+    NSArray *tempCategoryStorage;
+//    NSArray *imagesArray;
     
     SSJSONModel *myJsonInstance;
     
     NSMutableArray *categoryNames;
     NSMutableArray *categoryDescriptions;
-    NSMutableArray *categoryCodes;
+    NSMutableArray *categoryIds;
+    NSMutableArray *categoryTypes;
     
     UIView *blurView;
     
@@ -61,10 +64,10 @@
     
 //    imagesArray = @[""];     category image names to be entered in same order as categories named in array
     
-//    NSURL *categoriesUrl = [NSURL URLWithString:@"http://api.techtatva.in/categories"];
-//    myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
-//    [myJsonInstance sendRequestWithUrl:categoriesUrl];
-//    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    NSURL *categoriesUrl = [NSURL URLWithString:@"http://api.techtatva.in/categories"];
+    myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
+    [myJsonInstance sendRequestWithUrl:categoriesUrl];
+    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     
 }
 
@@ -87,9 +90,8 @@
 {
 
     // Return the number of rows in the section.
-//    return json.count;
     
-  return [categoriesArray count];
+    return tempCategoryStorage.count;
     
 }
 
@@ -107,9 +109,9 @@
         
     }
     
-//    cell.textLabel.text = [categoryNames objectAtIndex:indexPath.row];
+    cell.textLabel.text = [categoryNames objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [categoriesArray objectAtIndex:indexPath.row];
+//    cell.textLabel.text = [categoriesArray objectAtIndex:indexPath.row];
 //    cell.imageView.image = [UIImage imageNamed:[imagesArray objectAtIndex:indexPath.row]];
     
     return cell;
@@ -152,19 +154,23 @@
         NSLog(@"%@",myJsonInstance.parsedJsonData);
         json = myJsonInstance.parsedJsonData;
         categoryNames =[NSMutableArray new];
-        categoryCodes = [NSMutableArray new];
         categoryDescriptions = [NSMutableArray new];
+        categoryTypes = [NSMutableArray new];
+        categoryIds = [NSMutableArray new];
         
-        for (NSDictionary * dict in json)
+        tempCategoryStorage = [json objectForKey:@"Data"];
+        
+        for (NSDictionary * dict in tempCategoryStorage)
         {
             
-            [categoryNames addObject:[dict objectForKey:@"category"]];
-            [categoryCodes addObject:[dict objectForKey:@"description"]];
-            [categoryDescriptions addObject:[dict objectForKey:@"category_code"]];
-            
-            [categoriesTable reloadData];
+            [categoryNames addObject:[dict objectForKey:@"cat_name"]];
+            [categoryDescriptions addObject:[dict objectForKey:@"description"]];
+            [categoryIds addObject:[dict objectForKey:@"cat_id"]];
+            [categoryTypes addObject:[dict objectForKey:@"cat_type"]];
             
         }
+        
+        [categoriesTable reloadData];
         
         [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
         

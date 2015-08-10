@@ -14,21 +14,24 @@
 #import "Reachability.h"
 #import "MBProgressHUD.h"
 #import "SSJSONModel.h"
+#import "Event.h"
 
-@interface EventListViewController ()
+@interface EventListViewController () <SSJSONModelDelegate>
 {
     
     UIView *blurView;
     
     SSJSONModel *myJsonInstance;
     
-    NSArray *json;
+    NSDictionary *json;
     
     NSMutableArray *eventNames;
     NSMutableArray *eventIds;
     NSMutableArray *eventDescriptions;
     NSMutableArray *eventCategoryIds;
     NSMutableArray *eventMaxTeamMembers;
+    
+    NSArray *tempEventStorage;
     
 }
 
@@ -87,7 +90,7 @@
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return 20;
+    return tempEventStorage.count;
     
 }
 
@@ -115,10 +118,9 @@
     cell.indexPathForCell = indexPath;
     
     //Day is diplayed in the event name text. Later, can be used to filter out results. Just use the self.selctedDay property wisely. TEEHEE :3
+    
     cell.eventLabel.text = [eventNames objectAtIndex:indexPath.row];
-    
     cell.categoryLabel.text = [eventCategoryIds objectAtIndex:indexPath.row];
-    
     cell.venueLabel.text = @"304, NLH";
     cell.timeLabel.text = @"3:30 PM";
     cell.contactLabel.text = @"+91 8424998388";
@@ -429,19 +431,19 @@
         eventDescriptions = [NSMutableArray new];
         eventCategoryIds = [NSMutableArray new];
         
-        for (NSDictionary * dict in json)
+        tempEventStorage = [json objectForKey:@"data"];
+        for (NSDictionary * dict in tempEventStorage)
         {
-            
-            [eventNames addObject:[dict objectForKey:@"event_name"]];
             [eventIds addObject:[dict objectForKey:@"event_id"]];
+            [eventNames addObject:[dict objectForKey:@"event_name"]];
+            [eventMaxTeamMembers addObject:[dict objectForKey:@"event_max_team_number"]];
             [eventDescriptions addObject:[dict objectForKey:@"description"]];
             [eventCategoryIds addObject:[dict objectForKey:@"cat_id"]];
-            [eventMaxTeamMembers addObject:[dict objectForKey:@"event_max_team_number"]];
-            [eventsTable reloadData];
-            
         }
         
-        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+        [eventsTable reloadData];
+        
+//        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
         
     }
     
