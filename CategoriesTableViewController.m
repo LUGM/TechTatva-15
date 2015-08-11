@@ -97,19 +97,23 @@
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    // The next few log statements are not working. Looks like this method is not being executed.
+    
+    NSLog(@"First checker");
     
     static NSString *cellIdentifier = @"Cell";
     
+    NSLog(@"Second checker");
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    if (cell == nil)
-    {
-        
-        cell = [[UITableViewCell alloc] init];
-        
-    }
+    NSLog(@"Third checker");
     
     cell.textLabel.text = [categoryNames objectAtIndex:indexPath.row];
+    
+    // This is not logging, so problem should be around here.
+    
+    NSLog(@"Hello %@", cell.textLabel.text);
     
 //    cell.textLabel.text = [categoriesArray objectAtIndex:indexPath.row];
 //    cell.imageView.image = [UIImage imageNamed:[imagesArray objectAtIndex:indexPath.row]];
