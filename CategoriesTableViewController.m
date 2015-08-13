@@ -56,15 +56,18 @@
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Explore" style:UIBarButtonItemStylePlain target:self action:@selector(loadDropDown)];
     
-    categoriesTable = [[UITableView alloc] init];
-    categoriesTable.delegate = self;
-    categoriesTable.dataSource = self;
+//    self.categoriesTable = [[UITableView alloc] init];
+//    self.categoriesTable.delegate = self;
+//    self.categoriesTable.dataSource = self;
     
     categoriesArray = @[@"Acumen", @"Airborne", @"Alacrity", @"Bizzmaestro", @"Cheminova", @"Constructure", @"Cryptoss", @"Electrific", @"Energia", @"Epsilon", @"Kraftwagen", @"Mechanize", @"Mechatron", @"Robotrek", @"Turing"];
     
 //    imagesArray = @[""];     category image names to be entered in same order as categories named in array
     
-    NSURL *categoriesUrl = [NSURL URLWithString:@"http://api.techtatva.in/categories"];
+    NSURL *categoriesUrl;
+//    categoriesUrl = [NSURL URLWithString:@"http://api.techtatva.in/categories"];
+    categoriesUrl = [NSURL URLWithString:@"http://localhost:8888/categories.json"];
+    
     myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
     [myJsonInstance sendRequestWithUrl:categoriesUrl];
     [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
@@ -91,33 +94,22 @@
 
     // Return the number of rows in the section.
     
-    return tempCategoryStorage.count;
+    return categoryNames.count;
     
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // The next few log statements are not working. Looks like this method is not being executed.
-    
-    NSLog(@"First checker");
     
     static NSString *cellIdentifier = @"Cell";
     
-    NSLog(@"Second checker");
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    NSLog(@"Third checker");
     
     cell.textLabel.text = [categoryNames objectAtIndex:indexPath.row];
     
-    // This is not logging, so problem should be around here.
-    
-    NSLog(@"Hello %@", cell.textLabel.text);
-    
 //    cell.textLabel.text = [categoriesArray objectAtIndex:indexPath.row];
 //    cell.imageView.image = [UIImage imageNamed:[imagesArray objectAtIndex:indexPath.row]];
-    
+//    
     return cell;
     
 }
@@ -125,6 +117,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self performSegueWithIdentifier:@"categoryDetail" sender:self];
 }
+
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
@@ -162,7 +155,7 @@
         categoryTypes = [NSMutableArray new];
         categoryIds = [NSMutableArray new];
         
-        tempCategoryStorage = [json objectForKey:@"Data"];
+        tempCategoryStorage = [json objectForKey:@"data"];
         
         for (NSDictionary * dict in tempCategoryStorage)
         {
@@ -174,7 +167,7 @@
             
         }
         
-        [categoriesTable reloadData];
+        [self.tableView reloadData];
         
         [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
         
@@ -389,7 +382,7 @@
     if ([segue.identifier isEqualToString:@"categoryDetail"]) {
         UINavigationController * navController = segue.destinationViewController;
         CategoryEventViewController * destController = [navController viewControllers][0];
-        destController.title = [categoriesArray objectAtIndex:[self.tableView indexPathForSelectedRow].row];
+        destController.title = [categoryNames objectAtIndex:[self.tableView indexPathForSelectedRow].row];
     }
     NSLog(@" %@ ", sender);
     

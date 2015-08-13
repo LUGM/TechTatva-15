@@ -9,12 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CategoriesTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
-{
-    
-    UITableView *categoriesTable;
-    
-}
 
-- (IBAction)categoryInfoButton:(UIButton *)sender;
 
 @end
