@@ -12,58 +12,55 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oM8-zs-J3b">
-                    <rect key="frame" x="0.0" y="272" width="170" height="40"/>
+                    <rect key="frame" x="0.0" y="222" width="170" height="40"/>
                     <state key="normal" title="Events">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVA-Pg-2yr">
-                    <rect key="frame" x="0.0" y="224" width="170" height="40"/>
+                    <rect key="frame" x="0.0" y="174" width="170" height="40"/>
                     <state key="normal" title="Categories">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rEp-XP-QSJ">
-                    <rect key="frame" x="0.0" y="368" width="170" height="40"/>
+                    <rect key="frame" x="0.0" y="318" width="170" height="40"/>
                     <state key="normal" title="Results">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phW-5A-fjT">
-                    <rect key="frame" x="0.0" y="320" width="170" height="40"/>
+                    <rect key="frame" x="0.0" y="270" width="170" height="40"/>
                     <state key="normal" title="Favourites">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMd-le-Mbv">
-                    <rect key="frame" x="0.0" y="416" width="170" height="40"/>
+                    <rect key="frame" x="0.0" y="366" width="170" height="40"/>
                     <state key="normal" title="InstaFeed">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="TTlogomain.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="xf3-rS-Hcq">
-                    <rect key="frame" x="41" y="24" width="88" height="81"/>
+                    <rect key="frame" x="25" y="18" width="121" height="118"/>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azg-QC-f1Y">
-                    <rect key="frame" x="30" y="162" width="110" height="24"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8z-V9-Dot">
-                    <rect key="frame" x="0.0" y="464" width="170" height="40"/>
-                    <state key="normal" title="About Us">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXM-0Q-bdE">
+                    <rect key="frame" x="0.0" y="414" width="170" height="40"/>
+                    <state key="normal" title="Online Events">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rp7-rT-vbG">
-                    <rect key="frame" x="0.0" y="512" width="170" height="40"/>
-                    <state key="normal" title="Logout">
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fqd-z3-2Wv">
+                    <rect key="frame" x="0.0" y="462" width="170" height="40"/>
+                    <state key="normal" title="Register">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
-                    <connections>
-                        <action selector="logoutbuttonPressed:" destination="FRa-SY-Ky0" eventType="touchUpInside" id="fj3-PM-Gzi"/>
-                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8z-V9-Dot">
+                    <rect key="frame" x="0.0" y="510" width="170" height="40"/>
+                    <state key="normal" title="About Us">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -75,10 +72,10 @@
                 <outlet property="eventButtonPressed" destination="oM8-zs-J3b" id="mie-Ge-6ld"/>
                 <outlet property="favouritesButtonPressed" destination="phW-5A-fjT" id="w8a-14-Xlf"/>
                 <outlet property="instafeedButtonPressed" destination="FMd-le-Mbv" id="vxu-M9-b4W"/>
-                <outlet property="logoutButtonPressed" destination="Rp7-rT-vbG" id="qu4-V0-veP"/>
-                <outlet property="profilePhotoSidebar" destination="xf3-rS-Hcq" id="qcd-bK-eyf"/>
+                <outlet property="onlineEventsButtonPressed" destination="DXM-0Q-bdE" id="ddo-5O-TcZ"/>
+                <outlet property="registerButtonPressed" destination="fqd-z3-2Wv" id="CX4-Kh-oWa"/>
                 <outlet property="resultsButtonPressed" destination="rEp-XP-QSJ" id="8g5-Xy-fGX"/>
-                <outlet property="userNameSidebar" destination="Azg-QC-f1Y" id="oBm-63-gcu"/>
+                <outlet property="sidebarImageView" destination="xf3-rS-Hcq" id="Fbi-Fh-o6O"/>
             </connections>
             <point key="canvasLocation" x="975" y="-15"/>
         </view>

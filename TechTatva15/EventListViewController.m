@@ -119,8 +119,10 @@
     
     //Day is diplayed in the event name text. Later, can be used to filter out results. Just use the self.selctedDay property wisely. TEEHEE :3
     
-    cell.eventLabel.text = [eventNames objectAtIndex:indexPath.row];
-    cell.categoryLabel.text = [eventCategoryIds objectAtIndex:indexPath.row];
+//    cell.eventLabel.text = [eventNames objectAtIndex:indexPath.row];
+//    cell.categoryLabel.text = [eventCategoryIds objectAtIndex:indexPath.row];
+    
+    cell.eventLabel.text = [NSString stringWithFormat:@"Event %li Day %@", ((long)indexPath.row + 1), self.selectedDay];
     cell.venueLabel.text = @"304, NLH";
     cell.timeLabel.text = @"3:30 PM";
     cell.contactLabel.text = @"+91 8424998388";
@@ -158,7 +160,7 @@
     }
     else if(self.currentSelectedCellIndexPath != nil
             && [self.currentSelectedCellIndexPath compare:indexPath] == NSOrderedSame)
-        return 218;
+        return 255;
     
     else
         return 43;
@@ -237,9 +239,10 @@
         [_navigationDropDown.resultsButtonPressed addTarget:self action:@selector(resultsButton) forControlEvents:UIControlEventTouchUpInside];
         [_navigationDropDown.instafeedButtonPressed addTarget:self action:@selector(instafeedButton) forControlEvents:UIControlEventTouchUpInside];
         [_navigationDropDown.aboutUsButtonPressed addTarget:self action:@selector(aboutUsButton) forControlEvents:UIControlEventTouchUpInside];
-        [_navigationDropDown.logoutButtonPressed addTarget:self action:@selector(logoutButton) forControlEvents:UIControlEventTouchUpInside];
+        [_navigationDropDown.registerButtonPressed addTarget:self action:@selector(registerButton) forControlEvents:UIControlEventTouchUpInside];
+        [_navigationDropDown.onlineEventsButtonPressed addTarget:self action:@selector(onlineEventsButton) forControlEvents:UIControlEventTouchUpInside];
         
-        _navigationDropDown.profilePhotoSidebar.layer.cornerRadius = 25;
+        _navigationDropDown.sidebarImageView.layer.cornerRadius = 25;
         
     }
     
@@ -379,17 +382,59 @@
     
 }
 
-- (void) logoutButton
+- (void) registerButton
 {
     
-    [self.navigationDropDown removeFromSuperview];
-    self.navigationDropDown = nil;
+    if (![self isInternetAvailable])
+    {
+        
+        UIAlertView *registerViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable"
+                                                                               message:@"Please recheck connection"
+                                                                              delegate:self
+                                                                     cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [registerViewConnectionAlert show];
+        
+    }
     
-    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    UINavigationController *eventListViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"firstLoginView"];
-    [self presentViewController:eventListViewController animated:YES completion:nil];
+    else
+    {
+        
+        [self.navigationDropDown removeFromSuperview];
+        self.navigationDropDown = nil;
+        
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController *eventListViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"registerView"];
+        [self presentViewController:eventListViewController animated:YES completion:nil];
+        
+    }
     
-    // Clear Favourites array here
+}
+
+- (void) onlineEventsButton
+{
+    
+    if (![self isInternetAvailable])
+    {
+        
+        UIAlertView *onlineEventsViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable"
+                                                                               message:@"Please recheck connection"
+                                                                              delegate:self
+                                                                     cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [onlineEventsViewConnectionAlert show];
+        
+    }
+    
+    else
+    {
+        
+        [self.navigationDropDown removeFromSuperview];
+        self.navigationDropDown = nil;
+        
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController *eventListViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"onlineEventsView"];
+        [self presentViewController:eventListViewController animated:YES completion:nil];
+        
+    }
     
 }
 
@@ -443,7 +488,7 @@
         
         [eventsTable reloadData];
         
-//        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
         
     }
     

@@ -213,7 +213,7 @@
         [blurView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeExtraViews)]];
         NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"NavigationMenuView" owner:self options:nil];
         _navigationDropDown = [nib objectAtIndex:0];
-        _navigationDropDown.frame = CGRectMake(0, 40, 170, 584);
+        _navigationDropDown.frame = CGRectMake(0, 0, 170, 584);
         
         [self.view addSubview:_navigationDropDown];
         
@@ -223,9 +223,10 @@
         [_navigationDropDown.resultsButtonPressed addTarget:self action:@selector(resultsButton) forControlEvents:UIControlEventTouchUpInside];
         [_navigationDropDown.instafeedButtonPressed addTarget:self action:@selector(instafeedButton) forControlEvents:UIControlEventTouchUpInside];
         [_navigationDropDown.aboutUsButtonPressed addTarget:self action:@selector(aboutUsButton) forControlEvents:UIControlEventTouchUpInside];
-        [_navigationDropDown.logoutButtonPressed addTarget:self action:@selector(logoutButton) forControlEvents:UIControlEventTouchUpInside];
+        [_navigationDropDown.registerButtonPressed addTarget:self action:@selector(registerButton) forControlEvents:UIControlEventTouchUpInside];
+        [_navigationDropDown.onlineEventsButtonPressed addTarget:self action:@selector(onlineEventsButton) forControlEvents:UIControlEventTouchUpInside];
         
-        _navigationDropDown.profilePhotoSidebar.layer.cornerRadius = 25;
+        _navigationDropDown.sidebarImageView.layer.cornerRadius = 25;
         
     }
     
@@ -367,17 +368,59 @@
     
 }
 
-- (void) logoutButton
+- (void) registerButton
 {
     
-    [self.navigationDropDown removeFromSuperview];
-    self.navigationDropDown = nil;
+    if (![self isInternetAvailable])
+    {
+        
+        UIAlertView *registerViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable"
+                                                                               message:@"Please recheck connection"
+                                                                              delegate:self
+                                                                     cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [registerViewConnectionAlert show];
+        
+    }
     
-    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    UINavigationController *resultsViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"firstLoginView"];
-    [self presentViewController:resultsViewController animated:YES completion:nil];
+    else
+    {
+        
+        [self.navigationDropDown removeFromSuperview];
+        self.navigationDropDown = nil;
+        
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController *resultsViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"registerView"];
+        [self presentViewController:resultsViewController animated:YES completion:nil];
+        
+    }
     
-    // Clear Favourites array here
+}
+
+- (void) onlineEventsButton
+{
+    
+    if (![self isInternetAvailable])
+    {
+        
+        UIAlertView *onlineEventsViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable"
+                                                                               message:@"Please recheck connection"
+                                                                              delegate:self
+                                                                     cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [onlineEventsViewConnectionAlert show];
+        
+    }
+    
+    else
+    {
+        
+        [self.navigationDropDown removeFromSuperview];
+        self.navigationDropDown = nil;
+        
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController *resultsViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"onlineEventsView"];
+        [self presentViewController:resultsViewController animated:YES completion:nil];
+        
+    }
     
 }
 

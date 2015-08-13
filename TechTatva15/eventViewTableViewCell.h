@@ -18,6 +18,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *timeLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *dateImageView;
 @property (strong, nonatomic) IBOutlet UILabel *dateLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *maxTeamMembersImageView;
+@property (strong, nonatomic) IBOutlet UILabel *maxTeamMembersLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *contactImageView;
 @property (strong, nonatomic) IBOutlet UILabel *contactLabel;
 

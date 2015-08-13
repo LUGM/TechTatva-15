@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="218" id="KGk-i7-Jjw" customClass="eventViewTableViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="218"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="255" id="KGk-i7-Jjw" customClass="eventViewTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="255"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -42,7 +42,7 @@
                         <rect key="frame" x="15" y="128" width="35" height="35"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YRV-u1-E6A">
-                        <rect key="frame" x="15" y="171" width="35" height="35"/>
+                        <rect key="frame" x="15" y="212" width="35" height="35"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F1q-Jb-r5Y">
                         <rect key="frame" x="15" y="85" width="35" height="35"/>
@@ -66,20 +66,11 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehE-fb-InV">
-                        <rect key="frame" x="66" y="181" width="186" height="21"/>
+                        <rect key="frame" x="66" y="217" width="186" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wi2-rx-giz">
-                        <rect key="frame" x="277" y="171" width="30" height="30"/>
-                        <state key="normal" title="CB">
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                        <connections>
-                            <action selector="callButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="irP-rB-9lF"/>
-                        </connections>
-                    </button>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40n-Q5-oNQ">
                         <rect key="frame" x="239" y="8" width="30" height="30"/>
                         <state key="normal" title="D">
@@ -89,6 +80,24 @@
                             <action selector="detailsButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="fcu-BJ-4vM"/>
                         </connections>
                     </button>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wi2-rx-giz">
+                        <rect key="frame" x="277" y="208" width="30" height="30"/>
+                        <state key="normal" title="CB">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="callButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="irP-rB-9lF"/>
+                        </connections>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uEv-8Y-BbN">
+                        <rect key="frame" x="15" y="169" width="35" height="35"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Maximum Team Members" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ww5-C2-GaN">
+                        <rect key="frame" x="67" y="176" width="186" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </tableViewCellContentView>
             <connections>
@@ -98,12 +107,14 @@
                 <outlet property="dateImageView" destination="uZt-Mk-u16" id="m6a-e6-Vao"/>
                 <outlet property="dateLabel" destination="3cI-2h-GoG" id="Uo2-P3-SDH"/>
                 <outlet property="eventLabel" destination="l1E-Jr-422" id="K2H-Fr-mNb"/>
+                <outlet property="maxTeamMembersImageView" destination="uEv-8Y-BbN" id="uk7-9A-lf1"/>
+                <outlet property="maxTeamMembersLabel" destination="Ww5-C2-GaN" id="CT1-ne-27f"/>
                 <outlet property="timeImageView" destination="F1q-Jb-r5Y" id="Q8B-DK-wFC"/>
                 <outlet property="timeLabel" destination="XhJ-I1-6Dg" id="Y2N-hB-eDo"/>
                 <outlet property="venueImageView" destination="ZB4-nh-3o1" id="x3J-zV-dbG"/>
                 <outlet property="venueLabel" destination="WN4-Ca-vMY" id="mzR-8t-vJg"/>
             </connections>
-            <point key="canvasLocation" x="280" y="378"/>
+            <point key="canvasLocation" x="280" y="395.5"/>
         </tableViewCell>
     </objects>
 </document>
