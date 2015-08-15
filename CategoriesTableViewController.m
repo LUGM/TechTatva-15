@@ -15,7 +15,7 @@
 #import "SSJSONModel.h"
 #import "MBProgressHUD.h"
 #import "Reachability.h"
-#import "CategoryEventViewController.h"
+#import "CatEventViewController.h"
 
 @interface CategoriesTableViewController () <SSJSONModelDelegate>
 {
@@ -51,14 +51,16 @@
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
+    self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
+    self.navigationController.navigationBar.layer.shadowColor = [[UIColor orangeColor] CGColor];
+    self.navigationController.navigationBar.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
+    self.navigationController.navigationBar.layer.shadowRadius = 2.0f;
+    self.navigationController.navigationBar.layer.shadowOpacity = 1.0f;
+    
     blurView = nil;
     _navigationDropDown = nil;
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Explore" style:UIBarButtonItemStylePlain target:self action:@selector(loadDropDown)];
-    
-//    self.categoriesTable = [[UITableView alloc] init];
-//    self.categoriesTable.delegate = self;
-//    self.categoriesTable.dataSource = self;
     
     categoriesArray = @[@"Acumen", @"Airborne", @"Alacrity", @"Bizzmaestro", @"Cheminova", @"Constructure", @"Cryptoss", @"Electrific", @"Energia", @"Epsilon", @"Kraftwagen", @"Mechanize", @"Mechatron", @"Robotrek", @"Turing"];
     
@@ -125,18 +127,11 @@
     
 }
 
-- (IBAction)categoryInfoButton:(UIButton *)sender
-{
-    
-    UIAlertView *categoryDetails = [[UIAlertView alloc] initWithTitle:@"Details" message:@"[categoryDescriptions objectAtIndex:indexPath.row]" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    [categoryDetails show];
-    
-}
-
 -(void) tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
     
-    [self performSegueWithIdentifier:@"push to category-events" sender:indexPath];
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Category Details" message:[categoryDescriptions objectAtIndex:indexPath.row] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
     
 }
 
@@ -425,7 +420,7 @@
 {
     if ([segue.identifier isEqualToString:@"categoryDetail"]) {
         UINavigationController * navController = segue.destinationViewController;
-        CategoryEventViewController * destController = [navController viewControllers][0];
+        CatEventViewController * destController = [navController viewControllers][0];
         destController.title = [categoryNames objectAtIndex:[self.tableView indexPathForSelectedRow].row];
     }
     NSLog(@" %@ ", sender);

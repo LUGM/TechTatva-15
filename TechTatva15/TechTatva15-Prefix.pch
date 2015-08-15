@@ -7,7 +7,7 @@
 //
 
 #import "CategoriesTableViewController.h"
-#import "CategoryEventViewController.h"
+#import "CatEventViewController.h"
 #import "InstagramViewController.h"
 #import "FullScreenImageViewController.h"
 #import "ResultsViewController.h"

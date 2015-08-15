@@ -15,6 +15,7 @@
 #import "MBProgressHUD.h"
 #import "SSJSONModel.h"
 #import "Event.h"
+#import "DaySegmentedControlView.h"
 
 @interface EventListViewController () <SSJSONModelDelegate>
 {
@@ -40,6 +41,8 @@
 
 @property NavigationMenuView *navigationDropDown;
 
+@property DaySegmentedControlView *daySelector;
+
 @end
 
 @implementation EventListViewController
@@ -52,24 +55,37 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
+    self.navigationController.navigationBar.layer.shadowColor = [[UIColor orangeColor] CGColor];
+    self.navigationController.navigationBar.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
+    self.navigationController.navigationBar.layer.shadowRadius = 2.0f;
+    self.navigationController.navigationBar.layer.shadowOpacity = 1.0f;
+    
     blurView = nil;
     _navigationDropDown = nil;
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Explore" style:UIBarButtonItemStylePlain target:self action:@selector(loadDropDown)];
     
-    self.selectedDay = @1;
+    NSURL *eventsUrl;
     
-    [self.daySelector removeAllSegments];
-    [self.daySelector insertSegmentWithTitle:@"DAY 1" atIndex:0 animated:NO];
-    [self.daySelector insertSegmentWithTitle:@"DAY 2" atIndex:1 animated:NO];
-    [self.daySelector insertSegmentWithTitle:@"DAY 3" atIndex:2 animated:NO];
-    [self.daySelector insertSegmentWithTitle:@"DAY 4" atIndex:3 animated:NO];
-    
-    NSURL *eventsUrl = [NSURL URLWithString:@"http://api.techtatva.in/events"];
+    eventsUrl = [NSURL URLWithString:@"http://api.techtatva.in/events"];
     myJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
+//    eventsUrl = [NSURL URLWithString:@"http://localhost:8888/events.json"];
+    
     [myJsonInstance sendRequestWithUrl:eventsUrl];
     
     [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DaySegmentedControlView" owner:self options:nil];
+    _daySelector = [nib objectAtIndex:0];
+    _daySelector.frame = CGRectMake(0, 66, self.view.frame.size.width, 45);
+    [_daySelector.daySelectionControl addTarget:self action:@selector(daySelect) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:_daySelector];
+    
+    eventsTable.contentInset = UIEdgeInsetsMake(111, 0, 0, 0);
+    
+    _daySelected = @1;
+
     
 }
 
@@ -122,7 +138,7 @@
 //    cell.eventLabel.text = [eventNames objectAtIndex:indexPath.row];
 //    cell.categoryLabel.text = [eventCategoryIds objectAtIndex:indexPath.row];
     
-    cell.eventLabel.text = [NSString stringWithFormat:@"Event %li Day %@", ((long)indexPath.row + 1), self.selectedDay];
+    cell.eventLabel.text = [NSString stringWithFormat:@"Event %li Day %@", ((long)indexPath.row + 1), self.daySelected];
     cell.venueLabel.text = @"304, NLH";
     cell.timeLabel.text = @"3:30 PM";
     cell.contactLabel.text = @"+91 8424998388";
@@ -175,6 +191,41 @@
     
 }
 
+# pragma  mark Segmented Control Methods
+
+- (void) daySelect
+{
+    
+    switch (_daySelector.daySelectionControl.selectedSegmentIndex)
+    {
+            
+        case 0:
+            _daySelected = @1;
+            [eventsTable reloadData];
+            break;
+            
+        case 1:
+            _daySelected = @2;
+            [eventsTable reloadData];
+            break;
+            
+        case 2:
+            _daySelected = @3;
+            [eventsTable reloadData];
+            break;
+            
+        case 3:
+            _daySelected = @4;
+            [eventsTable reloadData];
+            break;
+            
+        default:
+            _daySelected = @1;
+            [eventsTable reloadData];
+            break;
+    }
+    
+}
 
 /*
  #pragma mark - Navigation
@@ -186,36 +237,7 @@
  }
  */
 
-- (IBAction)daySelectorIndexChanged:(id)sender
-{
-    
-    //Stting day using the segmented controller.
-    
-    switch (self.daySelector.selectedSegmentIndex)
-    {
-        case 0:
-            self.selectedDay = @1;
-            break;
-            
-        case 1:
-            self.selectedDay = @2;
-            break;
-            
-        case 2:
-            self.selectedDay = @3;
-            break;
-            
-        case 3:
-            self.selectedDay = @4;
-            break;
-        
-        default:
-            break;
-            
-    }
-    
-    [self.eventsTable reloadData];
-}
+# pragma mark Sidebar Methods
 
 - (void) loadDropDown
 {

@@ -18,8 +18,10 @@
 		182D3F491B56AFB30008F4BB /* InstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D3F481B56AFB30008F4BB /* InstagramViewController.m */; };
 		182D3F4C1B56B0C80008F4BB /* InstagramUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D3F4B1B56B0C80008F4BB /* InstagramUser.m */; };
 		182D3F4F1B56B21C0008F4BB /* InstagramImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D3F4E1B56B21C0008F4BB /* InstagramImage.m */; };
+		183C4E181B7FCCF700A07FB0 /* DaySegmentedControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C4E161B7FCCF700A07FB0 /* DaySegmentedControlView.m */; };
+		183C4E191B7FCCF700A07FB0 /* DaySegmentedControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183C4E171B7FCCF700A07FB0 /* DaySegmentedControlView.xib */; };
+		183C4E1D1B7FCD3400A07FB0 /* CatEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C4E1C1B7FCD3400A07FB0 /* CatEventViewController.m */; };
 		184FF8171B484041007B8E46 /* EventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FF8161B484041007B8E46 /* EventListViewController.m */; };
-		184FF8201B484D04007B8E46 /* CategoryEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FF81F1B484D04007B8E46 /* CategoryEventViewController.m */; };
 		18ADE1781B5ECC4B00CCD46D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ADE1771B5ECC4B00CCD46D /* Reachability.m */; };
 		18B4FC561B5958A5004647DA /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4FC361B5958A5004647DA /* MKAnnotationView+WebCache.m */; };
 		18B4FC571B5958A5004647DA /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4FC381B5958A5004647DA /* NSData+ImageContentType.m */; };
@@ -89,10 +91,13 @@
 		182D3F4B1B56B0C80008F4BB /* InstagramUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramUser.m; path = TechTatva15/InstagramUser.m; sourceTree = "<group>"; };
 		182D3F4D1B56B21C0008F4BB /* InstagramImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramImage.h; path = TechTatva15/InstagramImage.h; sourceTree = "<group>"; };
 		182D3F4E1B56B21C0008F4BB /* InstagramImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramImage.m; path = TechTatva15/InstagramImage.m; sourceTree = "<group>"; };
+		183C4E151B7FCCF700A07FB0 /* DaySegmentedControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaySegmentedControlView.h; sourceTree = "<group>"; };
+		183C4E161B7FCCF700A07FB0 /* DaySegmentedControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaySegmentedControlView.m; sourceTree = "<group>"; };
+		183C4E171B7FCCF700A07FB0 /* DaySegmentedControlView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DaySegmentedControlView.xib; sourceTree = "<group>"; };
+		183C4E1B1B7FCD3400A07FB0 /* CatEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatEventViewController.h; sourceTree = "<group>"; };
+		183C4E1C1B7FCD3400A07FB0 /* CatEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatEventViewController.m; sourceTree = "<group>"; };
 		184FF8151B484041007B8E46 /* EventListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListViewController.h; sourceTree = "<group>"; };
 		184FF8161B484041007B8E46 /* EventListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListViewController.m; sourceTree = "<group>"; };
-		184FF81E1B484D04007B8E46 /* CategoryEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryEventViewController.h; sourceTree = "<group>"; };
-		184FF81F1B484D04007B8E46 /* CategoryEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryEventViewController.m; sourceTree = "<group>"; };
 		18ADE1761B5ECC4B00CCD46D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		18ADE1771B5ECC4B00CCD46D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		18B4FC351B5958A5004647DA /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
@@ -273,6 +278,16 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
+		183C4E1A1B7FCD0A00A07FB0 /* Day Segmented Control View */ = {
+			isa = PBXGroup;
+			children = (
+				183C4E151B7FCCF700A07FB0 /* DaySegmentedControlView.h */,
+				183C4E161B7FCCF700A07FB0 /* DaySegmentedControlView.m */,
+				183C4E171B7FCCF700A07FB0 /* DaySegmentedControlView.xib */,
+			);
+			name = "Day Segmented Control View";
+			sourceTree = "<group>";
+		};
 		18ADE1751B5ECC4B00CCD46D /* Reachability Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -362,8 +377,8 @@
 				182922431B236B2800F95AE0 /* SplashViewController.m */,
 				18DBD09B1B44571B00749AD6 /* CategoriesTableViewController.h */,
 				18DBD09C1B44571B00749AD6 /* CategoriesTableViewController.m */,
-				184FF81E1B484D04007B8E46 /* CategoryEventViewController.h */,
-				184FF81F1B484D04007B8E46 /* CategoryEventViewController.m */,
+				183C4E1B1B7FCD3400A07FB0 /* CatEventViewController.h */,
+				183C4E1C1B7FCD3400A07FB0 /* CatEventViewController.m */,
 				182D3F471B56AFB30008F4BB /* InstagramViewController.h */,
 				182D3F481B56AFB30008F4BB /* InstagramViewController.m */,
 				18B4FC661B595E67004647DA /* FullScreenImageViewController.h */,
@@ -399,6 +414,7 @@
 		18F1BD561B3FE3EF00473E1A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				183C4E1A1B7FCD0A00A07FB0 /* Day Segmented Control View */,
 				18E5599E1B5EE5060004011A /* Navigation Menu View */,
 				18BF0E8F1B5579320088DA84 /* Instagram Cells */,
 				18F1BD541B3FE37900473E1A /* Event View Cells */,
@@ -517,6 +533,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				183C4E191B7FCCF700A07FB0 /* DaySegmentedControlView.xib in Resources */,
 				18B5ECE51B23793E00055A3F /* video.mov in Resources */,
 				18BF0E8B1B5574B00088DA84 /* InstagramCustomCell.xib in Resources */,
 				1822727B1B5A265200CD52B8 /* TTlogomain.jpg in Resources */,
@@ -557,11 +574,11 @@
 				182D3F491B56AFB30008F4BB /* InstagramViewController.m in Sources */,
 				182922221B236AFB00F95AE0 /* AppDelegate.m in Sources */,
 				18B4FC581B5958A5004647DA /* SDImageCache.m in Sources */,
+				183C4E1D1B7FCD3400A07FB0 /* CatEventViewController.m in Sources */,
 				4CC9F6D01B3DBB4F002F9C1D /* eventViewTableViewCell.m in Sources */,
 				18B4FC5D1B5958A5004647DA /* SDWebImageManager.m in Sources */,
 				18B4FC651B5958A5004647DA /* UIView+WebCacheOperation.m in Sources */,
 				A3CD67DD1B3C466B00DACD83 /* SSJSONModel.m in Sources */,
-				184FF8201B484D04007B8E46 /* CategoryEventViewController.m in Sources */,
 				182D3F4C1B56B0C80008F4BB /* InstagramUser.m in Sources */,
 				18B4FC5B1B5958A5004647DA /* SDWebImageDownloader.m in Sources */,
 				18B4FC601B5958A5004647DA /* UIImage+GIF.m in Sources */,
@@ -573,6 +590,7 @@
 				18B4FC611B5958A5004647DA /* UIImage+MultiFormat.m in Sources */,
 				18B4FC731B5962E4004647DA /* UIColor+FlatColors.m in Sources */,
 				18B4FC721B5962E4004647DA /* PQFCirclesInTriangle.m in Sources */,
+				183C4E181B7FCCF700A07FB0 /* DaySegmentedControlView.m in Sources */,
 				18ADE1781B5ECC4B00CCD46D /* Reachability.m in Sources */,
 				18B4FC591B5958A5004647DA /* SDWebImageCompat.m in Sources */,
 				18BF0E8E1B5578220088DA84 /* InstagramCustomTableViewCell.m in Sources */,
