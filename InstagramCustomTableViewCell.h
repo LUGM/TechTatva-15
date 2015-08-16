@@ -13,5 +13,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *mainImage;
 @property (weak, nonatomic) IBOutlet UIImageView *userImage;
 @property (weak, nonatomic) IBOutlet UILabel *userName;
+@property (weak, nonatomic) IBOutlet UILabel *likesCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *commentsCountLabel;
 
 @end

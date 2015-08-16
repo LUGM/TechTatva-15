@@ -52,7 +52,7 @@
     // self.clearsSelectionOnViewWillAppear = NO;
     
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
-    self.navigationController.navigationBar.layer.shadowColor = [[UIColor orangeColor] CGColor];
+    self.navigationController.navigationBar.layer.shadowColor = [[UIColor blackColor] CGColor];
     self.navigationController.navigationBar.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
     self.navigationController.navigationBar.layer.shadowRadius = 2.0f;
     self.navigationController.navigationBar.layer.shadowOpacity = 1.0f;
