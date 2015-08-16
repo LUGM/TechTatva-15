@@ -34,6 +34,10 @@
     self.navigationController.navigationBar.layer.shadowRadius = 2.0f;
     self.navigationController.navigationBar.layer.shadowOpacity = 1.0f;
     
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"x" style:UIBarButtonItemStylePlain target:self action:@selector(dismissThisController)];
+    
+//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImageAsset alloc] initWithCoder:Cancel style:UIBarButtonItemStylePlain target:self action:@selector(dismissThisController)];
+    
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DaySegmentedControlView" owner:self options:nil];
     _daySelector = [nib objectAtIndex:0];
     _daySelector.frame = CGRectMake(0, 66, self.view.frame.size.width, 45);
@@ -174,6 +178,15 @@
             [catEventTable reloadData];
             break;
     }
+    
+}
+
+# pragma mark Segue Methods
+
+- (void) dismissThisController
+{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 

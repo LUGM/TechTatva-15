@@ -57,6 +57,8 @@
     self.navigationController.navigationBar.layer.shadowRadius = 2.0f;
     self.navigationController.navigationBar.layer.shadowOpacity = 1.0f;
     
+    self.tableView.scrollsToTop = YES;
+    
     blurView = nil;
     _navigationDropDown = nil;
     

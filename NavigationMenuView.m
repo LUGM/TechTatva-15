@@ -33,6 +33,4 @@
 }
 */
 
-- (IBAction)logoutbuttonPressed:(UIButton *)sender {
-}
 @end

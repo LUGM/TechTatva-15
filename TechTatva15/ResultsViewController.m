@@ -56,6 +56,8 @@
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Explore" style:UIBarButtonItemStylePlain target:self action:@selector(loadDropDown)];
     
+    myTable.scrollsToTop = YES;
+    
     NSURL *resultsUrl = [NSURL URLWithString:@"http://results.techtatva.in"];              // this has to be url of results page of website
     myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
     [myJsonInstance sendRequestWithUrl:resultsUrl];

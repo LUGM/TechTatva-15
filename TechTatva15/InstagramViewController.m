@@ -78,6 +78,8 @@
     [refreshControl addTarget:self action:@selector(sendDataRequest) forControlEvents:UIControlEventValueChanged];
     [instagramTable addSubview:refreshControl];
     
+    instagramTable.scrollsToTop = YES;
+    
     background = [[UIView alloc] initWithFrame:self.view.frame];
     background.alpha = 0.75;
     [self.view addSubview:background];

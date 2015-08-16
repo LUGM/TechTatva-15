@@ -114,7 +114,7 @@
     hud.mode = MBProgressHUDModeAnnularDeterminate;
     NSURLRequest * request = [NSURLRequest requestWithURL:Url];
     
-    // Create url connection and fire request
+    // Create url connection and send request
     NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     [conn start];
     

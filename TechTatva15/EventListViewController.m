@@ -61,6 +61,8 @@
     self.navigationController.navigationBar.layer.shadowRadius = 2.0f;
     self.navigationController.navigationBar.layer.shadowOpacity = 1.0f;
     
+    eventsTable.scrollsToTop = YES;
+    
     blurView = nil;
     _navigationDropDown = nil;
     
@@ -82,7 +84,7 @@
     [_daySelector.daySelectionControl addTarget:self action:@selector(daySelect) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:_daySelector];
     
-    eventsTable.contentInset = UIEdgeInsetsMake(111, 0, 0, 0);
+    eventsTable.contentInset = UIEdgeInsetsMake(45, 0, 0, 0);
     
     _daySelected = @1;
 
