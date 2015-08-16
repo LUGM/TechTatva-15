@@ -67,8 +67,20 @@
 //    imagesArray = @[""];     category image names to be entered in same order as categories named in array
     
     NSURL *categoriesUrl;
-    categoriesUrl = [NSURL URLWithString:@"http://api.techtatva.in/categories"];
-//    categoriesUrl = [NSURL URLWithString:@"http://localhost:8888/categories.json"];
+    
+    if (![self isInternetAvailable])
+    {
+        
+        categoriesUrl = [NSURL URLWithString:@"http://localhost:8888/categories.json"];
+        
+    }
+    
+    else
+    {
+        
+        categoriesUrl = [NSURL URLWithString:@"http://api.techtatva.in/categories"];
+        
+    }
     
     myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
     [myJsonInstance sendRequestWithUrl:categoriesUrl];
@@ -116,8 +128,15 @@
     
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [self performSegueWithIdentifier:@"categoryDetail" sender:self];
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UINavigationController * navController = [storyboard instantiateViewControllerWithIdentifier:@"eventListNav"];
+    CatEventViewController * destController = [navController viewControllers][0];
+    destController.title = [categoryNames objectAtIndex:indexPath.row];
+    [self presentViewController:navController animated:YES completion:nil];
+
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -416,17 +435,6 @@
     
 }
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([segue.identifier isEqualToString:@"categoryDetail"]) {
-        UINavigationController * navController = segue.destinationViewController;
-        CatEventViewController * destController = [navController viewControllers][0];
-        destController.title = [categoryNames objectAtIndex:[self.tableView indexPathForSelectedRow].row];
-    }
-    NSLog(@" %@ ", sender);
-    
-    
-}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

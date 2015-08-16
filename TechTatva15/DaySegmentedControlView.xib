@@ -3,6 +3,7 @@
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -11,7 +12,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9ZB-Tr-jln">
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="9ZB-Tr-jln">
                     <rect key="frame" x="18" y="8" width="285" height="29"/>
                     <segments>
                         <segment title="DAY 1"/>
@@ -22,6 +23,11 @@
                 </segmentedControl>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="9ZB-Tr-jln" firstAttribute="leading" secondItem="Xdi-E4-MP9" secondAttribute="leading" constant="18" id="LpO-y2-3RF"/>
+                <constraint firstItem="9ZB-Tr-jln" firstAttribute="centerX" secondItem="Xdi-E4-MP9" secondAttribute="centerX" id="Pa3-hO-DAL"/>
+                <constraint firstItem="9ZB-Tr-jln" firstAttribute="top" secondItem="Xdi-E4-MP9" secondAttribute="topMargin" id="xnd-RV-oAO"/>
+            </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>

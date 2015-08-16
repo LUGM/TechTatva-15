@@ -40,8 +40,9 @@
     [_daySelector.daySelectionControl addTarget:self action:@selector(daySelect) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:_daySelector];
     
-    catEventTable.contentInset = UIEdgeInsetsMake(111, 0, 0, 0);
-    
+    catEventTable.contentInset = UIEdgeInsetsMake(45, 0, 0, 0);
+    catEventTable.scrollsToTop = YES;
+    self.view.backgroundColor = [UIColor grayColor];
     _daySelected = @1;
     
 }
