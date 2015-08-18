@@ -16,6 +16,8 @@
 
 @property DaySegmentedControlView *daySelector;
 
+- (IBAction)dismissVCBarButtonPressed:(UIBarButtonItem *)sender;
+
 @end
 
 @implementation CatEventViewController
@@ -34,9 +36,9 @@
     self.navigationController.navigationBar.layer.shadowRadius = 2.0f;
     self.navigationController.navigationBar.layer.shadowOpacity = 1.0f;
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"x" style:UIBarButtonItemStylePlain target:self action:@selector(dismissThisController)];
-    
-//    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImageAsset alloc] initWithCoder:Cancel style:UIBarButtonItemStylePlain target:self action:@selector(dismissThisController)];
+    UIBarButtonItem *dismissVC = [[UIBarButtonItem alloc] init];
+    dismissVC.target = self;
+    dismissVC.action = @selector(dismissVCBarButtonPressed:);
     
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DaySegmentedControlView" owner:self options:nil];
     _daySelector = [nib objectAtIndex:0];
@@ -181,15 +183,21 @@
     
 }
 
-# pragma mark Segue Methods
-
-- (void) dismissThisController
+- (IBAction)dismissVCBarButtonPressed:(UIBarButtonItem *)sender
 {
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
 
+//# pragma mark Segue Methods
+//
+//- (void) dismissThisController
+//{
+//    
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//    
+//}
 
 /*
 #pragma mark - Navigation
@@ -200,5 +208,11 @@
     // Pass the selected object to the new view controller.
 }
 */
-
+//
+//- (IBAction)dismissCatEventViewBarButton:(UIBarButtonItem *)sender
+//{
+//    
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//    
+//}
 @end

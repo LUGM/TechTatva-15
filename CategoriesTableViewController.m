@@ -73,7 +73,7 @@
     if (![self isInternetAvailable])
     {
         
-        categoriesUrl = [NSURL URLWithString:@"http://localhost:8888/categories.json"];
+        categoriesUrl = [NSURL URLWithString:@"http://localhost:8888/cats.json"];
         
     }
     
