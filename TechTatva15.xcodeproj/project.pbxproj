@@ -21,7 +21,6 @@
 		183C4E181B7FCCF700A07FB0 /* DaySegmentedControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C4E161B7FCCF700A07FB0 /* DaySegmentedControlView.m */; };
 		183C4E191B7FCCF700A07FB0 /* DaySegmentedControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183C4E171B7FCCF700A07FB0 /* DaySegmentedControlView.xib */; };
 		183C4E1D1B7FCD3400A07FB0 /* CatEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C4E1C1B7FCD3400A07FB0 /* CatEventViewController.m */; };
-		184FF8171B484041007B8E46 /* EventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FF8161B484041007B8E46 /* EventListViewController.m */; };
 		1897CC321B84EBD0007D779B /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897CC311B84EBD0007D779B /* EventsViewController.m */; };
 		18ADE1781B5ECC4B00CCD46D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ADE1771B5ECC4B00CCD46D /* Reachability.m */; };
 		18B4FC561B5958A5004647DA /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4FC361B5958A5004647DA /* MKAnnotationView+WebCache.m */; };
@@ -55,6 +54,11 @@
 		4CC9F6D11B3DBB4F002F9C1D /* eventViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */; };
 		4CC9F7141B3F275D002F9C1D /* CategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F7101B3F275D002F9C1D /* CategoryTableViewCell.m */; };
 		4CC9F7151B3F275D002F9C1D /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC9F7111B3F275D002F9C1D /* CategoryTableViewCell.xib */; };
+		A33D4F1F1B8645760083429E /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = A33D4F1A1B8645760083429E /* RECommonFunctions.m */; };
+		A33D4F201B8645760083429E /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A33D4F1C1B8645760083429E /* RESideMenu.m */; };
+		A33D4F211B8645760083429E /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A33D4F1E1B8645760083429E /* UIViewController+RESideMenu.m */; };
+		A33D4F251B8645AE0083429E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A33D4F241B8645AE0083429E /* RootViewController.m */; };
+		A33D4F281B86464B0083429E /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A33D4F271B86464B0083429E /* LeftMenuViewController.m */; };
 		A3BF3C011B3FD2DF00E1F436 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF3C001B3FD2DF00E1F436 /* MBProgressHUD.m */; };
 		A3CD67DD1B3C466B00DACD83 /* SSJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CD67DC1B3C466B00DACD83 /* SSJSONModel.m */; };
 /* End PBXBuildFile section */
@@ -97,8 +101,6 @@
 		183C4E171B7FCCF700A07FB0 /* DaySegmentedControlView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DaySegmentedControlView.xib; sourceTree = "<group>"; };
 		183C4E1B1B7FCD3400A07FB0 /* CatEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatEventViewController.h; sourceTree = "<group>"; };
 		183C4E1C1B7FCD3400A07FB0 /* CatEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatEventViewController.m; sourceTree = "<group>"; };
-		184FF8151B484041007B8E46 /* EventListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListViewController.h; sourceTree = "<group>"; };
-		184FF8161B484041007B8E46 /* EventListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListViewController.m; sourceTree = "<group>"; };
 		1897CC301B84EBD0007D779B /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
 		1897CC311B84EBD0007D779B /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		18ADE1761B5ECC4B00CCD46D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -162,6 +164,16 @@
 		4CC9F70F1B3F275D002F9C1D /* CategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryTableViewCell.h; path = ../CategoryTableViewCell.h; sourceTree = "<group>"; };
 		4CC9F7101B3F275D002F9C1D /* CategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryTableViewCell.m; path = ../CategoryTableViewCell.m; sourceTree = "<group>"; };
 		4CC9F7111B3F275D002F9C1D /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryTableViewCell.xib; path = ../CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		A33D4F191B8645760083429E /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
+		A33D4F1A1B8645760083429E /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
+		A33D4F1B1B8645760083429E /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
+		A33D4F1C1B8645760083429E /* RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RESideMenu.m; sourceTree = "<group>"; };
+		A33D4F1D1B8645760083429E /* UIViewController+RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+RESideMenu.h"; sourceTree = "<group>"; };
+		A33D4F1E1B8645760083429E /* UIViewController+RESideMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+RESideMenu.m"; sourceTree = "<group>"; };
+		A33D4F231B8645AE0083429E /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		A33D4F241B8645AE0083429E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		A33D4F261B86464B0083429E /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuViewController.h; sourceTree = "<group>"; };
+		A33D4F271B86464B0083429E /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuViewController.m; sourceTree = "<group>"; };
 		A3BF3BFF1B3FD2DF00E1F436 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		A3BF3C001B3FD2DF00E1F436 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		A3CD67DB1B3C466B00DACD83 /* SSJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSJSONModel.h; sourceTree = "<group>"; };
@@ -376,6 +388,10 @@
 		18F1BD521B3FE35000473E1A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				A33D4F231B8645AE0083429E /* RootViewController.h */,
+				A33D4F241B8645AE0083429E /* RootViewController.m */,
+				A33D4F261B86464B0083429E /* LeftMenuViewController.h */,
+				A33D4F271B86464B0083429E /* LeftMenuViewController.m */,
 				182922421B236B2800F95AE0 /* SplashViewController.h */,
 				182922431B236B2800F95AE0 /* SplashViewController.m */,
 				18DBD09B1B44571B00749AD6 /* CategoriesTableViewController.h */,
@@ -390,8 +406,6 @@
 				18E282721B373C4D0084DCDE /* ResultsViewController.m */,
 				1897CC301B84EBD0007D779B /* EventsViewController.h */,
 				1897CC311B84EBD0007D779B /* EventsViewController.m */,
-				184FF8151B484041007B8E46 /* EventListViewController.h */,
-				184FF8161B484041007B8E46 /* EventListViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -428,6 +442,19 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		A33D4F221B86457C0083429E /* RESideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				A33D4F191B8645760083429E /* RECommonFunctions.h */,
+				A33D4F1A1B8645760083429E /* RECommonFunctions.m */,
+				A33D4F1B1B8645760083429E /* RESideMenu.h */,
+				A33D4F1C1B8645760083429E /* RESideMenu.m */,
+				A33D4F1D1B8645760083429E /* UIViewController+RESideMenu.h */,
+				A33D4F1E1B8645760083429E /* UIViewController+RESideMenu.m */,
+			);
+			name = RESideMenu;
+			sourceTree = "<group>";
+		};
 		A3BF3BFE1B3FD2C600E1F436 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
@@ -440,6 +467,7 @@
 		A3CD67D91B3C465700DACD83 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				A33D4F221B86457C0083429E /* RESideMenu */,
 				18ADE1751B5ECC4B00CCD46D /* Reachability Files */,
 				18B4FC691B5962E4004647DA /* PQFCustomLoaders */,
 				18B4FC341B5958A5004647DA /* SDWebImage */,
@@ -566,15 +594,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				184FF8171B484041007B8E46 /* EventListViewController.m in Sources */,
 				18B4FC5E1B5958A5004647DA /* SDWebImagePrefetcher.m in Sources */,
 				18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */,
 				18B4FC621B5958A5004647DA /* UIImage+WebP.m in Sources */,
 				1897CC321B84EBD0007D779B /* EventsViewController.m in Sources */,
+				A33D4F211B8645760083429E /* UIViewController+RESideMenu.m in Sources */,
 				18B4FC641B5958A5004647DA /* UIImageView+WebCache.m in Sources */,
 				18B4FC5C1B5958A5004647DA /* SDWebImageDownloaderOperation.m in Sources */,
 				18FDACA51B76386F00C23742 /* Event.m in Sources */,
 				182D3F4F1B56B21C0008F4BB /* InstagramImage.m in Sources */,
+				A33D4F281B86464B0083429E /* LeftMenuViewController.m in Sources */,
 				18B4FC631B5958A5004647DA /* UIImageView+HighlightedWebCache.m in Sources */,
 				18B4FC5A1B5958A5004647DA /* SDWebImageDecoder.m in Sources */,
 				18B4FC571B5958A5004647DA /* NSData+ImageContentType.m in Sources */,
@@ -596,7 +625,10 @@
 				1829221F1B236AFB00F95AE0 /* main.m in Sources */,
 				18B4FC611B5958A5004647DA /* UIImage+MultiFormat.m in Sources */,
 				18B4FC731B5962E4004647DA /* UIColor+FlatColors.m in Sources */,
+				A33D4F251B8645AE0083429E /* RootViewController.m in Sources */,
+				A33D4F201B8645760083429E /* RESideMenu.m in Sources */,
 				18B4FC721B5962E4004647DA /* PQFCirclesInTriangle.m in Sources */,
+				A33D4F1F1B8645760083429E /* RECommonFunctions.m in Sources */,
 				183C4E181B7FCCF700A07FB0 /* DaySegmentedControlView.m in Sources */,
 				18ADE1781B5ECC4B00CCD46D /* Reachability.m in Sources */,
 				18B4FC591B5958A5004647DA /* SDWebImageCompat.m in Sources */,

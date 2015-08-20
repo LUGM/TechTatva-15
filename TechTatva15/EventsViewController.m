@@ -55,7 +55,7 @@
     self.navigationController.navigationBar.layer.shadowRadius = 2.0f;
     self.navigationController.navigationBar.layer.shadowOpacity = 1.0f;
     
-    eventTable.scrollsToTop = YES;
+//    eventTable.scrollsToTop = YES;
     
 //    blurView = nil;
     _navigationDropDown = nil;
@@ -63,9 +63,10 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Explore" style:UIBarButtonItemStylePlain target:self action:@selector(loadDropDown)];
     
     NSURL *eventsUrl;
-    eventsUrl = [NSURL URLWithString:@"http://api.techtatva.in/events"];
+//    eventsUrl = [NSURL URLWithString:@"http://api.techtatva.in/events"];
     myJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
-    
+    myJsonInstance.delegate = self;
+    eventsUrl = [NSURL URLWithString:@"http://localhost:8888/events.json"];
     [myJsonInstance sendRequestWithUrl:eventsUrl];
     
     [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
@@ -75,13 +76,13 @@
     
     // 110 because search bar is 44 and status bar is 66.
     
-    _daySelector.frame = CGRectMake(0, 110, self.view.frame.size.width, 45);
+    _daySelector.frame = CGRectMake(0, 66, self.view.frame.size.width, 45);
     [_daySelector.daySelectionControl addTarget:self action:@selector(daySelect) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:_daySelector];
     
     // offset 89 = 45 for segmented control and 44 for search bar
     
-    eventTable.contentInset = UIEdgeInsetsMake(89, 0, 0, 0);
+    eventTable.contentInset = UIEdgeInsetsMake(44, 0, 0, 0);
     self.view.backgroundColor = [UIColor grayColor];
     _daySelected = @1;
     
@@ -100,7 +101,7 @@
 - (void) jsonRequestDidCompleteWithDict:(id)response model:(SSJSONModel *)JSONModel
 {
     
-    if (JSONModel == myJsonInstance.parsedJsonData)
+    if (JSONModel == myJsonInstance)
     {
         
         NSLog(@"%@",myJsonInstance.parsedJsonData);
