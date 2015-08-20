@@ -63,10 +63,10 @@
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Explore" style:UIBarButtonItemStylePlain target:self action:@selector(loadDropDown)];
     
     NSURL *eventsUrl;
-//    eventsUrl = [NSURL URLWithString:@"http://api.techtatva.in/events"];
+    eventsUrl = [NSURL URLWithString:@"http://api.techtatva.in/events"];
     myJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
     myJsonInstance.delegate = self;
-    eventsUrl = [NSURL URLWithString:@"http://localhost:8888/events.json"];
+//    eventsUrl = [NSURL URLWithString:@"http://localhost:8888/events.json"];
     [myJsonInstance sendRequestWithUrl:eventsUrl];
     
     [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];

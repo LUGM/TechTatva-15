@@ -11,7 +11,7 @@
 #import "InstagramViewController.h"
 #import "FullScreenImageViewController.h"
 #import "ResultsViewController.h"
-#import "EventListViewController.h"
+#import "EventsViewController.h"
 
 #ifndef TechTatva15_TechTatva15_Prefix_pch
 #define TechTatva15_TechTatva15_Prefix_pch
