@@ -150,6 +150,53 @@
             </objects>
             <point key="canvasLocation" x="2911" y="3490"/>
         </scene>
+        <!--Events View Controller-->
+        <scene sceneID="Mf8-RK-xvZ">
+            <objects>
+                <viewController id="Qh7-j3-X9N" customClass="EventsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="LRh-C7-Wr3"/>
+                        <viewControllerLayoutGuide type="bottom" id="33S-Wy-Rfn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cb3-vc-Dbm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qkY-OL-5hp">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="nbi-Cv-NVR">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nbi-Cv-NVR" id="qmr-Og-5fR">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Qh7-j3-X9N" id="Eol-eV-EFo"/>
+                                    <outlet property="delegate" destination="Qh7-j3-X9N" id="RCr-hp-Tmn"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qkY-OL-5hp" firstAttribute="trailing" secondItem="LRh-C7-Wr3" secondAttribute="trailing" id="IKz-g6-S3C"/>
+                            <constraint firstItem="qkY-OL-5hp" firstAttribute="top" secondItem="cb3-vc-Dbm" secondAttribute="top" id="QAv-wq-Qm4"/>
+                            <constraint firstItem="qkY-OL-5hp" firstAttribute="leading" secondItem="LRh-C7-Wr3" secondAttribute="leading" id="jSO-0a-ldC"/>
+                            <constraint firstItem="qkY-OL-5hp" firstAttribute="bottom" secondItem="33S-Wy-Rfn" secondAttribute="top" id="rfT-Q2-OrK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cHr-Mg-vjG"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="eventTable" destination="qkY-OL-5hp" id="lZl-hJ-Hgo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PMK-L8-1x3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2934" y="4237"/>
+        </scene>
         <!--Categories-->
         <scene sceneID="XR6-4J-W8n">
             <objects>
@@ -232,7 +279,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C75-bj-Gfv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2852" y="4899"/>
+            <point key="canvasLocation" x="2867" y="5006"/>
         </scene>
         <!--Instagram View Controller-->
         <scene sceneID="Rdg-Nf-Cpd">
@@ -308,7 +355,7 @@
         <!--Navigation Controller-->
         <scene sceneID="fLi-B5-eTm">
             <objects>
-                <navigationController storyboardIdentifier="eventView" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bos-KZ-9tR" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="eventListView" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="bos-KZ-9tR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CHq-av-NdE">
@@ -322,12 +369,12 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CC5-DE-S6a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2260" y="4899"/>
+            <point key="canvasLocation" x="2270" y="5006"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yut-QA-KSv">
             <objects>
-                <navigationController storyboardIdentifier="instagramView" automaticallyAdjustsScrollViewInsets="NO" id="aeG-YH-oa6" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="instagramView" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="aeG-YH-oa6" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yIM-or-PEm">
@@ -361,6 +408,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="73C-px-CIS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2504" y="3490"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Q4z-oD-fcn">
+            <objects>
+                <navigationController storyboardIdentifier="eventView" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="toG-ju-MbY" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jyM-rH-GAn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Qh7-j3-X9N" kind="relationship" relationship="rootViewController" id="aYU-D4-Wbw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6YX-u5-wXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2504" y="4237"/>
         </scene>
     </scenes>
     <resources>

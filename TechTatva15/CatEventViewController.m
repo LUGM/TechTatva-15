@@ -8,8 +8,11 @@
 
 #import "CatEventViewController.h"
 #import "DaySegmentedControlView.h"
+#import "Reachability.h"
+#import "SSJSONModel.h"
+#import "MBProgressHUD.h"
 
-@interface CatEventViewController ()
+@interface CatEventViewController () // <SSJSONModelDelegate>
 
 @property NSIndexPath *previousSelectedIndexPath;
 @property NSIndexPath *currentSelectedIndexPath;
@@ -183,21 +186,14 @@
     
 }
 
+# pragma mark Segue Methods
+
 - (IBAction)dismissVCBarButtonPressed:(UIBarButtonItem *)sender
 {
     
     [self dismissViewControllerAnimated:YES completion:nil];
     
 }
-
-//# pragma mark Segue Methods
-//
-//- (void) dismissThisController
-//{
-//    
-//    [self dismissViewControllerAnimated:YES completion:nil];
-//    
-//}
 
 /*
 #pragma mark - Navigation
@@ -208,11 +204,4 @@
     // Pass the selected object to the new view controller.
 }
 */
-//
-//- (IBAction)dismissCatEventViewBarButton:(UIBarButtonItem *)sender
-//{
-//    
-//    [self dismissViewControllerAnimated:YES completion:nil];
-//    
-//}
 @end

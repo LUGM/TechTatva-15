@@ -22,6 +22,7 @@
 		183C4E191B7FCCF700A07FB0 /* DaySegmentedControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183C4E171B7FCCF700A07FB0 /* DaySegmentedControlView.xib */; };
 		183C4E1D1B7FCD3400A07FB0 /* CatEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C4E1C1B7FCD3400A07FB0 /* CatEventViewController.m */; };
 		184FF8171B484041007B8E46 /* EventListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 184FF8161B484041007B8E46 /* EventListViewController.m */; };
+		1897CC321B84EBD0007D779B /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897CC311B84EBD0007D779B /* EventsViewController.m */; };
 		18ADE1781B5ECC4B00CCD46D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ADE1771B5ECC4B00CCD46D /* Reachability.m */; };
 		18B4FC561B5958A5004647DA /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4FC361B5958A5004647DA /* MKAnnotationView+WebCache.m */; };
 		18B4FC571B5958A5004647DA /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4FC381B5958A5004647DA /* NSData+ImageContentType.m */; };
@@ -98,6 +99,8 @@
 		183C4E1C1B7FCD3400A07FB0 /* CatEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatEventViewController.m; sourceTree = "<group>"; };
 		184FF8151B484041007B8E46 /* EventListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventListViewController.h; sourceTree = "<group>"; };
 		184FF8161B484041007B8E46 /* EventListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventListViewController.m; sourceTree = "<group>"; };
+		1897CC301B84EBD0007D779B /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
+		1897CC311B84EBD0007D779B /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		18ADE1761B5ECC4B00CCD46D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		18ADE1771B5ECC4B00CCD46D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		18B4FC351B5958A5004647DA /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
@@ -385,6 +388,8 @@
 				18B4FC671B595E67004647DA /* FullScreenImageViewController.m */,
 				18E282711B373C4D0084DCDE /* ResultsViewController.h */,
 				18E282721B373C4D0084DCDE /* ResultsViewController.m */,
+				1897CC301B84EBD0007D779B /* EventsViewController.h */,
+				1897CC311B84EBD0007D779B /* EventsViewController.m */,
 				184FF8151B484041007B8E46 /* EventListViewController.h */,
 				184FF8161B484041007B8E46 /* EventListViewController.m */,
 			);
@@ -565,6 +570,7 @@
 				18B4FC5E1B5958A5004647DA /* SDWebImagePrefetcher.m in Sources */,
 				18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */,
 				18B4FC621B5958A5004647DA /* UIImage+WebP.m in Sources */,
+				1897CC321B84EBD0007D779B /* EventsViewController.m in Sources */,
 				18B4FC641B5958A5004647DA /* UIImageView+WebCache.m in Sources */,
 				18B4FC5C1B5958A5004647DA /* SDWebImageDownloaderOperation.m in Sources */,
 				18FDACA51B76386F00C23742 /* Event.m in Sources */,
