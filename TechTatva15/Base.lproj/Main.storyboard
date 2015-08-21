@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mmT-Jb-gOW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mmT-Jb-gOW">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment defaultVersion="1808" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -121,9 +121,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Category Name" id="4vs-GF-Otc">
-                        <barButtonItem key="leftBarButtonItem" image="Cancel" id="pZZ-yW-Whb">
+                        <barButtonItem key="leftBarButtonItem" image="Cancel" id="gIx-y8-8gg">
                             <connections>
-                                <action selector="dismissVCBarButtonPressed:" destination="ruu-b6-1oS" id="NOg-OA-kWF"/>
+                                <action selector="dismissVCBarButtonPressed:" destination="ruu-b6-1oS" id="inK-RL-Lpr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -316,6 +316,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="contentsTable" destination="3Hp-1p-FrM" id="kQJ-RE-mIN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lf8-KU-inw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

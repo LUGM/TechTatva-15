@@ -47,8 +47,6 @@
 		18BF0E8E1B5578220088DA84 /* InstagramCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BF0E8D1B5578220088DA84 /* InstagramCustomTableViewCell.m */; };
 		18DBD09D1B44571B00749AD6 /* CategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD09C1B44571B00749AD6 /* CategoriesTableViewController.m */; };
 		18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E282721B373C4D0084DCDE /* ResultsViewController.m */; };
-		18E559971B5EE2FA0004011A /* NavigationMenuView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E559961B5EE2FA0004011A /* NavigationMenuView.xib */; };
-		18E5599D1B5EE4690004011A /* NavigationMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E5599C1B5EE4690004011A /* NavigationMenuView.m */; };
 		18FDACA51B76386F00C23742 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDACA41B76386F00C23742 /* Event.m */; };
 		4CC9F6D01B3DBB4F002F9C1D /* eventViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */; };
 		4CC9F6D11B3DBB4F002F9C1D /* eventViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */; };
@@ -153,9 +151,6 @@
 		18DBD09C1B44571B00749AD6 /* CategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoriesTableViewController.m; path = ../CategoriesTableViewController.m; sourceTree = "<group>"; };
 		18E282711B373C4D0084DCDE /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
 		18E282721B373C4D0084DCDE /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
-		18E559961B5EE2FA0004011A /* NavigationMenuView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationMenuView.xib; sourceTree = "<group>"; };
-		18E5599B1B5EE4690004011A /* NavigationMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationMenuView.h; sourceTree = "<group>"; };
-		18E5599C1B5EE4690004011A /* NavigationMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationMenuView.m; sourceTree = "<group>"; };
 		18FDACA31B76386F00C23742 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		18FDACA41B76386F00C23742 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
 		4CC9F6CD1B3DBB4F002F9C1D /* eventViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventViewTableViewCell.h; sourceTree = "<group>"; };
@@ -374,17 +369,6 @@
 			name = "Instagram Cells";
 			sourceTree = "<group>";
 		};
-		18E5599E1B5EE5060004011A /* Navigation Menu View */ = {
-			isa = PBXGroup;
-			children = (
-				18E559961B5EE2FA0004011A /* NavigationMenuView.xib */,
-				18E5599B1B5EE4690004011A /* NavigationMenuView.h */,
-				18E5599C1B5EE4690004011A /* NavigationMenuView.m */,
-			);
-			name = "Navigation Menu View";
-			path = ..;
-			sourceTree = "<group>";
-		};
 		18F1BD521B3FE35000473E1A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,7 +418,6 @@
 			isa = PBXGroup;
 			children = (
 				183C4E1A1B7FCD0A00A07FB0 /* Day Segmented Control View */,
-				18E5599E1B5EE5060004011A /* Navigation Menu View */,
 				18BF0E8F1B5579320088DA84 /* Instagram Cells */,
 				18F1BD541B3FE37900473E1A /* Event View Cells */,
 				18F1BD551B3FE38A00473E1A /* Category Event View Cells */,
@@ -576,7 +559,6 @@
 				1829222D1B236AFB00F95AE0 /* LaunchScreen.xib in Resources */,
 				1829222A1B236AFB00F95AE0 /* Images.xcassets in Resources */,
 				4CC9F6D11B3DBB4F002F9C1D /* eventViewTableViewCell.xib in Resources */,
-				18E559971B5EE2FA0004011A /* NavigationMenuView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,7 +618,6 @@
 				182922441B236B2800F95AE0 /* SplashViewController.m in Sources */,
 				18B4FC5F1B5958A5004647DA /* UIButton+WebCache.m in Sources */,
 				A3BF3C011B3FD2DF00E1F436 /* MBProgressHUD.m in Sources */,
-				18E5599D1B5EE4690004011A /* NavigationMenuView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

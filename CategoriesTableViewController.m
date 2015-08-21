@@ -11,7 +11,6 @@
 
 
 #import "CategoriesTableViewController.h"
-#import "NavigationMenuView.h"
 #import "SSJSONModel.h"
 #import "MBProgressHUD.h"
 #import "Reachability.h"
@@ -33,11 +32,7 @@
     NSMutableArray *categoryIds;
     NSMutableArray *categoryTypes;
     
-    UIView *blurView;
-    
 }
-
-@property NavigationMenuView *navigationDropDown;
 
 @end
 
@@ -58,11 +53,6 @@
     self.navigationController.navigationBar.layer.shadowOpacity = 1.0f;
     
     self.tableView.scrollsToTop = YES;
-    
-    blurView = nil;
-    _navigationDropDown = nil;
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Explore" style:UIBarButtonItemStylePlain target:self action:@selector(loadDropDown)];
     
     categoriesArray = @[@"Acumen", @"Airborne", @"Alacrity", @"Bizzmaestro", @"Cheminova", @"Constructure", @"Cryptoss", @"Electrific", @"Energia", @"Epsilon", @"Kraftwagen", @"Mechanize", @"Mechatron", @"Robotrek", @"Turing"];
     
@@ -188,241 +178,6 @@
         [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
         
     }
-    
-}
-
-# pragma mark Sidebar Methods
-
-- (void) loadDropDown
-{
-    
-    if (self.navigationDropDown == nil)
-    {
-        
-        blurView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
-        blurView.alpha = 0.9;
-        [self.view addSubview:blurView];
-        [blurView addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removeExtraViews)]];
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"NavigationMenuView" owner:self options:nil];
-        _navigationDropDown = [nib objectAtIndex:0];
-        _navigationDropDown.frame = CGRectMake(0, 0, 170, 602);
-        
-        [self.view addSubview:_navigationDropDown];
-        
-        [_navigationDropDown.categoryButtonPressed addTarget:self action:@selector(categoryButton) forControlEvents:UIControlEventTouchUpInside];
-        [_navigationDropDown.eventButtonPressed addTarget:self action:@selector(eventButton) forControlEvents:UIControlEventTouchUpInside];
-        [_navigationDropDown.favouritesButtonPressed addTarget:self action:@selector(favouritesButton) forControlEvents:UIControlEventTouchUpInside];
-        [_navigationDropDown.resultsButtonPressed addTarget:self action:@selector(resultsButton) forControlEvents:UIControlEventTouchUpInside];
-        [_navigationDropDown.instafeedButtonPressed addTarget:self action:@selector(instafeedButton) forControlEvents:UIControlEventTouchUpInside];
-        [_navigationDropDown.aboutUsButtonPressed addTarget:self action:@selector(aboutUsButton) forControlEvents:UIControlEventTouchUpInside];
-        [_navigationDropDown.registerButtonPressed addTarget:self action:@selector(registerButton) forControlEvents:UIControlEventTouchUpInside];
-        [_navigationDropDown.onlineEventsButtonPressed addTarget:self action:@selector(onlineEventsButton) forControlEvents:UIControlEventTouchUpInside];
-        
-        _navigationDropDown.sidebarImageView.layer.cornerRadius = 25;
-        
-    }
-    
-}
-
-- (void) categoryButton
-{
-    
-    if (![self isInternetAvailable])
-    {
-        
-        UIAlertView *categoryViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable"
-                                                                              message:@"Please recheck connection"
-                                                                             delegate:self
-                                                                    cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [categoryViewConnectionAlert show];
-        
-    }
-    
-    else
-    {
-        
-        [self.navigationDropDown removeFromSuperview];
-        self.navigationDropDown = nil;
-        
-        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UINavigationController *categoriestableViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"categoryView"];
-        [self presentViewController:categoriestableViewController animated:YES completion:nil];
-        
-    }
-    
-}
-
-- (void) eventButton
-{
-    
-    if (![self isInternetAvailable])
-    {
-        
-        UIAlertView *eventViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable"
-                                                                           message:@"Please recheck connection"
-                                                                          delegate:self
-                                                                 cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [eventViewConnectionAlert show];
-        
-    }
-    
-    else
-    {
-        
-        [self.navigationDropDown removeFromSuperview];
-        self.navigationDropDown = nil;
-        
-        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UINavigationController *categoriestableViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"eventView"];
-        [self presentViewController:categoriestableViewController animated:YES completion:nil];
-        
-    }
-    
-}
-
-- (void) favouritesButton
-{
-    
-    [self.navigationDropDown removeFromSuperview];
-    self.navigationDropDown = nil;
-    
-    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    UINavigationController *categoriestableViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"favouritesView"];
-    [self presentViewController:categoriestableViewController animated:YES completion:nil];
-    
-}
-
-- (void) resultsButton
-{
-    
-    if (![self isInternetAvailable])
-    {
-        
-        UIAlertView *resultsViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable"
-                                                                             message:@"Please recheck connection"
-                                                                            delegate:self
-                                                                   cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [resultsViewConnectionAlert show];
-        
-    }
-    
-    else
-    {
-        
-        [self.navigationDropDown removeFromSuperview];
-        self.navigationDropDown = nil;
-        
-        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UINavigationController *categoriestableViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"resultsView"];
-        [self presentViewController:categoriestableViewController animated:YES completion:nil];
-        
-    }
-    
-}
-
-- (void) instafeedButton
-{
-    if (![self isInternetAvailable])
-    {
-        
-        UIAlertView *instagramViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable"
-                                                                               message:@"Please recheck connection"
-                                                                              delegate:self
-                                                                     cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [instagramViewConnectionAlert show];
-        
-    }
-    
-    else
-    {
-        
-        [self.navigationDropDown removeFromSuperview];
-        self.navigationDropDown = nil;
-        
-        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UINavigationController *categoriestableViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"instagramView"];
-        [self presentViewController:categoriestableViewController animated:YES completion:nil];
-        
-    }
-    
-}
-
-- (void)aboutUsButton
-{
-    
-    [self.navigationDropDown removeFromSuperview];
-    self.navigationDropDown = nil;
-    
-    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    UINavigationController *categoriestableViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"aboutUsView"];
-    [self presentViewController:categoriestableViewController animated:YES completion:nil];
-    
-}
-
-- (void) registerButton
-{
-    
-    if (![self isInternetAvailable])
-    {
-        
-        UIAlertView *registerViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable"
-                                                                               message:@"Please recheck connection"
-                                                                              delegate:self
-                                                                     cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [registerViewConnectionAlert show];
-        
-    }
-    
-    else
-    {
-        
-        [self.navigationDropDown removeFromSuperview];
-        self.navigationDropDown = nil;
-        
-        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UINavigationController *categoriestableViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"registerView"];
-        [self presentViewController:categoriestableViewController animated:YES completion:nil];
-        
-    }
-    
-}
-
-- (void) onlineEventsButton
-{
-    
-    if (![self isInternetAvailable])
-    {
-        
-        UIAlertView *onlineEventsViewConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Data unavailable"
-                                                                               message:@"Please recheck connection"
-                                                                              delegate:self
-                                                                     cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        [onlineEventsViewConnectionAlert show];
-        
-    }
-    
-    else
-    {
-        
-        [self.navigationDropDown removeFromSuperview];
-        self.navigationDropDown = nil;
-        
-        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UINavigationController *categoriestableViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"onlineEventsView"];
-        [self presentViewController:categoriestableViewController animated:YES completion:nil];
-        
-    }
-    
-}
-
-
-- (void)removeExtraViews
-{
-    
-    [blurView removeFromSuperview];
-    [_navigationDropDown removeFromSuperview];
-    blurView = nil;
-    _navigationDropDown = nil;
     
 }
 
