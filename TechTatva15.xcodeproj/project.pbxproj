@@ -14,7 +14,6 @@
 		1829222A1B236AFB00F95AE0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182922291B236AFB00F95AE0 /* Images.xcassets */; };
 		1829222D1B236AFB00F95AE0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1829222B1B236AFB00F95AE0 /* LaunchScreen.xib */; };
 		182922391B236AFB00F95AE0 /* TechTatva15Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 182922381B236AFB00F95AE0 /* TechTatva15Tests.m */; };
-		182922441B236B2800F95AE0 /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182922431B236B2800F95AE0 /* SplashViewController.m */; };
 		182D3F491B56AFB30008F4BB /* InstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D3F481B56AFB30008F4BB /* InstagramViewController.m */; };
 		182D3F4C1B56B0C80008F4BB /* InstagramUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D3F4B1B56B0C80008F4BB /* InstagramUser.m */; };
 		182D3F4F1B56B21C0008F4BB /* InstagramImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D3F4E1B56B21C0008F4BB /* InstagramImage.m */; };
@@ -43,20 +42,21 @@
 		18B4FC721B5962E4004647DA /* PQFCirclesInTriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4FC6B1B5962E4004647DA /* PQFCirclesInTriangle.m */; };
 		18B4FC731B5962E4004647DA /* UIColor+FlatColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4FC6E1B5962E4004647DA /* UIColor+FlatColors.m */; };
 		18B5ECE51B23793E00055A3F /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 18B5ECE41B23793E00055A3F /* video.mov */; };
-		18BF0E8B1B5574B00088DA84 /* InstagramCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BF0E8A1B5574B00088DA84 /* InstagramCustomCell.xib */; };
-		18BF0E8E1B5578220088DA84 /* InstagramCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BF0E8D1B5578220088DA84 /* InstagramCustomTableViewCell.m */; };
-		18DBD09D1B44571B00749AD6 /* CategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DBD09C1B44571B00749AD6 /* CategoriesTableViewController.m */; };
 		18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E282721B373C4D0084DCDE /* ResultsViewController.m */; };
 		18FDACA51B76386F00C23742 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDACA41B76386F00C23742 /* Event.m */; };
 		4CC9F6D01B3DBB4F002F9C1D /* eventViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */; };
 		4CC9F6D11B3DBB4F002F9C1D /* eventViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */; };
-		4CC9F7141B3F275D002F9C1D /* CategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F7101B3F275D002F9C1D /* CategoryTableViewCell.m */; };
-		4CC9F7151B3F275D002F9C1D /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC9F7111B3F275D002F9C1D /* CategoryTableViewCell.xib */; };
 		A33D4F1F1B8645760083429E /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = A33D4F1A1B8645760083429E /* RECommonFunctions.m */; };
 		A33D4F201B8645760083429E /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A33D4F1C1B8645760083429E /* RESideMenu.m */; };
 		A33D4F211B8645760083429E /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A33D4F1E1B8645760083429E /* UIViewController+RESideMenu.m */; };
 		A33D4F251B8645AE0083429E /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A33D4F241B8645AE0083429E /* RootViewController.m */; };
 		A33D4F281B86464B0083429E /* LeftMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A33D4F271B86464B0083429E /* LeftMenuViewController.m */; };
+		A3435C991B88BC9000BB1FFB /* CategoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3435C971B88BC9000BB1FFB /* CategoryTableViewCell.m */; };
+		A3435C9A1B88BC9000BB1FFB /* CategoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3435C981B88BC9000BB1FFB /* CategoryTableViewCell.xib */; };
+		A3435C9D1B88BCBA00BB1FFB /* SplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3435C9C1B88BCBA00BB1FFB /* SplashViewController.m */; };
+		A3435CA01B88BCC600BB1FFB /* CategoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3435C9F1B88BCC600BB1FFB /* CategoriesTableViewController.m */; };
+		A3435CA41B88BCDF00BB1FFB /* InstagramCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A3435CA11B88BCDF00BB1FFB /* InstagramCustomCell.xib */; };
+		A3435CA51B88BCDF00BB1FFB /* InstagramCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3435CA31B88BCDF00BB1FFB /* InstagramCustomTableViewCell.m */; };
 		A3BF3C011B3FD2DF00E1F436 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF3C001B3FD2DF00E1F436 /* MBProgressHUD.m */; };
 		A3CD67DD1B3C466B00DACD83 /* SSJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CD67DC1B3C466B00DACD83 /* SSJSONModel.m */; };
 /* End PBXBuildFile section */
@@ -86,8 +86,6 @@
 		182922321B236AFB00F95AE0 /* TechTatva15Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechTatva15Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		182922371B236AFB00F95AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182922381B236AFB00F95AE0 /* TechTatva15Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TechTatva15Tests.m; sourceTree = "<group>"; };
-		182922421B236B2800F95AE0 /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SplashViewController.h; path = ../SplashViewController.h; sourceTree = "<group>"; };
-		182922431B236B2800F95AE0 /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SplashViewController.m; path = ../SplashViewController.m; sourceTree = "<group>"; };
 		182D3F471B56AFB30008F4BB /* InstagramViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramViewController.h; sourceTree = "<group>"; };
 		182D3F481B56AFB30008F4BB /* InstagramViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramViewController.m; sourceTree = "<group>"; };
 		182D3F4A1B56B0C80008F4BB /* InstagramUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramUser.h; path = TechTatva15/InstagramUser.h; sourceTree = "<group>"; };
@@ -144,11 +142,6 @@
 		18B4FC6D1B5962E4004647DA /* UIColor+FlatColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FlatColors.h"; sourceTree = "<group>"; };
 		18B4FC6E1B5962E4004647DA /* UIColor+FlatColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FlatColors.m"; sourceTree = "<group>"; };
 		18B5ECE41B23793E00055A3F /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
-		18BF0E8A1B5574B00088DA84 /* InstagramCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = InstagramCustomCell.xib; path = ../InstagramCustomCell.xib; sourceTree = "<group>"; };
-		18BF0E8C1B5578220088DA84 /* InstagramCustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramCustomTableViewCell.h; path = ../InstagramCustomTableViewCell.h; sourceTree = "<group>"; };
-		18BF0E8D1B5578220088DA84 /* InstagramCustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramCustomTableViewCell.m; path = ../InstagramCustomTableViewCell.m; sourceTree = "<group>"; };
-		18DBD09B1B44571B00749AD6 /* CategoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoriesTableViewController.h; path = ../CategoriesTableViewController.h; sourceTree = "<group>"; };
-		18DBD09C1B44571B00749AD6 /* CategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoriesTableViewController.m; path = ../CategoriesTableViewController.m; sourceTree = "<group>"; };
 		18E282711B373C4D0084DCDE /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
 		18E282721B373C4D0084DCDE /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
 		18FDACA31B76386F00C23742 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
@@ -156,9 +149,6 @@
 		4CC9F6CD1B3DBB4F002F9C1D /* eventViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventViewTableViewCell.h; sourceTree = "<group>"; };
 		4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventViewTableViewCell.m; sourceTree = "<group>"; };
 		4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eventViewTableViewCell.xib; sourceTree = "<group>"; };
-		4CC9F70F1B3F275D002F9C1D /* CategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CategoryTableViewCell.h; path = ../CategoryTableViewCell.h; sourceTree = "<group>"; };
-		4CC9F7101B3F275D002F9C1D /* CategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CategoryTableViewCell.m; path = ../CategoryTableViewCell.m; sourceTree = "<group>"; };
-		4CC9F7111B3F275D002F9C1D /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CategoryTableViewCell.xib; path = ../CategoryTableViewCell.xib; sourceTree = "<group>"; };
 		A33D4F191B8645760083429E /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		A33D4F1A1B8645760083429E /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		A33D4F1B1B8645760083429E /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
@@ -169,6 +159,16 @@
 		A33D4F241B8645AE0083429E /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		A33D4F261B86464B0083429E /* LeftMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuViewController.h; sourceTree = "<group>"; };
 		A33D4F271B86464B0083429E /* LeftMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuViewController.m; sourceTree = "<group>"; };
+		A3435C961B88BC9000BB1FFB /* CategoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryTableViewCell.h; sourceTree = "<group>"; };
+		A3435C971B88BC9000BB1FFB /* CategoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryTableViewCell.m; sourceTree = "<group>"; };
+		A3435C981B88BC9000BB1FFB /* CategoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryTableViewCell.xib; sourceTree = "<group>"; };
+		A3435C9B1B88BCBA00BB1FFB /* SplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashViewController.h; sourceTree = "<group>"; };
+		A3435C9C1B88BCBA00BB1FFB /* SplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashViewController.m; sourceTree = "<group>"; };
+		A3435C9E1B88BCC600BB1FFB /* CategoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesTableViewController.h; sourceTree = "<group>"; };
+		A3435C9F1B88BCC600BB1FFB /* CategoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoriesTableViewController.m; sourceTree = "<group>"; };
+		A3435CA11B88BCDF00BB1FFB /* InstagramCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InstagramCustomCell.xib; sourceTree = "<group>"; };
+		A3435CA21B88BCDF00BB1FFB /* InstagramCustomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramCustomTableViewCell.h; sourceTree = "<group>"; };
+		A3435CA31B88BCDF00BB1FFB /* InstagramCustomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramCustomTableViewCell.m; sourceTree = "<group>"; };
 		A3BF3BFF1B3FD2DF00E1F436 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		A3BF3C001B3FD2DF00E1F436 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		A3CD67DB1B3C466B00DACD83 /* SSJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSJSONModel.h; sourceTree = "<group>"; };
@@ -362,9 +362,9 @@
 		18BF0E8F1B5579320088DA84 /* Instagram Cells */ = {
 			isa = PBXGroup;
 			children = (
-				18BF0E8A1B5574B00088DA84 /* InstagramCustomCell.xib */,
-				18BF0E8C1B5578220088DA84 /* InstagramCustomTableViewCell.h */,
-				18BF0E8D1B5578220088DA84 /* InstagramCustomTableViewCell.m */,
+				A3435CA11B88BCDF00BB1FFB /* InstagramCustomCell.xib */,
+				A3435CA21B88BCDF00BB1FFB /* InstagramCustomTableViewCell.h */,
+				A3435CA31B88BCDF00BB1FFB /* InstagramCustomTableViewCell.m */,
 			);
 			name = "Instagram Cells";
 			sourceTree = "<group>";
@@ -376,10 +376,10 @@
 				A33D4F241B8645AE0083429E /* RootViewController.m */,
 				A33D4F261B86464B0083429E /* LeftMenuViewController.h */,
 				A33D4F271B86464B0083429E /* LeftMenuViewController.m */,
-				182922421B236B2800F95AE0 /* SplashViewController.h */,
-				182922431B236B2800F95AE0 /* SplashViewController.m */,
-				18DBD09B1B44571B00749AD6 /* CategoriesTableViewController.h */,
-				18DBD09C1B44571B00749AD6 /* CategoriesTableViewController.m */,
+				A3435C9B1B88BCBA00BB1FFB /* SplashViewController.h */,
+				A3435C9C1B88BCBA00BB1FFB /* SplashViewController.m */,
+				A3435C9E1B88BCC600BB1FFB /* CategoriesTableViewController.h */,
+				A3435C9F1B88BCC600BB1FFB /* CategoriesTableViewController.m */,
 				183C4E1B1B7FCD3400A07FB0 /* CatEventViewController.h */,
 				183C4E1C1B7FCD3400A07FB0 /* CatEventViewController.m */,
 				182D3F471B56AFB30008F4BB /* InstagramViewController.h */,
@@ -407,9 +407,9 @@
 		18F1BD551B3FE38A00473E1A /* Category Event View Cells */ = {
 			isa = PBXGroup;
 			children = (
-				4CC9F7111B3F275D002F9C1D /* CategoryTableViewCell.xib */,
-				4CC9F70F1B3F275D002F9C1D /* CategoryTableViewCell.h */,
-				4CC9F7101B3F275D002F9C1D /* CategoryTableViewCell.m */,
+				A3435C961B88BC9000BB1FFB /* CategoryTableViewCell.h */,
+				A3435C971B88BC9000BB1FFB /* CategoryTableViewCell.m */,
+				A3435C981B88BC9000BB1FFB /* CategoryTableViewCell.xib */,
 			);
 			name = "Category Event View Cells";
 			sourceTree = "<group>";
@@ -551,10 +551,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				183C4E191B7FCCF700A07FB0 /* DaySegmentedControlView.xib in Resources */,
+				A3435C9A1B88BC9000BB1FFB /* CategoryTableViewCell.xib in Resources */,
 				18B5ECE51B23793E00055A3F /* video.mov in Resources */,
-				18BF0E8B1B5574B00088DA84 /* InstagramCustomCell.xib in Resources */,
 				1822727B1B5A265200CD52B8 /* TTlogomain.jpg in Resources */,
-				4CC9F7151B3F275D002F9C1D /* CategoryTableViewCell.xib in Resources */,
+				A3435CA41B88BCDF00BB1FFB /* InstagramCustomCell.xib in Resources */,
 				182922281B236AFB00F95AE0 /* Main.storyboard in Resources */,
 				1829222D1B236AFB00F95AE0 /* LaunchScreen.xib in Resources */,
 				1829222A1B236AFB00F95AE0 /* Images.xcassets in Resources */,
@@ -580,6 +580,7 @@
 				18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */,
 				18B4FC621B5958A5004647DA /* UIImage+WebP.m in Sources */,
 				1897CC321B84EBD0007D779B /* EventsViewController.m in Sources */,
+				A3435C9D1B88BCBA00BB1FFB /* SplashViewController.m in Sources */,
 				A33D4F211B8645760083429E /* UIViewController+RESideMenu.m in Sources */,
 				18B4FC641B5958A5004647DA /* UIImageView+WebCache.m in Sources */,
 				18B4FC5C1B5958A5004647DA /* SDWebImageDownloaderOperation.m in Sources */,
@@ -593,6 +594,7 @@
 				182922221B236AFB00F95AE0 /* AppDelegate.m in Sources */,
 				18B4FC581B5958A5004647DA /* SDImageCache.m in Sources */,
 				183C4E1D1B7FCD3400A07FB0 /* CatEventViewController.m in Sources */,
+				A3435CA51B88BCDF00BB1FFB /* InstagramCustomTableViewCell.m in Sources */,
 				4CC9F6D01B3DBB4F002F9C1D /* eventViewTableViewCell.m in Sources */,
 				18B4FC5D1B5958A5004647DA /* SDWebImageManager.m in Sources */,
 				18B4FC651B5958A5004647DA /* UIView+WebCacheOperation.m in Sources */,
@@ -600,8 +602,6 @@
 				182D3F4C1B56B0C80008F4BB /* InstagramUser.m in Sources */,
 				18B4FC5B1B5958A5004647DA /* SDWebImageDownloader.m in Sources */,
 				18B4FC601B5958A5004647DA /* UIImage+GIF.m in Sources */,
-				4CC9F7141B3F275D002F9C1D /* CategoryTableViewCell.m in Sources */,
-				18DBD09D1B44571B00749AD6 /* CategoriesTableViewController.m in Sources */,
 				18B4FC561B5958A5004647DA /* MKAnnotationView+WebCache.m in Sources */,
 				18B4FC681B595E67004647DA /* FullScreenImageViewController.m in Sources */,
 				1829221F1B236AFB00F95AE0 /* main.m in Sources */,
@@ -611,11 +611,11 @@
 				A33D4F201B8645760083429E /* RESideMenu.m in Sources */,
 				18B4FC721B5962E4004647DA /* PQFCirclesInTriangle.m in Sources */,
 				A33D4F1F1B8645760083429E /* RECommonFunctions.m in Sources */,
+				A3435CA01B88BCC600BB1FFB /* CategoriesTableViewController.m in Sources */,
 				183C4E181B7FCCF700A07FB0 /* DaySegmentedControlView.m in Sources */,
+				A3435C991B88BC9000BB1FFB /* CategoryTableViewCell.m in Sources */,
 				18ADE1781B5ECC4B00CCD46D /* Reachability.m in Sources */,
 				18B4FC591B5958A5004647DA /* SDWebImageCompat.m in Sources */,
-				18BF0E8E1B5578220088DA84 /* InstagramCustomTableViewCell.m in Sources */,
-				182922441B236B2800F95AE0 /* SplashViewController.m in Sources */,
 				18B4FC5F1B5958A5004647DA /* UIButton+WebCache.m in Sources */,
 				A3BF3C011B3FD2DF00E1F436 /* MBProgressHUD.m in Sources */,
 			);
