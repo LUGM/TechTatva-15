@@ -57,7 +57,7 @@
     
     self.title = @"#techtatva15";
     
-    instagramTable = [[UITableView alloc] initWithFrame:CGRectMake(10, 0, self.view.frame.size.width-20, self.view.frame.size.height)];
+    instagramTable = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
     instagramTable.delegate = self;
     instagramTable.dataSource = self;
     instagramTable.separatorStyle = UITableViewCellSeparatorStyleNone;

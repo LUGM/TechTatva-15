@@ -73,7 +73,6 @@
 
 /* Begin PBXFileReference section */
 		1811F1AB1B7553EC00B6BE2E /* TechTatva15-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TechTatva15-Prefix.pch"; sourceTree = "<group>"; };
-		1811F1AC1B75545500B6BE2E /* TechTatva15Macro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TechTatva15Macro.h; sourceTree = "<group>"; };
 		1822727A1B5A265200CD52B8 /* TTlogomain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TTlogomain.jpg; sourceTree = "<group>"; };
 		182922191B236AFB00F95AE0 /* TechTatva15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechTatva15.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1829221D1B236AFB00F95AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -250,7 +249,6 @@
 			isa = PBXGroup;
 			children = (
 				1811F1AB1B7553EC00B6BE2E /* TechTatva15-Prefix.pch */,
-				1811F1AC1B75545500B6BE2E /* TechTatva15Macro.h */,
 				182922201B236AFB00F95AE0 /* AppDelegate.h */,
 				182922211B236AFB00F95AE0 /* AppDelegate.m */,
 				1829221D1B236AFB00F95AE0 /* Info.plist */,

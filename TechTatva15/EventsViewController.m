@@ -105,6 +105,8 @@
         for (NSDictionary *dict in tempEventStorage)
         {
             
+//            if ([dict objectForKey:@"date"] isEqualToString:"07/10/2015") then add object and load table...check if date or Date in API
+            
             [eventNames addObject:[dict objectForKey:@"event_name"]];
             [eventCategoryIds addObject:[dict objectForKey:@"cat_id"]];
             
