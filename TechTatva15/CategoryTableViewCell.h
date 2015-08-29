@@ -13,7 +13,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *eventNameLabel;
 @property (strong, nonatomic) IBOutlet UITextView *eventDetailsTextView;
 
-- (IBAction)favouritesButtonPressed:(UIButton *)sender;
+@property (strong, nonatomic) IBOutlet UIButton *favouritesButton;
 
 @property (strong, nonatomic) NSIndexPath *indexPathForCell; //For managing data.
 

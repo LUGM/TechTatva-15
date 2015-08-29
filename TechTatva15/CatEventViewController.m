@@ -11,8 +11,21 @@
 #import "Reachability.h"
 #import "SSJSONModel.h"
 #import "MBProgressHUD.h"
+#import "Event.h"
+#import "CategoryTableViewCell.h"
 
-@interface CatEventViewController () // <SSJSONModelDelegate>
+@interface CatEventViewController () <SSJSONModelDelegate>
+{
+    
+    NSMutableArray *eventsArray;
+    NSMutableArray *eventByCategoryArray;
+    NSMutableArray *tempEventStorage;
+    
+    NSDictionary *json;
+    
+    SSJSONModel *myJsonInstance;
+    
+}
 
 @property NSIndexPath *previousSelectedIndexPath;
 @property NSIndexPath *currentSelectedIndexPath;
@@ -76,7 +89,7 @@
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return 40;
+    return [eventByCategoryArray count];
     
 }
 
@@ -91,8 +104,10 @@
     cell = [nib objectAtIndex:0];
     cell.indexPathForCell = indexPath;
     
-    cell.eventNameLabel.text = [NSString stringWithFormat:@"Event no %li on day %@", ((long) indexPath.row + 1), _daySelected];
-    cell.eventDetailsTextView.text = @"Add details here";
+    Event *event = [eventByCategoryArray objectAtIndex:indexPath.row];
+    
+    cell.eventNameLabel.text = event.event;
+    cell.eventDetailsTextView.text = event.description;
     
     return cell;
     
@@ -150,6 +165,40 @@
     
 }
 
+# pragma mark - Data Helper Methods
+
+- (void) jsonRequestDidCompleteWithDict:(id)response model:(SSJSONModel *)JSONModel
+{
+    
+    if (JSONModel == myJsonInstance)
+    {
+        
+        NSLog(@"%@",myJsonInstance.parsedJsonData);
+        json = myJsonInstance.parsedJsonData;
+        
+        eventsArray = [[NSMutableArray alloc] init];
+        
+        tempEventStorage = [json objectForKey:@"data"];
+        
+        for (NSDictionary *dict in tempEventStorage)
+        {
+            
+            //            if ([dict objectForKey:@"date"] isEqualToString:"07/10/2015") then add object and load table...check if date or Date in API
+            
+            Event *event = [[Event alloc] initWithDict:dict];
+            [eventsArray addObject:event];
+            
+        }
+        
+        [self filterByCategory];
+        
+        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+        
+    }
+    
+}
+
+
 # pragma  mark Segmented Control Methods
 
 - (void) daySelect
@@ -192,6 +241,29 @@
 {
     
     [self dismissViewControllerAnimated:YES completion:nil];
+    
+}
+
+# pragma mark - Event Sort Methods
+
+- (void) filterByCategory
+{
+    
+    eventByCategoryArray = [NSMutableArray array];
+    
+    for (Event *event in eventsArray)
+    {
+        
+        if ([event.category isEqualToString:self.title])
+        {
+            
+            [eventByCategoryArray addObject:event];
+            
+        }
+        
+    }
+    
+    [catEventTable reloadData];
     
 }
 

@@ -10,15 +10,18 @@
 
 @interface Event : NSObject
 
-@property (nonatomic,strong) NSString *event;
-@property (nonatomic,strong) NSString *location;
-@property (nonatomic,strong) NSString *start;
-@property (nonatomic,strong) NSString *stop;
-@property (nonatomic,strong) NSString *desc;
-@property (nonatomic,strong) NSNumber * day;
-@property (nonatomic,strong) NSString * category;
-@property (nonatomic,strong) NSString * date;
-@property (nonatomic, retain) NSString * contact;
+@property (nonatomic, strong) NSString *event;
+@property (nonatomic, strong) NSString *eventID;
+@property (nonatomic, strong) NSString *location;
+@property (nonatomic, strong) NSString *start;
+@property (nonatomic, strong) NSString *stop;
+@property (nonatomic, strong) NSString *desc;
+@property (nonatomic, strong) NSNumber *day;
+@property (nonatomic, strong) NSString *category;
+@property (nonatomic, strong) NSString *categoryID;
+@property (nonatomic, strong) NSString *date;
+@property (nonatomic, retain) NSString *contact;
+@property (nonatomic, strong) NSString *maxTeamSize;
 
 @property(nonatomic,strong) NSDictionary *mainDictionary;
 

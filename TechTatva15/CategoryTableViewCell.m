@@ -20,12 +20,4 @@
     // Configure the view for the selected state
 }
 
-- (IBAction)favouritesButtonPressed:(UIButton *)sender
-{
-    //Add favourites functionality. Dummy UIAlertView added on pressing button.
-    
-    UIAlertView *addedToFavourites = [[UIAlertView alloc] initWithTitle:@"Favourites" message:@"This event/Category has been added to your favourites" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    
-    [addedToFavourites show];
-}
 @end

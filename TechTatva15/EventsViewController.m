@@ -12,6 +12,7 @@
 #import "DaySegmentedControlView.h"
 #import "MBProgressHUD.h"
 #import "SSJSONModel.h"
+#import "Event.h"
 
 @interface EventsViewController () <SSJSONModelDelegate>
 {
@@ -22,8 +23,7 @@
     
     NSArray *tempEventStorage;
     
-    NSMutableArray *eventNames;
-    NSMutableArray *eventCategoryIds;
+    NSMutableArray *eventsArray;
     
 }
 
@@ -53,10 +53,22 @@
     eventTable.scrollsToTop = YES;
     
     NSURL *eventsUrl;
-    eventsUrl = [NSURL URLWithString:@"http://api.techtatva.in/events"];
+    
+    if (![self isInternetAvailable])
+    {
+        
+        eventsUrl = [NSURL URLWithString:@"http://api.techtatva.in/events"];
+        
+    }
+    else
+    {
+        
+        eventsUrl = [NSURL URLWithString:@"http://localhost:8888/events.json"];
+        
+    }
+    
     myJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
     myJsonInstance.delegate = self;
-//    eventsUrl = [NSURL URLWithString:@"http://localhost:8888/events.json"];
     [myJsonInstance sendRequestWithUrl:eventsUrl];
     
     [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
@@ -86,7 +98,7 @@
     
 }
 
-# pragma mark Data Helper Methods
+# pragma mark - Data Helper Methods
 
 - (void) jsonRequestDidCompleteWithDict:(id)response model:(SSJSONModel *)JSONModel
 {
@@ -97,8 +109,7 @@
         NSLog(@"%@",myJsonInstance.parsedJsonData);
         json = myJsonInstance.parsedJsonData;
         
-        eventNames = [NSMutableArray new];
-        eventCategoryIds = [NSMutableArray new];
+        eventsArray = [[NSMutableArray alloc] init];
         
         tempEventStorage = [json objectForKey:@"data"];
         
@@ -106,9 +117,9 @@
         {
             
 //            if ([dict objectForKey:@"date"] isEqualToString:"07/10/2015") then add object and load table...check if date or Date in API
-            
-            [eventNames addObject:[dict objectForKey:@"event_name"]];
-            [eventCategoryIds addObject:[dict objectForKey:@"cat_id"]];
+
+            Event *event = [[Event alloc] initWithDict:dict];
+            [eventsArray addObject:event];
             
         }
         
@@ -201,13 +212,14 @@
     cell.dateImageView = nil;
     cell.maxTeamMembersImageView = nil;
     
-    cell.eventLabel.text = [eventNames objectAtIndex:indexPath.row];
-    cell.dateLabel.text = [NSString stringWithFormat:@"Day %@", self.daySelected];
-    cell.categoryLabel.text = @"Category";
-    cell.maxTeamMembersLabel.text = @"Team members";
-    cell.contactLabel.text = @"7022207520";
-    cell.timeLabel.text = @"Midnight";
-    cell.venueLabel.text = @"DeeTee";
+    Event *event = [eventsArray objectAtIndex:indexPath.row];
+    cell.venueLabel.text = event.location;
+    cell.eventLabel.text = event.event;
+    cell.timeLabel.text = [NSString stringWithFormat:@"%@-%@",event.start,event.stop];
+    cell.contactLabel.text = event.contact;
+    cell.dateLabel.text = [NSString stringWithFormat:@"%@ - Day %@",event.date,event.day];
+    cell.maxTeamMembersLabel.text = event.maxTeamSize;
+    cell.categoryLabel.text = event.category;
     
     cell.indexPathForCell = indexPath;
     

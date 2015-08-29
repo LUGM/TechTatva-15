@@ -116,7 +116,7 @@
     
 //    cell.textLabel.text = [categoriesArray objectAtIndex:indexPath.row];
 //    cell.imageView.image = [UIImage imageNamed:[imagesArray objectAtIndex:indexPath.row]];
-//    
+    
     return cell;
     
 }
@@ -167,10 +167,10 @@
         for (NSDictionary * dict in tempCategoryStorage)
         {
             
-            [categoryNames addObject:[dict objectForKey:@"cat_name"]];
+            [categoryNames addObject:[dict objectForKey:@"categoryName"]];
             [categoryDescriptions addObject:[dict objectForKey:@"description"]];
-            [categoryIds addObject:[dict objectForKey:@"cat_id"]];
-            [categoryTypes addObject:[dict objectForKey:@"cat_type"]];
+            [categoryIds addObject:[dict objectForKey:@"categoryID"]];
+            [categoryTypes addObject:[dict objectForKey:@"categoryType"]];
             
         }
         

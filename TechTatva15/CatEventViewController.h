@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "CategoryTableViewCell.h"
 
 @interface CatEventViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 
