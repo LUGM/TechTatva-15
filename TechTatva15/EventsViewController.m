@@ -54,18 +54,18 @@
     
     NSURL *eventsUrl;
     
-    if (![self isInternetAvailable])
-    {
-        
+//    if (![self isInternetAvailable])
+//    {
+    
         eventsUrl = [NSURL URLWithString:@"http://api.techtatva.in/events"];
-        
-    }
-    else
-    {
-        
-        eventsUrl = [NSURL URLWithString:@"http://localhost:8888/events.json"];
-        
-    }
+//        
+//    }
+//    else
+//    {
+//        
+//        eventsUrl = [NSURL URLWithString:@"http://localhost:8888/events.json"];
+//        
+//    }
     
     myJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
     myJsonInstance.delegate = self;
