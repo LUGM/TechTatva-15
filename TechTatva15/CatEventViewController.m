@@ -67,6 +67,27 @@
     self.view.backgroundColor = [UIColor grayColor];
     _daySelected = @1;
     
+    NSURL *eventsUrl;
+    
+    if (![self isInternetAvailable])
+    {
+        
+        eventsUrl = [NSURL URLWithString:@"http://api.techtatva.in/events"];
+        
+    }
+    else
+    {
+        
+        eventsUrl = [NSURL URLWithString:@"http://localhost:8888/events.json"];
+        
+    }
+    
+    myJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
+    myJsonInstance.delegate = self;
+    [myJsonInstance sendRequestWithUrl:eventsUrl];
+    
+    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -135,7 +156,9 @@
         
     }
     
-    [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:self.currentSelectedIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+//    [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:self.currentSelectedIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    
+    //    one of the above two is correct, check which
     
 }
 
@@ -264,6 +287,17 @@
     }
     
     [catEventTable reloadData];
+    
+}
+
+# pragma mark Connection Check
+
+- (BOOL) isInternetAvailable
+{
+    
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [reachability currentReachabilityStatus];
+    return !(networkStatus == NotReachable);
     
 }
 
