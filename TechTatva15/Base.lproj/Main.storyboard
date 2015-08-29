@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mmT-Jb-gOW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mmT-Jb-gOW">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
@@ -74,7 +74,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Gjp-8s-Yx6">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Gjp-8s-Yx6">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -92,6 +92,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Gjp-8s-Yx6" firstAttribute="top" secondItem="TLL-Yj-3KN" secondAttribute="top" id="F0P-Ec-77g"/>
+                            <constraint firstItem="Gjp-8s-Yx6" firstAttribute="bottom" secondItem="hEY-5r-eMg" secondAttribute="top" id="Gzr-Ak-0IK"/>
+                            <constraint firstAttribute="trailing" secondItem="Gjp-8s-Yx6" secondAttribute="trailing" id="W8u-Pc-dW2"/>
+                            <constraint firstItem="Gjp-8s-Yx6" firstAttribute="leading" secondItem="TLL-Yj-3KN" secondAttribute="leading" id="wfU-ba-pQN"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bUx-1f-hR8"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -162,7 +168,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Category Name" id="4vs-GF-Otc">
-                        <barButtonItem key="leftBarButtonItem" image="Cancel" id="gIx-y8-8gg">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="gIx-y8-8gg">
                             <connections>
                                 <action selector="dismissVCBarButtonPressed:" destination="ruu-b6-1oS" id="inK-RL-Lpr"/>
                             </connections>
@@ -470,7 +476,4 @@
             <point key="canvasLocation" x="2156" y="1959"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Cancel" width="32" height="32"/>
-    </resources>
 </document>

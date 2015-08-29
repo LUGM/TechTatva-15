@@ -69,7 +69,7 @@
     
     NSURL *eventsUrl;
     
-    if (![self isInternetAvailable])
+    if ([self isInternetAvailable])
     {
         
         eventsUrl = [NSURL URLWithString:@"http://api.techtatva.in/events"];
@@ -81,12 +81,12 @@
         eventsUrl = [NSURL URLWithString:@"http://localhost:8888/events.json"];
         
     }
-    
+
     myJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
     myJsonInstance.delegate = self;
     [myJsonInstance sendRequestWithUrl:eventsUrl];
     
-    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
 }
 
@@ -215,7 +215,7 @@
         
         [self filterByCategory];
         
-        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+        [MBProgressHUD hideHUDForView:self.view animated:YES];
         
     }
     
