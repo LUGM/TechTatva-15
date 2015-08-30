@@ -13,6 +13,8 @@
 #import "MBProgressHUD.h"
 #import "Event.h"
 #import "CategoryTableViewCell.h"
+#import "CoreDataModel.h"
+#import "Favourites.h"
 
 @interface CatEventViewController () <SSJSONModelDelegate>
 {
@@ -24,6 +26,8 @@
     NSDictionary *json;
     
     SSJSONModel *myJsonInstance;
+    
+    NSIndexPath *cellSelectedIndexPath;
     
 }
 
@@ -128,7 +132,9 @@
     Event *event = [eventByCategoryArray objectAtIndex:indexPath.row];
     
     cell.eventNameLabel.text = event.event;
-    cell.eventDetailsTextView.text = event.description;
+    cell.eventDetailsTextView.text = event.desc;
+    
+    [cell.favouritesButton addTarget:self action:@selector(addToFavourites) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
     
@@ -138,6 +144,8 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    cellSelectedIndexPath = indexPath;
     
     self.previousSelectedIndexPath = self.currentSelectedIndexPath;
     self.currentSelectedIndexPath = indexPath;
@@ -156,7 +164,7 @@
         
     }
     
-//    [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:self.currentSelectedIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:self.currentSelectedIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     
     //    one of the above two is correct, check which
     
@@ -168,21 +176,21 @@
     if (([self.currentSelectedIndexPath compare:indexPath] == NSOrderedSame) && ([self.currentSelectedIndexPath compare:self.previousSelectedIndexPath] == NSOrderedSame))
     {
         
-        return 40;
+        return 45;
         
     }
     
     else if (self.currentSelectedIndexPath != nil && [self.currentSelectedIndexPath compare:indexPath] == NSOrderedSame)
     {
         
-        return  250;
+        return  235;
         
     }
     
     else
     {
         
-        return  40;
+        return  45;
         
     }
     
@@ -254,6 +262,59 @@
             _daySelected = @1;
             [catEventTable reloadData];
             break;
+    }
+    
+}
+
+# pragma mark - Favourites Methods
+
+- (void) addToFavourites
+{
+
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Following"];
+    NSError *error = nil;
+    
+    Event *event = [eventByCategoryArray objectAtIndex:cellSelectedIndexPath.row];
+    NSArray *fetchedArray = [[CoreDataModel managedObjectContext] executeFetchRequest:fetchRequest error:&error];
+    NSInteger eventAlreadyThere = 0;
+    
+    for (int i=0; i<fetchedArray.count; i++)
+    {
+        
+        Event *checkForFav = [fetchedArray objectAtIndex:i];
+        if ([checkForFav.event isEqualToString:event.event])
+        {
+            
+            UIAlertView *addedAlert = [[UIAlertView alloc]initWithTitle:@"event already added" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [addedAlert show];
+            eventAlreadyThere = 1;
+            break;
+        }
+        
+    }
+    
+    if (eventAlreadyThere == 0)
+    {
+        NSManagedObjectContext * context = [CoreDataModel managedObjectContext];
+        
+        Favourites *favouriteEvent = [NSEntityDescription insertNewObjectForEntityForName:@"Favourites" inManagedObjectContext:context];
+        
+        favouriteEvent.event = event.event;
+        favouriteEvent.location = event.location;
+        favouriteEvent.start = event.start;
+        favouriteEvent.stop = event.stop;
+        favouriteEvent.desc = event.desc;
+        favouriteEvent.contact = event.contact;
+        favouriteEvent.date = event.date;
+        favouriteEvent.day = event.day;
+        
+        if (![context save:&error])
+        {
+            
+            NSLog(@"%@",error);
+            
+        }
+        
     }
     
 }
