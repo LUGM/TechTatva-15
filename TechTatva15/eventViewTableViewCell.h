@@ -23,8 +23,8 @@
 @property (strong, nonatomic) IBOutlet UIImageView *contactImageView;
 @property (strong, nonatomic) IBOutlet UILabel *contactLabel;
 
+@property (strong, nonatomic) IBOutlet UIButton *detailsButton;
 
-- (IBAction)detailsButtonPressed:(UIButton *)sender;
 - (IBAction)resultsButtonPressed:(UIButton *)sender;
 - (IBAction)callButtonPressed:(UIButton *)sender;
 

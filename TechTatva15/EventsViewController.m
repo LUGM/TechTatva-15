@@ -25,6 +25,8 @@
     
     NSMutableArray *eventsArray;
     
+    NSIndexPath *cellSelectIndex;
+    
 }
 
 @property NSIndexPath *previousSelectedIndexPath;
@@ -221,6 +223,8 @@
     cell.maxTeamMembersLabel.text = event.maxTeamSize;
     cell.categoryLabel.text = event.category;
     
+    [cell.detailsButton addTarget:self action:@selector(detailsButton) forControlEvents:UIControlEventTouchUpInside];
+    
     cell.indexPathForCell = indexPath;
     
     return cell;
@@ -231,6 +235,8 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    
+    cellSelectIndex = indexPath;
     
     self.previousSelectedIndexPath = self.currentSelectedIndexPath;
     self.currentSelectedIndexPath = indexPath;
@@ -293,6 +299,19 @@
     
     UIView *blankView = [[UIView alloc] initWithFrame:CGRectZero];
     return blankView;
+    
+}
+
+# pragma mark - Cell Button Methods
+
+- (void) detailsButton
+{
+    
+    Event *event = [eventsArray objectAtIndex:cellSelectIndex.row];
+    
+    UIAlertView *detailsAlert = [[UIAlertView alloc] initWithTitle:@"Details" message:[NSString stringWithFormat:@"%@", event.desc] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    
+    [detailsAlert show];
     
 }
 
