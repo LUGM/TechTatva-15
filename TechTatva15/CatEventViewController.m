@@ -134,7 +134,7 @@
     cell.eventNameLabel.text = event.event;
     cell.eventDetailsTextView.text = event.desc;
     
-    [cell.favouritesButton addTarget:self action:@selector(addToFavourites) forControlEvents:UIControlEventTouchUpInside];
+    [cell.favouritesButton addTarget:self action:@selector(addToFavourites:) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
     
@@ -147,52 +147,53 @@
     
     cellSelectedIndexPath = indexPath;
     
-    self.previousSelectedIndexPath = self.currentSelectedIndexPath;
-    self.currentSelectedIndexPath = indexPath;
+    [catEventTable beginUpdates];
     
-    if (self.previousSelectedIndexPath && !([self.previousSelectedIndexPath compare:self.currentSelectedIndexPath] == NSOrderedSame))
+    if (![indexPath compare:_selectedCellIndex] == NSOrderedSame)
     {
         
-        [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:self.previousSelectedIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        
-    }
-    
-    else if ((self.previousSelectedIndexPath) && [self.previousSelectedIndexPath compare:self.currentSelectedIndexPath] == NSOrderedSame)
-    {
-        
-        [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:self.currentSelectedIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        
-    }
-    
-    [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:self.currentSelectedIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    
-    //    one of the above two is correct, check which
-    
-}
-
-- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
-    if (([self.currentSelectedIndexPath compare:indexPath] == NSOrderedSame) && ([self.currentSelectedIndexPath compare:self.previousSelectedIndexPath] == NSOrderedSame))
-    {
-        
-        return 45;
-        
-    }
-    
-    else if (self.currentSelectedIndexPath != nil && [self.currentSelectedIndexPath compare:indexPath] == NSOrderedSame)
-    {
-        
-        return  235;
+        _selectedCellIndex = indexPath;
         
     }
     
     else
     {
         
-        return  45;
+        _selectedCellIndex = nil;
         
     }
+    
+    [catEventTable deselectRowAtIndexPath:indexPath animated:YES];
+    [catEventTable endUpdates];
+    
+}
+
+- (void) tableView:(UITableView *)tableView didUnhighlightRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if (!self.catEventTable.isDragging)
+    {
+        
+        [catEventTable beginUpdates];
+        [catEventTable reloadData];
+        [catEventTable endUpdates];
+        
+    }
+    
+}
+
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if ([indexPath compare:_selectedCellIndex] == NSOrderedSame)
+    {
+        
+        return  255.f;
+        
+    }
+    
+    return 43.f;
     
 }
 
@@ -268,10 +269,10 @@
 
 # pragma mark - Favourites Methods
 
-- (void) addToFavourites
+- (void) addToFavourites:(id *) sender
 {
 
-    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Following"];
+    NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Favourites"];
     NSError *error = nil;
     
     Event *event = [eventByCategoryArray objectAtIndex:cellSelectedIndexPath.row];

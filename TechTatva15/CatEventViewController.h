@@ -14,5 +14,6 @@
 
 @property (strong, nonatomic) NSNumber *daySelected;
 
+@property (strong, nonatomic) NSIndexPath *selectedCellIndex;
 
 @end

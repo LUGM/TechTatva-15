@@ -237,60 +237,53 @@
 {
     
     cellSelectIndex = indexPath;
+        
+    [eventTable beginUpdates];
     
-    self.previousSelectedIndexPath = self.currentSelectedIndexPath;
-    self.currentSelectedIndexPath = indexPath;
-    
-    if (self.previousSelectedIndexPath && !([self.previousSelectedIndexPath compare:self.currentSelectedIndexPath] == NSOrderedSame))
+    if (![indexPath compare:_selectedCellIndex] == NSOrderedSame)
     {
         
-        [eventTable reloadRowsAtIndexPaths:[NSArray arrayWithObject:self.previousSelectedIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        
-    }
-    
-    else if ((self.previousSelectedIndexPath) && [self.previousSelectedIndexPath compare:self.currentSelectedIndexPath] == NSOrderedSame)
-    {
-        
-        [eventTable reloadRowsAtIndexPaths:[NSArray arrayWithObject:self.currentSelectedIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        _selectedCellIndex = indexPath;
         
     }
     
     else
     {
         
-        [eventTable reloadRowsAtIndexPaths:[NSArray arrayWithObject:self.currentSelectedIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        _selectedCellIndex = nil;
         
     }
     
-    [eventTable reloadRowsAtIndexPaths:[NSArray arrayWithObject:self.currentSelectedIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [eventTable deselectRowAtIndexPath:indexPath animated:YES];
+    [eventTable endUpdates];
     
-//    one of the above two is correct, check which
+}
+
+- (void) tableView:(UITableView *)tableView didUnhighlightRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if (!self.eventTable.isDragging)
+    {
+        
+        [eventTable beginUpdates];
+        [eventTable reloadData];
+        [eventTable endUpdates];
+        
+    }
     
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    if (([self.currentSelectedIndexPath compare:indexPath] == NSOrderedSame) && ([self.currentSelectedIndexPath compare:self.previousSelectedIndexPath] == NSOrderedSame))
+
+    if ([indexPath compare:_selectedCellIndex] == NSOrderedSame)
     {
         
-        return 43;
+        return  255.f;
         
     }
     
-    else if ((self.currentSelectedIndexPath != nil) && [self.currentSelectedIndexPath compare:indexPath] == NSOrderedSame)
-    {
-        
-        return 255;
-        
-    }
-    
-    else
-    {
-        
-        return 43;
-        
-    }
+    return 43.f;
     
 }
 
