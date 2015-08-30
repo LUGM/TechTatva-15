@@ -220,7 +220,7 @@
     cell.timeLabel.text = [NSString stringWithFormat:@"%@-%@",event.start,event.stop];
     cell.contactLabel.text = event.contact;
     cell.dateLabel.text = [NSString stringWithFormat:@"%@ - Day %@",event.date,event.day];
-    cell.maxTeamMembersLabel.text = event.maxTeamSize;
+    cell.maxTeamMembersLabel.text = [NSString stringWithFormat:@"Max Team Size : %@", event.maxTeamSize];
     cell.categoryLabel.text = event.category;
     
     [cell.detailsButton addTarget:self action:@selector(detailsButton) forControlEvents:UIControlEventTouchUpInside];

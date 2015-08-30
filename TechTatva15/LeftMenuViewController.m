@@ -141,24 +141,13 @@
         
         UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
         
-        UINavigationController * viewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"featuredEventsView"];
-        
-        [self.sideMenuViewController setContentViewController:viewController animated:YES];
-        
-    }
-    
-    if (indexPath.row == 7)
-    {
-        
-        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        
         UINavigationController * viewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"registerView"];
         
         [self.sideMenuViewController setContentViewController:viewController animated:YES];
         
     }
     
-    if (indexPath.row == 8)
+    if (indexPath.row == 7)
     {
         
         UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];

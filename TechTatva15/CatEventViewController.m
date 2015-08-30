@@ -27,8 +27,6 @@
     
     SSJSONModel *myJsonInstance;
     
-    NSIndexPath *cellSelectedIndexPath;
-    
 }
 
 @property NSIndexPath *previousSelectedIndexPath;
@@ -41,6 +39,11 @@
 @end
 
 @implementation CatEventViewController
+{
+    
+    UIButton *favButton;
+    
+}
 
 @synthesize catEventTable;
 
@@ -134,7 +137,8 @@
     cell.eventNameLabel.text = event.event;
     cell.eventDetailsTextView.text = event.desc;
     
-    [cell.favouritesButton addTarget:self action:@selector(addToFavourites:) forControlEvents:UIControlEventTouchUpInside];
+    favButton = (UIButton *) [cell viewWithTag:3];
+    [favButton addTarget:self action:@selector(addToFavourites:) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
     
@@ -144,8 +148,6 @@
 
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    cellSelectedIndexPath = indexPath;
     
     [catEventTable beginUpdates];
     
@@ -269,13 +271,17 @@
 
 # pragma mark - Favourites Methods
 
-- (void) addToFavourites:(id *) sender
+- (void) addToFavourites:(id) sender
 {
+    
+    CGPoint pointOfOrigin = [sender convertPoint:CGPointZero toView:catEventTable];
+    
+    NSIndexPath *indexPath = [catEventTable indexPathForRowAtPoint:pointOfOrigin];
 
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Favourites"];
     NSError *error = nil;
     
-    Event *event = [eventByCategoryArray objectAtIndex:cellSelectedIndexPath.row];
+    Event *event = [eventByCategoryArray objectAtIndex:indexPath.row];
     NSArray *fetchedArray = [[CoreDataModel managedObjectContext] executeFetchRequest:fetchRequest error:&error];
     NSInteger eventAlreadyThere = 0;
     
