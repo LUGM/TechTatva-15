@@ -23,5 +23,6 @@
 @property (nonatomic, retain) NSString * eventID;
 @property (nonatomic, retain) NSString * start;
 @property (nonatomic, retain) NSString * stop;
+@property (nonatomic, retain) NSString * maxTeamSize;
 
 @end

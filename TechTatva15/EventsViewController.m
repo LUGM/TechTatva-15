@@ -29,9 +29,6 @@
     
 }
 
-@property NSIndexPath *previousSelectedIndexPath;
-@property NSIndexPath *currentSelectedIndexPath;
-
 @property DaySegmentedControlView *daySelector;
 
 @end

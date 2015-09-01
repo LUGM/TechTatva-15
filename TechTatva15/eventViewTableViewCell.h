@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SWTableViewCell.h"
 
-@interface eventViewTableViewCell : UITableViewCell
+@interface eventViewTableViewCell : SWTableViewCell
 
 @property (strong, nonatomic) IBOutlet UILabel *eventLabel;
 @property (strong, nonatomic) IBOutlet UILabel *categoryLabel;

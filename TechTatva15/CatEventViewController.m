@@ -29,9 +29,6 @@
     
 }
 
-@property NSIndexPath *previousSelectedIndexPath;
-@property NSIndexPath *currentSelectedIndexPath;
-
 @property DaySegmentedControlView *daySelector;
 
 - (IBAction)dismissVCBarButtonPressed:(UIBarButtonItem *)sender;
@@ -288,9 +285,9 @@
         if ([checkForFav.event isEqualToString:event.event])
         {
             
-            UIAlertView *addedAlert = [[UIAlertView alloc]initWithTitle:@"event already added" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [addedAlert show];
             eventAlreadyThere = 1;
+            UIAlertView *addedAlert = [[UIAlertView alloc]initWithTitle:@"Event Already Added!" message:nil delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [addedAlert show];
             break;
         }
         
@@ -310,6 +307,7 @@
         favouriteEvent.contact = event.contact;
         favouriteEvent.date = event.date;
         favouriteEvent.day = event.day;
+        favouriteEvent.maxTeamSize = event.maxTeamSize;
         
         if (![context save:&error])
         {
@@ -317,8 +315,10 @@
             NSLog(@"%@",error);
             
         }
-        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Added" message:@"success yo" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Added" message:@"Event Successfully Added To Favourites" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [alert show];
+        
     }
     
 }

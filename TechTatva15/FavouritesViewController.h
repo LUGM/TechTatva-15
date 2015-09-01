@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SWTableViewCell.h"
 
-@interface FavouritesViewController : UIViewController
+@interface FavouritesViewController : UIViewController <SWTableViewCellDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *favouritesTable;
+
+@property (strong, nonatomic) NSIndexPath *selectedCellIndex;
 
 @end

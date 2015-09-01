@@ -17,6 +17,14 @@
 		182D3F491B56AFB30008F4BB /* InstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D3F481B56AFB30008F4BB /* InstagramViewController.m */; };
 		182D3F4C1B56B0C80008F4BB /* InstagramUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D3F4B1B56B0C80008F4BB /* InstagramUser.m */; };
 		182D3F4F1B56B21C0008F4BB /* InstagramImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D3F4E1B56B21C0008F4BB /* InstagramImage.m */; };
+		1835F6A21B961675009E12E5 /* Minus-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1835F6A11B961675009E12E5 /* Minus-50.png */; };
+		1835F6B01B961691009E12E5 /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 1835F6A51B961691009E12E5 /* NSMutableArray+SWUtilityButtons.m */; };
+		1835F6B11B961691009E12E5 /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1835F6A71B961691009E12E5 /* SWCellScrollView.m */; };
+		1835F6B21B961691009E12E5 /* SWLongPressGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1835F6A91B961691009E12E5 /* SWLongPressGestureRecognizer.m */; };
+		1835F6B31B961691009E12E5 /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1835F6AB1B961691009E12E5 /* SWTableViewCell.m */; };
+		1835F6B41B961691009E12E5 /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1835F6AD1B961691009E12E5 /* SWUtilityButtonTapGestureRecognizer.m */; };
+		1835F6B51B961691009E12E5 /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1835F6AF1B961691009E12E5 /* SWUtilityButtonView.m */; };
+		1835F6B71B961FC6009E12E5 /* Minus-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1835F6B61B961FC6009E12E5 /* Minus-32.png */; };
 		183C4E181B7FCCF700A07FB0 /* DaySegmentedControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C4E161B7FCCF700A07FB0 /* DaySegmentedControlView.m */; };
 		183C4E191B7FCCF700A07FB0 /* DaySegmentedControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183C4E171B7FCCF700A07FB0 /* DaySegmentedControlView.xib */; };
 		183C4E1D1B7FCD3400A07FB0 /* CatEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C4E1C1B7FCD3400A07FB0 /* CatEventViewController.m */; };
@@ -96,6 +104,20 @@
 		182D3F4B1B56B0C80008F4BB /* InstagramUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramUser.m; path = TechTatva15/InstagramUser.m; sourceTree = "<group>"; };
 		182D3F4D1B56B21C0008F4BB /* InstagramImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramImage.h; path = TechTatva15/InstagramImage.h; sourceTree = "<group>"; };
 		182D3F4E1B56B21C0008F4BB /* InstagramImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramImage.m; path = TechTatva15/InstagramImage.m; sourceTree = "<group>"; };
+		1835F6A11B961675009E12E5 /* Minus-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Minus-50.png"; sourceTree = "<group>"; };
+		1835F6A41B961691009E12E5 /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
+		1835F6A51B961691009E12E5 /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
+		1835F6A61B961691009E12E5 /* SWCellScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWCellScrollView.h; sourceTree = "<group>"; };
+		1835F6A71B961691009E12E5 /* SWCellScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWCellScrollView.m; sourceTree = "<group>"; };
+		1835F6A81B961691009E12E5 /* SWLongPressGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWLongPressGestureRecognizer.h; sourceTree = "<group>"; };
+		1835F6A91B961691009E12E5 /* SWLongPressGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWLongPressGestureRecognizer.m; sourceTree = "<group>"; };
+		1835F6AA1B961691009E12E5 /* SWTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWTableViewCell.h; sourceTree = "<group>"; };
+		1835F6AB1B961691009E12E5 /* SWTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWTableViewCell.m; sourceTree = "<group>"; };
+		1835F6AC1B961691009E12E5 /* SWUtilityButtonTapGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonTapGestureRecognizer.h; sourceTree = "<group>"; };
+		1835F6AD1B961691009E12E5 /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
+		1835F6AE1B961691009E12E5 /* SWUtilityButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonView.h; sourceTree = "<group>"; };
+		1835F6AF1B961691009E12E5 /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonView.m; sourceTree = "<group>"; };
+		1835F6B61B961FC6009E12E5 /* Minus-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Minus-32.png"; path = "../Minus-32.png"; sourceTree = "<group>"; };
 		183C4E151B7FCCF700A07FB0 /* DaySegmentedControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaySegmentedControlView.h; sourceTree = "<group>"; };
 		183C4E161B7FCCF700A07FB0 /* DaySegmentedControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaySegmentedControlView.m; sourceTree = "<group>"; };
 		183C4E171B7FCCF700A07FB0 /* DaySegmentedControlView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DaySegmentedControlView.xib; sourceTree = "<group>"; };
@@ -265,6 +287,8 @@
 		1829221C1B236AFB00F95AE0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1835F6B61B961FC6009E12E5 /* Minus-32.png */,
+				1835F6A11B961675009E12E5 /* Minus-50.png */,
 				1811F1AB1B7553EC00B6BE2E /* TechTatva15-Prefix.pch */,
 				182922201B236AFB00F95AE0 /* AppDelegate.h */,
 				182922211B236AFB00F95AE0 /* AppDelegate.m */,
@@ -301,6 +325,25 @@
 			);
 			name = "Instagram Model";
 			path = ..;
+			sourceTree = "<group>";
+		};
+		1835F6A31B961691009E12E5 /* PodFiles */ = {
+			isa = PBXGroup;
+			children = (
+				1835F6A41B961691009E12E5 /* NSMutableArray+SWUtilityButtons.h */,
+				1835F6A51B961691009E12E5 /* NSMutableArray+SWUtilityButtons.m */,
+				1835F6A61B961691009E12E5 /* SWCellScrollView.h */,
+				1835F6A71B961691009E12E5 /* SWCellScrollView.m */,
+				1835F6A81B961691009E12E5 /* SWLongPressGestureRecognizer.h */,
+				1835F6A91B961691009E12E5 /* SWLongPressGestureRecognizer.m */,
+				1835F6AA1B961691009E12E5 /* SWTableViewCell.h */,
+				1835F6AB1B961691009E12E5 /* SWTableViewCell.m */,
+				1835F6AC1B961691009E12E5 /* SWUtilityButtonTapGestureRecognizer.h */,
+				1835F6AD1B961691009E12E5 /* SWUtilityButtonTapGestureRecognizer.m */,
+				1835F6AE1B961691009E12E5 /* SWUtilityButtonView.h */,
+				1835F6AF1B961691009E12E5 /* SWUtilityButtonView.m */,
+			);
+			path = PodFiles;
 			sourceTree = "<group>";
 		};
 		183C4E1A1B7FCD0A00A07FB0 /* Day Segmented Control View */ = {
@@ -487,6 +530,7 @@
 		A3CD67D91B3C465700DACD83 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				1835F6A31B961691009E12E5 /* PodFiles */,
 				A33D4F221B86457C0083429E /* RESideMenu */,
 				18ADE1751B5ECC4B00CCD46D /* Reachability Files */,
 				18B4FC691B5962E4004647DA /* PQFCustomLoaders */,
@@ -588,6 +632,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				183C4E191B7FCCF700A07FB0 /* DaySegmentedControlView.xib in Resources */,
+				1835F6B71B961FC6009E12E5 /* Minus-32.png in Resources */,
+				1835F6A21B961675009E12E5 /* Minus-50.png in Resources */,
 				A3435C9A1B88BC9000BB1FFB /* CategoryTableViewCell.xib in Resources */,
 				18B5ECE51B23793E00055A3F /* video.mov in Resources */,
 				1822727B1B5A265200CD52B8 /* TTlogomain.jpg in Resources */,
@@ -634,6 +680,8 @@
 				1848174D1B90D7550031F1B9 /* FavouritesViewController.m in Sources */,
 				183C4E1D1B7FCD3400A07FB0 /* CatEventViewController.m in Sources */,
 				A3435CA51B88BCDF00BB1FFB /* InstagramCustomTableViewCell.m in Sources */,
+				1835F6B51B961691009E12E5 /* SWUtilityButtonView.m in Sources */,
+				1835F6B31B961691009E12E5 /* SWTableViewCell.m in Sources */,
 				4CC9F6D01B3DBB4F002F9C1D /* eventViewTableViewCell.m in Sources */,
 				18B4FC5D1B5958A5004647DA /* SDWebImageManager.m in Sources */,
 				18B4FC651B5958A5004647DA /* UIView+WebCacheOperation.m in Sources */,
@@ -646,18 +694,22 @@
 				18B4FC681B595E67004647DA /* FullScreenImageViewController.m in Sources */,
 				1829221F1B236AFB00F95AE0 /* main.m in Sources */,
 				18B4FC611B5958A5004647DA /* UIImage+MultiFormat.m in Sources */,
+				1835F6B11B961691009E12E5 /* SWCellScrollView.m in Sources */,
 				18B4FC731B5962E4004647DA /* UIColor+FlatColors.m in Sources */,
 				A33D4F251B8645AE0083429E /* RootViewController.m in Sources */,
 				A33D4F201B8645760083429E /* RESideMenu.m in Sources */,
 				18B4FC721B5962E4004647DA /* PQFCirclesInTriangle.m in Sources */,
 				A33D4F1F1B8645760083429E /* RECommonFunctions.m in Sources */,
 				A3435CA01B88BCC600BB1FFB /* CategoriesTableViewController.m in Sources */,
+				1835F6B01B961691009E12E5 /* NSMutableArray+SWUtilityButtons.m in Sources */,
 				183C4E181B7FCCF700A07FB0 /* DaySegmentedControlView.m in Sources */,
 				A3435C991B88BC9000BB1FFB /* CategoryTableViewCell.m in Sources */,
+				1835F6B21B961691009E12E5 /* SWLongPressGestureRecognizer.m in Sources */,
 				18ADE1781B5ECC4B00CCD46D /* Reachability.m in Sources */,
 				18B4FC591B5958A5004647DA /* SDWebImageCompat.m in Sources */,
 				18B4FC5F1B5958A5004647DA /* UIButton+WebCache.m in Sources */,
 				184817451B90D4F70031F1B9 /* CoreDataModel.m in Sources */,
+				1835F6B41B961691009E12E5 /* SWUtilityButtonTapGestureRecognizer.m in Sources */,
 				A3BF3C011B3FD2DF00E1F436 /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

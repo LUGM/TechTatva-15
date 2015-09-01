@@ -10,10 +10,11 @@
         <attribute name="event" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="location" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="maxTeamSize" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="start" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="stop" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Favourites" positionX="-63" positionY="-18" width="128" height="210"/>
+        <element name="Favourites" positionX="-63" positionY="-18" width="128" height="225"/>
     </elements>
 </model>

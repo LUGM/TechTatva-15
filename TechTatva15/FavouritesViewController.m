@@ -10,16 +10,16 @@
 #import "CoreDataModel.h"
 #import "eventViewTableViewCell.h"
 #import "Event.h"
+#import "Favourites.h"
 
 @interface FavouritesViewController () <UITableViewDataSource, UITableViewDelegate>
 {
     
     NSMutableArray *favouritesArray;
     
+    NSIndexPath *indexPathOfCell;
+    
 }
-
-@property NSIndexPath *previousSelectedIndexPath;
-@property NSIndexPath *currentSelectedIndexPath;
 
 @end
 
@@ -89,6 +89,8 @@
     
     cell = [nib objectAtIndex:0];
     
+    NSMutableArray *rightUtilityButtons = [NSMutableArray new];
+    
     cell.timeImageView = nil;
     cell.venueImageView = nil;
     cell.contactImageView = nil;
@@ -101,10 +103,16 @@
     cell.timeLabel.text = [NSString stringWithFormat:@"%@-%@",event.start,event.stop];
     cell.contactLabel.text = event.contact;
     cell.dateLabel.text = [NSString stringWithFormat:@"%@ - Day %@",event.date,event.day];
-//    cell.maxTeamMembersLabel.text = event.maxTeamSize;
+    cell.maxTeamMembersLabel.text = [NSString stringWithFormat:@"Max people : %@", event.maxTeamSize];
     cell.categoryLabel.text = event.category;
     
+    [rightUtilityButtons sw_addUtilityButtonWithColor:[UIColor whiteColor] icon:[UIImage imageNamed:@"Minus-32.png"]];
+    
+    cell.rightUtilityButtons = rightUtilityButtons;
+    cell.delegate = self;
+    
     cell.indexPathForCell = indexPath;
+    indexPathOfCell = indexPath;
     
     return cell;
     
@@ -115,27 +123,36 @@
 - (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    self.previousSelectedIndexPath = self.currentSelectedIndexPath;
-    self.currentSelectedIndexPath = indexPath;
+    [favouritesTable beginUpdates];
     
-    if (self.previousSelectedIndexPath && !([self.previousSelectedIndexPath compare:self.currentSelectedIndexPath] == NSOrderedSame))
+    if (![indexPath compare:_selectedCellIndex] == NSOrderedSame)
     {
         
-        [favouritesTable reloadRowsAtIndexPaths:[NSArray arrayWithObject:self.previousSelectedIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-        
-    }
-    
-    else if ((self.previousSelectedIndexPath) && [self.previousSelectedIndexPath compare:self.currentSelectedIndexPath] == NSOrderedSame)
-    {
-        
-        [favouritesTable reloadRowsAtIndexPaths:[NSArray arrayWithObject:self.currentSelectedIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        _selectedCellIndex = indexPath;
         
     }
     
     else
     {
         
-        [favouritesTable reloadRowsAtIndexPaths:[NSArray arrayWithObject:self.currentSelectedIndexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+        _selectedCellIndex = nil;
+        
+    }
+    
+    [favouritesTable deselectRowAtIndexPath:indexPath animated:YES];
+    [favouritesTable endUpdates];
+    
+}
+
+- (void) tableView:(UITableView *)tableView didUnhighlightRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    if (!self.favouritesTable.isDragging)
+    {
+        
+        [favouritesTable beginUpdates];
+        [favouritesTable reloadData];
+        [favouritesTable endUpdates];
         
     }
     
@@ -144,26 +161,53 @@
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    if (([self.currentSelectedIndexPath compare:indexPath] == NSOrderedSame) && ([self.currentSelectedIndexPath compare:self.previousSelectedIndexPath] == NSOrderedSame))
+    if ([indexPath compare:_selectedCellIndex] == NSOrderedSame)
     {
         
-        return 43;
+        return  255.f;
         
     }
     
-    else if ((self.currentSelectedIndexPath != nil) && [self.currentSelectedIndexPath compare:indexPath] == NSOrderedSame)
+    return 43.f;
+    
+}
+
+# pragma mark - Swipeable Cell Delegate Methods
+
+// Error here, deleting last element instead of the one selected to delete
+
+- (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index
+{
+    
+    switch (index)
     {
-        
-        return 255;
-        
+        case 0:
+            
+            if (indexPathOfCell.row < favouritesArray.count)
+            {
+                
+                Favourites * deleteFavouriteEvent = [favouritesArray objectAtIndex:indexPathOfCell.row];
+                [favouritesArray removeObjectAtIndex:indexPathOfCell.row];
+                [[CoreDataModel managedObjectContext] deleteObject:deleteFavouriteEvent];
+                NSError * error;
+                if (![[CoreDataModel managedObjectContext] save:&error])
+                {
+                    
+                    NSLog(@"Error : %@",error);
+                    
+                }
+                [favouritesTable deleteRowsAtIndexPaths:@[indexPathOfCell] withRowAnimation:UITableViewRowAnimationLeft];
+                
+            }
+
+            break;
+            
+        default:
+            break;
+
     }
     
-    else
-    {
-        
-        return 43;
-        
-    }
+    [favouritesTable reloadData];
     
 }
 

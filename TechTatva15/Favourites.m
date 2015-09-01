@@ -22,5 +22,6 @@
 @dynamic eventID;
 @dynamic start;
 @dynamic stop;
+@dynamic maxTeamSize;
 
 @end
