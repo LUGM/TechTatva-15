@@ -20,4 +20,7 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)favouritedButtonActionPressed:(id)sender {
+     [[NSNotificationCenter defaultCenter] postNotificationName:@"favouritePressed" object:self.indexPathForMyCell];
+}
 @end

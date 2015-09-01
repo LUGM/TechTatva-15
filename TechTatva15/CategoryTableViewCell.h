@@ -15,6 +15,7 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *favouritesButton;
 
-@property (strong, nonatomic) NSIndexPath *indexPathForCell; //For managing data.
+@property (strong, nonatomic) NSIndexPath *indexPathForMyCell; //For managing data.
+- (IBAction)favouritedButtonActionPressed:(id)sender;
 
 @end

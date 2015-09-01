@@ -39,11 +39,6 @@
 @end
 
 @implementation CatEventViewController
-{
-    
-    UIButton *favButton;
-    
-}
 
 @synthesize catEventTable;
 
@@ -95,6 +90,8 @@
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addToFavourites:) name:@"favouritePressed" object:nil];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -130,15 +127,14 @@
     
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CategoryTableViewCell" owner:self options:nil];
     cell = [nib objectAtIndex:0];
-    cell.indexPathForCell = indexPath;
+    cell.indexPathForMyCell = indexPath;
     
     Event *event = [eventByCategoryArray objectAtIndex:indexPath.row];
     
     cell.eventNameLabel.text = event.event;
     cell.eventDetailsTextView.text = event.desc;
     
-    favButton = (UIButton *) [cell viewWithTag:3];
-    [favButton addTarget:self action:@selector(addToFavourites:) forControlEvents:UIControlEventTouchUpInside];
+//    [cell.favouritesButton addTarget:self action:@selector(addToFavourites:) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
     
@@ -271,13 +267,13 @@
 
 # pragma mark - Favourites Methods
 
-- (void) addToFavourites:(id) sender
+- (void)addToFavourites:(id)someObject
 {
+//    CategoryTableViewCell * pressedButtonCell = someObject;
     
-    CGPoint pointOfOrigin = [sender convertPoint:CGPointZero toView:catEventTable];
+    NSIndexPath *indexPath = [someObject valueForKey:@"object"];
+    NSLog(@"index is %ld",(long)indexPath.row);
     
-    NSIndexPath *indexPath = [catEventTable indexPathForRowAtPoint:pointOfOrigin];
-
     NSFetchRequest *fetchRequest = [NSFetchRequest fetchRequestWithEntityName:@"Favourites"];
     NSError *error = nil;
     
@@ -321,7 +317,8 @@
             NSLog(@"%@",error);
             
         }
-        
+        UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Added" message:@"success yo" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [alert show];
     }
     
 }

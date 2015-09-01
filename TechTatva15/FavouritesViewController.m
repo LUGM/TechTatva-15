@@ -101,7 +101,7 @@
     cell.timeLabel.text = [NSString stringWithFormat:@"%@-%@",event.start,event.stop];
     cell.contactLabel.text = event.contact;
     cell.dateLabel.text = [NSString stringWithFormat:@"%@ - Day %@",event.date,event.day];
-    cell.maxTeamMembersLabel.text = event.maxTeamSize;
+//    cell.maxTeamMembersLabel.text = event.maxTeamSize;
     cell.categoryLabel.text = event.category;
     
     cell.indexPathForCell = indexPath;
