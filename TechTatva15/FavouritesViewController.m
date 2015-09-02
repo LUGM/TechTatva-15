@@ -186,8 +186,8 @@
             if (indexPathOfCell.row < favouritesArray.count)
             {
                 
-                Favourites * deleteFavouriteEvent = [favouritesArray objectAtIndex:indexPathOfCell.row];
-                [favouritesArray removeObjectAtIndex:indexPathOfCell.row];
+                Favourites * deleteFavouriteEvent = [favouritesArray objectAtIndex:index];
+                [favouritesArray removeObjectAtIndex:index];
                 [[CoreDataModel managedObjectContext] deleteObject:deleteFavouriteEvent];
                 NSError * error;
                 if (![[CoreDataModel managedObjectContext] save:&error])
@@ -196,7 +196,8 @@
                     NSLog(@"Error : %@",error);
                     
                 }
-                [favouritesTable deleteRowsAtIndexPaths:@[indexPathOfCell] withRowAnimation:UITableViewRowAnimationLeft];
+                NSIndexPath * pathsToDelete = [NSIndexPath indexPathForRow:index inSection:0];
+                [favouritesTable deleteRowsAtIndexPaths:@[pathsToDelete] withRowAnimation:UITableViewRowAnimationLeft];
                 
             }
 
