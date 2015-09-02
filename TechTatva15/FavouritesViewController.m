@@ -17,7 +17,7 @@
     
     NSMutableArray *favouritesArray;
     
-    NSIndexPath *indexPathOfCell;
+//    NSIndexPath *indexPathOfCell;
     
 }
 
@@ -112,7 +112,7 @@
     cell.delegate = self;
     
     cell.indexPathForCell = indexPath;
-    indexPathOfCell = indexPath;
+//    indexPathOfCell = indexPath;
     
     return cell;
     
@@ -174,20 +174,18 @@
 
 # pragma mark - Swipeable Cell Delegate Methods
 
-// Error here, deleting last element instead of the one selected to delete
-
 - (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index
 {
-    
+    NSIndexPath * path = [favouritesTable indexPathForCell:cell];
     switch (index)
     {
         case 0:
-            
-            if (indexPathOfCell.row < favouritesArray.count)
+
+            if (path.row < favouritesArray.count)
             {
                 
-                Favourites * deleteFavouriteEvent = [favouritesArray objectAtIndex:index];
-                [favouritesArray removeObjectAtIndex:index];
+                Favourites * deleteFavouriteEvent = [favouritesArray objectAtIndex:path.row];
+                [favouritesArray removeObjectAtIndex:path.row];
                 [[CoreDataModel managedObjectContext] deleteObject:deleteFavouriteEvent];
                 NSError * error;
                 if (![[CoreDataModel managedObjectContext] save:&error])
@@ -196,9 +194,8 @@
                     NSLog(@"Error : %@",error);
                     
                 }
-                NSIndexPath * pathsToDelete = [NSIndexPath indexPathForRow:index inSection:0];
+                NSIndexPath * pathsToDelete = [NSIndexPath indexPathForRow:path.row inSection:0];
                 [favouritesTable deleteRowsAtIndexPaths:@[pathsToDelete] withRowAnimation:UITableViewRowAnimationLeft];
-                
             }
 
             break;
@@ -208,7 +205,7 @@
 
     }
     
-    [favouritesTable reloadData];
+//    [favouritesTable reloadData];
     
 }
 
