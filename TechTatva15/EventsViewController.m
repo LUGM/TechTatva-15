@@ -220,8 +220,8 @@
     cell.maxTeamMembersLabel.text = [NSString stringWithFormat:@"Max Team Size : %@", event.maxTeamSize];
     cell.categoryLabel.text = event.category;
     
-     cell.indexPathForCell = indexPath;
-    [cell.detailsButton addTarget:self action:@selector(detailsButtonPressed) forControlEvents:UIControlEventTouchUpInside];
+    cell.indexPathForCell = indexPath;
+    [cell.detailsButton addTarget:self action:@selector(detailsButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
     
@@ -293,9 +293,13 @@
 
 # pragma mark - Cell Button Methods
 
-- (void)detailsButtonPressed
+- (void)detailsButtonPressed: (id) sender
 {
-    Event *event = [eventsArray objectAtIndex:cellSelectIndex.row];
+    
+    CGPoint pointClicked = [sender convertPoint:CGPointZero toView:self.eventTable];
+    NSIndexPath *requiredIndexPath = [self.eventTable indexPathForRowAtPoint:pointClicked];
+    
+    Event *event = [eventsArray objectAtIndex:requiredIndexPath.row];
     
     UIAlertView *detailsAlert = [[UIAlertView alloc] initWithTitle:@"Details" message:[NSString stringWithFormat:@"%@", event.desc] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     

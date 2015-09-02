@@ -106,6 +106,8 @@
     cell.maxTeamMembersLabel.text = [NSString stringWithFormat:@"Max people : %@", event.maxTeamSize];
     cell.categoryLabel.text = event.category;
     
+    [cell.detailsButton addTarget:self action:@selector(detailsButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    
     [rightUtilityButtons sw_addUtilityButtonWithColor:[UIColor whiteColor] icon:[UIImage imageNamed:@"Minus-32.png"]];
     
     cell.rightUtilityButtons = rightUtilityButtons;
@@ -209,6 +211,21 @@
     
 }
 
+# pragma mark - Cell Button Methods
+
+- (void)detailsButtonPressed: (id) sender
+{
+    
+    CGPoint pointClicked = [sender convertPoint:CGPointZero toView:self.favouritesTable];
+    NSIndexPath *requiredIndexPath = [self.favouritesTable indexPathForRowAtPoint:pointClicked];
+    
+    Event *event = [favouritesArray objectAtIndex:requiredIndexPath.row];
+    
+    UIAlertView *detailsAlert = [[UIAlertView alloc] initWithTitle:@"Details" message:[NSString stringWithFormat:@"%@", event.desc] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    
+    [detailsAlert show];
+    
+}
 
 /*
 #pragma mark - Navigation
