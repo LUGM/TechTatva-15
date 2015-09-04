@@ -24,7 +24,7 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _optionsArray = @[@"Categories",@"Events",@"Favourites", @"Results", @"InstaFeed", @"Online Events", @"Featured Events", @"Register", @"About Us"];
+    _optionsArray = @[@"Categories",@"Events",@"Favourites", @"Results", @"InstaFeed", @"Online Events", @"Register", @"About Us"];
     
     contentsTable.contentInset = UIEdgeInsetsMake(88, 0, 0, 0);
     

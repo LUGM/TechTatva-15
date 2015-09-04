@@ -197,7 +197,7 @@
                     
                 }
                 NSIndexPath * pathsToDelete = [NSIndexPath indexPathForRow:path.row inSection:0];
-                [favouritesTable deleteRowsAtIndexPaths:@[pathsToDelete] withRowAnimation:UITableViewRowAnimationLeft];
+                [favouritesTable deleteRowsAtIndexPaths:@[pathsToDelete] withRowAnimation:UITableViewRowAnimationRight];
             }
 
             break;
@@ -221,7 +221,7 @@
     
     Event *event = [favouritesArray objectAtIndex:requiredIndexPath.row];
     
-    UIAlertView *detailsAlert = [[UIAlertView alloc] initWithTitle:@"Details" message:[NSString stringWithFormat:@"%@", event.desc] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView *detailsAlert = [[UIAlertView alloc] initWithTitle:event.event message:event.desc delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     
     [detailsAlert show];
     

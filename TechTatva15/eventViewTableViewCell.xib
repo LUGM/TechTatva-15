@@ -90,7 +90,7 @@
                         <rect key="frame" x="15" y="42" width="35" height="35"/>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40n-Q5-oNQ">
-                        <rect key="frame" x="221" y="8" width="32" height="32"/>
+                        <rect key="frame" x="221" y="8" width="32" height="33"/>
                         <state key="normal" image="Details">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>

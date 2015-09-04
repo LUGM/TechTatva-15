@@ -57,11 +57,11 @@
     
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DaySegmentedControlView" owner:self options:nil];
     _daySelector = [nib objectAtIndex:0];
-    _daySelector.frame = CGRectMake(0, 66, self.view.frame.size.width, 45);
+    _daySelector.frame = CGRectMake(0, 64, self.view.frame.size.width, 44);
     [_daySelector.daySelectionControl addTarget:self action:@selector(daySelect) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:_daySelector];
     
-    catEventTable.contentInset = UIEdgeInsetsMake(45, 0, 0, 0);
+    catEventTable.contentInset = UIEdgeInsetsMake(44, 0, 0, 0);
     catEventTable.scrollsToTop = YES;
     self.view.backgroundColor = [UIColor grayColor];
     _daySelected = @1;

@@ -77,7 +77,7 @@
     
     // 110 because search bar is 44 and status bar is 66.
     
-    _daySelector.frame = CGRectMake(0, 66, self.view.frame.size.width, 45);
+    _daySelector.frame = CGRectMake(0, 64, self.view.frame.size.width, 44);
     [_daySelector.daySelectionControl addTarget:self action:@selector(daySelect) forControlEvents:UIControlEventValueChanged];
     [self.view addSubview:_daySelector];
     
@@ -301,7 +301,7 @@
     
     Event *event = [eventsArray objectAtIndex:requiredIndexPath.row];
     
-    UIAlertView *detailsAlert = [[UIAlertView alloc] initWithTitle:@"Details" message:[NSString stringWithFormat:@"%@", event.desc] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView *detailsAlert = [[UIAlertView alloc] initWithTitle:event.event message:event.desc delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     
     [detailsAlert show];
     

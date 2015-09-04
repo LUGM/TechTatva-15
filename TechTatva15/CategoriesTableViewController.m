@@ -142,7 +142,7 @@
 -(void) tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
 {
     
-    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Category Details" message:[categoryDescriptions objectAtIndex:indexPath.row] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:[categoryNames objectAtIndex:indexPath.row] message:[categoryDescriptions objectAtIndex:indexPath.row] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
     
 }
