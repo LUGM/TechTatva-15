@@ -15,12 +15,14 @@
 #import "SSJSONModel.h"
 #import "MBProgressHUD.h"
 #import "Reachability.h"
+#import "ResultsModel.h"
 
 @interface ResultsViewController () <SSJSONModelDelegate>
 {
     NSMutableArray *categoryNames;
     NSMutableArray *eventNames;
     NSMutableArray *particularEventResults;
+    NSMutableArray * filteredArray;
     NSArray *json;
 //    NSString *searchResult;                                                     change NSString to NSMutableArray
 //    NSMutableArray *searchEventResult;                                               change NSString to NSMutableArray
@@ -82,20 +84,16 @@
         
         NSLog(@"%@",myJsonInstance.parsedJsonData);
         json = myJsonInstance.parsedJsonData;
-        categoryNames =[NSMutableArray new];
-        eventNames = [NSMutableArray new];
+//        categoryNames =[NSMutableArray new];
         particularEventResults = [NSMutableArray new];
         
         for (NSDictionary * dict in json)
         {
-            
-            [categoryNames addObject:[dict objectForKey:@"Category"]];
-            [eventNames addObject:[dict objectForKey:@"Event"]];
-            [particularEventResults addObject:[dict objectForKey:@"Result"]];
-            [myTable reloadData];
-        
+            ResultsModel * result = [[ResultsModel alloc] initWithDict:dict];
+            [particularEventResults addObject:result];
         }
         
+        [myTable reloadData];
         [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
         
     }
@@ -113,21 +111,11 @@
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-//    if (_areResultsFiltered == YES)
-//    {
-//        
-//        return _searchResults.count;
-//        
-//    }
-//    else
-//    {
-//        
-//        return json.count;
-//        
-//    }
-    
-    return json.count;
-    
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return [filteredArray count];
+    } else {
+        return [particularEventResults count];
+    }
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -135,23 +123,19 @@
     
     static NSString *cellId = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellId];
+    }
+    ResultsModel * result = nil;
     
-//    if (_areResultsFiltered == NO)                                                     change YES to NO here
-//    {
-//        
-//        cell.textLabel.text = [eventNames objectAtIndex:indexPath.row];
-//        cell.detailTextLabel.text = [categoryNames objectAtIndex:indexPath.row];
-//        
-//    }
-//    else
-//    {
-//        
-//        cell.textLabel.text = [_searchResults objectAtIndex:indexPath.row];
-//        
-//    }
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        result = [filteredArray objectAtIndex:indexPath.row];
+    } else {
+        result = [particularEventResults objectAtIndex:indexPath.row];
+    }
     
-    cell.textLabel.text = [eventNames objectAtIndex:indexPath.row];
-    cell.detailTextLabel.text = [categoryNames objectAtIndex:indexPath.row];
+    cell.textLabel.text = result.name;
+    cell.detailTextLabel.text = result.categories;
     
     return cell;
     
@@ -164,22 +148,15 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-//    if (_areResultsFiltered == NO)
-//    {
-//
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[eventNames objectAtIndex:indexPath.row] message:[particularEventResults objectAtIndex:indexPath.row] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-//        [alert show];
-//        
-//    }
-//    else
-//    {
-//        
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[_searchResults objectAtIndex:indexPath.row] message:[_searchResultsResult objectAtIndex:indexPath.row] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-//        [alert show];
-//        
-//    }
+    ResultsModel * model = [particularEventResults objectAtIndex:indexPath.row];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[eventNames objectAtIndex:indexPath.row] message:[particularEventResults objectAtIndex:indexPath.row] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        model = [filteredArray objectAtIndex:indexPath.row];
+    } else {
+        model = [particularEventResults objectAtIndex:indexPath.row];
+    }
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:model.name message:model.result delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
     [alert show];
     
 }
@@ -194,10 +171,38 @@
 - (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
     
-    UIView *emptyView = [[ UIView alloc] initWithFrame:CGRectZero];
+    UIView *emptyView = [[ UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 20)];
     return emptyView;
     
 }
+
+#pragma mark Content Filtering
+-(void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope {
+    // Update the filtered array based on the search text and scope.
+    // Remove all objects from the filtered search array
+    [filteredArray removeAllObjects];
+    // Filter the array using NSPredicate
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"name contains[c] %@",searchText];
+    filteredArray = [NSMutableArray arrayWithArray:[particularEventResults filteredArrayUsingPredicate:predicate]];
+}
+
+#pragma mark - UISearchDisplayController Delegate Methods
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString {
+    // Tells the table data source to reload when text changes
+    [self filterContentForSearchText:searchString scope:
+     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    // Return YES to cause the search result table view to be reloaded.
+    return YES;
+}
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption {
+    // Tells the table data source to reload when scope bar selection changes
+    [self filterContentForSearchText:self.searchDisplayController.searchBar.text scope:
+     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
+    // Return YES to cause the search result table view to be reloaded.
+    return YES;
+}
+
 
 # pragma mark Connection Check
 
@@ -210,55 +215,4 @@
     
 }
 
-
-// In this method, find a way to loop over particularEventResults array together with eventNames array
-// What is to be done is that if event 3 of eventNames array is stored in event 2 of searchResults array, object 3 of particularEventResults array should be stored as object 2 of searchEventResult array
-
-//# pragma UISearchBar Delegate Methods
-//
-//- (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
-//{
-//    
-//    if (searchText.length == 0)
-//    {
-//        
-//        _areResultsFiltered = NO;
-//        
-//    }
-//    else
-//    {
-//        
-//        _areResultsFiltered = YES;
-//        
-//        _searchResults = [[NSMutableArray alloc] init];
-//        _searchResultsResult = [[NSMutableArray alloc] init];
-//        
-//        for (searchResult in eventNames)
-//        {
-//
-//            NSRange searchResultRange = [searchResult rangeOfString:searchText options:NSCaseInsensitiveSearch];
-//            
-//            if (searchResultRange.location != NSNotFound)
-//            {
-//                
-//                [_searchResults addObject:searchResult];
-//                [_searchResultsResult addObject:searchEventResult];
-//                
-//            }
-//            
-//        }
-//        
-//    }
-//    
-//    [myTable reloadData];
-//    
-//}
-//
-//- (void) searchBarSearchButtonClicked:(UISearchBar *)searchBar
-//{
-//    
-//    [searchBar resignFirstResponder];
-//    
-//}
-//
 @end

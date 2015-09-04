@@ -72,6 +72,7 @@
 		A3435CA51B88BCDF00BB1FFB /* InstagramCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3435CA31B88BCDF00BB1FFB /* InstagramCustomTableViewCell.m */; };
 		A3BF3C011B3FD2DF00E1F436 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF3C001B3FD2DF00E1F436 /* MBProgressHUD.m */; };
 		A3CD67DD1B3C466B00DACD83 /* SSJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CD67DC1B3C466B00DACD83 /* SSJSONModel.m */; };
+		A3F4B6451B99FE1A001C3DA8 /* ResultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F4B6441B99FE1A001C3DA8 /* ResultsModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -207,6 +208,8 @@
 		A3BF3C001B3FD2DF00E1F436 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		A3CD67DB1B3C466B00DACD83 /* SSJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSJSONModel.h; sourceTree = "<group>"; };
 		A3CD67DC1B3C466B00DACD83 /* SSJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSJSONModel.m; sourceTree = "<group>"; };
+		A3F4B6431B99FE1A001C3DA8 /* ResultsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsModel.h; sourceTree = "<group>"; };
+		A3F4B6441B99FE1A001C3DA8 /* ResultsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +247,8 @@
 				184817461B90D5A80031F1B9 /* Core Data Model */,
 				1811F1A91B75534900B6BE2E /* Event Data Model */,
 				182D3F501B56B2BF0008F4BB /* Instagram Model */,
+				A3F4B6431B99FE1A001C3DA8 /* ResultsModel.h */,
+				A3F4B6441B99FE1A001C3DA8 /* ResultsModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -703,6 +708,7 @@
 				A3435CA01B88BCC600BB1FFB /* CategoriesTableViewController.m in Sources */,
 				1835F6B01B961691009E12E5 /* NSMutableArray+SWUtilityButtons.m in Sources */,
 				183C4E181B7FCCF700A07FB0 /* DaySegmentedControlView.m in Sources */,
+				A3F4B6451B99FE1A001C3DA8 /* ResultsModel.m in Sources */,
 				A3435C991B88BC9000BB1FFB /* CategoryTableViewCell.m in Sources */,
 				1835F6B21B961691009E12E5 /* SWLongPressGestureRecognizer.m in Sources */,
 				18ADE1781B5ECC4B00CCD46D /* Reachability.m in Sources */,

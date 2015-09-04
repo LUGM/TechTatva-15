@@ -14,12 +14,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="3qh-Ss-KC1">
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="0fy-dU-sMg">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            <textInputTraits key="textInputTraits"/>
                             <connections>
-                                <outlet property="delegate" destination="BGT-Vw-D6L" id="ICD-hW-SOG"/>
+                                <outlet property="delegate" destination="BGT-Vw-D6L" id="Yxc-Ey-dne"/>
                             </connections>
                         </searchBar>
                         <prototypes>
@@ -55,10 +55,19 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="myTable" destination="u4g-2r-JF1" id="gjW-dZ-MSb"/>
-                        <outlet property="resultsSearchBar" destination="3qh-Ss-KC1" id="Pow-ap-sXz"/>
+                        <outlet property="searchDisplayController" destination="opD-CQ-R6q" id="cPa-LI-S1c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDU-GA-Djk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="opD-CQ-R6q">
+                    <connections>
+                        <outlet property="delegate" destination="BGT-Vw-D6L" id="H2Y-WT-sLH"/>
+                        <outlet property="searchBar" destination="0fy-dU-sMg" id="fYA-B6-7gm"/>
+                        <outlet property="searchContentsController" destination="BGT-Vw-D6L" id="yf2-Ru-I6h"/>
+                        <outlet property="searchResultsDataSource" destination="BGT-Vw-D6L" id="yaG-Iq-wk9"/>
+                        <outlet property="searchResultsDelegate" destination="BGT-Vw-D6L" id="Jnz-FO-8iU"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2730" y="1122"/>
         </scene>
