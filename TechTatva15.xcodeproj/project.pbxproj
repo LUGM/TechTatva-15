@@ -247,8 +247,7 @@
 				184817461B90D5A80031F1B9 /* Core Data Model */,
 				1811F1A91B75534900B6BE2E /* Event Data Model */,
 				182D3F501B56B2BF0008F4BB /* Instagram Model */,
-				A3F4B6431B99FE1A001C3DA8 /* ResultsModel.h */,
-				A3F4B6441B99FE1A001C3DA8 /* ResultsModel.m */,
+				18EA04261B9BFAF900AE2B57 /* Results Model */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -450,6 +449,15 @@
 				A3435CA31B88BCDF00BB1FFB /* InstagramCustomTableViewCell.m */,
 			);
 			name = "Instagram Cells";
+			sourceTree = "<group>";
+		};
+		18EA04261B9BFAF900AE2B57 /* Results Model */ = {
+			isa = PBXGroup;
+			children = (
+				A3F4B6431B99FE1A001C3DA8 /* ResultsModel.h */,
+				A3F4B6441B99FE1A001C3DA8 /* ResultsModel.m */,
+			);
+			name = "Results Model";
 			sourceTree = "<group>";
 		};
 		18F1BD521B3FE35000473E1A /* Controllers */ = {
