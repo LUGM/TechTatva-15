@@ -59,6 +59,7 @@
     
 //    imagesArray = @[""];     category image names to be entered in same order as categories named in array
     
+    self.tableView.separatorColor = [UIColor orangeColor];
     NSURL *categoriesUrl;
     
     if (![self isInternetAvailable])

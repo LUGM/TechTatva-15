@@ -14,6 +14,8 @@
 #import "SSJSONModel.h"
 #import "InstagramImage.h"
 #import "InstagramUser.h"
+#import "InstagramComments.h"
+#import "InstagramLikes.h"
 #import "UIImageView+WebCache.h"
 #import "FullScreenImageViewController.h"
 #import "PQFCirclesInTriangle.h"
@@ -134,6 +136,8 @@
         
         userArray = [[NSMutableArray alloc] init];
         imagesArray = [[NSMutableArray alloc]init];
+        likesArray = [[NSMutableArray alloc] init];
+        commentsArray = [[NSMutableArray alloc] init];
         for (NSDictionary * dictionary in [dict objectForKey:@"data"])
         {
             
@@ -142,6 +146,12 @@
             
             InstagramImage * img = [[InstagramImage alloc]initWithDictionary:[[dictionary objectForKey:@"images"] objectForKey:imgQualityStringForUrl]];
             [imagesArray addObject:img];
+            
+            InstagramLikes *likes = [[InstagramLikes alloc] initWithDictionary:[dictionary objectForKey:@"count"]];
+            [likesArray addObject:likes];
+            
+            InstagramComments *comments = [[InstagramComments alloc] initWithDictionary:[dictionary objectForKey:@"count"]];
+            [commentsArray addObject:comments];
             
             [refreshControl endRefreshing];
             
@@ -198,6 +208,12 @@
     InstagramImage * img = [imagesArray objectAtIndex:indexPath.row];
     [cell.mainImage sd_setImageWithURL:[NSURL URLWithString:img.url] placeholderImage:[UIImage imageNamed:@"TT15logomain"]];
     [cell.userImage sd_setImageWithURL:[NSURL URLWithString:user.profile_picture] placeholderImage:[UIImage imageNamed:@"TT15logomain"]];
+    
+    InstagramLikes *likes = [likesArray objectAtIndex:indexPath.row];
+    cell.likesCountLabel.text = likes.instaLikes;
+    
+    InstagramComments *comments = [commentsArray objectAtIndex:indexPath.row];
+    cell.commentsCountLabel.text = comments.instaComments;
     
     return cell;
     

@@ -25,11 +25,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *contactLabel;
 
 @property (strong, nonatomic) IBOutlet UIButton *detailsButton;
-
-- (IBAction)resultsButtonPressed:(UIButton *)sender;
-- (IBAction)callButtonPressed:(UIButton *)sender;
-
-//-----------------------------------------------------------------------//
+@property (strong, nonatomic) IBOutlet UIButton *callButton;
+@property (strong, nonatomic) IBOutlet UIButton *resultButton;
 
 @property (strong, nonatomic) NSIndexPath *indexPathForCell;
 

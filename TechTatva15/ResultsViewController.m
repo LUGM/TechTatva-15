@@ -51,6 +51,8 @@
     
     myTable.scrollsToTop = YES;
     
+    myTable.separatorColor = [UIColor orangeColor];
+    
     NSURL *resultsUrl = [NSURL URLWithString:@"http://results.techtatva.in"];              // this has to be url of results page of website
     myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
     [myJsonInstance sendRequestWithUrl:resultsUrl];

@@ -49,8 +49,22 @@
     NSArray *fetchedArray = [[CoreDataModel managedObjectContext] executeFetchRequest:fetchRequest error:&error];
     favouritesArray = [[NSMutableArray alloc] init];
     favouritesArray = [fetchedArray mutableCopy];
-    
+    if (favouritesArray.count == 0)
+    {
+        
+        UIAlertView *emptyViewAlert = [[UIAlertView alloc] initWithTitle:@"Empty" message:@"No favourites added" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [emptyViewAlert show];
+        
+        UIImageView *bgview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SideMenuBackground.png"]];
+        bgview.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+        [self.view addSubview:bgview];
+        
+        favouritesTable.separatorStyle = UITableViewCellSeparatorStyleNone;
+        
+    }
+    favouritesTable.separatorColor = [UIColor orangeColor];
     [favouritesTable reloadData];
+    
     
 }
 
@@ -107,6 +121,7 @@
     cell.categoryLabel.text = event.category;
     
     [cell.detailsButton addTarget:self action:@selector(detailsButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.callButton addTarget:self action:@selector(callCatHead:) forControlEvents:UIControlEventTouchUpInside];
     
     [rightUtilityButtons sw_addUtilityButtonWithColor:[UIColor whiteColor] icon:[UIImage imageNamed:@"Minus-32.png"]];
     
@@ -207,6 +222,20 @@
 
     }
     
+    if (favouritesArray.count == 0)
+    {
+        
+        UIAlertView *emptyViewAlert = [[UIAlertView alloc] initWithTitle:@"Empty" message:@"No Favourites now" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [emptyViewAlert show];
+        
+        UIImageView *bgview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SideMenuBackground.png"]];
+        bgview.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+        [self.view addSubview:bgview];
+        
+        favouritesTable.separatorStyle = UITableViewCellSeparatorStyleNone;
+        
+    }
+    
 //    [favouritesTable reloadData];
     
 }
@@ -224,6 +253,37 @@
     UIAlertView *detailsAlert = [[UIAlertView alloc] initWithTitle:event.event message:event.desc delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     
     [detailsAlert show];
+    
+}
+
+# pragma mark - Call feature
+
+- (void) callCatHead: (id) sender
+{
+    
+    CGPoint pointClicked = [sender convertPoint:CGPointZero toView:self.favouritesTable];
+    NSIndexPath *requiredIndexPath = [self.favouritesTable indexPathForRowAtPoint:pointClicked];
+    Event * event = [favouritesArray objectAtIndex:requiredIndexPath.row];
+    
+    NSString *getPhoneNumber = [[event.contact componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]] componentsJoinedByString:@""];
+    
+    NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt://+91%@", getPhoneNumber]];
+    
+    NSLog(@"Checking phone number to be called is : %@", phoneUrl);
+    
+    if ([[UIApplication sharedApplication] canOpenURL:phoneUrl])
+    {
+        
+        [[UIApplication sharedApplication] openURL:phoneUrl];
+        
+    }
+    else
+    {
+        
+        UIAlertView *noCallAlert = [[UIAlertView alloc]initWithTitle:@"Sorry" message:@"Calling feature unavailable" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [noCallAlert show];
+        
+    }
     
 }
 

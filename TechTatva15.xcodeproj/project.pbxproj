@@ -61,6 +61,9 @@
 		18B5ECE51B23793E00055A3F /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 18B5ECE41B23793E00055A3F /* video.mov */; };
 		18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E282721B373C4D0084DCDE /* ResultsViewController.m */; };
 		18FDACA51B76386F00C23742 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDACA41B76386F00C23742 /* Event.m */; };
+		4C01D5B11BAA15FF009FDB09 /* SideMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C01D5B01BAA15FF009FDB09 /* SideMenuBackground.png */; };
+		4C01D5B41BAA1FF0009FDB09 /* InstagramLikes.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C01D5B31BAA1FF0009FDB09 /* InstagramLikes.m */; };
+		4C01D5B71BAA206D009FDB09 /* InstagramComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C01D5B61BAA206D009FDB09 /* InstagramComments.m */; };
 		4CC9F6D01B3DBB4F002F9C1D /* eventViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */; };
 		4CC9F6D11B3DBB4F002F9C1D /* eventViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */; };
 		A33D4F1F1B8645760083429E /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = A33D4F1A1B8645760083429E /* RECommonFunctions.m */; };
@@ -193,6 +196,11 @@
 		18E282721B373C4D0084DCDE /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
 		18FDACA31B76386F00C23742 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		18FDACA41B76386F00C23742 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		4C01D5B01BAA15FF009FDB09 /* SideMenuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SideMenuBackground.png; sourceTree = "<group>"; };
+		4C01D5B21BAA1FF0009FDB09 /* InstagramLikes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramLikes.h; path = TechTatva15/InstagramLikes.h; sourceTree = "<group>"; };
+		4C01D5B31BAA1FF0009FDB09 /* InstagramLikes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramLikes.m; path = TechTatva15/InstagramLikes.m; sourceTree = "<group>"; };
+		4C01D5B51BAA206D009FDB09 /* InstagramComments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramComments.h; path = TechTatva15/InstagramComments.h; sourceTree = "<group>"; };
+		4C01D5B61BAA206D009FDB09 /* InstagramComments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramComments.m; path = TechTatva15/InstagramComments.m; sourceTree = "<group>"; };
 		4CC9F6CD1B3DBB4F002F9C1D /* eventViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventViewTableViewCell.h; sourceTree = "<group>"; };
 		4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventViewTableViewCell.m; sourceTree = "<group>"; };
 		4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eventViewTableViewCell.xib; sourceTree = "<group>"; };
@@ -303,6 +311,7 @@
 		1829221C1B236AFB00F95AE0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4C01D5B01BAA15FF009FDB09 /* SideMenuBackground.png */,
 				1835F6B61B961FC6009E12E5 /* Minus-32.png */,
 				1835F6A11B961675009E12E5 /* Minus-50.png */,
 				1811F1AB1B7553EC00B6BE2E /* TechTatva15-Prefix.pch */,
@@ -338,6 +347,10 @@
 				182D3F4B1B56B0C80008F4BB /* InstagramUser.m */,
 				182D3F4D1B56B21C0008F4BB /* InstagramImage.h */,
 				182D3F4E1B56B21C0008F4BB /* InstagramImage.m */,
+				4C01D5B21BAA1FF0009FDB09 /* InstagramLikes.h */,
+				4C01D5B31BAA1FF0009FDB09 /* InstagramLikes.m */,
+				4C01D5B51BAA206D009FDB09 /* InstagramComments.h */,
+				4C01D5B61BAA206D009FDB09 /* InstagramComments.m */,
 			);
 			name = "Instagram Model";
 			path = ..;
@@ -667,6 +680,7 @@
 				183C4E191B7FCCF700A07FB0 /* DaySegmentedControlView.xib in Resources */,
 				1835F6B71B961FC6009E12E5 /* Minus-32.png in Resources */,
 				1835F6A21B961675009E12E5 /* Minus-50.png in Resources */,
+				4C01D5B11BAA15FF009FDB09 /* SideMenuBackground.png in Resources */,
 				A3435C9A1B88BC9000BB1FFB /* CategoryTableViewCell.xib in Resources */,
 				18B5ECE51B23793E00055A3F /* video.mov in Resources */,
 				1822727B1B5A265200CD52B8 /* TTlogomain.jpg in Resources */,
@@ -725,6 +739,7 @@
 				18B4FC601B5958A5004647DA /* UIImage+GIF.m in Sources */,
 				184817421B90CE300031F1B9 /* TechTatva15_Core_Data_Model.xcdatamodeld in Sources */,
 				18B4FC561B5958A5004647DA /* MKAnnotationView+WebCache.m in Sources */,
+				4C01D5B41BAA1FF0009FDB09 /* InstagramLikes.m in Sources */,
 				18B4FC681B595E67004647DA /* FullScreenImageViewController.m in Sources */,
 				1829221F1B236AFB00F95AE0 /* main.m in Sources */,
 				18B4FC611B5958A5004647DA /* UIImage+MultiFormat.m in Sources */,
@@ -733,6 +748,7 @@
 				A33D4F251B8645AE0083429E /* RootViewController.m in Sources */,
 				18085BEB1BAA001B005CCADB /* RegisterViewController.m in Sources */,
 				A33D4F201B8645760083429E /* RESideMenu.m in Sources */,
+				4C01D5B71BAA206D009FDB09 /* InstagramComments.m in Sources */,
 				18085BE81BA9FED9005CCADB /* AboutUsViewController.m in Sources */,
 				18B4FC721B5962E4004647DA /* PQFCirclesInTriangle.m in Sources */,
 				A33D4F1F1B8645760083429E /* RECommonFunctions.m in Sources */,

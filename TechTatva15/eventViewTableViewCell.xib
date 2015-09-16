@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -25,9 +25,6 @@
                         <state key="normal" image="Results">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
-                        <connections>
-                            <action selector="resultsButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="XTW-hs-fv2"/>
-                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4K7-rt-8YI">
                         <rect key="frame" x="15" y="20" width="121" height="21"/>
@@ -73,9 +70,6 @@
                         <state key="normal" image="Call">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
-                        <connections>
-                            <action selector="callButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="irP-rB-9lF"/>
-                        </connections>
                     </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Team" translatesAutoresizingMaskIntoConstraints="NO" id="uEv-8Y-BbN">
                         <rect key="frame" x="15" y="169" width="35" height="35"/>
@@ -98,6 +92,7 @@
                 </subviews>
             </tableViewCellContentView>
             <connections>
+                <outlet property="callButton" destination="wi2-rx-giz" id="Io0-Bl-SgD"/>
                 <outlet property="categoryLabel" destination="4K7-rt-8YI" id="01A-hj-WHm"/>
                 <outlet property="contactImageView" destination="YRV-u1-E6A" id="Wdi-DY-beu"/>
                 <outlet property="contactLabel" destination="ehE-fb-InV" id="SaR-st-ghM"/>
@@ -107,6 +102,7 @@
                 <outlet property="eventLabel" destination="l1E-Jr-422" id="K2H-Fr-mNb"/>
                 <outlet property="maxTeamMembersImageView" destination="uEv-8Y-BbN" id="uk7-9A-lf1"/>
                 <outlet property="maxTeamMembersLabel" destination="Ww5-C2-GaN" id="CT1-ne-27f"/>
+                <outlet property="resultButton" destination="5Vi-fc-vAf" id="HQb-ok-RYl"/>
                 <outlet property="timeImageView" destination="F1q-Jb-r5Y" id="Q8B-DK-wFC"/>
                 <outlet property="timeLabel" destination="XhJ-I1-6Dg" id="Y2N-hB-eDo"/>
                 <outlet property="venueImageView" destination="ZB4-nh-3o1" id="x3J-zV-dbG"/>

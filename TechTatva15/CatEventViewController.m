@@ -66,6 +66,8 @@
     self.view.backgroundColor = [UIColor grayColor];
     _daySelected = @1;
     
+    catEventTable.separatorColor = [UIColor orangeColor];
+    
     NSURL *eventsUrl;
     
     if ([self isInternetAvailable])

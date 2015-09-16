@@ -53,6 +53,8 @@
     
     eventTable.scrollsToTop = YES;
     
+    eventTable.separatorColor = [UIColor orangeColor];
+    
     NSURL *eventsUrl;
     
     if ([self isInternetAvailable])
@@ -218,7 +220,9 @@
 
     if (cell == nil)
     {
-        cell = [[eventViewTableViewCell alloc]init];
+        
+        cell = [[eventViewTableViewCell alloc] init];
+        
     }
     
     Event *event = nil;
@@ -247,6 +251,8 @@
     
     cell.indexPathForCell = indexPath;
     [cell.detailsButton addTarget:self action:@selector(detailsButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [cell.callButton addTarget:self action:@selector(callCatHead:) forControlEvents:UIControlEventTouchUpInside];
+    
     
     return cell;
     
@@ -275,7 +281,7 @@
         event = [eventsArray objectAtIndex:indexPath.row];
         
     }
-        
+    
     [eventTable beginUpdates];
     
     if (![indexPath compare:_selectedCellIndex] == NSOrderedSame)
@@ -302,7 +308,7 @@
     
     if (!self.eventTable.isDragging)
     {
-        
+    
         [eventTable beginUpdates];
         [eventTable reloadData];
         [eventTable endUpdates];
@@ -333,7 +339,7 @@
     
 }
 
-# pragma mark - Cell Button Methods
+# pragma mark - Details Button Methods
 
 - (void)detailsButtonPressed: (id) sender
 {
@@ -363,6 +369,7 @@
 }
 
 # pragma mark - UISearchDisplayController Delegate Methods
+
 - (BOOL) searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
     
@@ -384,6 +391,37 @@
     
     // Return YES to cause the search result table view to be reloaded.
     return YES;
+    
+}
+
+# pragma mark - Call feature
+
+- (void) callCatHead: (id) sender
+{
+    
+    CGPoint pointClicked = [sender convertPoint:CGPointZero toView:self.eventTable];
+    NSIndexPath *requiredIndexPath = [self.eventTable indexPathForRowAtPoint:pointClicked];
+    Event * event = [eventsArray objectAtIndex:requiredIndexPath.row];
+    
+    NSString *getPhoneNumber = [[event.contact componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]] componentsJoinedByString:@""];
+    
+    NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt://+91%@", getPhoneNumber]];
+    
+    NSLog(@"Checking phone number to be called is : %@", phoneUrl);
+    
+    if ([[UIApplication sharedApplication] canOpenURL:phoneUrl])
+    {
+        
+        [[UIApplication sharedApplication] openURL:phoneUrl];
+        
+    }
+    else
+    {
+        
+        UIAlertView *noCallAlert = [[UIAlertView alloc]initWithTitle:@"Sorry" message:@"Calling feature unavailable" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [noCallAlert show];
+        
+    }
     
 }
 
