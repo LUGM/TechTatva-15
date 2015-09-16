@@ -27,6 +27,10 @@
     _optionsArray = @[@"Categories",@"Events",@"Favourites", @"Results", @"InstaFeed", @"Online Events", @"Register", @"About Us", @"Developers"];
     
     contentsTable.contentInset = UIEdgeInsetsMake(88, 0, 0, 0);
+    self.contentsTable.separatorColor = [UIColor orangeColor];
+    self.contentsTable.scrollEnabled = NO;
+    
+    
     
 }
 
@@ -60,7 +64,9 @@
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     cell.textLabel.text = _optionsArray[indexPath.row];
+    
     return cell;
+    
     
 }
 

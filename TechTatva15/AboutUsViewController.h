@@ -10,4 +10,9 @@
 
 @interface AboutUsViewController : UIViewController
 
+- (IBAction)facebookButtonPressed:(id)sender;
+- (IBAction)instaButtonPressed:(id)sender;
+- (IBAction)youtubeButtonPressed:(id)sender;
+- (IBAction)twitterButtonPressed:(id)sender;
+
 @end
