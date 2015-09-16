@@ -24,7 +24,7 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    _optionsArray = @[@"Categories",@"Events",@"Favourites", @"Results", @"InstaFeed", @"Online Events", @"Register", @"About Us"];
+    _optionsArray = @[@"Categories",@"Events",@"Favourites", @"Results", @"InstaFeed", @"Online Events", @"Register", @"About Us", @"Developers"];
     
     contentsTable.contentInset = UIEdgeInsetsMake(88, 0, 0, 0);
     
@@ -153,6 +153,17 @@
         UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
         
         UINavigationController * viewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"aboutUsView"];
+        
+        [self.sideMenuViewController setContentViewController:viewController animated:YES];
+        
+    }
+    
+    if (indexPath.row == 8)
+    {
+        
+        UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        
+        UINavigationController * viewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"developerView"];
         
         [self.sideMenuViewController setContentViewController:viewController animated:YES];
         

@@ -24,5 +24,6 @@
 @property (nonatomic, retain) NSString * start;
 @property (nonatomic, retain) NSString * stop;
 @property (nonatomic, retain) NSString * maxTeamSize;
+//@property (nonatomic, retain) NSString * duration;
 
 @end

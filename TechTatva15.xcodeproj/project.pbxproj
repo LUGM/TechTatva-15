@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18085BE51BA9FDF8005CCADB /* DevelopersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18085BE41BA9FDF8005CCADB /* DevelopersViewController.m */; };
+		18085BE81BA9FED9005CCADB /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18085BE71BA9FED9005CCADB /* AboutUsViewController.m */; };
+		18085BEB1BAA001B005CCADB /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18085BEA1BAA001B005CCADB /* RegisterViewController.m */; };
+		18085BEE1BAA02D9005CCADB /* OnlineEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18085BED1BAA02D9005CCADB /* OnlineEventsViewController.m */; };
 		1822727B1B5A265200CD52B8 /* TTlogomain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1822727A1B5A265200CD52B8 /* TTlogomain.jpg */; };
 		1829221F1B236AFB00F95AE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1829221E1B236AFB00F95AE0 /* main.m */; };
 		182922221B236AFB00F95AE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182922211B236AFB00F95AE0 /* AppDelegate.m */; };
@@ -86,6 +90,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18085BE31BA9FDF8005CCADB /* DevelopersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevelopersViewController.h; sourceTree = "<group>"; };
+		18085BE41BA9FDF8005CCADB /* DevelopersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevelopersViewController.m; sourceTree = "<group>"; };
+		18085BE61BA9FED9005CCADB /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		18085BE71BA9FED9005CCADB /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		18085BE91BAA001B005CCADB /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		18085BEA1BAA001B005CCADB /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		18085BEC1BAA02D9005CCADB /* OnlineEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineEventsViewController.h; sourceTree = "<group>"; };
+		18085BED1BAA02D9005CCADB /* OnlineEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineEventsViewController.m; sourceTree = "<group>"; };
 		1811F1AB1B7553EC00B6BE2E /* TechTatva15-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TechTatva15-Prefix.pch"; sourceTree = "<group>"; };
 		1822727A1B5A265200CD52B8 /* TTlogomain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TTlogomain.jpg; sourceTree = "<group>"; };
 		182922191B236AFB00F95AE0 /* TechTatva15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechTatva15.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -483,6 +495,14 @@
 				1897CC311B84EBD0007D779B /* EventsViewController.m */,
 				1848174B1B90D7550031F1B9 /* FavouritesViewController.h */,
 				1848174C1B90D7550031F1B9 /* FavouritesViewController.m */,
+				18085BE31BA9FDF8005CCADB /* DevelopersViewController.h */,
+				18085BE41BA9FDF8005CCADB /* DevelopersViewController.m */,
+				18085BE61BA9FED9005CCADB /* AboutUsViewController.h */,
+				18085BE71BA9FED9005CCADB /* AboutUsViewController.m */,
+				18085BE91BAA001B005CCADB /* RegisterViewController.h */,
+				18085BEA1BAA001B005CCADB /* RegisterViewController.m */,
+				18085BEC1BAA02D9005CCADB /* OnlineEventsViewController.h */,
+				18085BED1BAA02D9005CCADB /* OnlineEventsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -701,6 +721,7 @@
 				A3CD67DD1B3C466B00DACD83 /* SSJSONModel.m in Sources */,
 				182D3F4C1B56B0C80008F4BB /* InstagramUser.m in Sources */,
 				18B4FC5B1B5958A5004647DA /* SDWebImageDownloader.m in Sources */,
+				18085BE51BA9FDF8005CCADB /* DevelopersViewController.m in Sources */,
 				18B4FC601B5958A5004647DA /* UIImage+GIF.m in Sources */,
 				184817421B90CE300031F1B9 /* TechTatva15_Core_Data_Model.xcdatamodeld in Sources */,
 				18B4FC561B5958A5004647DA /* MKAnnotationView+WebCache.m in Sources */,
@@ -710,9 +731,12 @@
 				1835F6B11B961691009E12E5 /* SWCellScrollView.m in Sources */,
 				18B4FC731B5962E4004647DA /* UIColor+FlatColors.m in Sources */,
 				A33D4F251B8645AE0083429E /* RootViewController.m in Sources */,
+				18085BEB1BAA001B005CCADB /* RegisterViewController.m in Sources */,
 				A33D4F201B8645760083429E /* RESideMenu.m in Sources */,
+				18085BE81BA9FED9005CCADB /* AboutUsViewController.m in Sources */,
 				18B4FC721B5962E4004647DA /* PQFCirclesInTriangle.m in Sources */,
 				A33D4F1F1B8645760083429E /* RECommonFunctions.m in Sources */,
+				18085BEE1BAA02D9005CCADB /* OnlineEventsViewController.m in Sources */,
 				A3435CA01B88BCC600BB1FFB /* CategoriesTableViewController.m in Sources */,
 				1835F6B01B961691009E12E5 /* NSMutableArray+SWUtilityButtons.m in Sources */,
 				183C4E181B7FCCF700A07FB0 /* DaySegmentedControlView.m in Sources */,

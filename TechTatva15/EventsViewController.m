@@ -27,6 +27,8 @@
     
     NSIndexPath *cellSelectIndex;
     
+    NSMutableArray *filteredArray;
+    
 }
 
 @property DaySegmentedControlView *daySelector;
@@ -62,7 +64,7 @@
     else
     {
         
-        eventsUrl = [NSURL URLWithString:@"http://localhost:8888/events.json"];
+        eventsUrl = [NSURL URLWithString:@"http://localhost:8888/Events.json"];
         
     }
     
@@ -190,7 +192,18 @@
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return tempEventStorage.count;
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        
+        return [filteredArray count];
+        
+    }
+    else
+    {
+        
+        return tempEventStorage.count;
+        
+    }
     
 }
 
@@ -198,25 +211,37 @@
 {
     
     static NSString *cellIdentifier = @"Cell";
-    
-    eventViewTableViewCell *cell = (eventViewTableViewCell *) [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
+    eventViewTableViewCell *cell = (eventViewTableViewCell*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"eventViewTableViewCell" owner:self options:nil];
     
     cell = [nib objectAtIndex:0];
+
+    if (cell == nil)
+    {
+        cell = [[eventViewTableViewCell alloc]init];
+    }
     
-    cell.timeImageView = nil;
-    cell.venueImageView = nil;
-    cell.contactImageView = nil;
-    cell.dateImageView = nil;
-    cell.maxTeamMembersImageView = nil;
+    Event *event = nil;
     
-    Event *event = [eventsArray objectAtIndex:indexPath.row];
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        
+        event = [filteredArray objectAtIndex:indexPath.row];
+        
+    }
+    
+    else
+    {
+        
+        event = [eventsArray objectAtIndex:indexPath.row];
+        
+    }
+    
     cell.venueLabel.text = event.location;
     cell.eventLabel.text = event.event;
-    cell.timeLabel.text = [NSString stringWithFormat:@"%@-%@",event.start,event.stop];
+    cell.timeLabel.text = [NSString stringWithFormat:@"%@-%@", event.start, event.stop];
     cell.contactLabel.text = event.contact;
-    cell.dateLabel.text = [NSString stringWithFormat:@"%@ - Day %@",event.date,event.day];
+    cell.dateLabel.text = [NSString stringWithFormat:@"%@",event.date];
     cell.maxTeamMembersLabel.text = [NSString stringWithFormat:@"Max Team Size : %@", event.maxTeamSize];
     cell.categoryLabel.text = event.category;
     
@@ -233,6 +258,23 @@
 {
     
     cellSelectIndex = indexPath;
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    Event *event = nil;
+    
+    if (tableView == self.searchDisplayController.searchResultsTableView)
+    {
+        
+        event = [filteredArray objectAtIndex:indexPath.row];
+        
+    }
+    else
+    {
+        
+        event = [eventsArray objectAtIndex:indexPath.row];
+        
+    }
         
     [eventTable beginUpdates];
     
@@ -304,6 +346,44 @@
     UIAlertView *detailsAlert = [[UIAlertView alloc] initWithTitle:event.event message:event.desc delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     
     [detailsAlert show];
+    
+}
+
+# pragma mark - Content Filtering
+
+-(void)filterContentForSearchText:(NSString*) searchText scope:(NSString*)scope
+{
+    
+    [filteredArray removeAllObjects];
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"event contains[c]%@", searchText];
+    
+    filteredArray = [NSMutableArray arrayWithArray:[eventsArray filteredArrayUsingPredicate:predicate]];
+    
+}
+
+# pragma mark - UISearchDisplayController Delegate Methods
+- (BOOL) searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    
+    // Tells the table data source to reload when text changes
+    [self filterContentForSearchText:searchString scope:
+     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:[self.searchDisplayController.searchBar selectedScopeButtonIndex]]];
+    
+    // Return YES to cause the search result table view to be reloaded.
+    return YES;
+    
+}
+
+- (BOOL) searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchScope:(NSInteger)searchOption
+{
+    
+    // Tells the table data source to reload when scope bar selection changes
+    [self filterContentForSearchText:self.searchDisplayController.searchBar.text scope:
+     [[self.searchDisplayController.searchBar scopeButtonTitles] objectAtIndex:searchOption]];
+    
+    // Return YES to cause the search result table view to be reloaded.
+    return YES;
     
 }
 

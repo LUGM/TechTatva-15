@@ -23,5 +23,6 @@
 @dynamic start;
 @dynamic stop;
 @dynamic maxTeamSize;
+//@dynamic duration;
 
 @end

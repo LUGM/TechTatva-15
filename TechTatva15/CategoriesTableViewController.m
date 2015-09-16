@@ -64,7 +64,7 @@
     if (![self isInternetAvailable])
     {
         
-        categoriesUrl = [NSURL URLWithString:@"http://localhost:8888/cats.json"];
+        categoriesUrl = [NSURL URLWithString:@"http://localhost:8888/Categories.json"];
         
     }
     
@@ -114,8 +114,7 @@
     
     cell.textLabel.text = [categoryNames objectAtIndex:indexPath.row];
     
-//    cell.textLabel.text = [categoriesArray objectAtIndex:indexPath.row];
-//    cell.imageView.image = [UIImage imageNamed:[imagesArray objectAtIndex:indexPath.row]];
+//    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", cell.textLabel.text]];
     
     return cell;
     

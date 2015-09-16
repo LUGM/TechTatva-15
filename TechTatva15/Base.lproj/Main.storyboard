@@ -50,7 +50,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Results" id="6j8-zJ-STw">
-                        <barButtonItem key="leftBarButtonItem" id="fHr-b0-wIh"/>
+                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="bLk-3s-Yuh"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -108,7 +108,9 @@
                             <constraint firstItem="Gjp-8s-Yx6" firstAttribute="leading" secondItem="TLL-Yj-3KN" secondAttribute="leading" id="wfU-ba-pQN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="bUx-1f-hR8"/>
+                    <navigationItem key="navigationItem" id="bUx-1f-hR8">
+                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="Spp-6G-Xce"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="favouritesTable" destination="Gjp-8s-Yx6" id="YTl-b7-kdY"/>
@@ -207,6 +209,14 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="OBd-PG-6vB">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="rYn-OS-55O">
+                                    <rect key="frame" x="0.0" y="64" width="320" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                    <connections>
+                                        <outlet property="delegate" destination="Qh7-j3-X9N" id="uVd-RM-Jat"/>
+                                    </connections>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="6mC-3J-A9a">
                                         <autoresizingMask key="autoresizingMask"/>
@@ -223,21 +233,31 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="33S-Wy-Rfn" firstAttribute="top" secondItem="OBd-PG-6vB" secondAttribute="bottom" id="1LL-IW-aOc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="OBd-PG-6vB" secondAttribute="trailing" constant="-16" id="Kkt-rg-IVx"/>
-                            <constraint firstItem="OBd-PG-6vB" firstAttribute="top" secondItem="LRh-C7-Wr3" secondAttribute="bottom" constant="-64" id="SpR-um-TgW"/>
-                            <constraint firstItem="OBd-PG-6vB" firstAttribute="leading" secondItem="cb3-vc-Dbm" secondAttribute="leadingMargin" constant="-16" id="dkw-TP-Y5N"/>
-                            <constraint firstAttribute="centerX" secondItem="OBd-PG-6vB" secondAttribute="centerX" id="eKw-jR-d0d"/>
-                            <constraint firstAttribute="centerY" secondItem="OBd-PG-6vB" secondAttribute="centerY" id="xIF-TS-vGT"/>
+                            <constraint firstItem="OBd-PG-6vB" firstAttribute="top" secondItem="cb3-vc-Dbm" secondAttribute="top" id="6wE-Pu-poe"/>
+                            <constraint firstItem="OBd-PG-6vB" firstAttribute="bottom" secondItem="33S-Wy-Rfn" secondAttribute="top" id="Crh-PI-ARa"/>
+                            <constraint firstAttribute="trailing" secondItem="OBd-PG-6vB" secondAttribute="trailing" id="Dvo-xg-7sb"/>
+                            <constraint firstItem="OBd-PG-6vB" firstAttribute="leading" secondItem="cb3-vc-Dbm" secondAttribute="leading" id="ToQ-QX-wRj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="cHr-Mg-vjG"/>
+                    <navigationItem key="navigationItem" id="cHr-Mg-vjG">
+                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="CV2-z5-Jhd"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="eventTable" destination="OBd-PG-6vB" id="KyR-kX-xHr"/>
+                        <outlet property="searchDisplayController" destination="2wM-fO-Vlg" id="ld0-OQ-p3G"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PMK-L8-1x3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="2wM-fO-Vlg">
+                    <connections>
+                        <outlet property="delegate" destination="Qh7-j3-X9N" id="92H-dd-Lhq"/>
+                        <outlet property="searchBar" destination="rYn-OS-55O" id="icu-2K-a5K"/>
+                        <outlet property="searchContentsController" destination="Qh7-j3-X9N" id="jLZ-9K-8d4"/>
+                        <outlet property="searchResultsDataSource" destination="Qh7-j3-X9N" id="Xk1-vq-WIP"/>
+                        <outlet property="searchResultsDelegate" destination="Qh7-j3-X9N" id="mk5-LG-KzZ"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2934" y="4237"/>
         </scene>
@@ -254,6 +274,11 @@
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yK9-eJ-QmC" id="wVv-5K-DWu">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7YV-SJ-3kn">
+                                            <rect key="frame" x="16" y="0.0" width="50" height="40"/>
+                                        </imageView>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -262,7 +287,9 @@
                             <outlet property="delegate" destination="SlK-De-5MX" id="A4p-se-BMi"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Categories" id="xgN-St-4Mx"/>
+                    <navigationItem key="navigationItem" title="Categories" id="xgN-St-4Mx">
+                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="lfh-AQ-GsU"/>
+                    </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </tableViewController>
@@ -283,7 +310,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="pef-9P-4Kd"/>
+                    <navigationItem key="navigationItem" id="pef-9P-4Kd">
+                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="4FE-JU-rLr"/>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <segue destination="ypG-aR-IRn" kind="show" identifier="FullScreenImage" id="pz6-iN-H7q"/>
@@ -292,6 +321,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y43-pu-07j" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2730" y="5707"/>
+        </scene>
+        <!--About Us-->
+        <scene sceneID="LIt-YY-jft">
+            <objects>
+                <viewController id="Jin-ph-3OA" customClass="AboutUsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Dcw-Qy-Rcl"/>
+                        <viewControllerLayoutGuide type="bottom" id="tNR-Vg-qHd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WPM-mh-qsZ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="About Us" id="2Dy-Kc-eZf">
+                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="5hS-HP-jaV"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fy0-9j-cLq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2730" y="6434"/>
         </scene>
         <!--Full Screen Image View Controller-->
         <scene sceneID="jPj-aI-bgQ">
@@ -328,6 +379,48 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pGv-0G-JVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3232" y="5707"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="Oen-2O-rUM">
+            <objects>
+                <viewController id="XuI-BD-FRI" customClass="RegisterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6dI-ok-bSS"/>
+                        <viewControllerLayoutGuide type="bottom" id="an5-sk-mPH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iP8-NR-22J">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vny-Qc-KvC">
+                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="t88-h5-PE4"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cwp-Mh-rmC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2730" y="7295"/>
+        </scene>
+        <!--Online Events View Controller-->
+        <scene sceneID="sjE-za-edq">
+            <objects>
+                <viewController id="yM3-9C-FBc" customClass="OnlineEventsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="K3l-c3-3Uz"/>
+                        <viewControllerLayoutGuide type="bottom" id="yJ3-X4-fDD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gls-3u-2x8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xod-Vt-7Dj"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0HK-3c-2zG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2730" y="8034"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="nYb-qu-4hZ">
@@ -465,6 +558,28 @@
             </objects>
             <point key="canvasLocation" x="2504" y="4237"/>
         </scene>
+        <!--Developer Team-->
+        <scene sceneID="5vQ-WJ-e34">
+            <objects>
+                <viewController id="fD2-KV-LEE" customClass="DevelopersViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="FM2-uS-p1w"/>
+                        <viewControllerLayoutGuide type="bottom" id="ouC-Ud-ReA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="olk-Qk-Nhw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Developer Team" id="15u-8L-ALc">
+                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="Msd-y0-1Bi"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5IO-tq-nMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2934" y="4907"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="SfJ-Wk-hTX">
             <objects>
@@ -484,8 +599,85 @@
             </objects>
             <point key="canvasLocation" x="2156" y="1959"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5C9-gr-Q3h">
+            <objects>
+                <navigationController storyboardIdentifier="developerView" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ztV-3m-hWr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gfG-l8-GMe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="fD2-KV-LEE" kind="relationship" relationship="rootViewController" id="QR6-EM-Hx7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8a5-wD-Xhu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2504" y="4907"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="O31-Yu-YQe">
+            <objects>
+                <navigationController storyboardIdentifier="aboutUsView" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WL3-5B-tJt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YP3-VB-yqr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Jin-ph-3OA" kind="relationship" relationship="rootViewController" id="IIy-TV-vWy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qsh-eO-Div" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2156" y="6434"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="zZM-dg-KBn">
+            <objects>
+                <navigationController storyboardIdentifier="registerView" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ltk-5y-fEV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0JO-lx-e7L">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="XuI-BD-FRI" kind="relationship" relationship="rootViewController" id="kza-Uf-MaU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2oy-0f-Quk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2156" y="7295"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bQe-R4-SsA">
+            <objects>
+                <navigationController storyboardIdentifier="onlineEventsView" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ob6-m1-Xbo" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="10P-7e-4df">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="yM3-9C-FBc" kind="relationship" relationship="rootViewController" id="161-SM-KTo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k9f-uQ-1dS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2156" y="8034"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Dismiss" width="32" height="32"/>
+        <image name="Swipe Right" width="32" height="32"/>
     </resources>
 </document>

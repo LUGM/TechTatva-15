@@ -16,14 +16,14 @@
     if(self) {
         self.event = [dict objectForKey:@"eventName"];
         self.eventID = [dict objectForKey:@"eventID"];
-        self.location = [dict objectForKey:@"location"];
+        self.location = [dict objectForKey:@"Location"];
         self.start = [dict objectForKey:@"start"];
         self.stop = [dict objectForKey:@"stop"];
+//        self.duration = [dict objectForKey:@"Duration"];
         self.desc = [dict objectForKey:@"description"];
         self.day = [dict objectForKey:@"day"];
         self.category = [dict objectForKey:@"categoryName"];
-        self.categoryID = [dict objectForKey:@"categoryID"];
-        self.date = [dict objectForKey:@"date"];
+        self.date = [dict objectForKey:@"Date"];
         self.contact = [dict objectForKey:@"contact"];
         self.maxTeamSize = [dict objectForKey:@"maxTeamSize"];
     }

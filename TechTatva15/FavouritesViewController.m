@@ -100,9 +100,9 @@
     Event *event = [favouritesArray objectAtIndex:indexPath.row];
     cell.venueLabel.text = event.location;
     cell.eventLabel.text = event.event;
-    cell.timeLabel.text = [NSString stringWithFormat:@"%@-%@",event.start,event.stop];
+    cell.timeLabel.text = [NSString stringWithFormat:@"%@-%@", event.start, event.stop];
     cell.contactLabel.text = event.contact;
-    cell.dateLabel.text = [NSString stringWithFormat:@"%@ - Day %@",event.date,event.day];
+    cell.dateLabel.text = [NSString stringWithFormat:@"%@", event.date];
     cell.maxTeamMembersLabel.text = [NSString stringWithFormat:@"Max people : %@", event.maxTeamSize];
     cell.categoryLabel.text = event.category;
     

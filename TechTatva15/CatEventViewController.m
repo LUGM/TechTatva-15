@@ -77,7 +77,7 @@
     else
     {
         
-        eventsUrl = [NSURL URLWithString:@"http://localhost:8888/events.json"];
+        eventsUrl = [NSURL URLWithString:@"http://localhost:8888/Events.json"];
         
     }
 
@@ -303,6 +303,7 @@
         favouriteEvent.location = event.location;
         favouriteEvent.start = event.start;
         favouriteEvent.stop = event.stop;
+//        favouriteEvent.duration = event.duration;
         favouriteEvent.desc = event.desc;
         favouriteEvent.contact = event.contact;
         favouriteEvent.date = event.date;
