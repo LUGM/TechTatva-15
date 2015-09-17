@@ -21,7 +21,7 @@
     // Do any additional setup after loading the view.
     
     UIWebView *onlineEventsWebview = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    [onlineEventsWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://www.github.com"]]];
+    [onlineEventsWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://techtatva.in"]]];
     [self.view addSubview:onlineEventsWebview];
     
 }

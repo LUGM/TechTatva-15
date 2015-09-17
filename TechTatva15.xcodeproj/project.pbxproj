@@ -12,6 +12,8 @@
 		18085BEB1BAA001B005CCADB /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18085BEA1BAA001B005CCADB /* RegisterViewController.m */; };
 		18085BEE1BAA02D9005CCADB /* OnlineEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18085BED1BAA02D9005CCADB /* OnlineEventsViewController.m */; };
 		1822727B1B5A265200CD52B8 /* TTlogomain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1822727A1B5A265200CD52B8 /* TTlogomain.jpg */; };
+		182653F21BAA7D43006B30CF /* EasterEggViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182653F11BAA7D43006B30CF /* EasterEggViewController.m */; };
+		182653F41BAA7DC0006B30CF /* linuxtux.png in Resources */ = {isa = PBXBuildFile; fileRef = 182653F31BAA7DC0006B30CF /* linuxtux.png */; };
 		1829221F1B236AFB00F95AE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1829221E1B236AFB00F95AE0 /* main.m */; };
 		182922221B236AFB00F95AE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182922211B236AFB00F95AE0 /* AppDelegate.m */; };
 		182922281B236AFB00F95AE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182922261B236AFB00F95AE0 /* Main.storyboard */; };
@@ -103,6 +105,9 @@
 		18085BED1BAA02D9005CCADB /* OnlineEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineEventsViewController.m; sourceTree = "<group>"; };
 		1811F1AB1B7553EC00B6BE2E /* TechTatva15-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TechTatva15-Prefix.pch"; sourceTree = "<group>"; };
 		1822727A1B5A265200CD52B8 /* TTlogomain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TTlogomain.jpg; sourceTree = "<group>"; };
+		182653F01BAA7D43006B30CF /* EasterEggViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasterEggViewController.h; sourceTree = "<group>"; };
+		182653F11BAA7D43006B30CF /* EasterEggViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasterEggViewController.m; sourceTree = "<group>"; };
+		182653F31BAA7DC0006B30CF /* linuxtux.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linuxtux.png; sourceTree = "<group>"; };
 		182922191B236AFB00F95AE0 /* TechTatva15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechTatva15.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1829221D1B236AFB00F95AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1829221E1B236AFB00F95AE0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -311,6 +316,7 @@
 		1829221C1B236AFB00F95AE0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				182653F31BAA7DC0006B30CF /* linuxtux.png */,
 				4C01D5B01BAA15FF009FDB09 /* SideMenuBackground.png */,
 				1835F6B61B961FC6009E12E5 /* Minus-32.png */,
 				1835F6A11B961675009E12E5 /* Minus-50.png */,
@@ -516,6 +522,8 @@
 				18085BEA1BAA001B005CCADB /* RegisterViewController.m */,
 				18085BEC1BAA02D9005CCADB /* OnlineEventsViewController.h */,
 				18085BED1BAA02D9005CCADB /* OnlineEventsViewController.m */,
+				182653F01BAA7D43006B30CF /* EasterEggViewController.h */,
+				182653F11BAA7D43006B30CF /* EasterEggViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -679,6 +687,7 @@
 			files = (
 				183C4E191B7FCCF700A07FB0 /* DaySegmentedControlView.xib in Resources */,
 				1835F6B71B961FC6009E12E5 /* Minus-32.png in Resources */,
+				182653F41BAA7DC0006B30CF /* linuxtux.png in Resources */,
 				1835F6A21B961675009E12E5 /* Minus-50.png in Resources */,
 				4C01D5B11BAA15FF009FDB09 /* SideMenuBackground.png in Resources */,
 				A3435C9A1B88BC9000BB1FFB /* CategoryTableViewCell.xib in Resources */,
@@ -744,6 +753,7 @@
 				1829221F1B236AFB00F95AE0 /* main.m in Sources */,
 				18B4FC611B5958A5004647DA /* UIImage+MultiFormat.m in Sources */,
 				1835F6B11B961691009E12E5 /* SWCellScrollView.m in Sources */,
+				182653F21BAA7D43006B30CF /* EasterEggViewController.m in Sources */,
 				18B4FC731B5962E4004647DA /* UIColor+FlatColors.m in Sources */,
 				A33D4F251B8645AE0083429E /* RootViewController.m in Sources */,
 				18085BEB1BAA001B005CCADB /* RegisterViewController.m in Sources */,

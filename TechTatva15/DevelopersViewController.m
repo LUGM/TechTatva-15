@@ -32,6 +32,18 @@
     
 }
 
+- (void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    
+    if (motion == UIEventSubtypeMotionShake)
+    {
+        
+        [self performSegueWithIdentifier:@"easterEgg" sender:self];
+        
+    }
+    
+}
+
 /*
 #pragma mark - Navigation
 

@@ -147,6 +147,9 @@
             InstagramImage * img = [[InstagramImage alloc]initWithDictionary:[[dictionary objectForKey:@"images"] objectForKey:imgQualityStringForUrl]];
             [imagesArray addObject:img];
             
+            
+            // likes and comments not parsing
+            
             InstagramLikes *likes = [[InstagramLikes alloc] initWithDictionary:[dictionary objectForKey:@"count"]];
             [likesArray addObject:likes];
             
