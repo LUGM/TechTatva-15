@@ -20,9 +20,13 @@
     self.leftMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"leftMenuViewController"];
 }
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
+    
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.backgroundImage = [UIImage imageNamed:@"SideMenuBackground.png"];
 }
 
 - (void)didReceiveMemoryWarning {

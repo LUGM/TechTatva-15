@@ -26,20 +26,37 @@
     // Do any additional setup after loading the view.
     _optionsArray = @[@"Categories",@"Events",@"Favourites", @"Results", @"InstaFeed", @"Online Events", @"Register", @"About Us", @"Developers"];
     
-    contentsTable.contentInset = UIEdgeInsetsMake(88, 0, 0, 0);
-    contentsTable.scrollEnabled = NO;
-    [contentsTable setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    self.view.backgroundColor = [UIColor clearColor];
     
-    [contentsTable setBackgroundColor:[UIColor clearColor]];
+//    contentsTable.contentInset = UIEdgeInsetsMake(88, 0, 0, 0);
+//    contentsTable.scrollEnabled = NO;
+//    [contentsTable setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    
+//    [contentsTable setBackgroundColor:[UIColor clearColor]];
     
 //    [contentsTable setBackgroundColor:[self colorWithHexString:@"0xFF5722"]];
 //    UIImageView *sideMenuBackgroudView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SideMenuBackground.png"]];
 //    sideMenuBackgroudView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     
-    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"SideMenuBackground.png"]];
-    self.contentsTable.separatorColor = [UIColor orangeColor];
-    self.contentsTable.scrollEnabled = NO;
+//    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"SideMenuBackground.png"]];
+//    self.contentsTable.separatorColor = [UIColor orangeColor];
     
+    contentsTable = ({
+        contentsTable = [[UITableView alloc] initWithFrame:self.view.frame];
+        contentsTable.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
+        contentsTable.delegate = self;
+        contentsTable.dataSource = self;
+        contentsTable.contentInset = UIEdgeInsetsMake(88, 0, 0, 0);
+        contentsTable.opaque = NO;
+        contentsTable.backgroundColor = [UIColor clearColor];
+//        contentsTable.backgroundView = nil;
+        contentsTable.separatorStyle = UITableViewCellSeparatorStyleNone;
+        contentsTable.bounces = NO;
+        contentsTable.scrollsToTop = NO;
+        contentsTable;
+        });
+
+    [self.view addSubview:contentsTable];
 }
 
 - (void)didReceiveMemoryWarning
@@ -71,6 +88,9 @@
 
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] init];
+    }
     cell.backgroundColor = [UIColor clearColor];
     cell.textLabel.textColor = [UIColor grayColor];
     
