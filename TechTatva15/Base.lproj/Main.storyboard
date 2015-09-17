@@ -280,6 +280,7 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <color key="tintColor" red="1" green="0.59705262055128006" blue="0.096622450190158471" alpha="1" colorSpace="calibratedRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -593,7 +594,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <segue destination="x1d-13-E9K" kind="show" id="eUY-HK-K0f"/>
+                        <segue destination="PIx-3i-VQm" kind="presentation" identifier="easterEgg" id="K8c-I8-a1x"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5IO-tq-nMf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -657,6 +658,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="wiD-M6-MZn"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -665,7 +667,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bci-HX-ojL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3484" y="4907"/>
+            <point key="canvasLocation" x="4016" y="4907"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SfJ-Wk-hTX">
@@ -761,6 +763,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k9f-uQ-1dS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2156" y="8034"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="71d-AQ-RD3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PIx-3i-VQm" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="RIV-we-KZe">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="x1d-13-E9K" kind="relationship" relationship="rootViewController" id="sD7-Qe-Q5O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C8N-Au-j7p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3484" y="4907"/>
         </scene>
     </scenes>
     <resources>

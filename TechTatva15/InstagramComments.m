@@ -17,7 +17,7 @@
     if (self)
     {
         
-        _instaComments = [dict objectForKey:@"comment"];
+        _instaComments = [dict objectForKey:@"count"];
         
     }
     

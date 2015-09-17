@@ -21,7 +21,7 @@
     // Do any additional setup after loading the view.
     
     UIWebView *registerWebView = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    [registerWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://techtatva.in/register/"]]];
+    [registerWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://register.techtatva.in/"]]];
     [self.view addSubview:registerWebView];
     
 }

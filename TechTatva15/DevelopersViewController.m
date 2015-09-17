@@ -32,6 +32,13 @@
     
 }
 
+- (BOOL) canBecomeFirstResponder
+{
+    
+    return YES;
+
+}
+
 - (void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
 {
     

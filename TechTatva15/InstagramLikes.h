@@ -10,7 +10,7 @@
 
 @interface InstagramLikes : NSObject
 
-@property (strong, nonatomic) NSString *instaLikes;
+@property NSNumber *instaLikes;
 
 - (id) initWithDictionary : (NSDictionary *) dict;
 

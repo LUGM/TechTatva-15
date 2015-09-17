@@ -265,24 +265,22 @@
     
     cellSelectIndex = indexPath;
     
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    Event *event = nil;
+//    
+//    if (tableView == self.searchDisplayController.searchResultsTableView)
+//    {
+//        
+//        event = [filteredArray objectAtIndex:indexPath.row];
+//        
+//    }
+//    else
+//    {
+//        
+//        event = [eventsArray objectAtIndex:indexPath.row];
+//        
+//    }
     
-    Event *event = nil;
-    
-    if (tableView == self.searchDisplayController.searchResultsTableView)
-    {
-        
-        event = [filteredArray objectAtIndex:indexPath.row];
-        
-    }
-    else
-    {
-        
-        event = [eventsArray objectAtIndex:indexPath.row];
-        
-    }
-    
-    [eventTable beginUpdates];
+    [tableView beginUpdates];
     
     if (![indexPath compare:_selectedCellIndex] == NSOrderedSame)
     {
@@ -298,8 +296,10 @@
         
     }
     
-    [eventTable deselectRowAtIndexPath:indexPath animated:YES];
-    [eventTable endUpdates];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView endUpdates];
+
+
     
 }
 
@@ -341,14 +341,21 @@
 
 # pragma mark - Details Button Methods
 
-- (void)detailsButtonPressed: (id) sender
+- (void)detailsButtonPressed: (id)sender
 {
-    
-    CGPoint pointClicked = [sender convertPoint:CGPointZero toView:self.eventTable];
-    NSIndexPath *requiredIndexPath = [self.eventTable indexPathForRowAtPoint:pointClicked];
-    
-    Event *event = [eventsArray objectAtIndex:requiredIndexPath.row];
-    
+    Event *event;
+    if (self.searchDisplayController.searchResultsTableView) {
+        CGPoint pointClicked = [sender convertPoint:CGPointZero toView:self.searchDisplayController.searchResultsTableView];
+        NSIndexPath *requiredIndexPath = [self.searchDisplayController.searchResultsTableView indexPathForRowAtPoint:pointClicked];
+        
+        event = [filteredArray objectAtIndex:requiredIndexPath.row];
+    }
+    else {
+        CGPoint pointClicked = [sender convertPoint:CGPointZero toView:eventTable];
+        NSIndexPath *requiredIndexPath = [eventTable indexPathForRowAtPoint:pointClicked];
+        
+        event = [eventsArray objectAtIndex:requiredIndexPath.row];
+    }
     UIAlertView *detailsAlert = [[UIAlertView alloc] initWithTitle:event.event message:event.desc delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     
     [detailsAlert show];

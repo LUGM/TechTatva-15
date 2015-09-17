@@ -17,7 +17,7 @@
     if (self)
     {
         
-        _instaLikes = [dict objectForKey:@"likes"];
+        _instaLikes = [dict objectForKey:@"count"];
         
     }
     

@@ -10,7 +10,7 @@
 
 @interface InstagramComments : NSObject
 
-@property (strong, nonatomic) NSString *instaComments;
+@property NSNumber *instaComments;
 
 - (id) initWithDictionary : (NSDictionary *) dict;
 

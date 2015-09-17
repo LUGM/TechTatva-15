@@ -150,10 +150,10 @@
             
             // likes and comments not parsing
             
-            InstagramLikes *likes = [[InstagramLikes alloc] initWithDictionary:[dictionary objectForKey:@"count"]];
+            InstagramLikes *likes = [[InstagramLikes alloc] initWithDictionary:[dictionary objectForKey:@"likes"]];
             [likesArray addObject:likes];
             
-            InstagramComments *comments = [[InstagramComments alloc] initWithDictionary:[dictionary objectForKey:@"count"]];
+            InstagramComments *comments = [[InstagramComments alloc] initWithDictionary:[dictionary objectForKey:@"comments"]];
             [commentsArray addObject:comments];
             
             [refreshControl endRefreshing];
@@ -213,10 +213,10 @@
     [cell.userImage sd_setImageWithURL:[NSURL URLWithString:user.profile_picture] placeholderImage:[UIImage imageNamed:@"TT15logomain"]];
     
     InstagramLikes *likes = [likesArray objectAtIndex:indexPath.row];
-    cell.likesCountLabel.text = likes.instaLikes;
+    cell.likesCountLabel.text = [NSString stringWithFormat:@"%@", likes.instaLikes];
     
     InstagramComments *comments = [commentsArray objectAtIndex:indexPath.row];
-    cell.commentsCountLabel.text = comments.instaComments;
+    cell.commentsCountLabel.text = [NSString stringWithFormat:@"%@", comments.instaComments];
     
     return cell;
     
