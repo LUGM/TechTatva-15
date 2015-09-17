@@ -27,7 +27,6 @@
     _optionsArray = @[@"Categories",@"Events",@"Favourites", @"Results", @"InstaFeed", @"Online Events", @"Register", @"About Us", @"Developers"];
     
     contentsTable.contentInset = UIEdgeInsetsMake(88, 0, 0, 0);
-<<<<<<< HEAD
     contentsTable.scrollEnabled = NO;
     [contentsTable setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     
@@ -38,12 +37,8 @@
 //    sideMenuBackgroudView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     
     self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"SideMenuBackground.png"]];
-=======
     self.contentsTable.separatorColor = [UIColor orangeColor];
     self.contentsTable.scrollEnabled = NO;
-    
->>>>>>> 5c6d8b4b89988c5ad7d5165a008bcbdd649fbe63
-    
     
 }
 
