@@ -199,12 +199,12 @@
 }
 
 - (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
-{
-    
-    UIView *emptyView = [[ UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 20)];
-    return emptyView;
-    
-}
+    {
+        
+        UIView *blankView = [[UIView alloc] initWithFrame:CGRectZero];
+        return blankView;
+        
+    }
 
 # pragma mark Content Filtering
 

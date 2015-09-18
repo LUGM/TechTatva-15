@@ -70,11 +70,4 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.facebook.com/groups/lug2016/"]];
     
 }
-
-- (IBAction)siteLinkPressed:(id)sender
-{
-    
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.lugmanipal.org"]];
-    
-}
 @end

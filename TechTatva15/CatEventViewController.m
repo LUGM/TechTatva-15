@@ -194,6 +194,15 @@
     
 }
 
+- (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    
+    UIView *blankView = [[UIView alloc] initWithFrame:CGRectZero];
+    return blankView;
+    
+}
+
+
 # pragma mark - Data Helper Methods
 
 - (void) jsonRequestDidCompleteWithDict:(id)response model:(SSJSONModel *)JSONModel

@@ -229,13 +229,14 @@
     
 }
 
--(UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+- (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
     
-    UIView * blankView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 10)];
+    UIView *blankView = [[UIView alloc] initWithFrame:CGRectZero];
     return blankView;
     
 }
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

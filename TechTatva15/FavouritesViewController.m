@@ -189,6 +189,15 @@
     
 }
 
+- (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    
+    UIView *blankView = [[UIView alloc] initWithFrame:CGRectZero];
+    return blankView;
+    
+}
+
+
 # pragma mark - Swipeable Cell Delegate Methods
 
 - (void)swipeableTableViewCell:(SWTableViewCell *)cell didTriggerRightUtilityButtonWithIndex:(NSInteger)index

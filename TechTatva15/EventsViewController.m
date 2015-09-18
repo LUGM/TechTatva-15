@@ -265,21 +265,6 @@
     
     cellSelectIndex = indexPath;
     
-//    Event *event = nil;
-//    
-//    if (tableView == self.searchDisplayController.searchResultsTableView)
-//    {
-//        
-//        event = [filteredArray objectAtIndex:indexPath.row];
-//        
-//    }
-//    else
-//    {
-//        
-//        event = [eventsArray objectAtIndex:indexPath.row];
-//        
-//    }
-    
     [tableView beginUpdates];
     
     if (![indexPath compare:_selectedCellIndex] == NSOrderedSame)
@@ -343,20 +328,34 @@
 
 - (void)detailsButtonPressed: (id)sender
 {
-    Event *event;
-    if (self.searchDisplayController.searchResultsTableView) {
+    
+    Event *event = nil;
+    // modify this condition to check if table view is search one or normal
+    if (self.searchDisplayController.searchResultsTableView)
+    {
+        NSLog(@"search loop");
+        
         CGPoint pointClicked = [sender convertPoint:CGPointZero toView:self.searchDisplayController.searchResultsTableView];
         NSIndexPath *requiredIndexPath = [self.searchDisplayController.searchResultsTableView indexPathForRowAtPoint:pointClicked];
         
         event = [filteredArray objectAtIndex:requiredIndexPath.row];
+        
     }
-    else {
+    // not entering else condition, ever
+    else
+    {
+        
         CGPoint pointClicked = [sender convertPoint:CGPointZero toView:eventTable];
         NSIndexPath *requiredIndexPath = [eventTable indexPathForRowAtPoint:pointClicked];
         
+        NSLog(@"index path check here %li", requiredIndexPath.row);
+        
         event = [eventsArray objectAtIndex:requiredIndexPath.row];
+        
     }
     UIAlertView *detailsAlert = [[UIAlertView alloc] initWithTitle:event.event message:event.desc delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    
+    NSLog(@"check event here %@", event);         // returning null here in normal view
     
     [detailsAlert show];
     

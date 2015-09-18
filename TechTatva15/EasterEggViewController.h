@@ -9,9 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface EasterEggViewController : UIViewController
+
 @property (strong, nonatomic) IBOutlet UIImageView *logoImage;
 - (IBAction)gitButtonPressed:(id)sender;
 - (IBAction)facebookButtonPressed:(id)sender;
-- (IBAction)siteLinkPressed:(id)sender;
 
 @end
