@@ -13,6 +13,7 @@
 #import "MBProgressHUD.h"
 #import "SSJSONModel.h"
 #import "Event.h"
+#import "RESideMenu.h"
 
 @interface EventsViewController () <SSJSONModelDelegate>
 {
@@ -330,10 +331,9 @@
 {
     
     Event *event = nil;
-    // modify this condition to check if table view is search one or normal
-    if (self.searchDisplayController.searchResultsTableView)
+
+    if ([self.searchDisplayController isActive])
     {
-        NSLog(@"search loop");
         
         CGPoint pointClicked = [sender convertPoint:CGPointZero toView:self.searchDisplayController.searchResultsTableView];
         NSIndexPath *requiredIndexPath = [self.searchDisplayController.searchResultsTableView indexPathForRowAtPoint:pointClicked];
@@ -341,21 +341,19 @@
         event = [filteredArray objectAtIndex:requiredIndexPath.row];
         
     }
-    // not entering else condition, ever
+    
     else
     {
         
         CGPoint pointClicked = [sender convertPoint:CGPointZero toView:eventTable];
         NSIndexPath *requiredIndexPath = [eventTable indexPathForRowAtPoint:pointClicked];
         
-        NSLog(@"index path check here %li", requiredIndexPath.row);
-        
         event = [eventsArray objectAtIndex:requiredIndexPath.row];
         
     }
     UIAlertView *detailsAlert = [[UIAlertView alloc] initWithTitle:event.event message:event.desc delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     
-    NSLog(@"check event here %@", event);         // returning null here in normal view
+    NSLog(@"check event here %@", event);
     
     [detailsAlert show];
     
@@ -441,4 +439,10 @@
 }
 */
 
+- (IBAction)hamburgerLoader:(id)sender
+{
+    
+    [self presentLeftMenuViewController:self];
+    
+}
 @end

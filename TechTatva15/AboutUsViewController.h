@@ -14,5 +14,8 @@
 - (IBAction)instaButtonPressed:(id)sender;
 - (IBAction)youtubeButtonPressed:(id)sender;
 - (IBAction)twitterButtonPressed:(id)sender;
+- (IBAction)gPlusButtonPressed:(id)sender;
+@property (strong, nonatomic) IBOutlet UITextView *aboutUsTextField;
+- (IBAction)hamburgerLoader:(id)sender;
 
 @end

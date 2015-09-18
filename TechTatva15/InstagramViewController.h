@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface InstagramViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+- (IBAction)hamburgerLoader:(id)sender;
 
 @end

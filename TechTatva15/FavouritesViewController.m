@@ -11,6 +11,7 @@
 #import "eventViewTableViewCell.h"
 #import "Event.h"
 #import "Favourites.h"
+#import "RESideMenu.h"
 
 @interface FavouritesViewController () <UITableViewDataSource, UITableViewDelegate>
 {
@@ -306,4 +307,10 @@
 }
 */
 
+- (IBAction)hamburgerLoader:(id)sender
+{
+    
+    [self presentLeftMenuViewController:self];
+    
+}
 @end

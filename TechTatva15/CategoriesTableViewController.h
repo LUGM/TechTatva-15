@@ -10,5 +10,6 @@
 
 @interface CategoriesTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate>
 
+- (IBAction)hamburgerLoader:(id)sender;
 
 @end

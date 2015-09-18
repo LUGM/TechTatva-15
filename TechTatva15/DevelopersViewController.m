@@ -7,6 +7,7 @@
 //
 
 #import "DevelopersViewController.h"
+#import "RESideMenu.h"
 
 @interface DevelopersViewController ()
 
@@ -61,4 +62,10 @@
 }
 */
 
+- (IBAction)hamburgerLoader:(id)sender
+{
+    
+    [self presentLeftMenuViewController:self];
+    
+}
 @end

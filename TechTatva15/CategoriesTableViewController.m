@@ -15,6 +15,7 @@
 #import "MBProgressHUD.h"
 #import "Reachability.h"
 #import "CatEventViewController.h"
+#import "RESideMenu.h"
 
 @interface CategoriesTableViewController () <SSJSONModelDelegate>
 {
@@ -55,13 +56,9 @@
     
     self.tableView.scrollsToTop = YES;
     
-    categoriesArray = @[@"Acumen", @"Airborne", @"Alacrity", @"Bizzmaestro", @"Cheminova", @"Constructure", @"Cryptoss", @"Electrific", @"Energia", @"Epsilon", @"Kraftwagen", @"Mechanize", @"Mechatron", @"Robotrek", @"Turing"];
-    
-//    imagesArray = @[""];     category image names to be entered in same order as categories named in array
-    
     self.tableView.separatorColor = [UIColor orangeColor];
-    NSURL *categoriesUrl;
     
+    NSURL *categoriesUrl;
     if (![self isInternetAvailable])
     {
         
@@ -202,6 +199,13 @@
     
 }
 
+- (IBAction)hamburgerLoader:(id)sender
+{
+    
+    [self presentLeftMenuViewController:self];
+    
+}
+
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -245,5 +249,4 @@
     // Pass the selected object to the new view controller.
 }
 */
-
 @end

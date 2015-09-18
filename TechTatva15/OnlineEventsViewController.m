@@ -7,6 +7,9 @@
 //
 
 #import "OnlineEventsViewController.h"
+#import "MBProgressHUD.h"
+#import "Reachability.h"
+#import "RESideMenu.h"
 
 @interface OnlineEventsViewController ()
 
@@ -20,9 +23,21 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UIWebView *onlineEventsWebview = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    [onlineEventsWebview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://techtatva.in"]]];
-    [self.view addSubview:onlineEventsWebview];
+    if ([self isInternetAvailable])
+    {
+        
+        [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+        [self loadWebView];
+        
+    }
+    else
+    {
+        
+        UIAlertView *noNetAlert = [[UIAlertView alloc] initWithTitle:@"No Internet" message:@"Data connection unavailable" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [noNetAlert show];
+        self.view.backgroundColor = [UIColor grayColor];
+        
+    }
     
 }
 
@@ -31,6 +46,28 @@
     
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
+}
+
+- (void) loadWebView
+{
+    
+    UIWebView *registerWebView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    [registerWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://techtatva.in/"]]];
+    [self.view addSubview:registerWebView];
+    [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
+
+    
+}
+
+# pragma mark Connection Check
+
+- (BOOL) isInternetAvailable
+{
+    
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [reachability currentReachabilityStatus];
+    return !(networkStatus == NotReachable);
     
 }
 
@@ -44,4 +81,10 @@
 }
 */
 
+- (IBAction)hamburgerLoader:(id)sender
+{
+    
+    [self presentLeftMenuViewController:self];
+    
+}
 @end

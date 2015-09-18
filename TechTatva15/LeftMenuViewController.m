@@ -8,6 +8,7 @@
 
 #import "LeftMenuViewController.h"
 #import "RESideMenu.h"
+#import "MBProgressHUD.h"
 
 @interface LeftMenuViewController () <UITableViewDataSource,UITableViewDelegate>
 
@@ -27,19 +28,6 @@
     _optionsArray = @[@"Categories",@"Events",@"Favourites", @"Results", @"InstaFeed", @"Online Events", @"Register", @"About Us", @"Developers"];
     
     self.view.backgroundColor = [UIColor clearColor];
-    
-//    contentsTable.contentInset = UIEdgeInsetsMake(88, 0, 0, 0);
-//    contentsTable.scrollEnabled = NO;
-//    [contentsTable setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-    
-//    [contentsTable setBackgroundColor:[UIColor clearColor]];
-    
-//    [contentsTable setBackgroundColor:[self colorWithHexString:@"0xFF5722"]];
-//    UIImageView *sideMenuBackgroudView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SideMenuBackground.png"]];
-//    sideMenuBackgroudView.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-    
-//    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"SideMenuBackground.png"]];
-//    self.contentsTable.separatorColor = [UIColor orangeColor];
     
     contentsTable = ({
         contentsTable = [[UITableView alloc] initWithFrame:self.view.frame];

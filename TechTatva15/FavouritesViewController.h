@@ -14,5 +14,6 @@
 @property (strong, nonatomic) IBOutlet UITableView *favouritesTable;
 
 @property (strong, nonatomic) NSIndexPath *selectedCellIndex;
+- (IBAction)hamburgerLoader:(id)sender;
 
 @end

@@ -20,6 +20,7 @@
 #import "FullScreenImageViewController.h"
 #import "PQFCirclesInTriangle.h"
 #import "Reachability.h"
+#import "RESideMenu.h"
 
 @interface InstagramViewController () <SSJSONModelDelegate>
 {
@@ -289,4 +290,10 @@
 }
 */
 
+- (IBAction)hamburgerLoader:(id)sender
+{
+    
+    [self presentLeftMenuViewController:self];
+    
+}
 @end

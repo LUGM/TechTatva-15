@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DevelopersViewController : UIViewController
+- (IBAction)hamburgerLoader:(id)sender;
 
 @end

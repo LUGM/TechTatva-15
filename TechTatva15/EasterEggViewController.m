@@ -7,6 +7,8 @@
 //
 
 #import "EasterEggViewController.h"
+#import "Reachability.h"
+#import "MBProgressHUD.h"
 
 @interface EasterEggViewController ()
 
@@ -60,14 +62,62 @@
 - (IBAction)gitButtonPressed:(id)sender
 {
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/LUGM"]];
+    if ([self isInternetAvailable])
+    {
+        
+        [self loadGit];
+        
+    }
+    else
+    {
+        
+        UIAlertView *noNetAlert = [[UIAlertView alloc] initWithTitle:@"No Internet" message:@"Data connection unavailable" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [noNetAlert show];
+        
+    }
     
 }
 
 - (IBAction)facebookButtonPressed:(id)sender
 {
     
+    if ([self isInternetAvailable])
+    {
+        
+        [self loadFacebook];
+        
+    }
+    else
+    {
+        
+        UIAlertView *noNetAlert = [[UIAlertView alloc] initWithTitle:@"No Internet" message:@"Data connection unavailable" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [noNetAlert show];
+        
+    }
+
+    
+}
+
+- (void) loadFacebook
+{
+    
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.facebook.com/groups/lug2016/"]];
+    
+}
+
+- (void) loadGit
+{
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.facebook.com/groups/lug2016/"]];
+    
+}
+
+- (BOOL) isInternetAvailable
+{
+    
+    Reachability *reachability = [Reachability reachabilityForInternetConnection];
+    NetworkStatus networkStatus = [reachability currentReachabilityStatus];
+    return !(networkStatus == NotReachable);
     
 }
 @end

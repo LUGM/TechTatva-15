@@ -50,7 +50,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Results" id="6j8-zJ-STw">
-                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="bLk-3s-Yuh"/>
+                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="bLk-3s-Yuh">
+                            <connections>
+                                <action selector="hamburgerLoader:" destination="BGT-Vw-D6L" id="Ysj-dp-3vP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -109,7 +113,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bUx-1f-hR8">
-                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="Spp-6G-Xce"/>
+                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="Spp-6G-Xce">
+                            <connections>
+                                <action selector="hamburgerLoader:" destination="h3C-Oa-BbA" id="mqd-F0-Rw4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -240,7 +248,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cHr-Mg-vjG">
-                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="CV2-z5-Jhd"/>
+                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="CV2-z5-Jhd">
+                            <connections>
+                                <action selector="hamburgerLoader:" destination="Qh7-j3-X9N" id="kdQ-gh-S2H"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -289,7 +301,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Categories" id="xgN-St-4Mx">
-                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="lfh-AQ-GsU"/>
+                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="lfh-AQ-GsU">
+                            <connections>
+                                <action selector="hamburgerLoader:" destination="SlK-De-5MX" id="Rpl-Gf-iSW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
@@ -312,7 +328,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="pef-9P-4Kd">
-                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="4FE-JU-rLr"/>
+                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="4FE-JU-rLr">
+                            <connections>
+                                <action selector="hamburgerLoader:" destination="Eg6-h5-4aW" id="iSK-J6-Euw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -323,7 +343,7 @@
             </objects>
             <point key="canvasLocation" x="2730" y="5707"/>
         </scene>
-        <!--About Us-->
+        <!--TechTatva '15-->
         <scene sceneID="LIt-YY-jft">
             <objects>
                 <viewController id="Jin-ph-3OA" customClass="AboutUsViewController" sceneMemberID="viewController">
@@ -335,9 +355,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNC-Yw-qgL">
-                                <rect key="frame" x="8" y="505" width="30" height="30"/>
-                                <state key="normal" title="fb">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNC-Yw-qgL">
+                                <rect key="frame" x="145" y="445" width="32" height="32"/>
+                                <state key="normal" image="Facebook">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -345,7 +365,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbt-FI-bXm">
-                                <rect key="frame" x="82" y="505" width="56" height="30"/>
+                                <rect key="frame" x="52" y="490" width="56" height="30"/>
                                 <state key="normal" title="youtube">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -353,31 +373,54 @@
                                     <action selector="youtubeButtonPressed:" destination="Jin-ph-3OA" eventType="touchUpInside" id="ftB-PT-6mA"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wc1-GO-710">
-                                <rect key="frame" x="186" y="505" width="43" height="30"/>
-                                <state key="normal" title="twitter">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wc1-GO-710">
+                                <rect key="frame" x="224" y="490" width="32" height="32"/>
+                                <state key="normal" image="Twitter">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="twitterButtonPressed:" destination="Jin-ph-3OA" eventType="touchUpInside" id="GDi-ac-Fyr"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7SJ-Eu-1SB">
-                                <rect key="frame" x="271" y="505" width="33" height="30"/>
-                                <state key="normal" title="insta">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7SJ-Eu-1SB">
+                                <rect key="frame" x="145" y="535" width="32" height="32"/>
+                                <state key="normal" title="insta" image="Instagram">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="instaButtonPressed:" destination="Jin-ph-3OA" eventType="touchUpInside" id="ySe-Rl-toe"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMj-Zv-1d8">
+                                <rect key="frame" x="145" y="490" width="30" height="30"/>
+                                <state key="normal" title="g+">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="gPlusButtonPressed:" destination="Jin-ph-3OA" eventType="touchUpInside" id="9pT-aM-hPO"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CcZ-YF-K0e">
+                                <rect key="frame" x="26" y="72" width="269" height="365"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="About Us" id="2Dy-Kc-eZf">
-                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="5hS-HP-jaV"/>
+                    <navigationItem key="navigationItem" title="TechTatva '15" id="2Dy-Kc-eZf">
+                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="5hS-HP-jaV">
+                            <connections>
+                                <action selector="hamburgerLoader:" destination="Jin-ph-3OA" id="ViD-Z3-hj3"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="aboutUsTextField" destination="CcZ-YF-K0e" id="fmE-Mm-nSm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fy0-9j-cLq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -433,7 +476,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="vny-Qc-KvC">
-                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="t88-h5-PE4"/>
+                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="t88-h5-PE4">
+                            <connections>
+                                <action selector="hamburgerLoader:" destination="XuI-BD-FRI" id="XGi-ES-Oeu"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
@@ -454,7 +501,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="xod-Vt-7Dj"/>
+                    <navigationItem key="navigationItem" id="xod-Vt-7Dj">
+                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="ccA-Bk-zg7">
+                            <connections>
+                                <action selector="hamburgerLoader:" destination="yM3-9C-FBc" id="3xO-9E-olp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0HK-3c-2zG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -590,7 +643,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Developer Team" id="15u-8L-ALc">
-                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="Msd-y0-1Bi"/>
+                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="Msd-y0-1Bi">
+                            <connections>
+                                <action selector="hamburgerLoader:" destination="fD2-KV-LEE" id="3Fo-tD-dfI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -628,18 +685,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNz-qe-Zwm">
-                                <rect key="frame" x="70" y="452" width="30" height="30"/>
-                                <state key="normal" title="FB">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNz-qe-Zwm">
+                                <rect key="frame" x="70" y="452" width="32" height="32"/>
+                                <state key="normal" image="Facebook">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="facebookButtonPressed:" destination="x1d-13-E9K" eventType="touchUpInside" id="bcB-pe-qHE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNL-mD-eBd">
-                                <rect key="frame" x="221" y="452" width="30" height="30"/>
-                                <state key="normal" title="Git">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNL-mD-eBd">
+                                <rect key="frame" x="219" y="452" width="32" height="32"/>
+                                <state key="normal" image="Git">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -777,6 +834,10 @@
     </scenes>
     <resources>
         <image name="Dismiss" width="32" height="32"/>
+        <image name="Facebook" width="32" height="32"/>
+        <image name="Git" width="32" height="32"/>
+        <image name="Instagram" width="32" height="32"/>
         <image name="Swipe Right" width="32" height="32"/>
+        <image name="Twitter" width="32" height="32"/>
     </resources>
 </document>

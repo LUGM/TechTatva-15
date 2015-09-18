@@ -16,6 +16,7 @@
 #import "MBProgressHUD.h"
 #import "Reachability.h"
 #import "ResultsModel.h"
+#import "RESideMenu.h"
 
 @interface ResultsViewController () <SSJSONModelDelegate>
 {
@@ -53,7 +54,9 @@
     
     myTable.separatorColor = [UIColor orangeColor];
     
-    NSURL *resultsUrl = [NSURL URLWithString:@"http://results.techtatva.in"];              // this has to be url of results page of website
+    // change the url, this one is unresponsive
+    
+    NSURL *resultsUrl = [NSURL URLWithString:@"http://results.techtatva.in"];
     myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
     [myJsonInstance sendRequestWithUrl:resultsUrl];
     [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
@@ -258,4 +261,10 @@
     
 }
 
+- (IBAction)hamburgerLoader:(id)sender
+{
+    
+    [self presentLeftMenuViewController:self];
+    
+}
 @end
