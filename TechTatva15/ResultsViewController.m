@@ -224,7 +224,8 @@
     
 }
 
-#pragma mark - UISearchDisplayController Delegate Methods
+# pragma mark - UISearchDisplayController Delegate Methods
+
 -(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
     

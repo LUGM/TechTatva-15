@@ -11,7 +11,7 @@
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>9A2BA4695D7B131BD7E8C2C086219A74EE24144C</key>
-		<string>https://github.com/shubhsin/TechTatva-15.git</string>
+		<string>https://github.com/shubhsin/TechTatva-15</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>TechTatva15.xcodeproj</string>
@@ -21,7 +21,7 @@
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/shubhsin/TechTatva-15.git</string>
+	<string>https://github.com/shubhsin/TechTatva-15</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>

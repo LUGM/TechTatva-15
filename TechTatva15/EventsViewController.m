@@ -14,21 +14,25 @@
 #import "SSJSONModel.h"
 #import "Event.h"
 #import "RESideMenu.h"
+#import "ResultsModel.h"
 
 @interface EventsViewController () <SSJSONModelDelegate>
 {
     
     SSJSONModel *myJsonInstance;
+//    SSJSONModel *resultsJsonInstance;
     
     NSDictionary *json;
     
     NSArray *tempEventStorage;
-    
-    NSMutableArray *eventsArray;
+    NSArray *resultJsonResponse;
     
     NSIndexPath *cellSelectIndex;
     
+    NSMutableArray *eventsArray;
     NSMutableArray *filteredArray;
+    NSMutableArray *resultsArray;
+//    NSMutableArray *resultsFilteredArray;
     
 }
 
@@ -57,11 +61,13 @@
     eventTable.separatorColor = [UIColor orangeColor];
     
     NSURL *eventsUrl;
+    NSURL *resultsUrl;
     
     if ([self isInternetAvailable])
     {
     
         eventsUrl = [NSURL URLWithString:@"http://api.techtatva.in/events"];
+        resultsUrl = [NSURL URLWithString:@"results.techtatva.in"];
         
     }
     else
@@ -73,6 +79,8 @@
     
     myJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
     myJsonInstance.delegate = self;
+//    resultsJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
+//    resultsJsonInstance.delegate = self;
     [myJsonInstance sendRequestWithUrl:eventsUrl];
     
     [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
@@ -132,6 +140,47 @@
         [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
         
     }
+    
+    [self asyncResultRequest];
+    
+}
+
+- (void) fetchedData:(NSData *) response
+{
+    
+    NSError *error;
+    
+    resultJsonResponse = [NSJSONSerialization JSONObjectWithData:response options:kNilOptions error:&error];
+    
+    //    resultJsonResponse = resultsJsonInstance.parsedJsonData;
+    
+    resultsArray = [NSMutableArray new];
+    
+    for (NSDictionary *dictionary in resultJsonResponse)
+    {
+        
+        ResultsModel *result = [[ResultsModel alloc] initWithDict:dictionary];
+        [resultsArray addObject:result];
+        
+    }
+    
+}
+
+// check if it will be main queue or current queue in sendAsynReq call, has to run in parallel
+
+- (void) asyncResultRequest
+{
+    
+    NSString *resultsUrl = [NSString stringWithFormat:@"http://results.techtatva.in"];
+    
+    NSURLRequest *requestSent = [NSURLRequest requestWithURL:[NSURL URLWithString:resultsUrl]];
+    
+    [NSURLConnection sendAsynchronousRequest:requestSent queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
+     {
+         
+         [self fetchedData:data];
+         
+     }];
     
 }
 
@@ -253,7 +302,7 @@
     cell.indexPathForCell = indexPath;
     [cell.detailsButton addTarget:self action:@selector(detailsButtonPressed:) forControlEvents:UIControlEventTouchUpInside];
     [cell.callButton addTarget:self action:@selector(callCatHead:) forControlEvents:UIControlEventTouchUpInside];
-    
+    [cell.resultButton addTarget:self action:@selector(showEventResult:) forControlEvents:UIControlEventTouchUpInside];
     
     return cell;
     
@@ -325,9 +374,9 @@
     
 }
 
-# pragma mark - Details Button Methods
+# pragma mark - Cell Button Methods
 
-- (void)detailsButtonPressed: (id)sender
+- (void) detailsButtonPressed: (id)sender
 {
     
     Event *event = nil;
@@ -359,9 +408,62 @@
     
 }
 
+- (void) showEventResult: (id) sender
+{
+    
+    Event *event = nil;
+    ResultsModel *result = nil;
+    
+    if ([self.searchDisplayController isActive])
+    {
+        
+        CGPoint pointClicked = [sender convertPoint:CGPointZero toView:self.searchDisplayController.searchResultsTableView];
+        NSIndexPath *requiredIndexPath = [self.searchDisplayController.searchResultsTableView indexPathForRowAtPoint:pointClicked];
+        
+        event = [filteredArray objectAtIndex:requiredIndexPath.row];
+        for (ResultsModel *res in resultsArray)
+        {
+            
+            if ([event.event compare:res.name])
+            {
+                
+                result = res;
+                
+            }
+            
+        }
+        
+    }
+    
+    else
+    {
+        
+        CGPoint pointClicked = [sender convertPoint:CGPointZero toView:eventTable];
+        NSIndexPath *requiredIndexPath = [eventTable indexPathForRowAtPoint:pointClicked];
+        
+        event = [eventsArray objectAtIndex:requiredIndexPath.row];
+        for (ResultsModel *res in resultsArray)
+        {
+            
+            if ([event.event compare:res.name])
+            {
+                
+                result = res;
+                
+            }
+            
+        }
+        
+    }
+    
+    UIAlertView *resultAlert = [[UIAlertView alloc] initWithTitle:result.name message:result.result delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+    [resultAlert show];
+    
+}
+
 # pragma mark - Content Filtering
 
--(void)filterContentForSearchText:(NSString*) searchText scope:(NSString*)scope
+-(void) filterContentForSearchText:(NSString*) searchText scope:(NSString*)scope
 {
     
     [filteredArray removeAllObjects];

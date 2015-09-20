@@ -356,7 +356,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNC-Yw-qgL">
-                                <rect key="frame" x="145" y="445" width="32" height="32"/>
+                                <rect key="frame" x="168" y="445" width="32" height="32"/>
                                 <state key="normal" image="Facebook">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -364,17 +364,8 @@
                                     <action selector="facebookButtonPressed:" destination="Jin-ph-3OA" eventType="touchUpInside" id="YnU-6P-NzB"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbt-FI-bXm">
-                                <rect key="frame" x="52" y="490" width="56" height="30"/>
-                                <state key="normal" title="youtube">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="youtubeButtonPressed:" destination="Jin-ph-3OA" eventType="touchUpInside" id="ftB-PT-6mA"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wc1-GO-710">
-                                <rect key="frame" x="224" y="490" width="32" height="32"/>
+                                <rect key="frame" x="263" y="490" width="32" height="32"/>
                                 <state key="normal" image="Twitter">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -383,7 +374,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7SJ-Eu-1SB">
-                                <rect key="frame" x="145" y="535" width="32" height="32"/>
+                                <rect key="frame" x="168" y="536" width="32" height="32"/>
                                 <state key="normal" title="insta" image="Instagram">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -391,9 +382,9 @@
                                     <action selector="instaButtonPressed:" destination="Jin-ph-3OA" eventType="touchUpInside" id="ySe-Rl-toe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMj-Zv-1d8">
-                                <rect key="frame" x="145" y="490" width="30" height="30"/>
-                                <state key="normal" title="g+">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMj-Zv-1d8">
+                                <rect key="frame" x="168" y="490" width="32" height="32"/>
+                                <state key="normal" image="G+">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -407,6 +398,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbt-FI-bXm">
+                                <rect key="frame" x="62" y="490" width="32" height="32"/>
+                                <state key="normal" image="Youtube">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="youtubeButtonPressed:" destination="Jin-ph-3OA" eventType="touchUpInside" id="ftB-PT-6mA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -835,9 +835,11 @@
     <resources>
         <image name="Dismiss" width="32" height="32"/>
         <image name="Facebook" width="32" height="32"/>
+        <image name="G+" width="32" height="32"/>
         <image name="Git" width="32" height="32"/>
         <image name="Instagram" width="32" height="32"/>
         <image name="Swipe Right" width="32" height="32"/>
         <image name="Twitter" width="32" height="32"/>
+        <image name="Youtube" width="32" height="32"/>
     </resources>
 </document>

@@ -79,9 +79,7 @@
         
         // Save it to the camera roll / saved photo album
         UIImageWriteToSavedPhotosAlbum(imageToSave, nil, nil, nil);
-        UIAlertView * alert = [[UIAlertView alloc]initWithTitle:@"Done" message:@"Saved in Photo Library" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-        [alert show];
-        
+
     }
     
 }
