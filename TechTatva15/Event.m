@@ -14,18 +14,20 @@
 {
     self = [super init];
     if(self) {
-        self.event = [dict objectForKey:@"eventName"];
-        self.eventID = [dict objectForKey:@"eventID"];
-        self.location = [dict objectForKey:@"Location"];
-        self.start = [dict objectForKey:@"start"];
-        self.stop = [dict objectForKey:@"stop"];
+        self.event = [dict objectForKey:@"event_name"];
+        self.eventID = [dict objectForKey:@"event_id"];
+        self.location = [dict objectForKey:@"venue"];
+        self.start = [dict objectForKey:@"start_time"];
+        self.stop = [dict objectForKey:@"end_time"];
 //        self.duration = [dict objectForKey:@"Duration"];
         self.desc = [dict objectForKey:@"description"];
         self.day = [dict objectForKey:@"day"];
-        self.category = [dict objectForKey:@"categoryName"];
-        self.date = [dict objectForKey:@"Date"];
-        self.contact = [dict objectForKey:@"contact"];
-        self.maxTeamSize = [dict objectForKey:@"maxTeamSize"];
+        self.category = [dict objectForKey:@"cat_name"];
+        self.date = [dict objectForKey:@"date"];
+        self.contact = [dict objectForKey:@"contact_name"];
+        self.contactNumber = [dict objectForKey:@"contact_number"];
+        self.maxTeamSize = [dict objectForKey:@"event_max_team_number"];
+        self.catID = [dict objectForKey:@"cat_id"];
     }
     return self;
 }

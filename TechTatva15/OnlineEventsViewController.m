@@ -53,7 +53,7 @@
 {
     
     UIWebView *registerWebView = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    [registerWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://techtatva.in/"]]];
+    [registerWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://techtatva.in/onlineevents"]]];
     [self.view addSubview:registerWebView];
     [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
 

@@ -63,6 +63,7 @@
     {
         
         categoriesUrl = [NSURL URLWithString:@"http://localhost:8888/Categories.json"];
+        NSLog(@"enters if ");
         
     }
     
@@ -125,6 +126,7 @@
     UINavigationController * navController = [storyboard instantiateViewControllerWithIdentifier:@"eventListNav"];
     CatEventViewController * destController = [navController viewControllers][0];
     destController.title = [categoryNames objectAtIndex:indexPath.row];
+    destController.catid = [categoryIds objectAtIndex:indexPath.row];
     [self presentViewController:navController animated:YES completion:nil];
 
 }

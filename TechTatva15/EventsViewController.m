@@ -20,7 +20,7 @@
 {
     
     SSJSONModel *myJsonInstance;
-//    SSJSONModel *resultsJsonInstance;
+    SSJSONModel *resultsJsonInstance;
     
     NSDictionary *json;
     
@@ -28,6 +28,8 @@
     NSArray *resultJsonResponse;
     
     NSIndexPath *cellSelectIndex;
+    
+    NSString *dayString;
     
     NSMutableArray *eventsArray;
     NSMutableArray *filteredArray;
@@ -65,22 +67,26 @@
     
     if ([self isInternetAvailable])
     {
+        
+        NSLog(@"Enters if");
     
-        eventsUrl = [NSURL URLWithString:@"http://api.techtatva.in/events"];
-        resultsUrl = [NSURL URLWithString:@"results.techtatva.in"];
+        eventsUrl = [NSURL URLWithString:@"http://schedule.techtatva.in"];
+        resultsUrl = [NSURL URLWithString:@"http://results.techtatva.in"];
         
     }
     else
     {
         
         eventsUrl = [NSURL URLWithString:@"http://localhost:8888/Events.json"];
+        resultsUrl = [NSURL URLWithString:@"http://localhost:8888/Results.json"];
         
     }
     
     myJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
     myJsonInstance.delegate = self;
-//    resultsJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
-//    resultsJsonInstance.delegate = self;
+    resultsJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
+    resultsJsonInstance.delegate = self;
+    [resultsJsonInstance sendRequestWithUrl:resultsUrl];
     [myJsonInstance sendRequestWithUrl:eventsUrl];
     
     [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
@@ -118,10 +124,11 @@
     if (JSONModel == myJsonInstance)
     {
         
-        NSLog(@"%@",myJsonInstance.parsedJsonData);
+//        NSLog(@"%@",myJsonInstance.parsedJsonData);
         json = myJsonInstance.parsedJsonData;
         
         eventsArray = [[NSMutableArray alloc] init];
+        resultsArray = [[NSMutableArray alloc] init];
         
         tempEventStorage = [json objectForKey:@"data"];
         
@@ -135,13 +142,19 @@
             
         }
         
-        [eventTable reloadData];
+        [self filterEvents];
         
         [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
         
     }
-    
-    [self asyncResultRequest];
+    else if (JSONModel == resultsJsonInstance)
+    {
+     
+        NSLog(@"results json log%@",resultsJsonInstance.parsedJsonData);
+        
+//        [self asyncResultRequest];
+        
+    }
     
 }
 
@@ -152,9 +165,9 @@
     
     resultJsonResponse = [NSJSONSerialization JSONObjectWithData:response options:kNilOptions error:&error];
     
-    //    resultJsonResponse = resultsJsonInstance.parsedJsonData;
+    NSLog(@"results array %@", resultJsonResponse);
     
-    resultsArray = [NSMutableArray new];
+    //    resultJsonResponse = resultsJsonInstance.parsedJsonData;
     
     for (NSDictionary *dictionary in resultJsonResponse)
     {
@@ -171,9 +184,24 @@
 - (void) asyncResultRequest
 {
     
-    NSString *resultsUrl = [NSString stringWithFormat:@"http://results.techtatva.in"];
+    NSURL *resultUrl;
     
-    NSURLRequest *requestSent = [NSURLRequest requestWithURL:[NSURL URLWithString:resultsUrl]];
+    if ([self isInternetAvailable])
+    {
+        
+        NSLog(@"Enters if");
+
+        resultUrl = [NSURL URLWithString:@"results.techtatva.in"];
+        
+    }
+    else
+    {
+        
+        resultUrl = [NSURL URLWithString:@"http://localhost:8888/Results.json"];
+        
+    }
+
+    NSURLRequest *requestSent = [NSURLRequest requestWithURL:resultUrl];
     
     [NSURLConnection sendAsynchronousRequest:requestSent queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
      {
@@ -194,30 +222,49 @@
             
         case 0:
             _daySelected = @1;
-            [eventTable reloadData];
+            dayString = @"1";
             break;
             
         case 1:
             _daySelected = @2;
-            [eventTable reloadData];
+            dayString = @"2";
             break;
             
         case 2:
             _daySelected = @3;
-            [eventTable reloadData];
+            dayString = @"3";
             break;
             
         case 3:
             _daySelected = @4;
-            [eventTable reloadData];
+            dayString = @"4";
             break;
             
         default:
             _daySelected = @1;
-            [eventTable reloadData];
+            dayString = @"1";
             break;
             
     }
+    
+}
+
+- (void) filterEvents
+{
+    
+    for (Event *event in eventsArray)
+    {
+        
+        if ([event.day isEqualToString:dayString])
+        {
+            
+            [eventsArray addObject:event];
+            
+        }
+        
+    }
+    
+    [eventTable reloadData];
     
 }
 
@@ -445,6 +492,8 @@
         for (ResultsModel *res in resultsArray)
         {
             
+            NSLog(@"results data only %@", res);
+            
             if ([event.event compare:res.name])
             {
                 
@@ -509,11 +558,11 @@
     NSIndexPath *requiredIndexPath = [self.eventTable indexPathForRowAtPoint:pointClicked];
     Event * event = [eventsArray objectAtIndex:requiredIndexPath.row];
     
-    NSString *getPhoneNumber = [[event.contact componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]] componentsJoinedByString:@""];
+    NSString *getPhoneNumber = [[event.contactNumber componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]] componentsJoinedByString:@""];
     
     NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt://+91%@", getPhoneNumber]];
-    
-    NSLog(@"Checking phone number to be called is : %@", phoneUrl);
+    NSURL *phonecheckUrl = [NSURL URLWithString:[NSString stringWithFormat:@"+91%@", getPhoneNumber]];
+    NSLog(@"Checking phone number to be called is : %@", phonecheckUrl);
     
     if ([[UIApplication sharedApplication] canOpenURL:phoneUrl])
     {

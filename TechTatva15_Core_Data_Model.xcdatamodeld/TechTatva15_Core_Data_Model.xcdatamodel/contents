@@ -5,7 +5,7 @@
         <attribute name="categoryID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="contact" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="day" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="day" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="event" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventID" optional="YES" attributeType="String" syncable="YES"/>

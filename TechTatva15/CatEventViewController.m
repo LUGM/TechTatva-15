@@ -23,6 +23,8 @@
     NSMutableArray *eventByCategoryArray;
     NSMutableArray *tempEventStorage;
     
+    NSString *dayString;
+    
     NSDictionary *json;
     
     SSJSONModel *myJsonInstance;
@@ -44,6 +46,8 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    NSLog(@"CAT ID : %@",self.catid);
     
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
     self.navigationController.navigationBar.layer.shadowColor = [[UIColor blackColor] CGColor];
@@ -73,7 +77,8 @@
     if ([self isInternetAvailable])
     {
         
-        eventsUrl = [NSURL URLWithString:@"http://api.techtatva.in/events"];
+        eventsUrl = [NSURL URLWithString:@"http://schedule.techtatva.in"];
+        NSLog(@"enters if");
         
     }
     else
@@ -123,9 +128,11 @@
     static NSString *cellIdentifier = @"Cell";
     
     CategoryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CategoryTableViewCell" owner:self options:nil];
     cell = [nib objectAtIndex:0];
+    if (cell == nil) {
+        cell = [[CategoryTableViewCell alloc] init];
+    }
     cell.indexPathForMyCell = indexPath;
     
     Event *event = [eventByCategoryArray objectAtIndex:indexPath.row];
@@ -211,7 +218,7 @@
     if (JSONModel == myJsonInstance)
     {
         
-        NSLog(@"%@",myJsonInstance.parsedJsonData);
+//        NSLog(@"%@",myJsonInstance.parsedJsonData);
         json = myJsonInstance.parsedJsonData;
         
         eventsArray = [[NSMutableArray alloc] init];
@@ -220,16 +227,13 @@
         
         for (NSDictionary *dict in tempEventStorage)
         {
-            
-            //            if ([dict objectForKey:@"date"] isEqualToString:"07/10/2015") then add object and load table...check if date or Date in API
-            
+
             Event *event = [[Event alloc] initWithDict:dict];
             [eventsArray addObject:event];
             
         }
-        
-        [self filterByCategory];
-        
+        [self filterEvents];
+    
         [MBProgressHUD hideHUDForView:self.view animated:YES];
         
     }
@@ -247,37 +251,37 @@
             
         case 0:
             _daySelected = @1;
-            [catEventTable reloadData];
+            dayString = @"1";
             break;
             
         case 1:
             _daySelected = @2;
-            [catEventTable reloadData];
+            dayString = @"2";
             break;
             
         case 2:
             _daySelected = @3;
-            [catEventTable reloadData];
+            dayString = @"3";
             break;
             
         case 3:
             _daySelected = @4;
-            [catEventTable reloadData];
+            dayString = @"4";
             break;
             
         default:
             _daySelected = @1;
-            [catEventTable reloadData];
+            dayString = @"1";
             break;
     }
     
+    [self filterEvents];
 }
 
 # pragma mark - Favourites Methods
 
 - (void)addToFavourites:(id)someObject
 {
-//    CategoryTableViewCell * pressedButtonCell = someObject;
     
     NSIndexPath *indexPath = [someObject valueForKey:@"object"];
     NSLog(@"index is %ld",(long)indexPath.row);
@@ -346,17 +350,17 @@
 
 # pragma mark - Event Sort Methods
 
-- (void) filterByCategory
+- (void) filterEvents
 {
     
-    eventByCategoryArray = [NSMutableArray array];
+    eventByCategoryArray = [NSMutableArray new];
     
     for (Event *event in eventsArray)
     {
         
-        if ([event.category isEqualToString:self.title])
+        if ([event.catID isEqualToString:self.catid] && [event.day isEqualToString:dayString])
         {
-            
+            NSLog(@"EVENT NAME: %@",event.event);
             [eventByCategoryArray addObject:event];
             
         }

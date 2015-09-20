@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *catEventTable;
 
 @property (strong, nonatomic) NSNumber *daySelected;
+@property (strong, nonatomic) NSString *catid;
 
 @property (strong, nonatomic) NSIndexPath *selectedCellIndex;
 

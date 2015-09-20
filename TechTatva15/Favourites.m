@@ -2,7 +2,7 @@
 //  Favourites.m
 //  TechTatva15
 //
-//  Created by YASH on 28/08/15.
+//  Created by YASH on 20/09/15.
 //  Copyright (c) 2015 AppDev. All rights reserved.
 //
 
@@ -14,15 +14,14 @@
 @dynamic category;
 @dynamic categoryID;
 @dynamic contact;
-@dynamic event;
-@dynamic location;
 @dynamic date;
 @dynamic day;
 @dynamic desc;
+@dynamic event;
 @dynamic eventID;
+@dynamic location;
+@dynamic maxTeamSize;
 @dynamic start;
 @dynamic stop;
-@dynamic maxTeamSize;
-//@dynamic duration;
 
 @end

@@ -275,7 +275,7 @@
     NSIndexPath *requiredIndexPath = [self.favouritesTable indexPathForRowAtPoint:pointClicked];
     Event * event = [favouritesArray objectAtIndex:requiredIndexPath.row];
     
-    NSString *getPhoneNumber = [[event.contact componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]] componentsJoinedByString:@""];
+    NSString *getPhoneNumber = [[event.contactNumber componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]] componentsJoinedByString:@""];
     
     NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt://+91%@", getPhoneNumber]];
     
