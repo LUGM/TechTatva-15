@@ -44,6 +44,7 @@
 		1863CBEA1BB0532B00921C84 /* newbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1863CBE91BB0532B00921C84 /* newbg.png */; };
 		1897CC321B84EBD0007D779B /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897CC311B84EBD0007D779B /* EventsViewController.m */; };
 		18ADE1781B5ECC4B00CCD46D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ADE1771B5ECC4B00CCD46D /* Reachability.m */; };
+		18B24B6E1BB06AE100FA0885 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B24B6D1BB06AE100FA0885 /* WebViewController.m */; };
 		18B4FC561B5958A5004647DA /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4FC361B5958A5004647DA /* MKAnnotationView+WebCache.m */; };
 		18B4FC571B5958A5004647DA /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4FC381B5958A5004647DA /* NSData+ImageContentType.m */; };
 		18B4FC581B5958A5004647DA /* SDImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4FC3A1B5958A5004647DA /* SDImageCache.m */; };
@@ -70,7 +71,6 @@
 		4C01D5B11BAA15FF009FDB09 /* SideMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C01D5B01BAA15FF009FDB09 /* SideMenuBackground.png */; };
 		4C01D5B41BAA1FF0009FDB09 /* InstagramLikes.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C01D5B31BAA1FF0009FDB09 /* InstagramLikes.m */; };
 		4C01D5B71BAA206D009FDB09 /* InstagramComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C01D5B61BAA206D009FDB09 /* InstagramComments.m */; };
-		4C0DFC4B1BB0120700714534 /* CustomWebviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DFC4A1BB0120700714534 /* CustomWebviewsViewController.m */; };
 		4C9744031BAF39A400B51649 /* Airborne.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744021BAF39A400B51649 /* Airborne.png */; };
 		4C9744051BAF39AC00B51649 /* Alacrity.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744041BAF39AC00B51649 /* Alacrity.png */; };
 		4C9744071BAF39B300B51649 /* Bizzmaestro.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744061BAF39B300B51649 /* Bizzmaestro.png */; };
@@ -182,6 +182,8 @@
 		1897CC311B84EBD0007D779B /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		18ADE1761B5ECC4B00CCD46D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		18ADE1771B5ECC4B00CCD46D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		18B24B6C1BB06AE100FA0885 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		18B24B6D1BB06AE100FA0885 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		18B4FC351B5958A5004647DA /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		18B4FC361B5958A5004647DA /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		18B4FC371B5958A5004647DA /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -234,8 +236,6 @@
 		4C01D5B31BAA1FF0009FDB09 /* InstagramLikes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramLikes.m; path = TechTatva15/InstagramLikes.m; sourceTree = "<group>"; };
 		4C01D5B51BAA206D009FDB09 /* InstagramComments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramComments.h; path = TechTatva15/InstagramComments.h; sourceTree = "<group>"; };
 		4C01D5B61BAA206D009FDB09 /* InstagramComments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramComments.m; path = TechTatva15/InstagramComments.m; sourceTree = "<group>"; };
-		4C0DFC491BB0120700714534 /* CustomWebviewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomWebviewsViewController.h; sourceTree = "<group>"; };
-		4C0DFC4A1BB0120700714534 /* CustomWebviewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomWebviewsViewController.m; sourceTree = "<group>"; };
 		4C9744021BAF39A400B51649 /* Airborne.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Airborne.png; sourceTree = "<group>"; };
 		4C9744041BAF39AC00B51649 /* Alacrity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Alacrity.png; sourceTree = "<group>"; };
 		4C9744061BAF39B300B51649 /* Bizzmaestro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bizzmaestro.png; sourceTree = "<group>"; };
@@ -577,16 +577,16 @@
 				1848174C1B90D7550031F1B9 /* FavouritesViewController.m */,
 				18085BE31BA9FDF8005CCADB /* DevelopersViewController.h */,
 				18085BE41BA9FDF8005CCADB /* DevelopersViewController.m */,
-				18085BE61BA9FED9005CCADB /* AboutUsViewController.h */,
-				18085BE71BA9FED9005CCADB /* AboutUsViewController.m */,
 				18085BE91BAA001B005CCADB /* RegisterViewController.h */,
 				18085BEA1BAA001B005CCADB /* RegisterViewController.m */,
 				18085BEC1BAA02D9005CCADB /* OnlineEventsViewController.h */,
 				18085BED1BAA02D9005CCADB /* OnlineEventsViewController.m */,
 				182653F01BAA7D43006B30CF /* EasterEggViewController.h */,
 				182653F11BAA7D43006B30CF /* EasterEggViewController.m */,
-				4C0DFC491BB0120700714534 /* CustomWebviewsViewController.h */,
-				4C0DFC4A1BB0120700714534 /* CustomWebviewsViewController.m */,
+				18085BE61BA9FED9005CCADB /* AboutUsViewController.h */,
+				18085BE71BA9FED9005CCADB /* AboutUsViewController.m */,
+				18B24B6C1BB06AE100FA0885 /* WebViewController.h */,
+				18B24B6D1BB06AE100FA0885 /* WebViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -866,6 +866,7 @@
 				18B4FC611B5958A5004647DA /* UIImage+MultiFormat.m in Sources */,
 				1835F6B11B961691009E12E5 /* SWCellScrollView.m in Sources */,
 				182653F21BAA7D43006B30CF /* EasterEggViewController.m in Sources */,
+				18B24B6E1BB06AE100FA0885 /* WebViewController.m in Sources */,
 				18B4FC731B5962E4004647DA /* UIColor+FlatColors.m in Sources */,
 				A33D4F251B8645AE0083429E /* RootViewController.m in Sources */,
 				18085BEB1BAA001B005CCADB /* RegisterViewController.m in Sources */,
@@ -875,7 +876,6 @@
 				18B4FC721B5962E4004647DA /* PQFCirclesInTriangle.m in Sources */,
 				A33D4F1F1B8645760083429E /* RECommonFunctions.m in Sources */,
 				18085BEE1BAA02D9005CCADB /* OnlineEventsViewController.m in Sources */,
-				4C0DFC4B1BB0120700714534 /* CustomWebviewsViewController.m in Sources */,
 				1835F6B01B961691009E12E5 /* NSMutableArray+SWUtilityButtons.m in Sources */,
 				183C4E181B7FCCF700A07FB0 /* DaySegmentedControlView.m in Sources */,
 				A3F4B6451B99FE1A001C3DA8 /* ResultsModel.m in Sources */,

@@ -11,10 +11,12 @@
 #import "Reachability.h"
 #import "RESideMenu.h"
 #import "SocialView.h"
+#import "WebViewController.h"
 
 @interface AboutUsViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property NSString * aboutUsString;
 @property SocialView *buttons;
+@property NSString * passURL;
 
 @end
 
@@ -25,8 +27,6 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
-//    [self loadActualView];
     
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -59,13 +59,9 @@
     
     if ([self isInternetAvailable])
     {
-     
-        _webviewNumber = @"Facebook";
-//        [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UINavigationController * navController = [storyboard instantiateViewControllerWithIdentifier:@"customWebviews"];
-        [self presentViewController:navController animated:YES completion:nil];
         
+        _passURL = @"https://www.facebook.com/MITtechtatva";
+        [self performSegueWithIdentifier:@"customWebview" sender:self];
     }
     else
     {
@@ -83,11 +79,8 @@
     if ([self isInternetAvailable])
     {
         
-        _webviewNumber = @"Youtube";
-//        [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UINavigationController * navController = [storyboard instantiateViewControllerWithIdentifier:@"customWebviews"];
-        [self presentViewController:navController animated:YES completion:nil];
+        _passURL = @"https://www.youtube.com/TechTatva";
+        [self performSegueWithIdentifier:@"customWebview" sender:self];
         
     }
     else
@@ -106,11 +99,8 @@
     if ([self isInternetAvailable])
     {
         
-        _webviewNumber = @"Twitter";
-//        [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UINavigationController * navController = [storyboard instantiateViewControllerWithIdentifier:@"customWebviews"];
-        [self presentViewController:navController animated:YES completion:nil];
+        _passURL = @"https://www.twitter.com/MITtechtatva";
+        [self performSegueWithIdentifier:@"customWebview" sender:self];
         
     }
     else
@@ -128,11 +118,8 @@
     if ([self isInternetAvailable])
     {
         
-        self.webviewNumber = @"Gplus";
-//        [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UINavigationController * navController = [storyboard instantiateViewControllerWithIdentifier:@"customWebviews"];
-        [self presentViewController:navController animated:YES completion:nil];
+        _passURL = @"https://plus.google.com/+techtatva";
+        [self performSegueWithIdentifier:@"customWebview" sender:self];
         
     }
     else
@@ -150,11 +137,8 @@
     if ([self isInternetAvailable])
     {
         
-        self.webviewNumber = @"Instagram";
-//        [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UINavigationController * navController = [storyboard instantiateViewControllerWithIdentifier:@"customWebviews"];
-        [self presentViewController:navController animated:YES completion:nil];
+        _passURL = @"https://www.instagram.com/MITtechtatva";
+        [self performSegueWithIdentifier:@"customWebview" sender:self];
         
     }
     else
@@ -326,15 +310,20 @@
     
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+# pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    if ([segue.identifier isEqualToString:@"customWebview"])
+    {
+        UINavigationController *navController = segue.destinationViewController;
+        WebViewController * destination = [navController viewControllers][0];
+        destination.url = _passURL;
+    }
 }
-*/
+
 - (IBAction)hamburgerLoader:(id)sender
 {
     

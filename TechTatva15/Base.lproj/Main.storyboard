@@ -202,32 +202,6 @@
             </objects>
             <point key="canvasLocation" x="2911" y="3490"/>
         </scene>
-        <!--Custom Webviews View Controller-->
-        <scene sceneID="fdX-Mh-fw4">
-            <objects>
-                <viewController id="CLD-fk-Ef8" customClass="CustomWebviewsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ePv-0J-6by"/>
-                        <viewControllerLayoutGuide type="bottom" id="QcQ-ep-Ns1"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="YvX-P2-bnE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="FQn-V9-v2c">
-                        <barButtonItem key="leftBarButtonItem" image="Dismiss" id="h3x-s1-0Tk">
-                            <connections>
-                                <action selector="dismissVCBarButtonPressed:" destination="CLD-fk-Ef8" id="1eu-rO-cnh"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KLm-QB-4Zf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3649" y="6434"/>
-        </scene>
         <!--Events View Controller-->
         <scene sceneID="Mf8-RK-xvZ">
             <objects>
@@ -416,6 +390,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="myTableView" destination="CL1-uU-zr6" id="aMU-Wr-wlb"/>
+                        <segue destination="vK6-oi-kD5" kind="presentation" identifier="customWebview" id="bnG-BZ-n0N"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fy0-9j-cLq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -457,6 +432,49 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pGv-0G-JVa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3232" y="5707"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="9eo-vS-u2h">
+            <objects>
+                <viewController id="cXh-vi-tYo" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0zZ-GT-5rj"/>
+                        <viewControllerLayoutGuide type="bottom" id="VRW-Yf-fbE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ENd-EX-63j">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cJB-dB-vQG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="cXh-vi-tYo" id="7Ty-LL-mLt"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="JuJ-i2-vfE">
+                        <barButtonItem key="leftBarButtonItem" image="Dismiss" id="xZk-0e-Ycd">
+                            <connections>
+                                <action selector="dismissVCBarButtonPressed:" destination="cXh-vi-tYo" id="NUu-4M-qcB"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="Safari" id="bV1-gc-nkx">
+                            <connections>
+                                <action selector="openInSafari:" destination="cXh-vi-tYo" id="iXa-kk-m1t"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="webViewOutlet" destination="cJB-dB-vQG" id="g91-WI-wfG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tEd-qs-bd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3805" y="6371"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="Oen-2O-rUM">
@@ -826,29 +844,30 @@
             <point key="canvasLocation" x="3484" y="4907"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="qwM-fj-IzL">
+        <scene sceneID="Lmx-c1-cT3">
             <objects>
-                <navigationController storyboardIdentifier="customWebviews" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ave-fF-fag" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="customWebviews" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vK6-oi-kD5" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WTs-2h-S1C">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Mwl-Jd-wdh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="CLD-fk-Ef8" kind="relationship" relationship="rootViewController" id="XRb-Rw-QHO"/>
+                        <segue destination="cXh-vi-tYo" kind="relationship" relationship="rootViewController" id="hwC-Ok-Yxb"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qww-2q-orz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G27-9V-cuj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3232" y="6434"/>
+            <point key="canvasLocation" x="3232" y="6371"/>
         </scene>
     </scenes>
     <resources>
         <image name="Dismiss" width="32" height="32"/>
         <image name="Facebook" width="32" height="32"/>
         <image name="Git" width="32" height="32"/>
+        <image name="Safari" width="32" height="32"/>
         <image name="Swipe Right" width="32" height="32"/>
     </resources>
 </document>
