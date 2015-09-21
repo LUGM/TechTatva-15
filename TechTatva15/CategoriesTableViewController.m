@@ -58,6 +58,8 @@
     
     self.tableView.separatorColor = [UIColor orangeColor];
     
+  
+    
     NSURL *categoriesUrl;
     if (![self isInternetAvailable])
     {
@@ -113,9 +115,11 @@
     
     cell.textLabel.text = [categoryNames objectAtIndex:indexPath.row];
     
-//    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", cell.textLabel.text]];
-    
+    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png",[categoryNames objectAtIndex:indexPath.row]]];
+
     return cell;
+    
+    
     
 }
 

@@ -67,6 +67,24 @@
 		4C01D5B11BAA15FF009FDB09 /* SideMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C01D5B01BAA15FF009FDB09 /* SideMenuBackground.png */; };
 		4C01D5B41BAA1FF0009FDB09 /* InstagramLikes.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C01D5B31BAA1FF0009FDB09 /* InstagramLikes.m */; };
 		4C01D5B71BAA206D009FDB09 /* InstagramComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C01D5B61BAA206D009FDB09 /* InstagramComments.m */; };
+		4C9744031BAF39A400B51649 /* Airborne.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744021BAF39A400B51649 /* Airborne.png */; };
+		4C9744051BAF39AC00B51649 /* Alacrity.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744041BAF39AC00B51649 /* Alacrity.png */; };
+		4C9744071BAF39B300B51649 /* Bizzmaestro.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744061BAF39B300B51649 /* Bizzmaestro.png */; };
+		4C9744091BAF39BD00B51649 /* Cheminova.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744081BAF39BD00B51649 /* Cheminova.png */; };
+		4C9744121BAF39C300B51649 /* Constructure.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C97440B1BAF39C300B51649 /* Constructure.png */; };
+		4C97441A1BAF39DD00B51649 /* Cryptoss.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744191BAF39DD00B51649 /* Cryptoss.png */; };
+		4C97441C1BAF39E500B51649 /* Electrific.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C97441B1BAF39E500B51649 /* Electrific.png */; };
+		4C97441E1BAF39EC00B51649 /* Energia.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C97441D1BAF39EC00B51649 /* Energia.png */; };
+		4C9744201BAF39F400B51649 /* Epsilon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C97441F1BAF39F400B51649 /* Epsilon.png */; };
+		4C9744221BAF39FF00B51649 /* Featured Events.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744211BAF39FF00B51649 /* Featured Events.png */; };
+		4C9744241BAF3A0A00B51649 /* Gaming.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744231BAF3A0A00B51649 /* Gaming.png */; };
+		4C9744261BAF3A1800B51649 /* Kraftwagen.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744251BAF3A1800B51649 /* Kraftwagen.png */; };
+		4C9744281BAF3A2000B51649 /* Mechatron.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744271BAF3A2000B51649 /* Mechatron.png */; };
+		4C97442A1BAF3A2C00B51649 /* Mechanize.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744291BAF3A2C00B51649 /* Mechanize.png */; };
+		4C9744301BAFD02E00B51649 /* Acumen.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C97442F1BAFD02E00B51649 /* Acumen.png */; };
+		4C9744321BAFD13600B51649 /* Turing.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744311BAFD13600B51649 /* Turing.png */; };
+		4C9744341BAFD15900B51649 /* Robotrek.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744331BAFD15900B51649 /* Robotrek.png */; };
+		4C9744361BAFD1B200B51649 /* Open Events.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744351BAFD1B200B51649 /* Open Events.png */; };
 		4CC9F6D01B3DBB4F002F9C1D /* eventViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */; };
 		4CC9F6D11B3DBB4F002F9C1D /* eventViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */; };
 		A33D4F1F1B8645760083429E /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = A33D4F1A1B8645760083429E /* RECommonFunctions.m */; };
@@ -207,6 +225,24 @@
 		4C01D5B31BAA1FF0009FDB09 /* InstagramLikes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramLikes.m; path = TechTatva15/InstagramLikes.m; sourceTree = "<group>"; };
 		4C01D5B51BAA206D009FDB09 /* InstagramComments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramComments.h; path = TechTatva15/InstagramComments.h; sourceTree = "<group>"; };
 		4C01D5B61BAA206D009FDB09 /* InstagramComments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramComments.m; path = TechTatva15/InstagramComments.m; sourceTree = "<group>"; };
+		4C9744021BAF39A400B51649 /* Airborne.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Airborne.png; sourceTree = "<group>"; };
+		4C9744041BAF39AC00B51649 /* Alacrity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Alacrity.png; sourceTree = "<group>"; };
+		4C9744061BAF39B300B51649 /* Bizzmaestro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bizzmaestro.png; sourceTree = "<group>"; };
+		4C9744081BAF39BD00B51649 /* Cheminova.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cheminova.png; sourceTree = "<group>"; };
+		4C97440B1BAF39C300B51649 /* Constructure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Constructure.png; path = Constructure/Constructure.png; sourceTree = "<group>"; };
+		4C9744191BAF39DD00B51649 /* Cryptoss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cryptoss.png; sourceTree = "<group>"; };
+		4C97441B1BAF39E500B51649 /* Electrific.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Electrific.png; sourceTree = "<group>"; };
+		4C97441D1BAF39EC00B51649 /* Energia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Energia.png; sourceTree = "<group>"; };
+		4C97441F1BAF39F400B51649 /* Epsilon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Epsilon.png; sourceTree = "<group>"; };
+		4C9744211BAF39FF00B51649 /* Featured Events.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Featured Events.png"; sourceTree = "<group>"; };
+		4C9744231BAF3A0A00B51649 /* Gaming.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gaming.png; sourceTree = "<group>"; };
+		4C9744251BAF3A1800B51649 /* Kraftwagen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Kraftwagen.png; sourceTree = "<group>"; };
+		4C9744271BAF3A2000B51649 /* Mechatron.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mechatron.png; sourceTree = "<group>"; };
+		4C9744291BAF3A2C00B51649 /* Mechanize.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mechanize.png; sourceTree = "<group>"; };
+		4C97442F1BAFD02E00B51649 /* Acumen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Acumen.png; sourceTree = "<group>"; };
+		4C9744311BAFD13600B51649 /* Turing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Turing.png; sourceTree = "<group>"; };
+		4C9744331BAFD15900B51649 /* Robotrek.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Robotrek.png; sourceTree = "<group>"; };
+		4C9744351BAFD1B200B51649 /* Open Events.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Open Events.png"; sourceTree = "<group>"; };
 		4CC9F6CD1B3DBB4F002F9C1D /* eventViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventViewTableViewCell.h; sourceTree = "<group>"; };
 		4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventViewTableViewCell.m; sourceTree = "<group>"; };
 		4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eventViewTableViewCell.xib; sourceTree = "<group>"; };
@@ -316,6 +352,7 @@
 		1829221C1B236AFB00F95AE0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4C9744011BAF398600B51649 /* Category Images */,
 				182653F31BAA7DC0006B30CF /* linuxtux.png */,
 				4C01D5B01BAA15FF009FDB09 /* SideMenuBackground.png */,
 				1835F6B61B961FC6009E12E5 /* Minus-32.png */,
@@ -559,6 +596,31 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		4C9744011BAF398600B51649 /* Category Images */ = {
+			isa = PBXGroup;
+			children = (
+				4C97442F1BAFD02E00B51649 /* Acumen.png */,
+				4C9744021BAF39A400B51649 /* Airborne.png */,
+				4C9744041BAF39AC00B51649 /* Alacrity.png */,
+				4C9744061BAF39B300B51649 /* Bizzmaestro.png */,
+				4C9744081BAF39BD00B51649 /* Cheminova.png */,
+				4C97440B1BAF39C300B51649 /* Constructure.png */,
+				4C9744191BAF39DD00B51649 /* Cryptoss.png */,
+				4C97441B1BAF39E500B51649 /* Electrific.png */,
+				4C97441D1BAF39EC00B51649 /* Energia.png */,
+				4C97441F1BAF39F400B51649 /* Epsilon.png */,
+				4C9744211BAF39FF00B51649 /* Featured Events.png */,
+				4C9744231BAF3A0A00B51649 /* Gaming.png */,
+				4C9744251BAF3A1800B51649 /* Kraftwagen.png */,
+				4C9744271BAF3A2000B51649 /* Mechatron.png */,
+				4C9744291BAF3A2C00B51649 /* Mechanize.png */,
+				4C9744331BAFD15900B51649 /* Robotrek.png */,
+				4C9744311BAFD13600B51649 /* Turing.png */,
+				4C9744351BAFD1B200B51649 /* Open Events.png */,
+			);
+			name = "Category Images";
+			sourceTree = "<group>";
+		};
 		A33D4F221B86457C0083429E /* RESideMenu */ = {
 			isa = PBXGroup;
 			children = (
@@ -685,17 +747,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C9744241BAF3A0A00B51649 /* Gaming.png in Resources */,
 				183C4E191B7FCCF700A07FB0 /* DaySegmentedControlView.xib in Resources */,
 				1835F6B71B961FC6009E12E5 /* Minus-32.png in Resources */,
+				4C9744261BAF3A1800B51649 /* Kraftwagen.png in Resources */,
 				182653F41BAA7DC0006B30CF /* linuxtux.png in Resources */,
+				4C9744321BAFD13600B51649 /* Turing.png in Resources */,
+				4C97441C1BAF39E500B51649 /* Electrific.png in Resources */,
 				1835F6A21B961675009E12E5 /* Minus-50.png in Resources */,
 				4C01D5B11BAA15FF009FDB09 /* SideMenuBackground.png in Resources */,
 				A3435C9A1B88BC9000BB1FFB /* CategoryTableViewCell.xib in Resources */,
 				18B5ECE51B23793E00055A3F /* video.mov in Resources */,
 				1822727B1B5A265200CD52B8 /* TTlogomain.jpg in Resources */,
+				4C9744341BAFD15900B51649 /* Robotrek.png in Resources */,
+				4C97441A1BAF39DD00B51649 /* Cryptoss.png in Resources */,
+				4C97442A1BAF3A2C00B51649 /* Mechanize.png in Resources */,
 				A3435CA41B88BCDF00BB1FFB /* InstagramCustomCell.xib in Resources */,
+				4C9744281BAF3A2000B51649 /* Mechatron.png in Resources */,
 				182922281B236AFB00F95AE0 /* Main.storyboard in Resources */,
+				4C9744201BAF39F400B51649 /* Epsilon.png in Resources */,
 				1829222D1B236AFB00F95AE0 /* LaunchScreen.xib in Resources */,
+				4C9744091BAF39BD00B51649 /* Cheminova.png in Resources */,
+				4C9744361BAFD1B200B51649 /* Open Events.png in Resources */,
+				4C9744051BAF39AC00B51649 /* Alacrity.png in Resources */,
+				4C9744071BAF39B300B51649 /* Bizzmaestro.png in Resources */,
+				4C9744121BAF39C300B51649 /* Constructure.png in Resources */,
+				4C9744301BAFD02E00B51649 /* Acumen.png in Resources */,
+				4C97441E1BAF39EC00B51649 /* Energia.png in Resources */,
+				4C9744221BAF39FF00B51649 /* Featured Events.png in Resources */,
+				4C9744031BAF39A400B51649 /* Airborne.png in Resources */,
 				1829222A1B236AFB00F95AE0 /* Images.xcassets in Resources */,
 				4CC9F6D11B3DBB4F002F9C1D /* eventViewTableViewCell.xib in Resources */,
 			);
