@@ -76,12 +76,15 @@
 
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    if (cell == nil) {
+    if (cell == nil)
+    {
+        
         cell = [[UITableViewCell alloc] init];
+        
     }
     cell.backgroundColor = [UIColor clearColor];
-    cell.textLabel.textColor = [UIColor grayColor];
-    
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.textLabel.font = [UIFont systemFontOfSize:18.0];
     cell.textLabel.text = _optionsArray[indexPath.row];
     
     return cell;

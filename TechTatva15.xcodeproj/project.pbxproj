@@ -39,6 +39,9 @@
 		184817421B90CE300031F1B9 /* TechTatva15_Core_Data_Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 184817401B90CE300031F1B9 /* TechTatva15_Core_Data_Model.xcdatamodeld */; };
 		184817451B90D4F70031F1B9 /* CoreDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 184817441B90D4F70031F1B9 /* CoreDataModel.m */; };
 		1848174D1B90D7550031F1B9 /* FavouritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1848174C1B90D7550031F1B9 /* FavouritesViewController.m */; };
+		1863CBE11BB0409A00921C84 /* SocialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1863CBE01BB0409A00921C84 /* SocialView.xib */; };
+		1863CBE71BB0422B00921C84 /* SocialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1863CBE61BB0422B00921C84 /* SocialView.m */; };
+		1863CBEA1BB0532B00921C84 /* newbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1863CBE91BB0532B00921C84 /* newbg.png */; };
 		1897CC321B84EBD0007D779B /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897CC311B84EBD0007D779B /* EventsViewController.m */; };
 		18ADE1781B5ECC4B00CCD46D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ADE1771B5ECC4B00CCD46D /* Reachability.m */; };
 		18B4FC561B5958A5004647DA /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4FC361B5958A5004647DA /* MKAnnotationView+WebCache.m */; };
@@ -171,6 +174,10 @@
 		184817441B90D4F70031F1B9 /* CoreDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataModel.m; path = TechTatva15/CoreDataModel.m; sourceTree = "<group>"; };
 		1848174B1B90D7550031F1B9 /* FavouritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavouritesViewController.h; sourceTree = "<group>"; };
 		1848174C1B90D7550031F1B9 /* FavouritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavouritesViewController.m; sourceTree = "<group>"; };
+		1863CBE01BB0409A00921C84 /* SocialView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SocialView.xib; sourceTree = "<group>"; };
+		1863CBE51BB0422B00921C84 /* SocialView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SocialView.h; sourceTree = "<group>"; };
+		1863CBE61BB0422B00921C84 /* SocialView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SocialView.m; sourceTree = "<group>"; };
+		1863CBE91BB0532B00921C84 /* newbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newbg.png; sourceTree = "<group>"; };
 		1897CC301B84EBD0007D779B /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
 		1897CC311B84EBD0007D779B /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		18ADE1761B5ECC4B00CCD46D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
@@ -364,6 +371,7 @@
 				1835F6B61B961FC6009E12E5 /* Minus-32.png */,
 				1835F6A11B961675009E12E5 /* Minus-50.png */,
 				1811F1AB1B7553EC00B6BE2E /* TechTatva15-Prefix.pch */,
+				1863CBE91BB0532B00921C84 /* newbg.png */,
 				182922201B236AFB00F95AE0 /* AppDelegate.h */,
 				182922211B236AFB00F95AE0 /* AppDelegate.m */,
 				1829221D1B236AFB00F95AE0 /* Info.plist */,
@@ -452,6 +460,16 @@
 				18D5D4C41BAEE89200833626 /* Favourites.m */,
 			);
 			name = "Favourites Data Model";
+			sourceTree = "<group>";
+		};
+		1863CBE81BB0424400921C84 /* About Us Buttons Cell */ = {
+			isa = PBXGroup;
+			children = (
+				1863CBE01BB0409A00921C84 /* SocialView.xib */,
+				1863CBE51BB0422B00921C84 /* SocialView.h */,
+				1863CBE61BB0422B00921C84 /* SocialView.m */,
+			);
+			name = "About Us Buttons Cell";
 			sourceTree = "<group>";
 		};
 		18ADE1751B5ECC4B00CCD46D /* Reachability Files */ = {
@@ -600,6 +618,7 @@
 				18BF0E8F1B5579320088DA84 /* Instagram Cells */,
 				18F1BD541B3FE37900473E1A /* Event View Cells */,
 				18F1BD551B3FE38A00473E1A /* Category Event View Cells */,
+				1863CBE81BB0424400921C84 /* About Us Buttons Cell */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -782,11 +801,13 @@
 				4C9744121BAF39C300B51649 /* Constructure.png in Resources */,
 				4C97443A1BAFDBDB00B51649 /* devimg.png in Resources */,
 				4C9744301BAFD02E00B51649 /* Acumen.png in Resources */,
+				1863CBEA1BB0532B00921C84 /* newbg.png in Resources */,
 				4C97441E1BAF39EC00B51649 /* Energia.png in Resources */,
 				4C9744221BAF39FF00B51649 /* Featured Events.png in Resources */,
 				4C9744031BAF39A400B51649 /* Airborne.png in Resources */,
 				1829222A1B236AFB00F95AE0 /* Images.xcassets in Resources */,
 				4CC9F6D11B3DBB4F002F9C1D /* eventViewTableViewCell.xib in Resources */,
+				1863CBE11BB0409A00921C84 /* SocialView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -807,6 +828,7 @@
 				18B4FC5E1B5958A5004647DA /* SDWebImagePrefetcher.m in Sources */,
 				18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */,
 				18B4FC621B5958A5004647DA /* UIImage+WebP.m in Sources */,
+				1863CBE71BB0422B00921C84 /* SocialView.m in Sources */,
 				1897CC321B84EBD0007D779B /* EventsViewController.m in Sources */,
 				A3435C9D1B88BCBA00BB1FFB /* SplashViewController.m in Sources */,
 				A33D4F211B8645760083429E /* UIViewController+RESideMenu.m in Sources */,

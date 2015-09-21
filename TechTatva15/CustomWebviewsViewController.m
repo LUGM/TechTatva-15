@@ -12,10 +12,6 @@
 #import "MBProgressHUD.h"
 
 @interface CustomWebviewsViewController ()
-{
-    
-    NSURL *webViewUrl;
-}
 
 @end
 
@@ -27,46 +23,58 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSNumber *flag;
+    UIBarButtonItem *dismissVC = [[UIBarButtonItem alloc] init];
+    dismissVC.target = self;
+    dismissVC.action = @selector(dismissVCBarButtonPressed:);
+    
+//    NSNumber *flag;
     
     AboutUsViewController *detail = [[AboutUsViewController alloc] init];
     if ([detail.webviewNumber isEqualToString:@"Facebook"])
     {
-        
-        flag = @1;
-        self->webViewUrl = [NSURL URLWithString:@"https://www.facebook.com/MITtechtatva"];
+     
+        UIWebView *webview = [[UIWebView alloc] initWithFrame:self.view.bounds];
+        [webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.facebook.com/MITtechtatva"]]];
+        [self.view addSubview:webview];
+//        self->webViewUrl = [NSURL URLWithString:@"https://www.facebook.com/MITtechtatva"];
         
     }
     else if ([detail.webviewNumber isEqualToString:@"Youtube"])
     {
         
-        flag = @2;
-        self->webViewUrl = [NSURL URLWithString:@"https://www.youtube.com/TechTatva"];
+//        flag = @2;
+        UIWebView *webview = [[UIWebView alloc] initWithFrame:self.view.bounds];
+        [webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.youtube.com/TechTatva"]]];
+//        self->webViewUrl = [NSURL URLWithString:@"https://www.youtube.com/TechTatva"];
         
     }
     else if ([detail.webviewNumber isEqualToString:@"Instagram"])
     {
         
-        flag = @3;
-        self->webViewUrl = [NSURL URLWithString:@"https://www.instagram.com/MITtechtatva"];
+//        flag = @3;
+        UIWebView *webview = [[UIWebView alloc] initWithFrame:self.view.bounds];
+        [webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.instagram.com/MITtechtatva"]]];
+//        self->webViewUrl = [NSURL URLWithString:@"https://www.instagram.com/MITtechtatva"];
         
     }
     else if ([detail.webviewNumber isEqualToString:@"Twitter"])
     {
         
-        flag = @4;
-        self->webViewUrl = [NSURL URLWithString:@"https://www.twitter.com/MITtechtatva"];
+//        flag = @4;
+        UIWebView *webview = [[UIWebView alloc] initWithFrame:self.view.bounds];
+        [webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.twitter.com/MITtechtatva"]]];
+//        self->webViewUrl = [NSURL URLWithString:@"https://www.twitter.com/MITtechtatva"];
         
     }
     else if ([detail.webviewNumber isEqualToString:@"Gplus"])
     {
         
-        flag = @5;
-       self-> webViewUrl = [NSURL URLWithString:@"https://plus.google.com/+techtatva"];
+//        flag = @5;
+        UIWebView *webview = [[UIWebView alloc] initWithFrame:self.view.bounds];
+        [webview loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://plus.google.com/+techtatva"]]];
+//       self-> webViewUrl = [NSURL URLWithString:@"https://plus.google.com/+techtatva"];
         
     }
-    
-    [self loadWebviews];
 
 }
 
@@ -74,20 +82,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-# pragma mark - Web View Methods
-
-- (void) loadWebviews
-{
-    
-    UIWebView *webview = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    [webview loadRequest:[NSURLRequest requestWithURL:self->webViewUrl]];                          // load webViewUrl
-    [self.view addSubview:webview];
-    
-    [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
-    
-}
-
 
 # pragma mark Connection Check
 
@@ -97,6 +91,16 @@
     Reachability *reachability = [Reachability reachabilityForInternetConnection];
     NetworkStatus networkStatus = [reachability currentReachabilityStatus];
     return !(networkStatus == NotReachable);
+    
+}
+
+# pragma mark Segue Methods
+
+- (IBAction)dismissVCBarButtonPressed:(UIBarButtonItem *)sender
+{
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+//    [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
     
 }
 

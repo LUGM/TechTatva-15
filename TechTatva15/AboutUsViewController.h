@@ -10,13 +10,9 @@
 
 @interface AboutUsViewController : UIViewController
 
-- (IBAction)facebookButtonPressed:(id)sender;
-- (IBAction)instaButtonPressed:(id)sender;
-- (IBAction)youtubeButtonPressed:(id)sender;
-- (IBAction)twitterButtonPressed:(id)sender;
-- (IBAction)gPlusButtonPressed:(id)sender;
-@property (strong, nonatomic) IBOutlet UITextView *aboutUsTextField;
-@property (strong, nonatomic) NSString *webviewNumber;
 - (IBAction)hamburgerLoader:(id)sender;
+
+@property (strong, nonatomic) NSString *webviewNumber;
+@property (strong, nonatomic) IBOutlet UITableView *myTableView;
 
 @end

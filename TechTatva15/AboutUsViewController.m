@@ -10,8 +10,11 @@
 #import "MBProgressHUD.h"
 #import "Reachability.h"
 #import "RESideMenu.h"
+#import "SocialView.h"
 
-@interface AboutUsViewController ()
+@interface AboutUsViewController ()<UITableViewDataSource,UITableViewDelegate>
+@property NSString * aboutUsString;
+@property SocialView *buttons;
 
 @end
 
@@ -27,7 +30,17 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    _aboutUsTextField.text = [NSString stringWithFormat:@"TechTatva is the annual, student run, National Level Technical Fest of Manipal Institue of Technology, Manipal. It is one of the largest technical fests of the South Zone of the country, witnessing participation from various prestigious institutes from across the nation. TechTatva comprises of a plethora of events, ranging across the various branches of engineering.\n\nFrugal Innovation – Do More with Less, the theme for this year seeks to extend the mindset of Jugaad, derived from the common Indian experience of innovating frugal, homespun, and simple solutions to the myriad problems that beset everyday life. This October 7th to 10th, TechTatva'15 aims to bear witness to a revamped Jugaadu methodology."];
+    self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
+    
+    _aboutUsString = [NSString stringWithFormat:@"TechTatva is the annual, student run, National Level Technical Fest of Manipal Institue of Technology, Manipal. It is one of the largest technical fests of the South Zone of the country, witnessing participation from various prestigious institutes from across the nation. TechTatva comprises of a plethora of events, ranging across the various branches of engineering.\n\nFrugal Innovation – Do More with Less, the theme for this year seeks to extend the mindset of Jugaad, derived from the common Indian experience of innovating frugal, homespun, and simple solutions to the myriad problems that beset everyday life. This October 7th to 10th, TechTatva'15 aims to bear witness to a revamped Jugaadu methodology."];
+    
+    self.myTableView.backgroundColor = UIColorFromRGB(0xECF0F1);
+    self.myTableView.contentInset = UIEdgeInsetsMake(20, 0, 0, 0);
+    
+    self.navigationController.navigationBar.layer.shadowColor = [[UIColor blackColor] CGColor];
+    self.navigationController.navigationBar.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
+    self.navigationController.navigationBar.layer.shadowRadius = 2.0f;
+    self.navigationController.navigationBar.layer.shadowOpacity = 1.0f;
     
 }
 
@@ -41,15 +54,17 @@
 
 # pragma mark - Button Methods
 
-- (IBAction)facebookButtonPressed:(id)sender
+- (void) facebookButton
 {
     
     if ([self isInternetAvailable])
     {
      
         _webviewNumber = @"Facebook";
-        [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-        [self facebookWebView];
+//        [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController * navController = [storyboard instantiateViewControllerWithIdentifier:@"customWebviews"];
+        [self presentViewController:navController animated:YES completion:nil];
         
     }
     else
@@ -62,16 +77,16 @@
     
 }
 
-- (IBAction)youtubeButtonPressed:(id)sender
+- (void) youtubeButton 
 {
     
     if ([self isInternetAvailable])
     {
         
         _webviewNumber = @"Youtube";
-        [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+//        [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
         UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UINavigationController * navController = [storyboard instantiateViewControllerWithIdentifier:@"eventListNav"];
+        UINavigationController * navController = [storyboard instantiateViewControllerWithIdentifier:@"customWebviews"];
         [self presentViewController:navController animated:YES completion:nil];
         
     }
@@ -85,16 +100,16 @@
     
 }
 
-- (IBAction)twitterButtonPressed:(id)sender
+- (void) twitterButton
 {
     
     if ([self isInternetAvailable])
     {
         
         _webviewNumber = @"Twitter";
-        [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+//        [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
         UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UINavigationController * navController = [storyboard instantiateViewControllerWithIdentifier:@"eventListNav"];
+        UINavigationController * navController = [storyboard instantiateViewControllerWithIdentifier:@"customWebviews"];
         [self presentViewController:navController animated:YES completion:nil];
         
     }
@@ -107,16 +122,16 @@
     }
 }
 
-- (IBAction)gPlusButtonPressed:(id)sender
+- (void) gPlusButton
 {
     
     if ([self isInternetAvailable])
     {
         
         self.webviewNumber = @"Gplus";
-        [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+//        [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
         UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UINavigationController * navController = [storyboard instantiateViewControllerWithIdentifier:@"eventListNav"];
+        UINavigationController * navController = [storyboard instantiateViewControllerWithIdentifier:@"customWebviews"];
         [self presentViewController:navController animated:YES completion:nil];
         
     }
@@ -129,15 +144,16 @@
     }
 }
 
-- (IBAction)instaButtonPressed:(id)sender
+- (void) instaButton 
 {
     
     if ([self isInternetAvailable])
     {
+        
         self.webviewNumber = @"Instagram";
-        [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+//        [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
         UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-        UINavigationController * navController = [storyboard instantiateViewControllerWithIdentifier:@"eventListNav"];
+        UINavigationController * navController = [storyboard instantiateViewControllerWithIdentifier:@"customWebviews"];
         [self presentViewController:navController animated:YES completion:nil];
         
     }
@@ -148,8 +164,98 @@
         [noNetAlert show];
         
     }
+    
 }
 
+# pragma mark Table View Methods
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    
+    return 2;
+
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    
+    return 1;
+    
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    static NSString * cellIdentifier = @"Cell";
+
+    
+    if (indexPath.section == 0)
+    {
+        
+        UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        cell.textLabel.text = _aboutUsString;
+        cell.textLabel.textAlignment = NSTextAlignmentCenter;
+        cell.textLabel.numberOfLines = 0;
+        cell.textLabel.font = [UIFont fontWithName:@"Helvetica Neue Light" size:18];
+        return cell;
+        
+    }
+    else if (indexPath.section == 1)
+    {
+        
+        SocialView * cell = (SocialView*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SocialView" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
+        [cell.facebookButton addTarget:self action:@selector(facebookButton) forControlEvents:UIControlEventTouchUpInside];
+        [cell.instaButton addTarget:self action:@selector(instaButton) forControlEvents:UIControlEventTouchUpInside];
+        [cell.gPlusButton addTarget:self action:@selector(gPlusButton) forControlEvents:UIControlEventTouchUpInside];
+        [cell.twitterButton addTarget:self action:@selector(twitterButton) forControlEvents:UIControlEventTouchUpInside];
+        [cell.youtubeButton addTarget:self action:@selector(youtubeButton) forControlEvents:UIControlEventTouchUpInside];
+        return cell;
+        
+    }
+
+    return nil;
+    
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    CGFloat height = 0.0;
+    if (indexPath.section == 0)
+    {
+        
+        UILabel * label = [[UILabel alloc] init];
+        label.numberOfLines = 0;
+        label.lineBreakMode = NSLineBreakByWordWrapping;
+        label.font = [UIFont fontWithName:@"Helvetica Neue Light" size:18];
+        label.text = _aboutUsString;
+        CGRect labelFrame = label.frame;
+        labelFrame.size.width = _myTableView.frame.size.width;
+        label.frame = labelFrame;
+        [label sizeToFit];
+        height = label.frame.size.height + 80;
+        
+    }
+    
+    if (indexPath.section == 1)
+    {
+        
+        height = 75;
+        
+    }
+    
+    return height;
+    
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+{
+    
+    return 20;
+    
+}
 //- (void) loadActualView
 //{
 //    

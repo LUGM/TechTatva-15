@@ -69,6 +69,7 @@
     catEventTable.scrollsToTop = YES;
     self.view.backgroundColor = [UIColor grayColor];
     _daySelected = @1;
+    dayString = @"1";
     
     catEventTable.separatorColor = [UIColor orangeColor];
     

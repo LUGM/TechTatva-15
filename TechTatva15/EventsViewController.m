@@ -341,7 +341,7 @@
     cell.venueLabel.text = event.location;
     cell.eventLabel.text = event.event;
     cell.timeLabel.text = [NSString stringWithFormat:@"%@-%@", event.start, event.stop];
-    cell.contactLabel.text = event.contact;
+    cell.contactLabel.text = [NSString stringWithFormat:@"%@ %@", event.contact, event.contactNumber];
     cell.dateLabel.text = [NSString stringWithFormat:@"%@",event.date];
     cell.maxTeamMembersLabel.text = [NSString stringWithFormat:@"Max Team Size : %@", event.maxTeamSize];
     cell.categoryLabel.text = event.category;

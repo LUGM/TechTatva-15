@@ -26,7 +26,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.backgroundImage = [UIImage imageNamed:@"SideMenuBackground.png"];
+    self.backgroundImage = [UIImage imageNamed:@"newbg.png"];
 }
 
 - (void)didReceiveMemoryWarning {

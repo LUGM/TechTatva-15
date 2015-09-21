@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mmT-Jb-gOW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mmT-Jb-gOW">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -215,7 +215,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="FQn-V9-v2c"/>
+                    <navigationItem key="navigationItem" id="FQn-V9-v2c">
+                        <barButtonItem key="leftBarButtonItem" image="Dismiss" id="h3x-s1-0Tk">
+                            <connections>
+                                <action selector="dismissVCBarButtonPressed:" destination="CLD-fk-Ef8" id="1eu-rO-cnh"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KLm-QB-4Zf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -375,60 +381,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNC-Yw-qgL">
-                                <rect key="frame" x="168" y="445" width="32" height="32"/>
-                                <state key="normal" image="Facebook">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="facebookButtonPressed:" destination="Jin-ph-3OA" eventType="touchUpInside" id="YnU-6P-NzB"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wc1-GO-710">
-                                <rect key="frame" x="263" y="490" width="32" height="32"/>
-                                <state key="normal" image="Twitter">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="twitterButtonPressed:" destination="Jin-ph-3OA" eventType="touchUpInside" id="GDi-ac-Fyr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7SJ-Eu-1SB">
-                                <rect key="frame" x="168" y="536" width="32" height="32"/>
-                                <state key="normal" title="insta" image="Instagram">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="instaButtonPressed:" destination="Jin-ph-3OA" eventType="touchUpInside" id="ySe-Rl-toe"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMj-Zv-1d8">
-                                <rect key="frame" x="168" y="490" width="32" height="32"/>
-                                <state key="normal" image="G+">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="gPlusButtonPressed:" destination="Jin-ph-3OA" eventType="touchUpInside" id="9pT-aM-hPO"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CcZ-YF-K0e">
-                                <rect key="frame" x="26" y="72" width="269" height="365"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="CL1-uU-zr6">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbt-FI-bXm">
-                                <rect key="frame" x="62" y="490" width="32" height="32"/>
-                                <state key="normal" image="Youtube">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Rar-zO-XDe">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rar-zO-XDe" id="y7j-7c-iII">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
-                                    <action selector="youtubeButtonPressed:" destination="Jin-ph-3OA" eventType="touchUpInside" id="ftB-PT-6mA"/>
+                                    <outlet property="dataSource" destination="Jin-ph-3OA" id="WQF-Gd-aFs"/>
+                                    <outlet property="delegate" destination="Jin-ph-3OA" id="5tu-ru-45n"/>
                                 </connections>
-                            </button>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="CL1-uU-zr6" secondAttribute="trailing" id="5i9-3e-n2C"/>
+                            <constraint firstItem="CL1-uU-zr6" firstAttribute="top" secondItem="WPM-mh-qsZ" secondAttribute="top" id="oxR-YQ-7xw"/>
+                            <constraint firstItem="CL1-uU-zr6" firstAttribute="leading" secondItem="WPM-mh-qsZ" secondAttribute="leading" id="q3g-EC-qLl"/>
+                            <constraint firstItem="CL1-uU-zr6" firstAttribute="bottom" secondItem="tNR-Vg-qHd" secondAttribute="top" id="tkU-LT-vVY"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TechTatva '15" id="2Dy-Kc-eZf">
                         <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="5hS-HP-jaV">
@@ -439,7 +415,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
-                        <outlet property="aboutUsTextField" destination="CcZ-YF-K0e" id="fmE-Mm-nSm"/>
+                        <outlet property="myTableView" destination="CL1-uU-zr6" id="aMU-Wr-wlb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fy0-9j-cLq" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -872,11 +848,7 @@
     <resources>
         <image name="Dismiss" width="32" height="32"/>
         <image name="Facebook" width="32" height="32"/>
-        <image name="G+" width="32" height="32"/>
         <image name="Git" width="32" height="32"/>
-        <image name="Instagram" width="32" height="32"/>
         <image name="Swipe Right" width="32" height="32"/>
-        <image name="Twitter" width="32" height="32"/>
-        <image name="Youtube" width="32" height="32"/>
     </resources>
 </document>
