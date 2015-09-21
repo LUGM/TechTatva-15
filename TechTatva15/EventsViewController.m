@@ -32,6 +32,7 @@
     NSString *dayString;
     
     NSMutableArray *eventsArray;
+    NSMutableArray *preDaySortEventsArray;
     NSMutableArray *filteredArray;
     NSMutableArray *resultsArray;
 //    NSMutableArray *resultsFilteredArray;
@@ -105,6 +106,7 @@
     eventTable.contentInset = UIEdgeInsetsMake(44, 0, 0, 0);
     self.view.backgroundColor = [UIColor grayColor];
     _daySelected = @1;
+    dayString = @"1";
     
 }
 
@@ -129,6 +131,7 @@
         
         eventsArray = [[NSMutableArray alloc] init];
         resultsArray = [[NSMutableArray alloc] init];
+        preDaySortEventsArray = [[NSMutableArray alloc] init];
         
         tempEventStorage = [json objectForKey:@"data"];
         
@@ -138,7 +141,7 @@
 //            if ([dict objectForKey:@"date"] isEqualToString:"07/10/2015") then add object and load table...check if date or Date in API
 
             Event *event = [[Event alloc] initWithDict:dict];
-            [eventsArray addObject:event];
+            [preDaySortEventsArray addObject:event];
             
         }
         
@@ -212,7 +215,7 @@
     
 }
 
-# pragma mark Segmented Control Methods
+# pragma mark Day Methods
 
 - (void) daySelect
 {
@@ -246,13 +249,14 @@
             break;
             
     }
+    [self filterEvents];
     
 }
 
 - (void) filterEvents
 {
     
-    for (Event *event in eventsArray)
+    for (Event *event in preDaySortEventsArray)
     {
         
         if ([event.day isEqualToString:dayString])
