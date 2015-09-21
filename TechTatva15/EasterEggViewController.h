@@ -11,6 +11,7 @@
 @interface EasterEggViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIImageView *logoImage;
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundImage;
 - (IBAction)gitButtonPressed:(id)sender;
 - (IBAction)facebookButtonPressed:(id)sender;
 

@@ -26,6 +26,7 @@
     [startAlert show];
     
     _logoImage.image = [UIImage imageNamed:@"linuxtux.png"];
+    self.backgroundImage.image = [UIImage imageNamed:@"devimg.png"];
     
 }
 
@@ -108,7 +109,7 @@
 - (void) loadGit
 {
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.facebook.com/groups/lug2016/"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/LUGM"]];
     
 }
 

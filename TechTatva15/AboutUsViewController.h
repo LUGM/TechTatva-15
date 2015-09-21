@@ -16,6 +16,7 @@
 - (IBAction)twitterButtonPressed:(id)sender;
 - (IBAction)gPlusButtonPressed:(id)sender;
 @property (strong, nonatomic) IBOutlet UITextView *aboutUsTextField;
+@property (strong, nonatomic) NSString *webviewNumber;
 - (IBAction)hamburgerLoader:(id)sender;
 
 @end

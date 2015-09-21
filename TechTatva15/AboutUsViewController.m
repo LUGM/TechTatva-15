@@ -46,7 +46,8 @@
     
     if ([self isInternetAvailable])
     {
-        
+     
+        _webviewNumber = @"Facebook";
         [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
         [self facebookWebView];
         
@@ -67,8 +68,11 @@
     if ([self isInternetAvailable])
     {
         
+        _webviewNumber = @"Youtube";
         [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-        [self youtubeWebView];
+        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController * navController = [storyboard instantiateViewControllerWithIdentifier:@"eventListNav"];
+        [self presentViewController:navController animated:YES completion:nil];
         
     }
     else
@@ -87,8 +91,11 @@
     if ([self isInternetAvailable])
     {
         
+        _webviewNumber = @"Twitter";
         [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-        [self twitterWebView];
+        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController * navController = [storyboard instantiateViewControllerWithIdentifier:@"eventListNav"];
+        [self presentViewController:navController animated:YES completion:nil];
         
     }
     else
@@ -106,8 +113,11 @@
     if ([self isInternetAvailable])
     {
         
+        self.webviewNumber = @"Gplus";
         [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-        [self gPlusWebView];
+        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController * navController = [storyboard instantiateViewControllerWithIdentifier:@"eventListNav"];
+        [self presentViewController:navController animated:YES completion:nil];
         
     }
     else
@@ -124,9 +134,11 @@
     
     if ([self isInternetAvailable])
     {
-        
+        self.webviewNumber = @"Instagram";
         [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-        [self instaWebView];
+        UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+        UINavigationController * navController = [storyboard instantiateViewControllerWithIdentifier:@"eventListNav"];
+        [self presentViewController:navController animated:YES completion:nil];
         
     }
     else
@@ -147,55 +159,55 @@
 //    
 //}
 
-- (void) facebookWebView
-{
-    
-    UIWebView *facebookLink = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    [facebookLink loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.facebook.com/MITtechtatva"]]];
-    [self.view addSubview:facebookLink];
-    [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
-    
-}
-
-- (void) instaWebView
-{
-    
-    UIWebView *instaLink = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    [instaLink loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.instagram.com/MITtechtatva"]]];
-    [self.view addSubview:instaLink];
-    [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
-    
-}
-
-- (void) youtubeWebView
-{
-    
-    UIWebView *youtubeLink = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    [youtubeLink loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.youtube.com/TechTatva"]]];
-    [self.view addSubview:youtubeLink];
-    [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
-    
-}
-
-- (void) twitterWebView
-{
-    
-    UIWebView *twitterLink = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    [twitterLink loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.twitter.com/MITtechtatva"]]];
-    [self.view addSubview:twitterLink];
-    [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
-    
-}
-
-- (void) gPlusWebView
-{
-    
-    UIWebView *gPlusLink = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    [gPlusLink loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://plus.google.com/+techtatva"]]];
-    [self.view addSubview:gPlusLink];
-    [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
-    
-}
+//- (void) facebookWebView
+//{
+//    
+//    UIWebView *facebookLink = [[UIWebView alloc] initWithFrame:self.view.bounds];
+//    [facebookLink loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.facebook.com/MITtechtatva"]]];
+//    [self.view addSubview:facebookLink];
+//    [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
+//    
+//}
+//
+//- (void) instaWebView
+//{
+//    
+//    UIWebView *instaLink = [[UIWebView alloc] initWithFrame:self.view.bounds];
+//    [instaLink loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.instagram.com/MITtechtatva"]]];
+//    [self.view addSubview:instaLink];
+//    [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
+//    
+//}
+//
+//- (void) youtubeWebView
+//{
+//    
+//    UIWebView *youtubeLink = [[UIWebView alloc] initWithFrame:self.view.bounds];
+//    [youtubeLink loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.youtube.com/TechTatva"]]];
+//    [self.view addSubview:youtubeLink];
+//    [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
+//    
+//}
+//
+//- (void) twitterWebView
+//{
+//    
+//    UIWebView *twitterLink = [[UIWebView alloc] initWithFrame:self.view.bounds];
+//    [twitterLink loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://www.twitter.com/MITtechtatva"]]];
+//    [self.view addSubview:twitterLink];
+//    [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
+//    
+//}
+//
+//- (void) gPlusWebView
+//{
+//    
+//    UIWebView *gPlusLink = [[UIWebView alloc] initWithFrame:self.view.bounds];
+//    [gPlusLink loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"https://plus.google.com/+techtatva"]]];
+//    [self.view addSubview:gPlusLink];
+//    [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
+//    
+//}
 
 # pragma mark Connection Check
 

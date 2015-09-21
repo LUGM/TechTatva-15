@@ -67,6 +67,7 @@
 		4C01D5B11BAA15FF009FDB09 /* SideMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C01D5B01BAA15FF009FDB09 /* SideMenuBackground.png */; };
 		4C01D5B41BAA1FF0009FDB09 /* InstagramLikes.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C01D5B31BAA1FF0009FDB09 /* InstagramLikes.m */; };
 		4C01D5B71BAA206D009FDB09 /* InstagramComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C01D5B61BAA206D009FDB09 /* InstagramComments.m */; };
+		4C0DFC4B1BB0120700714534 /* CustomWebviewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C0DFC4A1BB0120700714534 /* CustomWebviewsViewController.m */; };
 		4C9744031BAF39A400B51649 /* Airborne.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744021BAF39A400B51649 /* Airborne.png */; };
 		4C9744051BAF39AC00B51649 /* Alacrity.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744041BAF39AC00B51649 /* Alacrity.png */; };
 		4C9744071BAF39B300B51649 /* Bizzmaestro.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744061BAF39B300B51649 /* Bizzmaestro.png */; };
@@ -85,6 +86,7 @@
 		4C9744321BAFD13600B51649 /* Turing.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744311BAFD13600B51649 /* Turing.png */; };
 		4C9744341BAFD15900B51649 /* Robotrek.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744331BAFD15900B51649 /* Robotrek.png */; };
 		4C9744361BAFD1B200B51649 /* Open Events.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744351BAFD1B200B51649 /* Open Events.png */; };
+		4C97443A1BAFDBDB00B51649 /* devimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744391BAFDBDB00B51649 /* devimg.png */; };
 		4CC9F6D01B3DBB4F002F9C1D /* eventViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */; };
 		4CC9F6D11B3DBB4F002F9C1D /* eventViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */; };
 		A33D4F1F1B8645760083429E /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = A33D4F1A1B8645760083429E /* RECommonFunctions.m */; };
@@ -225,6 +227,8 @@
 		4C01D5B31BAA1FF0009FDB09 /* InstagramLikes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramLikes.m; path = TechTatva15/InstagramLikes.m; sourceTree = "<group>"; };
 		4C01D5B51BAA206D009FDB09 /* InstagramComments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramComments.h; path = TechTatva15/InstagramComments.h; sourceTree = "<group>"; };
 		4C01D5B61BAA206D009FDB09 /* InstagramComments.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramComments.m; path = TechTatva15/InstagramComments.m; sourceTree = "<group>"; };
+		4C0DFC491BB0120700714534 /* CustomWebviewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomWebviewsViewController.h; sourceTree = "<group>"; };
+		4C0DFC4A1BB0120700714534 /* CustomWebviewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomWebviewsViewController.m; sourceTree = "<group>"; };
 		4C9744021BAF39A400B51649 /* Airborne.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Airborne.png; sourceTree = "<group>"; };
 		4C9744041BAF39AC00B51649 /* Alacrity.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Alacrity.png; sourceTree = "<group>"; };
 		4C9744061BAF39B300B51649 /* Bizzmaestro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Bizzmaestro.png; sourceTree = "<group>"; };
@@ -243,6 +247,7 @@
 		4C9744311BAFD13600B51649 /* Turing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Turing.png; sourceTree = "<group>"; };
 		4C9744331BAFD15900B51649 /* Robotrek.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Robotrek.png; sourceTree = "<group>"; };
 		4C9744351BAFD1B200B51649 /* Open Events.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Open Events.png"; sourceTree = "<group>"; };
+		4C9744391BAFDBDB00B51649 /* devimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = devimg.png; sourceTree = "<group>"; };
 		4CC9F6CD1B3DBB4F002F9C1D /* eventViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventViewTableViewCell.h; sourceTree = "<group>"; };
 		4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventViewTableViewCell.m; sourceTree = "<group>"; };
 		4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eventViewTableViewCell.xib; sourceTree = "<group>"; };
@@ -353,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				4C9744011BAF398600B51649 /* Category Images */,
+				4C9744391BAFDBDB00B51649 /* devimg.png */,
 				182653F31BAA7DC0006B30CF /* linuxtux.png */,
 				4C01D5B01BAA15FF009FDB09 /* SideMenuBackground.png */,
 				1835F6B61B961FC6009E12E5 /* Minus-32.png */,
@@ -561,6 +567,8 @@
 				18085BED1BAA02D9005CCADB /* OnlineEventsViewController.m */,
 				182653F01BAA7D43006B30CF /* EasterEggViewController.h */,
 				182653F11BAA7D43006B30CF /* EasterEggViewController.m */,
+				4C0DFC491BB0120700714534 /* CustomWebviewsViewController.h */,
+				4C0DFC4A1BB0120700714534 /* CustomWebviewsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -772,6 +780,7 @@
 				4C9744051BAF39AC00B51649 /* Alacrity.png in Resources */,
 				4C9744071BAF39B300B51649 /* Bizzmaestro.png in Resources */,
 				4C9744121BAF39C300B51649 /* Constructure.png in Resources */,
+				4C97443A1BAFDBDB00B51649 /* devimg.png in Resources */,
 				4C9744301BAFD02E00B51649 /* Acumen.png in Resources */,
 				4C97441E1BAF39EC00B51649 /* Energia.png in Resources */,
 				4C9744221BAF39FF00B51649 /* Featured Events.png in Resources */,
@@ -844,6 +853,7 @@
 				18B4FC721B5962E4004647DA /* PQFCirclesInTriangle.m in Sources */,
 				A33D4F1F1B8645760083429E /* RECommonFunctions.m in Sources */,
 				18085BEE1BAA02D9005CCADB /* OnlineEventsViewController.m in Sources */,
+				4C0DFC4B1BB0120700714534 /* CustomWebviewsViewController.m in Sources */,
 				1835F6B01B961691009E12E5 /* NSMutableArray+SWUtilityButtons.m in Sources */,
 				183C4E181B7FCCF700A07FB0 /* DaySegmentedControlView.m in Sources */,
 				A3F4B6451B99FE1A001C3DA8 /* ResultsModel.m in Sources */,
