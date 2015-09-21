@@ -129,7 +129,6 @@
 //        NSLog(@"%@",myJsonInstance.parsedJsonData);
         json = myJsonInstance.parsedJsonData;
         
-        eventsArray = [[NSMutableArray alloc] init];
         resultsArray = [[NSMutableArray alloc] init];
         preDaySortEventsArray = [[NSMutableArray alloc] init];
         
@@ -255,6 +254,8 @@
 
 - (void) filterEvents
 {
+    
+    eventsArray = [NSMutableArray new];
     
     for (Event *event in preDaySortEventsArray)
     {
