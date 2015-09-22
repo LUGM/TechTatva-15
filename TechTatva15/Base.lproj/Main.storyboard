@@ -445,7 +445,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cJB-dB-vQG">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cJB-dB-vQG">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -454,6 +454,12 @@
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cJB-dB-vQG" firstAttribute="leading" secondItem="ENd-EX-63j" secondAttribute="leading" id="3tx-TD-zLe"/>
+                            <constraint firstItem="cJB-dB-vQG" firstAttribute="top" secondItem="ENd-EX-63j" secondAttribute="top" id="mW5-eb-46i"/>
+                            <constraint firstItem="cJB-dB-vQG" firstAttribute="bottom" secondItem="VRW-Yf-fbE" secondAttribute="top" id="n3i-BJ-y8A"/>
+                            <constraint firstAttribute="trailing" secondItem="cJB-dB-vQG" secondAttribute="trailing" id="sqi-VY-kMp"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JuJ-i2-vfE">
                         <barButtonItem key="leftBarButtonItem" image="Dismiss" id="xZk-0e-Ycd">
