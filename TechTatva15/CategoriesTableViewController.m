@@ -64,8 +64,20 @@
     if (![self isInternetAvailable])
     {
         
-        categoriesUrl = [NSURL URLWithString:@"http://localhost:8888/Categories.json"];
-        NSLog(@"enters if ");
+        NSUserDefaults *catData =[NSUserDefaults standardUserDefaults];
+//        NSLog(@"Data is %@", [catData objectForKey:@"data"]);
+        
+        if ([catData objectForKey:@"data"] != nil)
+        {
+            
+            json = [catData objectForKey:@"data"];
+            NSLog(@"json here is %@", json);
+            [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+            [self setData];
+//            categoriesUrl = [NSURL URLWithString:@"http://localhost:8888/Categories.json"];
+            NSLog(@"enters if ");
+            
+        }
         
     }
     
@@ -73,12 +85,12 @@
     {
         
         categoriesUrl = [NSURL URLWithString:@"http://api.techtatva.in/categories"];
+    
+        myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
+        [myJsonInstance sendRequestWithUrl:categoriesUrl];
+        [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
         
     }
-    
-    myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
-    [myJsonInstance sendRequestWithUrl:categoriesUrl];
-    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     
 }
 
@@ -167,30 +179,59 @@
     if (JSONModel == myJsonInstance)
     {
         
-        NSLog(@"%@",myJsonInstance.parsedJsonData);
+//        NSLog(@"%@",myJsonInstance.parsedJsonData);
         json = myJsonInstance.parsedJsonData;
         categoryNames =[NSMutableArray new];
         categoryDescriptions = [NSMutableArray new];
         categoryTypes = [NSMutableArray new];
         categoryIds = [NSMutableArray new];
         
-        tempCategoryStorage = [json objectForKey:@"data"];
+        NSUserDefaults *categoryData = [NSUserDefaults standardUserDefaults];
+        [categoryData setObject:json forKey:@"data"];
+        [categoryData synchronize];
+//        NSLog(@"cat data %@", categoryData);
         
-        for (NSDictionary * dict in tempCategoryStorage)
-        {
-            
-            [categoryNames addObject:[dict objectForKey:@"categoryName"]];
-            [categoryDescriptions addObject:[dict objectForKey:@"description"]];
-            [categoryIds addObject:[dict objectForKey:@"categoryID"]];
-            [categoryTypes addObject:[dict objectForKey:@"categoryType"]];
-            
-        }
+//        tempCategoryStorage = [json objectForKey:@"data"];
+//        
+//        for (NSDictionary * dict in tempCategoryStorage)
+//        {
+//            
+//            [categoryNames addObject:[dict objectForKey:@"categoryName"]];
+//            [categoryDescriptions addObject:[dict objectForKey:@"description"]];
+//            [categoryIds addObject:[dict objectForKey:@"categoryID"]];
+//            [categoryTypes addObject:[dict objectForKey:@"categoryType"]];
+//            
+//        }
         
-        [self.tableView reloadData];
+        [self setData];
         
-        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+//        
+//        [self.tableView reloadData];
+//        
+//        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
         
     }
+    
+}
+
+- (void) setData
+{
+    
+    tempCategoryStorage = [json objectForKey:@"data"];
+    
+    for (NSDictionary * dict in tempCategoryStorage)
+    {
+        
+        [categoryNames addObject:[dict objectForKey:@"categoryName"]];
+        [categoryDescriptions addObject:[dict objectForKey:@"description"]];
+        [categoryIds addObject:[dict objectForKey:@"categoryID"]];
+        [categoryTypes addObject:[dict objectForKey:@"categoryType"]];
+        
+    }
+    
+    [self.tableView reloadData];
+    
+    [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
     
 }
 

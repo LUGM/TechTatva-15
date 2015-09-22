@@ -74,23 +74,47 @@
         eventsUrl = [NSURL URLWithString:@"http://schedule.techtatva.in"];
         resultsUrl = [NSURL URLWithString:@"http://results.techtatva.in"];
         
+        myJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
+        myJsonInstance.delegate = self;
+        resultsJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
+        resultsJsonInstance.delegate = self;
+        [resultsJsonInstance sendRequestWithUrl:resultsUrl];
+        [myJsonInstance sendRequestWithUrl:eventsUrl];
+        
+//        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        
     }
     else
     {
         
-        eventsUrl = [NSURL URLWithString:@"http://localhost:8888/Events.json"];
-        resultsUrl = [NSURL URLWithString:@"http://localhost:8888/Results.json"];
+//        eventsUrl = [NSURL URLWithString:@"http://localhost:8888/Events.json"];
+//        resultsUrl = [NSURL URLWithString:@"http://localhost:8888/Results.json"];
+        
+        NSUserDefaults *eventVCDat =[NSUserDefaults standardUserDefaults];
+        //        NSLog(@"Data is %@", [evData objectForKey:@"data"]);
+        
+        if ([eventVCDat objectForKey:@"data"] != nil)
+        {
+            
+            json = [eventVCDat objectForKey:@"data"];
+            NSLog(@"json here is %@", json);
+//            [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+            [self setData];
+            
+        }
         
     }
     
-    myJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
-    myJsonInstance.delegate = self;
-    resultsJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
-    resultsJsonInstance.delegate = self;
-    [resultsJsonInstance sendRequestWithUrl:resultsUrl];
-    [myJsonInstance sendRequestWithUrl:eventsUrl];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
-    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+//    myJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
+//    myJsonInstance.delegate = self;
+//    resultsJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
+//    resultsJsonInstance.delegate = self;
+//    [resultsJsonInstance sendRequestWithUrl:resultsUrl];
+//    [myJsonInstance sendRequestWithUrl:eventsUrl];
+    
+//    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     
     NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DaySegmentedControlView" owner:self options:nil];
     _daySelector = [nib objectAtIndex:0];
@@ -129,24 +153,28 @@
 //        NSLog(@"%@",myJsonInstance.parsedJsonData);
         json = myJsonInstance.parsedJsonData;
         
-        resultsArray = [[NSMutableArray alloc] init];
-        preDaySortEventsArray = [[NSMutableArray alloc] init];
+        NSUserDefaults *eventVCData = [NSUserDefaults standardUserDefaults];
+        [eventVCData setObject:json forKey:@"data"];
+        [eventVCData synchronize];
         
-        tempEventStorage = [json objectForKey:@"data"];
-        
-        for (NSDictionary *dict in tempEventStorage)
-        {
-            
-//            if ([dict objectForKey:@"date"] isEqualToString:"07/10/2015") then add object and load table...check if date or Date in API
-
-            Event *event = [[Event alloc] initWithDict:dict];
-            [preDaySortEventsArray addObject:event];
-            
-        }
-        
-        [self filterEvents];
-        
+//        resultsArray = [[NSMutableArray alloc] init];
+//        preDaySortEventsArray = [[NSMutableArray alloc] init];
+//        
+//        tempEventStorage = [json objectForKey:@"data"];
+//        
+//        for (NSDictionary *dict in tempEventStorage)
+//        {
+//
+//            Event *event = [[Event alloc] initWithDict:dict];
+//            [preDaySortEventsArray addObject:event];
+//            
+//        }
+//        
+//        [self filterEvents];
+//        
         [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+        
+        [self setData];
         
     }
     else if (JSONModel == resultsJsonInstance)
@@ -157,6 +185,31 @@
 //        [self asyncResultRequest];
         
     }
+    
+}
+
+- (void) setData
+{
+    
+    resultsArray = [[NSMutableArray alloc] init];
+    preDaySortEventsArray = [[NSMutableArray alloc] init];
+    tempEventStorage = [[NSMutableArray alloc] init];
+    
+    tempEventStorage = [json objectForKey:@"data"];
+    
+    for (NSDictionary *dict in tempEventStorage)
+    {
+        
+        Event *event = [[Event alloc] initWithDict:dict];
+        [preDaySortEventsArray addObject:event];
+        
+    }
+    
+//    [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+    
+    [self filterEvents];
+    
+//    [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
     
 }
 
@@ -268,6 +321,8 @@
         }
         
     }
+    
+//    [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
     
     [eventTable reloadData];
     

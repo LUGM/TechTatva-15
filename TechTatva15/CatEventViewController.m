@@ -80,20 +80,38 @@
         
         eventsUrl = [NSURL URLWithString:@"http://schedule.techtatva.in"];
         NSLog(@"enters if");
+        myJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
+        myJsonInstance.delegate = self;
+        [myJsonInstance sendRequestWithUrl:eventsUrl];
+        
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+
         
     }
     else
     {
         
-        eventsUrl = [NSURL URLWithString:@"http://localhost:8888/Events.json"];
+//        eventsUrl = [NSURL URLWithString:@"http://localhost:8888/Events.json"];
+        NSUserDefaults *evData =[NSUserDefaults standardUserDefaults];
+        //        NSLog(@"Data is %@", [evData objectForKey:@"data"]);
+        
+        if ([evData objectForKey:@"data"] != nil)
+        {
+            
+            json = [evData objectForKey:@"data"];
+            NSLog(@"json here is %@", json);
+            [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+            [self loadData];
+            
+        }
         
     }
 
-    myJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
-    myJsonInstance.delegate = self;
-    [myJsonInstance sendRequestWithUrl:eventsUrl];
-    
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//    myJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
+//    myJsonInstance.delegate = self;
+//    [myJsonInstance sendRequestWithUrl:eventsUrl];
+//    
+//    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addToFavourites:) name:@"favouritePressed" object:nil];
     
@@ -222,22 +240,49 @@
 //        NSLog(@"%@",myJsonInstance.parsedJsonData);
         json = myJsonInstance.parsedJsonData;
         
-        eventsArray = [[NSMutableArray alloc] init];
+        NSUserDefaults *eventData = [NSUserDefaults standardUserDefaults];
+        [eventData setObject:json forKey:@"data"];
+        [eventData synchronize];
         
-        tempEventStorage = [json objectForKey:@"data"];
+        [self loadData];
         
-        for (NSDictionary *dict in tempEventStorage)
-        {
-
-            Event *event = [[Event alloc] initWithDict:dict];
-            [eventsArray addObject:event];
-            
-        }
-        [self filterEvents];
-    
-        [MBProgressHUD hideHUDForView:self.view animated:YES];
+//        eventsArray = [[NSMutableArray alloc] init];
+//        
+//        tempEventStorage = [json objectForKey:@"data"];
+//        
+//        for (NSDictionary *dict in tempEventStorage)
+//        {
+//
+//            Event *event = [[Event alloc] initWithDict:dict];
+//            [eventsArray addObject:event];
+//            
+//        }
+//        [self filterEvents];
+//    
+//        [MBProgressHUD hideHUDForView:self.view animated:YES];
         
     }
+    
+}
+
+- (void) loadData
+{
+    
+    eventsArray = [[NSMutableArray alloc] init];
+    
+    tempEventStorage = [json objectForKey:@"data"];
+    
+    for (NSDictionary *dict in tempEventStorage)
+    {
+        
+        Event *event = [[Event alloc] initWithDict:dict];
+        [eventsArray addObject:event];
+        
+    }
+    
+    [self filterEvents];
+    
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
     
 }
 
@@ -361,7 +406,7 @@
         
         if ([event.catID isEqualToString:self.catid] && [event.day isEqualToString:dayString])
         {
-            NSLog(@"EVENT NAME: %@",event.event);
+            
             [eventByCategoryArray addObject:event];
             
         }

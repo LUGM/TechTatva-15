@@ -37,7 +37,6 @@
         contentsTable.contentInset = UIEdgeInsetsMake(88, 0, 0, 0);
         contentsTable.opaque = NO;
         contentsTable.backgroundColor = [UIColor clearColor];
-//        contentsTable.backgroundView = nil;
         contentsTable.separatorStyle = UITableViewCellSeparatorStyleNone;
         contentsTable.bounces = NO;
         contentsTable.scrollsToTop = NO;
