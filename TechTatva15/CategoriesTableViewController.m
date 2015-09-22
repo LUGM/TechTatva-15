@@ -16,6 +16,7 @@
 #import "Reachability.h"
 #import "CatEventViewController.h"
 #import "RESideMenu.h"
+#import <Parse/Parse.h>
 
 @interface CategoriesTableViewController () <SSJSONModelDelegate>
 {
@@ -58,21 +59,30 @@
     
     self.tableView.separatorColor = [UIColor orangeColor];
     
-  
+
+    
+    [PFConfig getConfigInBackgroundWithBlock:^(PFConfig * config, NSError * error){
+        NSLog(@"CATEGORY URL : %@",config[@"categories"]);
+        NSLog(@"SCHEDULE URL : %@",config[@"schedule"]);
+        NSLog(@"RESULTS URL : %@",config[@"results"]);
+
+    }];
+    
     
     NSURL *categoriesUrl;
+    
     if (![self isInternetAvailable])
     {
         
         NSUserDefaults *catData =[NSUserDefaults standardUserDefaults];
 //        NSLog(@"Data is %@", [catData objectForKey:@"data"]);
         
-        if ([catData objectForKey:@"data"] != nil)
+        if ([catData objectForKey:@"categories"] != nil)
         {
             
-            json = [catData objectForKey:@"data"];
-            NSLog(@"json here is %@", json);
-            [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+            json = [catData objectForKey:@"categories"];
+//            NSLog(@"json here is %@", json);
+//            [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
             [self setData];
 //            categoriesUrl = [NSURL URLWithString:@"http://localhost:8888/Categories.json"];
             NSLog(@"enters if ");
@@ -181,13 +191,9 @@
         
 //        NSLog(@"%@",myJsonInstance.parsedJsonData);
         json = myJsonInstance.parsedJsonData;
-        categoryNames =[NSMutableArray new];
-        categoryDescriptions = [NSMutableArray new];
-        categoryTypes = [NSMutableArray new];
-        categoryIds = [NSMutableArray new];
         
         NSUserDefaults *categoryData = [NSUserDefaults standardUserDefaults];
-        [categoryData setObject:json forKey:@"data"];
+        [categoryData setObject:json forKey:@"categories"];
         [categoryData synchronize];
 //        NSLog(@"cat data %@", categoryData);
         
@@ -216,9 +222,11 @@
 
 - (void) setData
 {
-    
     tempCategoryStorage = [json objectForKey:@"data"];
-    
+    categoryNames =[NSMutableArray new];
+    categoryDescriptions = [NSMutableArray new];
+    categoryTypes = [NSMutableArray new];
+    categoryIds = [NSMutableArray new];
     for (NSDictionary * dict in tempCategoryStorage)
     {
         

@@ -42,6 +42,7 @@
     self.navigationController.navigationBar.layer.shadowRadius = 2.0f;
     self.navigationController.navigationBar.layer.shadowOpacity = 1.0f;
     
+    self.myTableView.contentInset = UIEdgeInsetsMake(0, 0, 20, 0);
 }
 
 - (void)didReceiveMemoryWarning
@@ -234,11 +235,18 @@
     
 }
 
-- (CGFloat) tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
-    
+
+        UIView * blank = [[UIView alloc] initWithFrame:CGRectZero];
+        return blank;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    if (section == 1) {
+        return 0;
+    }
     return 20;
-    
 }
 //- (void) loadActualView
 //{

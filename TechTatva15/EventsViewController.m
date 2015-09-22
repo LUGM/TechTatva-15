@@ -63,6 +63,22 @@
     
     eventTable.separatorColor = [UIColor orangeColor];
     
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DaySegmentedControlView" owner:self options:nil];
+    _daySelector = [nib objectAtIndex:0];
+    
+    // 110 because search bar is 44 and status bar is 66.
+    
+    _daySelector.frame = CGRectMake(0, 64, self.view.frame.size.width, 44);
+    [_daySelector.daySelectionControl addTarget:self action:@selector(daySelect) forControlEvents:UIControlEventValueChanged];
+    [self.view addSubview:_daySelector];
+    
+    // offset 89 = 45 for segmented control and 44 for search bar
+    
+    eventTable.contentInset = UIEdgeInsetsMake(44, 0, 0, 0);
+    self.view.backgroundColor = [UIColor grayColor];
+    _daySelected = @1;
+    dayString = @"1";
+    
     NSURL *eventsUrl;
     NSURL *resultsUrl;
     
@@ -81,7 +97,7 @@
         [resultsJsonInstance sendRequestWithUrl:resultsUrl];
         [myJsonInstance sendRequestWithUrl:eventsUrl];
         
-//        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         
     }
     else
@@ -93,19 +109,17 @@
         NSUserDefaults *eventVCDat =[NSUserDefaults standardUserDefaults];
         //        NSLog(@"Data is %@", [evData objectForKey:@"data"]);
         
-        if ([eventVCDat objectForKey:@"data"] != nil)
+        if ([eventVCDat objectForKey:@"events"] != nil)
         {
             
-            json = [eventVCDat objectForKey:@"data"];
-            NSLog(@"json here is %@", json);
+            json = [eventVCDat objectForKey:@"events"];
+//            NSLog(@"json here is %@", json);
 //            [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
             [self setData];
             
         }
         
     }
-    
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
 //    myJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
 //    myJsonInstance.delegate = self;
@@ -115,22 +129,6 @@
 //    [myJsonInstance sendRequestWithUrl:eventsUrl];
     
 //    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-    
-    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DaySegmentedControlView" owner:self options:nil];
-    _daySelector = [nib objectAtIndex:0];
-    
-    // 110 because search bar is 44 and status bar is 66.
-    
-    _daySelector.frame = CGRectMake(0, 64, self.view.frame.size.width, 44);
-    [_daySelector.daySelectionControl addTarget:self action:@selector(daySelect) forControlEvents:UIControlEventValueChanged];
-    [self.view addSubview:_daySelector];
-    
-    // offset 89 = 45 for segmented control and 44 for search bar
-    
-    eventTable.contentInset = UIEdgeInsetsMake(44, 0, 0, 0);
-    self.view.backgroundColor = [UIColor grayColor];
-    _daySelected = @1;
-    dayString = @"1";
     
 }
 
@@ -154,8 +152,9 @@
         json = myJsonInstance.parsedJsonData;
         
         NSUserDefaults *eventVCData = [NSUserDefaults standardUserDefaults];
-        [eventVCData setObject:json forKey:@"data"];
+        [eventVCData setObject:json forKey:@"events"];
         [eventVCData synchronize];
+        NSLog(@"ORIGINAL : %@",json);
         
 //        resultsArray = [[NSMutableArray alloc] init];
 //        preDaySortEventsArray = [[NSMutableArray alloc] init];
@@ -196,15 +195,13 @@
     tempEventStorage = [[NSMutableArray alloc] init];
     
     tempEventStorage = [json objectForKey:@"data"];
-    
     for (NSDictionary *dict in tempEventStorage)
     {
         
         Event *event = [[Event alloc] initWithDict:dict];
         [preDaySortEventsArray addObject:event];
-        
+
     }
-    
     [self filterEvents];
     
 }
@@ -317,6 +314,7 @@
         }
         
     }
+    NSLog(@"EVENTS ARRAY : %@",eventsArray);
     
     [MBProgressHUD hideHUDForView:self.view animated:YES];
     

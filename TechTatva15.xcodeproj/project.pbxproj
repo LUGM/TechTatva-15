@@ -104,6 +104,20 @@
 		A3435CA51B88BCDF00BB1FFB /* InstagramCustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A3435CA31B88BCDF00BB1FFB /* InstagramCustomTableViewCell.m */; };
 		A3BF3C011B3FD2DF00E1F436 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = A3BF3C001B3FD2DF00E1F436 /* MBProgressHUD.m */; };
 		A3CD67DD1B3C466B00DACD83 /* SSJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3CD67DC1B3C466B00DACD83 /* SSJSONModel.m */; };
+		A3D6E8401BB1D0D100951F88 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D6E83F1BB1D0D100951F88 /* AudioToolbox.framework */; };
+		A3D6E8421BB1D0DA00951F88 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D6E8411BB1D0DA00951F88 /* CFNetwork.framework */; };
+		A3D6E8441BB1D0E100951F88 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D6E8431BB1D0E100951F88 /* CoreGraphics.framework */; };
+		A3D6E8461BB1D0E700951F88 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D6E8451BB1D0E700951F88 /* CoreLocation.framework */; };
+		A3D6E8481BB1D0F300951F88 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D6E8471BB1D0F300951F88 /* QuartzCore.framework */; };
+		A3D6E84A1BB1D0F700951F88 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D6E8491BB1D0F700951F88 /* Security.framework */; };
+		A3D6E84C1BB1D0FE00951F88 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D6E84B1BB1D0FE00951F88 /* StoreKit.framework */; };
+		A3D6E84E1BB1D10700951F88 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D6E84D1BB1D10700951F88 /* SystemConfiguration.framework */; };
+		A3D6E8501BB1D10E00951F88 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D6E84F1BB1D10E00951F88 /* libz.dylib */; };
+		A3D6E8521BB1D11800951F88 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D6E8511BB1D11800951F88 /* libsqlite3.dylib */; };
+		A3D6E8541BB1D12200951F88 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D6E8531BB1D12200951F88 /* Accounts.framework */; };
+		A3D6E8561BB1D12700951F88 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D6E8551BB1D12700951F88 /* Social.framework */; };
+		A3D6E8581BB1D1A800951F88 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D6E8571BB1D1A800951F88 /* Parse.framework */; };
+		A3D6E85A1BB1D1F000951F88 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D6E8591BB1D1F000951F88 /* Bolts.framework */; };
 		A3F4B6451B99FE1A001C3DA8 /* ResultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F4B6441B99FE1A001C3DA8 /* ResultsModel.m */; };
 /* End PBXBuildFile section */
 
@@ -281,6 +295,20 @@
 		A3BF3C001B3FD2DF00E1F436 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		A3CD67DB1B3C466B00DACD83 /* SSJSONModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSJSONModel.h; sourceTree = "<group>"; };
 		A3CD67DC1B3C466B00DACD83 /* SSJSONModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSJSONModel.m; sourceTree = "<group>"; };
+		A3D6E83F1BB1D0D100951F88 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A3D6E8411BB1D0DA00951F88 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A3D6E8431BB1D0E100951F88 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A3D6E8451BB1D0E700951F88 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A3D6E8471BB1D0F300951F88 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A3D6E8491BB1D0F700951F88 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A3D6E84B1BB1D0FE00951F88 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		A3D6E84D1BB1D10700951F88 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A3D6E84F1BB1D10E00951F88 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		A3D6E8511BB1D11800951F88 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		A3D6E8531BB1D12200951F88 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		A3D6E8551BB1D12700951F88 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		A3D6E8571BB1D1A800951F88 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../Downloads/parse-library-1/Parse.framework"; sourceTree = "<group>"; };
+		A3D6E8591BB1D1F000951F88 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../Downloads/parse-library-1/Bolts.framework"; sourceTree = "<group>"; };
 		A3F4B6431B99FE1A001C3DA8 /* ResultsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsModel.h; sourceTree = "<group>"; };
 		A3F4B6441B99FE1A001C3DA8 /* ResultsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -290,6 +318,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3D6E85A1BB1D1F000951F88 /* Bolts.framework in Frameworks */,
+				A3D6E8581BB1D1A800951F88 /* Parse.framework in Frameworks */,
+				A3D6E8561BB1D12700951F88 /* Social.framework in Frameworks */,
+				A3D6E8541BB1D12200951F88 /* Accounts.framework in Frameworks */,
+				A3D6E8521BB1D11800951F88 /* libsqlite3.dylib in Frameworks */,
+				A3D6E8501BB1D10E00951F88 /* libz.dylib in Frameworks */,
+				A3D6E84E1BB1D10700951F88 /* SystemConfiguration.framework in Frameworks */,
+				A3D6E84C1BB1D0FE00951F88 /* StoreKit.framework in Frameworks */,
+				A3D6E84A1BB1D0F700951F88 /* Security.framework in Frameworks */,
+				A3D6E8481BB1D0F300951F88 /* QuartzCore.framework in Frameworks */,
+				A3D6E8461BB1D0E700951F88 /* CoreLocation.framework in Frameworks */,
+				A3D6E8441BB1D0E100951F88 /* CoreGraphics.framework in Frameworks */,
+				A3D6E8421BB1D0DA00951F88 /* CFNetwork.framework in Frameworks */,
+				A3D6E8401BB1D0D100951F88 /* AudioToolbox.framework in Frameworks */,
 				1848173F1B90CD680031F1B9 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +370,20 @@
 		182922101B236AFB00F95AE0 = {
 			isa = PBXGroup;
 			children = (
+				A3D6E8591BB1D1F000951F88 /* Bolts.framework */,
+				A3D6E8571BB1D1A800951F88 /* Parse.framework */,
+				A3D6E8551BB1D12700951F88 /* Social.framework */,
+				A3D6E8531BB1D12200951F88 /* Accounts.framework */,
+				A3D6E8511BB1D11800951F88 /* libsqlite3.dylib */,
+				A3D6E84F1BB1D10E00951F88 /* libz.dylib */,
+				A3D6E84D1BB1D10700951F88 /* SystemConfiguration.framework */,
+				A3D6E84B1BB1D0FE00951F88 /* StoreKit.framework */,
+				A3D6E8491BB1D0F700951F88 /* Security.framework */,
+				A3D6E8471BB1D0F300951F88 /* QuartzCore.framework */,
+				A3D6E8451BB1D0E700951F88 /* CoreLocation.framework */,
+				A3D6E8431BB1D0E100951F88 /* CoreGraphics.framework */,
+				A3D6E8411BB1D0DA00951F88 /* CFNetwork.framework */,
+				A3D6E83F1BB1D0D100951F88 /* AudioToolbox.framework */,
 				1848173E1B90CD680031F1B9 /* CoreData.framework */,
 				1829221B1B236AFB00F95AE0 /* TechTatva15 */,
 				182922351B236AFB00F95AE0 /* TechTatva15Tests */,
@@ -1010,6 +1066,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TechTatva15",
+					"/Users/shubhamsorte/Downloads/parse-library-1",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TechTatva15/TechTatva15-Prefix.pch";
 				INFOPLIST_FILE = TechTatva15/Info.plist;
@@ -1026,6 +1087,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TechTatva15",
+					"/Users/shubhamsorte/Downloads/parse-library-1",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TechTatva15/TechTatva15-Prefix.pch";
 				INFOPLIST_FILE = TechTatva15/Info.plist;

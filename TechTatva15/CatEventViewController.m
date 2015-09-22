@@ -95,12 +95,11 @@
         NSUserDefaults *evData =[NSUserDefaults standardUserDefaults];
         //        NSLog(@"Data is %@", [evData objectForKey:@"data"]);
         
-        if ([evData objectForKey:@"data"] != nil)
+        if ([evData objectForKey:@"events"] != nil)
         {
             
-            json = [evData objectForKey:@"data"];
+            json = [evData objectForKey:@"events"];
             NSLog(@"json here is %@", json);
-            [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
             [self loadData];
             
         }
@@ -241,7 +240,7 @@
         json = myJsonInstance.parsedJsonData;
         
         NSUserDefaults *eventData = [NSUserDefaults standardUserDefaults];
-        [eventData setObject:json forKey:@"data"];
+        [eventData setObject:json forKey:@"events"];
         [eventData synchronize];
         
         [self loadData];

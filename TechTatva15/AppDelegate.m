@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -23,6 +24,13 @@
     
     [[UINavigationBar appearance] setBarTintColor:UIColorFromRGB(0xff5722)];
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    // Initialize Parse.
+    [Parse setApplicationId:@"3kIBsNTFceZmlpCiPpJA0WTYTiFNSVZVngTGJj7k"
+                  clientKey:@"Msd1PiRbmLovdfpA4PETqFQlImilNd54RSKzMkd6"];
+    
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     return YES;
 }
