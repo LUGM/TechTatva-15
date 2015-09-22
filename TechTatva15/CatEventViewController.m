@@ -15,6 +15,7 @@
 #import "CategoryTableViewCell.h"
 #import "CoreDataModel.h"
 #import "Favourites.h"
+#import <Parse/Parse.h>
 
 @interface CatEventViewController () <SSJSONModelDelegate>
 {
@@ -28,6 +29,10 @@
     NSDictionary *json;
     
     SSJSONModel *myJsonInstance;
+    
+    NSString *checkedCategoryUrl;
+    NSString *checkedScheduleUrl;
+    NSString *checkedResultUrl;
     
 }
 
@@ -73,25 +78,26 @@
     
     catEventTable.separatorColor = [UIColor orangeColor];
     
-    NSURL *eventsUrl;
-    
     if ([self isInternetAvailable])
     {
         
-        eventsUrl = [NSURL URLWithString:@"http://schedule.techtatva.in"];
-        NSLog(@"enters if");
-        myJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
-        myJsonInstance.delegate = self;
-        [myJsonInstance sendRequestWithUrl:eventsUrl];
+        [PFConfig getConfigInBackgroundWithBlock:^(PFConfig * config, NSError * error){
+            NSLog(@"CATEGORY URL : %@",config[@"categories"]);
+            NSLog(@"SCHEDULE URL : %@",config[@"schedule"]);
+            NSLog(@"RESULTS URL : %@",config[@"results"]);
+            
+            checkedCategoryUrl = config[@"categories"];
+            checkedScheduleUrl = config[@"schedule"];
+            checkedResultUrl = config[@"results"];
+            
+        }];
         
-        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-
+        [self setCorrectUrls];
         
     }
     else
     {
         
-//        eventsUrl = [NSURL URLWithString:@"http://localhost:8888/Events.json"];
         NSUserDefaults *evData =[NSUserDefaults standardUserDefaults];
         //        NSLog(@"Data is %@", [evData objectForKey:@"data"]);
         
@@ -105,14 +111,20 @@
         }
         
     }
-
-//    myJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
-//    myJsonInstance.delegate = self;
-//    [myJsonInstance sendRequestWithUrl:eventsUrl];
-//    
-//    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(addToFavourites:) name:@"favouritePressed" object:nil];
+    
+}
+
+- (void) setCorrectUrls
+{
+    
+    NSURL *eventsUrl;
+    eventsUrl = [NSURL URLWithString:checkedScheduleUrl];
+    
+    myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
+    [myJsonInstance sendRequestWithUrl:eventsUrl];
+    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     
 }
 
@@ -236,7 +248,6 @@
     if (JSONModel == myJsonInstance)
     {
         
-//        NSLog(@"%@",myJsonInstance.parsedJsonData);
         json = myJsonInstance.parsedJsonData;
         
         NSUserDefaults *eventData = [NSUserDefaults standardUserDefaults];
@@ -244,21 +255,6 @@
         [eventData synchronize];
         
         [self loadData];
-        
-//        eventsArray = [[NSMutableArray alloc] init];
-//        
-//        tempEventStorage = [json objectForKey:@"data"];
-//        
-//        for (NSDictionary *dict in tempEventStorage)
-//        {
-//
-//            Event *event = [[Event alloc] initWithDict:dict];
-//            [eventsArray addObject:event];
-//            
-//        }
-//        [self filterEvents];
-//    
-//        [MBProgressHUD hideHUDForView:self.view animated:YES];
         
     }
     

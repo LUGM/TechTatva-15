@@ -43,6 +43,9 @@
 		1863CBE71BB0422B00921C84 /* SocialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1863CBE61BB0422B00921C84 /* SocialView.m */; };
 		1863CBEA1BB0532B00921C84 /* newbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 1863CBE91BB0532B00921C84 /* newbg.png */; };
 		1897CC321B84EBD0007D779B /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897CC311B84EBD0007D779B /* EventsViewController.m */; };
+		18A3EDF91BB1E36D002233C9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A3EDF71BB1E36D002233C9 /* Bolts.framework */; };
+		18A3EDFA1BB1E36D002233C9 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18A3EDF81BB1E36D002233C9 /* Parse.framework */; };
+		18A3EDFD1BB1E3C8002233C9 /* UITableView+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3EDFC1BB1E3C8002233C9 /* UITableView+Animations.m */; };
 		18ADE1781B5ECC4B00CCD46D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ADE1771B5ECC4B00CCD46D /* Reachability.m */; };
 		18B24B6E1BB06AE100FA0885 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B24B6D1BB06AE100FA0885 /* WebViewController.m */; };
 		18B4FC561B5958A5004647DA /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4FC361B5958A5004647DA /* MKAnnotationView+WebCache.m */; };
@@ -116,8 +119,6 @@
 		A3D6E8521BB1D11800951F88 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D6E8511BB1D11800951F88 /* libsqlite3.dylib */; };
 		A3D6E8541BB1D12200951F88 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D6E8531BB1D12200951F88 /* Accounts.framework */; };
 		A3D6E8561BB1D12700951F88 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D6E8551BB1D12700951F88 /* Social.framework */; };
-		A3D6E8581BB1D1A800951F88 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D6E8571BB1D1A800951F88 /* Parse.framework */; };
-		A3D6E85A1BB1D1F000951F88 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D6E8591BB1D1F000951F88 /* Bolts.framework */; };
 		A3F4B6451B99FE1A001C3DA8 /* ResultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F4B6441B99FE1A001C3DA8 /* ResultsModel.m */; };
 /* End PBXBuildFile section */
 
@@ -194,6 +195,10 @@
 		1863CBE91BB0532B00921C84 /* newbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newbg.png; sourceTree = "<group>"; };
 		1897CC301B84EBD0007D779B /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
 		1897CC311B84EBD0007D779B /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		18A3EDF71BB1E36D002233C9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = TechTatva15/Bolts.framework; sourceTree = "<group>"; };
+		18A3EDF81BB1E36D002233C9 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = TechTatva15/Parse.framework; sourceTree = "<group>"; };
+		18A3EDFB1BB1E3C8002233C9 /* UITableView+Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Animations.h"; sourceTree = "<group>"; };
+		18A3EDFC1BB1E3C8002233C9 /* UITableView+Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Animations.m"; sourceTree = "<group>"; };
 		18ADE1761B5ECC4B00CCD46D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		18ADE1771B5ECC4B00CCD46D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		18B24B6C1BB06AE100FA0885 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
@@ -307,8 +312,6 @@
 		A3D6E8511BB1D11800951F88 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		A3D6E8531BB1D12200951F88 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		A3D6E8551BB1D12700951F88 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		A3D6E8571BB1D1A800951F88 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "../../../Downloads/parse-library-1/Parse.framework"; sourceTree = "<group>"; };
-		A3D6E8591BB1D1F000951F88 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "../../../Downloads/parse-library-1/Bolts.framework"; sourceTree = "<group>"; };
 		A3F4B6431B99FE1A001C3DA8 /* ResultsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsModel.h; sourceTree = "<group>"; };
 		A3F4B6441B99FE1A001C3DA8 /* ResultsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -318,12 +321,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A3D6E85A1BB1D1F000951F88 /* Bolts.framework in Frameworks */,
-				A3D6E8581BB1D1A800951F88 /* Parse.framework in Frameworks */,
 				A3D6E8561BB1D12700951F88 /* Social.framework in Frameworks */,
 				A3D6E8541BB1D12200951F88 /* Accounts.framework in Frameworks */,
 				A3D6E8521BB1D11800951F88 /* libsqlite3.dylib in Frameworks */,
 				A3D6E8501BB1D10E00951F88 /* libz.dylib in Frameworks */,
+				18A3EDFA1BB1E36D002233C9 /* Parse.framework in Frameworks */,
 				A3D6E84E1BB1D10700951F88 /* SystemConfiguration.framework in Frameworks */,
 				A3D6E84C1BB1D0FE00951F88 /* StoreKit.framework in Frameworks */,
 				A3D6E84A1BB1D0F700951F88 /* Security.framework in Frameworks */,
@@ -333,6 +335,7 @@
 				A3D6E8421BB1D0DA00951F88 /* CFNetwork.framework in Frameworks */,
 				A3D6E8401BB1D0D100951F88 /* AudioToolbox.framework in Frameworks */,
 				1848173F1B90CD680031F1B9 /* CoreData.framework in Frameworks */,
+				18A3EDF91BB1E36D002233C9 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,8 +373,8 @@
 		182922101B236AFB00F95AE0 = {
 			isa = PBXGroup;
 			children = (
-				A3D6E8591BB1D1F000951F88 /* Bolts.framework */,
-				A3D6E8571BB1D1A800951F88 /* Parse.framework */,
+				18A3EDF71BB1E36D002233C9 /* Bolts.framework */,
+				18A3EDF81BB1E36D002233C9 /* Parse.framework */,
 				A3D6E8551BB1D12700951F88 /* Social.framework */,
 				A3D6E8531BB1D12200951F88 /* Accounts.framework */,
 				A3D6E8511BB1D11800951F88 /* libsqlite3.dylib */,
@@ -526,6 +529,15 @@
 				1863CBE61BB0422B00921C84 /* SocialView.m */,
 			);
 			name = "About Us Buttons Cell";
+			sourceTree = "<group>";
+		};
+		18A3EDFE1BB1E3FE002233C9 /* Developer View Animation */ = {
+			isa = PBXGroup;
+			children = (
+				18A3EDFB1BB1E3C8002233C9 /* UITableView+Animations.h */,
+				18A3EDFC1BB1E3C8002233C9 /* UITableView+Animations.m */,
+			);
+			name = "Developer View Animation";
 			sourceTree = "<group>";
 		};
 		18ADE1751B5ECC4B00CCD46D /* Reachability Files */ = {
@@ -729,6 +741,7 @@
 		A3CD67D91B3C465700DACD83 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				18A3EDFE1BB1E3FE002233C9 /* Developer View Animation */,
 				1835F6A31B961691009E12E5 /* PodFiles */,
 				A33D4F221B86457C0083429E /* RESideMenu */,
 				18ADE1751B5ECC4B00CCD46D /* Reachability Files */,
@@ -930,6 +943,7 @@
 				4C01D5B71BAA206D009FDB09 /* InstagramComments.m in Sources */,
 				18085BE81BA9FED9005CCADB /* AboutUsViewController.m in Sources */,
 				18B4FC721B5962E4004647DA /* PQFCirclesInTriangle.m in Sources */,
+				18A3EDFD1BB1E3C8002233C9 /* UITableView+Animations.m in Sources */,
 				A33D4F1F1B8645760083429E /* RECommonFunctions.m in Sources */,
 				18085BEE1BAA02D9005CCADB /* OnlineEventsViewController.m in Sources */,
 				1835F6B01B961691009E12E5 /* NSMutableArray+SWUtilityButtons.m in Sources */,

@@ -6,10 +6,6 @@
 //  Copyright (c) 2015 AppDev. All rights reserved.
 //
 
-
-// When data from APIs is ready to be loaded, uncomment the required commented lines.
-
-
 #import "CategoriesTableViewController.h"
 #import "SSJSONModel.h"
 #import "MBProgressHUD.h"
@@ -33,6 +29,10 @@
     NSMutableArray *categoryDescriptions;
     NSMutableArray *categoryIds;
     NSMutableArray *categoryTypes;
+    
+    NSString *checkedCategoryUrl;
+    NSString *checkedScheduleUrl;
+    NSString *checkedResultUrl;
     
 }
 
@@ -59,18 +59,6 @@
     
     self.tableView.separatorColor = [UIColor orangeColor];
     
-
-    
-    [PFConfig getConfigInBackgroundWithBlock:^(PFConfig * config, NSError * error){
-        NSLog(@"CATEGORY URL : %@",config[@"categories"]);
-        NSLog(@"SCHEDULE URL : %@",config[@"schedule"]);
-        NSLog(@"RESULTS URL : %@",config[@"results"]);
-
-    }];
-    
-    
-    NSURL *categoriesUrl;
-    
     if (![self isInternetAvailable])
     {
         
@@ -81,10 +69,7 @@
         {
             
             json = [catData objectForKey:@"categories"];
-//            NSLog(@"json here is %@", json);
-//            [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
             [self setData];
-//            categoriesUrl = [NSURL URLWithString:@"http://localhost:8888/Categories.json"];
             NSLog(@"enters if ");
             
         }
@@ -94,13 +79,33 @@
     else
     {
         
-        categoriesUrl = [NSURL URLWithString:@"http://api.techtatva.in/categories"];
-    
-        myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
-        [myJsonInstance sendRequestWithUrl:categoriesUrl];
-        [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+        [PFConfig getConfigInBackgroundWithBlock:^(PFConfig * config, NSError * error){
+            NSLog(@"CATEGORY URL : %@",config[@"categories"]);
+            NSLog(@"SCHEDULE URL : %@",config[@"schedule"]);
+            NSLog(@"RESULTS URL : %@",config[@"results"]);
+            
+            checkedCategoryUrl = config[@"categories"];
+            checkedScheduleUrl = config[@"schedule"];
+            checkedResultUrl = config[@"results"];
+            
+        }];
         
+        [self setCorrectUrls];
+    
     }
+    
+}
+
+- (void) setCorrectUrls
+{
+    
+    NSURL *categoriesUrl;
+    categoriesUrl = [NSURL URLWithString:checkedCategoryUrl];
+    NSLog(@"categories url %@", categoriesUrl);
+    
+    myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
+    [myJsonInstance sendRequestWithUrl:categoriesUrl];
+    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     
 }
 
@@ -140,8 +145,6 @@
     cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png",[categoryNames objectAtIndex:indexPath.row]]];
 
     return cell;
-    
-    
     
 }
 
@@ -188,33 +191,14 @@
     
     if (JSONModel == myJsonInstance)
     {
-        
-//        NSLog(@"%@",myJsonInstance.parsedJsonData);
+
         json = myJsonInstance.parsedJsonData;
         
         NSUserDefaults *categoryData = [NSUserDefaults standardUserDefaults];
         [categoryData setObject:json forKey:@"categories"];
         [categoryData synchronize];
-//        NSLog(@"cat data %@", categoryData);
-        
-//        tempCategoryStorage = [json objectForKey:@"data"];
-//        
-//        for (NSDictionary * dict in tempCategoryStorage)
-//        {
-//            
-//            [categoryNames addObject:[dict objectForKey:@"categoryName"]];
-//            [categoryDescriptions addObject:[dict objectForKey:@"description"]];
-//            [categoryIds addObject:[dict objectForKey:@"categoryID"]];
-//            [categoryTypes addObject:[dict objectForKey:@"categoryType"]];
-//            
-//        }
         
         [self setData];
-        
-//        
-//        [self.tableView reloadData];
-//        
-//        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
         
     }
     
@@ -222,7 +206,9 @@
 
 - (void) setData
 {
+    
     tempCategoryStorage = [json objectForKey:@"data"];
+    NSLog(@"%@", tempCategoryStorage);
     categoryNames =[NSMutableArray new];
     categoryDescriptions = [NSMutableArray new];
     categoryTypes = [NSMutableArray new];

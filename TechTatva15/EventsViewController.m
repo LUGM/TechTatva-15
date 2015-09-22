@@ -15,6 +15,7 @@
 #import "Event.h"
 #import "RESideMenu.h"
 #import "ResultsModel.h"
+#import <Parse/Parse.h>
 
 @interface EventsViewController () <SSJSONModelDelegate>
 {
@@ -23,6 +24,7 @@
     SSJSONModel *resultsJsonInstance;
     
     NSDictionary *json;
+    NSDictionary *resultsDict;
     
     NSArray *tempEventStorage;
     NSArray *resultJsonResponse;
@@ -30,12 +32,15 @@
     NSIndexPath *cellSelectIndex;
     
     NSString *dayString;
+    NSString *checkedCategoryUrl;
+    NSString *checkedScheduleUrl;
+    NSString *checkedResultUrl;
     
     NSMutableArray *eventsArray;
     NSMutableArray *preDaySortEventsArray;
     NSMutableArray *filteredArray;
     NSMutableArray *resultsArray;
-//    NSMutableArray *resultsFilteredArray;
+    NSMutableArray *tempResultStorage;
     
 }
 
@@ -79,56 +84,61 @@
     _daySelected = @1;
     dayString = @"1";
     
-    NSURL *eventsUrl;
-    NSURL *resultsUrl;
-    
     if ([self isInternetAvailable])
     {
         
-        NSLog(@"Enters if");
-    
-        eventsUrl = [NSURL URLWithString:@"http://schedule.techtatva.in"];
-        resultsUrl = [NSURL URLWithString:@"http://results.techtatva.in"];
+        [PFConfig getConfigInBackgroundWithBlock:^(PFConfig * config, NSError * error){
+            NSLog(@"CATEGORY URL : %@",config[@"categories"]);
+            NSLog(@"SCHEDULE URL : %@",config[@"schedule"]);
+            NSLog(@"RESULTS URL : %@",config[@"results"]);
+            
+            checkedCategoryUrl = config[@"categories"];
+            checkedScheduleUrl = config[@"schedule"];
+            checkedResultUrl = config[@"results"];
+            
+        }];
         
-        myJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
-        myJsonInstance.delegate = self;
-        resultsJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
-        resultsJsonInstance.delegate = self;
-        [resultsJsonInstance sendRequestWithUrl:resultsUrl];
-        [myJsonInstance sendRequestWithUrl:eventsUrl];
-        
-        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        [self setCorrectUrls];
         
     }
     else
     {
         
-//        eventsUrl = [NSURL URLWithString:@"http://localhost:8888/Events.json"];
-//        resultsUrl = [NSURL URLWithString:@"http://localhost:8888/Results.json"];
-        
-        NSUserDefaults *eventVCDat =[NSUserDefaults standardUserDefaults];
-        //        NSLog(@"Data is %@", [evData objectForKey:@"data"]);
+        NSUserDefaults *eventVCDat = [NSUserDefaults standardUserDefaults];
+        NSUserDefaults *eventResultsDat = [NSUserDefaults standardUserDefaults];
         
         if ([eventVCDat objectForKey:@"events"] != nil)
         {
             
             json = [eventVCDat objectForKey:@"events"];
-//            NSLog(@"json here is %@", json);
-//            [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+            [self setData];
+            
+        }
+        if ([eventResultsDat objectForKey:@"eventRes"] != nil)
+        {
+            
+            resultsDict = [eventResultsDat objectForKey:@"eventRes"];
             [self setData];
             
         }
         
     }
     
-//    myJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
-//    myJsonInstance.delegate = self;
-//    resultsJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
-//    resultsJsonInstance.delegate = self;
-//    [resultsJsonInstance sendRequestWithUrl:resultsUrl];
-//    [myJsonInstance sendRequestWithUrl:eventsUrl];
+}
+
+- (void) setCorrectUrls
+{
     
-//    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+    NSURL *eventsUrl;
+    NSURL *resultsUrl;
+    eventsUrl = [NSURL URLWithString:checkedScheduleUrl];
+    resultsUrl = [NSURL URLWithString:checkedResultUrl];
+    
+    myJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
+    [myJsonInstance sendRequestWithUrl:eventsUrl];
+    resultsJsonInstance = [[SSJSONModel alloc] initWithDelegate:self];
+    [resultsJsonInstance sendRequestWithUrl:resultsUrl];
+    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     
 }
 
@@ -148,29 +158,13 @@
     if (JSONModel == myJsonInstance)
     {
         
-//        NSLog(@"%@",myJsonInstance.parsedJsonData);
         json = myJsonInstance.parsedJsonData;
         
         NSUserDefaults *eventVCData = [NSUserDefaults standardUserDefaults];
         [eventVCData setObject:json forKey:@"events"];
         [eventVCData synchronize];
-        NSLog(@"ORIGINAL : %@",json);
+        NSLog(@"ORIGINAL : %@", json);
         
-//        resultsArray = [[NSMutableArray alloc] init];
-//        preDaySortEventsArray = [[NSMutableArray alloc] init];
-//        
-//        tempEventStorage = [json objectForKey:@"data"];
-//        
-//        for (NSDictionary *dict in tempEventStorage)
-//        {
-//
-//            Event *event = [[Event alloc] initWithDict:dict];
-//            [preDaySortEventsArray addObject:event];
-//            
-//        }
-//        
-//        [self filterEvents];
-//        
         [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
         
         [self setData];
@@ -179,9 +173,13 @@
     else if (JSONModel == resultsJsonInstance)
     {
      
-        NSLog(@"results json log%@",resultsJsonInstance.parsedJsonData);
+        resultsDict = myJsonInstance.parsedJsonData;
         
-//        [self asyncResultRequest];
+        NSUserDefaults *eventResultVCData = [NSUserDefaults standardUserDefaults];
+        [eventResultVCData setObject:resultsDict forKey:@"eventRes"];
+        [eventResultVCData synchronize];
+        
+        [self setData];
         
     }
     
@@ -193,6 +191,7 @@
     resultsArray = [[NSMutableArray alloc] init];
     preDaySortEventsArray = [[NSMutableArray alloc] init];
     tempEventStorage = [[NSMutableArray alloc] init];
+    tempResultStorage = [[NSMutableArray alloc] init];
     
     tempEventStorage = [json objectForKey:@"data"];
     for (NSDictionary *dict in tempEventStorage)
@@ -202,61 +201,15 @@
         [preDaySortEventsArray addObject:event];
 
     }
-    [self filterEvents];
     
-}
-
-- (void) fetchedData:(NSData *) response
-{
-    
-    NSError *error;
-    
-    resultJsonResponse = [NSJSONSerialization JSONObjectWithData:response options:kNilOptions error:&error];
-    
-    NSLog(@"results array %@", resultJsonResponse);
-    
-    //    resultJsonResponse = resultsJsonInstance.parsedJsonData;
-    
-    for (NSDictionary *dictionary in resultJsonResponse)
+    for (NSDictionary *dict in tempResultStorage)
     {
         
-        ResultsModel *result = [[ResultsModel alloc] initWithDict:dictionary];
+        ResultsModel *result = [[ResultsModel alloc] initWithDict:dict];
         [resultsArray addObject:result];
         
     }
-    
-}
-
-// check if it will be main queue or current queue in sendAsynReq call, has to run in parallel
-
-- (void) asyncResultRequest
-{
-    
-    NSURL *resultUrl;
-    
-    if ([self isInternetAvailable])
-    {
-        
-        NSLog(@"Enters if");
-
-        resultUrl = [NSURL URLWithString:@"results.techtatva.in"];
-        
-    }
-    else
-    {
-        
-        resultUrl = [NSURL URLWithString:@"http://localhost:8888/Results.json"];
-        
-    }
-
-    NSURLRequest *requestSent = [NSURLRequest requestWithURL:resultUrl];
-    
-    [NSURLConnection sendAsynchronousRequest:requestSent queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError)
-     {
-         
-         [self fetchedData:data];
-         
-     }];
+    [self filterEvents];
     
 }
 

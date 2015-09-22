@@ -10,6 +10,12 @@
 #import "RESideMenu.h"
 
 @interface DevelopersViewController ()
+{
+    
+    NSMutableArray *arrData;
+    __weak IBOutlet UITableView *devTable;
+    
+}
 
 @end
 
@@ -21,8 +27,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.view.backgroundColor = [UIColor orangeColor];
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
+    
+    [self setAnimationTableView:AnimationRightToLeft];
+    [self setData];
     
 }
 
@@ -38,7 +46,7 @@
 {
     
     return YES;
-
+    
 }
 
 - (void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
@@ -50,6 +58,62 @@
         [self performSegueWithIdentifier:@"easterEgg" sender:self];
         
     }
+    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    
+    [super viewWillAppear:animated];
+    
+}
+
+# pragma mark - UI Table View Data Source Methods
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    
+    return arrData.count;
+    
+}
+
+- (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    static NSString *cellId = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    if (cell == nil)
+    {
+        
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+        
+    }
+    
+    [cell.textLabel setText:[arrData objectAtIndex:indexPath.row]];
+    [cell.textLabel setTextColor:[UIColor whiteColor]];
+    [cell setBackgroundColor:[UIColor colorWithRed:255/ 255.0 green:98/ 255.0 blue:90/ 255.0 alpha:1.0]];
+    
+    return cell;
+    
+}
+
+- (void) setData
+{
+    
+    arrData = [[NSMutableArray alloc] init];
+    NSInteger iCount = 100;
+    for (NSInteger i = 0; i < iCount; i++) {
+        [arrData addObject:[NSString stringWithFormat:@"TEXT - %ld", (long)i]];
+    }
+    
+    [devTable reloadData];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [devTable performAnimation:self.animationTableView finishBlock:^(bool finished) {
+            
+        }];
+    });
     
 }
 

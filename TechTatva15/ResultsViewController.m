@@ -6,17 +6,13 @@
 //  Copyright (c) 2015 AppDev. All rights reserved.
 //
 
-
-// UI customisations to be added, loads to do in this view still, check last year's app, it's a good reference
-// In ResultsViewController .h and .m files, all commented lines are attempt to implement search, look at code again, it should work, with some changes maybe.
-
-
 #import "ResultsViewController.h"
 #import "SSJSONModel.h"
 #import "MBProgressHUD.h"
 #import "Reachability.h"
 #import "ResultsModel.h"
 #import "RESideMenu.h"
+#import <Parse/Parse.h>
 
 @interface ResultsViewController () <SSJSONModelDelegate>
 {
@@ -24,11 +20,16 @@
     NSMutableArray *categoryNames;
     NSMutableArray *eventNames;
     NSMutableArray *particularEventResults;
-    NSMutableArray * filteredArray;
+    NSMutableArray *tempEventResults;
+    NSMutableArray *filteredArray;
     
-    NSArray *json;
+    NSDictionary *json;
     
     SSJSONModel *myJsonInstance;
+    
+    NSString *checkedCategoryUrl;
+    NSString *checkedScheduleUrl;
+    NSString *checkedResultUrl;
     
 }
 
@@ -56,16 +57,60 @@
     
     // change the url, this one is unresponsive
     
-    NSURL *resultsUrl = [NSURL URLWithString:@"http://results.techtatva.in"];
+    if ([self isInternetAvailable])
+    {
+        
+        [PFConfig getConfigInBackgroundWithBlock:^(PFConfig * config, NSError * error){
+            NSLog(@"CATEGORY URL : %@",config[@"categories"]);
+            NSLog(@"SCHEDULE URL : %@",config[@"schedule"]);
+            NSLog(@"RESULTS URL : %@",config[@"results"]);
+            
+            checkedCategoryUrl = config[@"categories"];
+            checkedScheduleUrl = config[@"schedule"];
+            checkedResultUrl = config[@"results"];
+            
+        }];
+        
+        [self setCorrectUrls];
+        
+    }
+    else
+    {
+        
+        UIAlertView *netUnavailable = [[UIAlertView alloc] initWithTitle:@"No Internet" message:@"Check your internet connection and try again" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [netUnavailable show];
+        
+        NSUserDefaults *resultDat = [NSUserDefaults standardUserDefaults];
+        if ([resultDat objectForKey:@"results"] != nil)
+        {
+            
+            json = [resultDat objectForKey:@"results"];
+            [self setData];
+            
+        }
+        
+    }
+    
+}
+
+- (void) setCorrectUrls
+{
+    
+    NSURL *resultsUrl;
+    resultsUrl = [NSURL URLWithString:checkedResultUrl];
+    
     myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
     [myJsonInstance sendRequestWithUrl:resultsUrl];
     [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
+    
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
 }
 
 /*
@@ -87,21 +132,33 @@
     if (JSONModel == myJsonInstance)
     {
         
-        NSLog(@"%@",myJsonInstance.parsedJsonData);
         json = myJsonInstance.parsedJsonData;
-//        categoryNames =[NSMutableArray new];
-        particularEventResults = [NSMutableArray new];
         
-        for (NSDictionary * dict in json)
-        {
-            ResultsModel * result = [[ResultsModel alloc] initWithDict:dict];
-            [particularEventResults addObject:result];
-        }
+        NSUserDefaults *eventData = [NSUserDefaults standardUserDefaults];
+        [eventData setObject:json forKey:@"events"];
+        [eventData synchronize];
         
-        [myTable reloadData];
-        [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+        [self setData];
         
     }
+    
+}
+
+- (void) setData
+{
+    
+    particularEventResults = [NSMutableArray new];
+    tempEventResults = [[NSMutableArray alloc] init];
+    tempEventResults = [json objectForKey:@"data"];
+    
+    for (NSDictionary * dict in tempEventResults)
+    {
+        ResultsModel * result = [[ResultsModel alloc] initWithDict:dict];
+        [particularEventResults addObject:result];
+    }
+    
+    [myTable reloadData];
+    [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
     
 }
 

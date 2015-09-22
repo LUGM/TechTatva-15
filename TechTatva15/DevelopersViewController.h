@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UITableView+Animations.h"
 
 @interface DevelopersViewController : UIViewController
+
 - (IBAction)hamburgerLoader:(id)sender;
+@property (assign, nonatomic) UITableViewAnimation animationTableView;
 
 @end

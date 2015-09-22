@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mmT-Jb-gOW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mmT-Jb-gOW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -667,7 +667,23 @@
                     <view key="view" contentMode="scaleToFill" id="olk-Qk-Nhw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="b2m-n7-ZyV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fD2-KV-LEE" id="ZUi-KM-uFf"/>
+                                    <outlet property="delegate" destination="fD2-KV-LEE" id="blG-DK-HG2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="b2m-n7-ZyV" firstAttribute="leading" secondItem="olk-Qk-Nhw" secondAttribute="leading" id="N9h-mg-F1n"/>
+                            <constraint firstAttribute="trailing" secondItem="b2m-n7-ZyV" secondAttribute="trailing" id="a0Z-FQ-gU5"/>
+                            <constraint firstItem="b2m-n7-ZyV" firstAttribute="top" secondItem="olk-Qk-Nhw" secondAttribute="top" id="kvc-9H-19c"/>
+                            <constraint firstItem="b2m-n7-ZyV" firstAttribute="bottom" secondItem="ouC-Ud-ReA" secondAttribute="top" id="zSW-XH-EfR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Developer Team" id="15u-8L-ALc">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="Msd-y0-1Bi">
@@ -679,6 +695,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="devTable" destination="b2m-n7-ZyV" id="qKv-Jl-Mx0"/>
                         <segue destination="PIx-3i-VQm" kind="presentation" identifier="easterEgg" id="K8c-I8-a1x"/>
                     </connections>
                 </viewController>
