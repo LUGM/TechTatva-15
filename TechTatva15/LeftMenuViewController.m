@@ -197,6 +197,7 @@
     }
     
      [self.sideMenuViewController hideMenuViewController];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
 }
 

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mmT-Jb-gOW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mmT-Jb-gOW">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -50,7 +49,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Results" id="6j8-zJ-STw">
-                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="bLk-3s-Yuh">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="bLk-3s-Yuh">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="hamburgerLoader:" destination="BGT-Vw-D6L" id="Ysj-dp-3vP"/>
                             </connections>
@@ -113,7 +113,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bUx-1f-hR8">
-                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="Spp-6G-Xce">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="Spp-6G-Xce">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="hamburgerLoader:" destination="h3C-Oa-BbA" id="mqd-F0-Rw4"/>
                             </connections>
@@ -248,7 +249,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cHr-Mg-vjG">
-                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="CV2-z5-Jhd">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="CV2-z5-Jhd">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="hamburgerLoader:" destination="Qh7-j3-X9N" id="kdQ-gh-S2H"/>
                             </connections>
@@ -301,7 +303,8 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Categories" id="xgN-St-4Mx">
-                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="lfh-AQ-GsU">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="lfh-AQ-GsU">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="hamburgerLoader:" destination="SlK-De-5MX" id="Rpl-Gf-iSW"/>
                             </connections>
@@ -328,7 +331,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="pef-9P-4Kd">
-                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="4FE-JU-rLr">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="4FE-JU-rLr">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="hamburgerLoader:" destination="Eg6-h5-4aW" id="iSK-J6-Euw"/>
                             </connections>
@@ -381,7 +385,8 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="TechTatva '15" id="2Dy-Kc-eZf">
-                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="5hS-HP-jaV">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="5hS-HP-jaV">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="hamburgerLoader:" destination="Jin-ph-3OA" id="ViD-Z3-hj3"/>
                             </connections>
@@ -496,7 +501,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="vny-Qc-KvC">
-                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="t88-h5-PE4">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="t88-h5-PE4">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="hamburgerLoader:" destination="XuI-BD-FRI" id="XGi-ES-Oeu"/>
                             </connections>
@@ -522,7 +528,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="xod-Vt-7Dj">
-                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="ccA-Bk-zg7">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="ccA-Bk-zg7">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="hamburgerLoader:" destination="yM3-9C-FBc" id="3xO-9E-olp"/>
                             </connections>
@@ -663,7 +670,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Developer Team" id="15u-8L-ALc">
-                        <barButtonItem key="leftBarButtonItem" image="Swipe Right" id="Msd-y0-1Bi">
+                        <barButtonItem key="leftBarButtonItem" image="menu" id="Msd-y0-1Bi">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="hamburgerLoader:" destination="fD2-KV-LEE" id="3Fo-tD-dfI"/>
                             </connections>
@@ -874,6 +882,6 @@
         <image name="Facebook" width="32" height="32"/>
         <image name="Git" width="32" height="32"/>
         <image name="Safari" width="32" height="32"/>
-        <image name="Swipe Right" width="32" height="32"/>
+        <image name="menu" width="32" height="32"/>
     </resources>
 </document>

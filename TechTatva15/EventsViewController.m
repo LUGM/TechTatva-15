@@ -205,11 +205,7 @@
         
     }
     
-//    [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
-    
     [self filterEvents];
-    
-//    [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
     
 }
 
@@ -322,7 +318,7 @@
         
     }
     
-//    [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
+    [MBProgressHUD hideHUDForView:self.view animated:YES];
     
     [eventTable reloadData];
     
@@ -360,7 +356,7 @@
     else
     {
         
-        return tempEventStorage.count;
+        return eventsArray.count;
         
     }
     
