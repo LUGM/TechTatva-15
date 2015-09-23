@@ -10,6 +10,7 @@
 #import "MBProgressHUD.h"
 #import "Reachability.h"
 #import "RESideMenu.h"
+#import <Parse/Parse.h>
 
 @interface RegisterViewController ()
 
@@ -22,12 +23,16 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
     if ([self isInternetAvailable])
     {
         
         [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-        [self loadWebView];
+        [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
+        [PFConfig getConfigInBackgroundWithBlock:^(PFConfig * config, NSError * error){
+            NSLog(@"CATEGORY URL : %@", config[@"register"]);
+            [self loadWebView:config[@"register"]];
+        }];
         
     }
     else
@@ -49,11 +54,11 @@
     
 }
 
-- (void) loadWebView
+- (void) loadWebView :(NSString*)registerURL
 {
     
     UIWebView *registerWebView = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    [registerWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://register.techtatva.in/"]]];
+    [registerWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:registerURL]]];
     [self.view addSubview:registerWebView];
     [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
     

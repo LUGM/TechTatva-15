@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface OnlineEventsViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIWebView *registerWebView;
 - (IBAction)hamburgerLoader:(id)sender;
 
 @end

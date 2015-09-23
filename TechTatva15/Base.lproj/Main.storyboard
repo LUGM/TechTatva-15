@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mmT-Jb-gOW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aKN-gg-Sec">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -526,7 +526,22 @@
                     <view key="view" contentMode="scaleToFill" id="Gls-3u-2x8">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="48v-St-dsJ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="cXh-vi-tYo" id="ReZ-iu-4NV"/>
+                                </connections>
+                            </webView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="48v-St-dsJ" firstAttribute="leading" secondItem="Gls-3u-2x8" secondAttribute="leading" id="8gk-rl-jj2"/>
+                            <constraint firstAttribute="trailing" secondItem="48v-St-dsJ" secondAttribute="trailing" id="dzi-IV-88r"/>
+                            <constraint firstItem="48v-St-dsJ" firstAttribute="bottom" secondItem="yJ3-X4-fDD" secondAttribute="top" id="fl6-gs-3ig"/>
+                            <constraint firstItem="48v-St-dsJ" firstAttribute="top" secondItem="Gls-3u-2x8" secondAttribute="top" id="vTI-ca-UPd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xod-Vt-7Dj">
                         <barButtonItem key="leftBarButtonItem" image="menu" id="ccA-Bk-zg7">
@@ -537,10 +552,50 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="registerWebView" destination="48v-St-dsJ" id="roo-Ja-TFj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0HK-3c-2zG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2730" y="8034"/>
+        </scene>
+        <!--Splash View Controller-->
+        <scene sceneID="dKd-vr-aUt">
+            <objects>
+                <viewController id="aKN-gg-Sec" customClass="SplashViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zzY-ib-Iyy"/>
+                        <viewControllerLayoutGuide type="bottom" id="CTR-MQ-R1w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="47V-90-VQz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MoO-FD-4wp">
+                                <rect key="frame" x="70" y="121" width="180" height="180"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="GQA-Po-Q17"/>
+                                    <constraint firstAttribute="height" constant="180" id="IdU-2M-AQK"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MoO-FD-4wp" firstAttribute="top" secondItem="zzY-ib-Iyy" secondAttribute="bottom" constant="101" id="u2t-Mr-7mP"/>
+                            <constraint firstAttribute="centerX" secondItem="MoO-FD-4wp" secondAttribute="centerX" id="w8F-wD-vrJ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="splashView" destination="MoO-FD-4wp" id="Wl1-Pb-0wA"/>
+                        <segue destination="mmT-Jb-gOW" kind="presentation" identifier="FirstView" id="yIY-0x-ab9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mvC-Fq-uI2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="717" y="3490"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="nYb-qu-4hZ">

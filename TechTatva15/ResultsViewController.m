@@ -44,7 +44,7 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
     self.navigationController.navigationBar.layer.shadowColor = [[UIColor blackColor] CGColor];
     self.navigationController.navigationBar.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
@@ -134,7 +134,7 @@
         json = myJsonInstance.parsedJsonData;
         
         NSUserDefaults *eventData = [NSUserDefaults standardUserDefaults];
-        [eventData setObject:json forKey:@"events"];
+        [eventData setObject:json forKey:@"results"];
         [eventData synchronize];
         
         [self setData];

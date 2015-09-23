@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -15,17 +15,11 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l1E-Jr-422">
-                        <rect key="frame" x="15" y="5" width="199" height="21"/>
+                        <rect key="frame" x="15" y="5" width="254" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Vi-fc-vAf">
-                        <rect key="frame" x="277" y="8" width="32" height="32"/>
-                        <state key="normal" image="Results">
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4K7-rt-8YI">
                         <rect key="frame" x="15" y="20" width="121" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
@@ -42,7 +36,7 @@
                         <rect key="frame" x="15" y="85" width="35" height="35"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Venue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WN4-Ca-vMY">
-                        <rect key="frame" x="66" y="51" width="148" height="19"/>
+                        <rect key="frame" x="66" y="52" width="148" height="19"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -53,24 +47,27 @@
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wi2-rx-giz">
+                        <rect key="frame" x="277" y="208" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="uNh-Sb-2zs"/>
+                        </constraints>
+                        <state key="normal" image="Call">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3cI-2h-GoG">
                         <rect key="frame" x="66" y="136" width="148" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehE-fb-InV">
-                        <rect key="frame" x="66" y="217" width="186" height="21"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ehE-fb-InV">
+                        <rect key="frame" x="66" y="217" width="203" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wi2-rx-giz">
-                        <rect key="frame" x="277" y="208" width="32" height="32"/>
-                        <state key="normal" image="Call">
-                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                        </state>
-                    </button>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Team" translatesAutoresizingMaskIntoConstraints="NO" id="uEv-8Y-BbN">
                         <rect key="frame" x="15" y="169" width="35" height="35"/>
                     </imageView>
@@ -81,15 +78,25 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Location" translatesAutoresizingMaskIntoConstraints="NO" id="ZB4-nh-3o1">
-                        <rect key="frame" x="15" y="42" width="35" height="35"/>
+                        <rect key="frame" x="15" y="44" width="35" height="35"/>
                     </imageView>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40n-Q5-oNQ">
-                        <rect key="frame" x="221" y="8" width="32" height="33"/>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40n-Q5-oNQ">
+                        <rect key="frame" x="277" y="8" width="32" height="33"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="4hb-lL-EyN"/>
+                            <constraint firstAttribute="height" constant="33" id="UiP-RA-DaS"/>
+                        </constraints>
                         <state key="normal" image="Details">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
                     </button>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="40n-Q5-oNQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="90q-FE-ZOa"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="wi2-rx-giz" secondAttribute="trailing" constant="3" id="MqG-4c-E39"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="40n-Q5-oNQ" secondAttribute="trailing" constant="3" id="jRs-Qk-zwa"/>
+                    <constraint firstItem="wi2-rx-giz" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="200" id="pNS-CY-I6n"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="callButton" destination="wi2-rx-giz" id="Io0-Bl-SgD"/>
@@ -102,7 +109,6 @@
                 <outlet property="eventLabel" destination="l1E-Jr-422" id="K2H-Fr-mNb"/>
                 <outlet property="maxTeamMembersImageView" destination="uEv-8Y-BbN" id="uk7-9A-lf1"/>
                 <outlet property="maxTeamMembersLabel" destination="Ww5-C2-GaN" id="CT1-ne-27f"/>
-                <outlet property="resultButton" destination="5Vi-fc-vAf" id="HQb-ok-RYl"/>
                 <outlet property="timeImageView" destination="F1q-Jb-r5Y" id="Q8B-DK-wFC"/>
                 <outlet property="timeLabel" destination="XhJ-I1-6Dg" id="Y2N-hB-eDo"/>
                 <outlet property="venueImageView" destination="ZB4-nh-3o1" id="x3J-zV-dbG"/>
@@ -117,7 +123,6 @@
         <image name="Date" width="32" height="32"/>
         <image name="Details" width="32" height="32"/>
         <image name="Location" width="32" height="32"/>
-        <image name="Results" width="32" height="32"/>
         <image name="Team" width="32" height="32"/>
         <image name="Time" width="32" height="32"/>
     </resources>

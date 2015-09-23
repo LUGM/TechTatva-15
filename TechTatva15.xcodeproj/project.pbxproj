@@ -12,14 +12,12 @@
 		18085BE81BA9FED9005CCADB /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18085BE71BA9FED9005CCADB /* AboutUsViewController.m */; };
 		18085BEB1BAA001B005CCADB /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18085BEA1BAA001B005CCADB /* RegisterViewController.m */; };
 		18085BEE1BAA02D9005CCADB /* OnlineEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18085BED1BAA02D9005CCADB /* OnlineEventsViewController.m */; };
-		1822727B1B5A265200CD52B8 /* TTlogomain.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 1822727A1B5A265200CD52B8 /* TTlogomain.jpg */; };
 		182653F21BAA7D43006B30CF /* EasterEggViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182653F11BAA7D43006B30CF /* EasterEggViewController.m */; };
 		182653F41BAA7DC0006B30CF /* linuxtux.png in Resources */ = {isa = PBXBuildFile; fileRef = 182653F31BAA7DC0006B30CF /* linuxtux.png */; };
 		1829221F1B236AFB00F95AE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1829221E1B236AFB00F95AE0 /* main.m */; };
 		182922221B236AFB00F95AE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182922211B236AFB00F95AE0 /* AppDelegate.m */; };
 		182922281B236AFB00F95AE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182922261B236AFB00F95AE0 /* Main.storyboard */; };
 		1829222A1B236AFB00F95AE0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182922291B236AFB00F95AE0 /* Images.xcassets */; };
-		1829222D1B236AFB00F95AE0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1829222B1B236AFB00F95AE0 /* LaunchScreen.xib */; };
 		182922391B236AFB00F95AE0 /* TechTatva15Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 182922381B236AFB00F95AE0 /* TechTatva15Tests.m */; };
 		182D3F491B56AFB30008F4BB /* InstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D3F481B56AFB30008F4BB /* InstagramViewController.m */; };
 		182D3F4C1B56B0C80008F4BB /* InstagramUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D3F4B1B56B0C80008F4BB /* InstagramUser.m */; };
@@ -67,11 +65,9 @@
 		18B4FC681B595E67004647DA /* FullScreenImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4FC671B595E67004647DA /* FullScreenImageViewController.m */; };
 		18B4FC721B5962E4004647DA /* PQFCirclesInTriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4FC6B1B5962E4004647DA /* PQFCirclesInTriangle.m */; };
 		18B4FC731B5962E4004647DA /* UIColor+FlatColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4FC6E1B5962E4004647DA /* UIColor+FlatColors.m */; };
-		18B5ECE51B23793E00055A3F /* video.mov in Resources */ = {isa = PBXBuildFile; fileRef = 18B5ECE41B23793E00055A3F /* video.mov */; };
 		18D5D4C51BAEE89200833626 /* Favourites.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D5D4C41BAEE89200833626 /* Favourites.m */; };
 		18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E282721B373C4D0084DCDE /* ResultsViewController.m */; };
 		18FDACA51B76386F00C23742 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDACA41B76386F00C23742 /* Event.m */; };
-		4C01D5B11BAA15FF009FDB09 /* SideMenuBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C01D5B01BAA15FF009FDB09 /* SideMenuBackground.png */; };
 		4C01D5B41BAA1FF0009FDB09 /* InstagramLikes.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C01D5B31BAA1FF0009FDB09 /* InstagramLikes.m */; };
 		4C01D5B71BAA206D009FDB09 /* InstagramComments.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C01D5B61BAA206D009FDB09 /* InstagramComments.m */; };
 		4C9744031BAF39A400B51649 /* Airborne.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744021BAF39A400B51649 /* Airborne.png */; };
@@ -95,6 +91,7 @@
 		4C97443A1BAFDBDB00B51649 /* devimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744391BAFDBDB00B51649 /* devimg.png */; };
 		4CC9F6D01B3DBB4F002F9C1D /* eventViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */; };
 		4CC9F6D11B3DBB4F002F9C1D /* eventViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */; };
+		A314D8131BB3116C0005FF0D /* iphone5.mov in Resources */ = {isa = PBXBuildFile; fileRef = A314D8121BB3116C0005FF0D /* iphone5.mov */; };
 		A33D4F1F1B8645760083429E /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = A33D4F1A1B8645760083429E /* RECommonFunctions.m */; };
 		A33D4F201B8645760083429E /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A33D4F1C1B8645760083429E /* RESideMenu.m */; };
 		A33D4F211B8645760083429E /* UIViewController+RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A33D4F1E1B8645760083429E /* UIViewController+RESideMenu.m */; };
@@ -119,7 +116,11 @@
 		A3D6E8521BB1D11800951F88 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D6E8511BB1D11800951F88 /* libsqlite3.dylib */; };
 		A3D6E8541BB1D12200951F88 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D6E8531BB1D12200951F88 /* Accounts.framework */; };
 		A3D6E8561BB1D12700951F88 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D6E8551BB1D12700951F88 /* Social.framework */; };
+		A3D8BAF61BB2F810003FA1A4 /* TTLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D8BAF51BB2F810003FA1A4 /* TTLogo.png */; };
 		A3F4B6451B99FE1A001C3DA8 /* ResultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F4B6441B99FE1A001C3DA8 /* ResultsModel.m */; };
+		A3F59AC41BB316DF009CF058 /* iphone6.mov in Resources */ = {isa = PBXBuildFile; fileRef = A3F59AC31BB316DF009CF058 /* iphone6.mov */; };
+		A3F59AC61BB31774009CF058 /* iphone6p.mov in Resources */ = {isa = PBXBuildFile; fileRef = A3F59AC51BB31774009CF058 /* iphone6p.mov */; };
+		A3F59AC81BB317BE009CF058 /* iphone4.mov in Resources */ = {isa = PBXBuildFile; fileRef = A3F59AC71BB317BE009CF058 /* iphone4.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,18 +144,16 @@
 		18085BEC1BAA02D9005CCADB /* OnlineEventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OnlineEventsViewController.h; sourceTree = "<group>"; };
 		18085BED1BAA02D9005CCADB /* OnlineEventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OnlineEventsViewController.m; sourceTree = "<group>"; };
 		1811F1AB1B7553EC00B6BE2E /* TechTatva15-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TechTatva15-Prefix.pch"; sourceTree = "<group>"; };
-		1822727A1B5A265200CD52B8 /* TTlogomain.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = TTlogomain.jpg; sourceTree = "<group>"; };
 		182653F01BAA7D43006B30CF /* EasterEggViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasterEggViewController.h; sourceTree = "<group>"; };
 		182653F11BAA7D43006B30CF /* EasterEggViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasterEggViewController.m; sourceTree = "<group>"; };
 		182653F31BAA7DC0006B30CF /* linuxtux.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linuxtux.png; sourceTree = "<group>"; };
-		182922191B236AFB00F95AE0 /* TechTatva15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechTatva15.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		182922191B236AFB00F95AE0 /* TectTatva'15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TectTatva'15.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1829221D1B236AFB00F95AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1829221E1B236AFB00F95AE0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		182922201B236AFB00F95AE0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		182922211B236AFB00F95AE0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		182922271B236AFB00F95AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		182922291B236AFB00F95AE0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1829222C1B236AFB00F95AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		182922321B236AFB00F95AE0 /* TechTatva15Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TechTatva15Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		182922371B236AFB00F95AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182922381B236AFB00F95AE0 /* TechTatva15Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TechTatva15Tests.m; sourceTree = "<group>"; };
@@ -243,14 +242,12 @@
 		18B4FC6C1B5962E4004647DA /* PQFCustomLoaders.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PQFCustomLoaders.h; sourceTree = "<group>"; };
 		18B4FC6D1B5962E4004647DA /* UIColor+FlatColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FlatColors.h"; sourceTree = "<group>"; };
 		18B4FC6E1B5962E4004647DA /* UIColor+FlatColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FlatColors.m"; sourceTree = "<group>"; };
-		18B5ECE41B23793E00055A3F /* video.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = video.mov; sourceTree = "<group>"; };
 		18D5D4C31BAEE89200833626 /* Favourites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Favourites.h; sourceTree = "<group>"; };
 		18D5D4C41BAEE89200833626 /* Favourites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Favourites.m; sourceTree = "<group>"; };
 		18E282711B373C4D0084DCDE /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
 		18E282721B373C4D0084DCDE /* ResultsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsViewController.m; sourceTree = "<group>"; };
 		18FDACA31B76386F00C23742 /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
 		18FDACA41B76386F00C23742 /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
-		4C01D5B01BAA15FF009FDB09 /* SideMenuBackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SideMenuBackground.png; sourceTree = "<group>"; };
 		4C01D5B21BAA1FF0009FDB09 /* InstagramLikes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramLikes.h; path = TechTatva15/InstagramLikes.h; sourceTree = "<group>"; };
 		4C01D5B31BAA1FF0009FDB09 /* InstagramLikes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramLikes.m; path = TechTatva15/InstagramLikes.m; sourceTree = "<group>"; };
 		4C01D5B51BAA206D009FDB09 /* InstagramComments.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramComments.h; path = TechTatva15/InstagramComments.h; sourceTree = "<group>"; };
@@ -277,6 +274,7 @@
 		4CC9F6CD1B3DBB4F002F9C1D /* eventViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventViewTableViewCell.h; sourceTree = "<group>"; };
 		4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventViewTableViewCell.m; sourceTree = "<group>"; };
 		4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eventViewTableViewCell.xib; sourceTree = "<group>"; };
+		A314D8121BB3116C0005FF0D /* iphone5.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = iphone5.mov; sourceTree = "<group>"; };
 		A33D4F191B8645760083429E /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		A33D4F1A1B8645760083429E /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
 		A33D4F1B1B8645760083429E /* RESideMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RESideMenu.h; sourceTree = "<group>"; };
@@ -312,8 +310,12 @@
 		A3D6E8511BB1D11800951F88 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		A3D6E8531BB1D12200951F88 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		A3D6E8551BB1D12700951F88 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		A3D8BAF51BB2F810003FA1A4 /* TTLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TTLogo.png; sourceTree = "<group>"; };
 		A3F4B6431B99FE1A001C3DA8 /* ResultsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsModel.h; sourceTree = "<group>"; };
 		A3F4B6441B99FE1A001C3DA8 /* ResultsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsModel.m; sourceTree = "<group>"; };
+		A3F59AC31BB316DF009CF058 /* iphone6.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = iphone6.mov; sourceTree = "<group>"; };
+		A3F59AC51BB31774009CF058 /* iphone6p.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = iphone6p.mov; sourceTree = "<group>"; };
+		A3F59AC71BB317BE009CF058 /* iphone4.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = iphone4.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -397,7 +399,7 @@
 		1829221A1B236AFB00F95AE0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				182922191B236AFB00F95AE0 /* TechTatva15.app */,
+				182922191B236AFB00F95AE0 /* TectTatva'15.app */,
 				182922321B236AFB00F95AE0 /* TechTatva15Tests.xctest */,
 			);
 			name = Products;
@@ -412,9 +414,6 @@
 				18F1BD561B3FE3EF00473E1A /* Views */,
 				18F1BD521B3FE35000473E1A /* Controllers */,
 				182922291B236AFB00F95AE0 /* Images.xcassets */,
-				1822727A1B5A265200CD52B8 /* TTlogomain.jpg */,
-				18B5ECE41B23793E00055A3F /* video.mov */,
-				1829222B1B236AFB00F95AE0 /* LaunchScreen.xib */,
 				1829221C1B236AFB00F95AE0 /* Supporting Files */,
 			);
 			path = TechTatva15;
@@ -423,10 +422,14 @@
 		1829221C1B236AFB00F95AE0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A3D8BAF51BB2F810003FA1A4 /* TTLogo.png */,
+				A314D8121BB3116C0005FF0D /* iphone5.mov */,
+				A3F59AC31BB316DF009CF058 /* iphone6.mov */,
+				A3F59AC51BB31774009CF058 /* iphone6p.mov */,
+				A3F59AC71BB317BE009CF058 /* iphone4.mov */,
 				4C9744011BAF398600B51649 /* Category Images */,
 				4C9744391BAFDBDB00B51649 /* devimg.png */,
 				182653F31BAA7DC0006B30CF /* linuxtux.png */,
-				4C01D5B01BAA15FF009FDB09 /* SideMenuBackground.png */,
 				1835F6B61B961FC6009E12E5 /* Minus-32.png */,
 				1835F6A11B961675009E12E5 /* Minus-50.png */,
 				1811F1AB1B7553EC00B6BE2E /* TechTatva15-Prefix.pch */,
@@ -779,7 +782,7 @@
 			);
 			name = TechTatva15;
 			productName = TechTatva15;
-			productReference = 182922191B236AFB00F95AE0 /* TechTatva15.app */;
+			productReference = 182922191B236AFB00F95AE0 /* TectTatva'15.app */;
 			productType = "com.apple.product-type.application";
 		};
 		182922311B236AFB00F95AE0 /* TechTatva15Tests */ = {
@@ -846,23 +849,23 @@
 				4C9744241BAF3A0A00B51649 /* Gaming.png in Resources */,
 				183C4E191B7FCCF700A07FB0 /* DaySegmentedControlView.xib in Resources */,
 				1835F6B71B961FC6009E12E5 /* Minus-32.png in Resources */,
+				A314D8131BB3116C0005FF0D /* iphone5.mov in Resources */,
 				4C9744261BAF3A1800B51649 /* Kraftwagen.png in Resources */,
 				182653F41BAA7DC0006B30CF /* linuxtux.png in Resources */,
 				4C9744321BAFD13600B51649 /* Turing.png in Resources */,
+				A3F59AC61BB31774009CF058 /* iphone6p.mov in Resources */,
 				4C97441C1BAF39E500B51649 /* Electrific.png in Resources */,
+				A3F59AC81BB317BE009CF058 /* iphone4.mov in Resources */,
 				1835F6A21B961675009E12E5 /* Minus-50.png in Resources */,
-				4C01D5B11BAA15FF009FDB09 /* SideMenuBackground.png in Resources */,
 				A3435C9A1B88BC9000BB1FFB /* CategoryTableViewCell.xib in Resources */,
-				18B5ECE51B23793E00055A3F /* video.mov in Resources */,
-				1822727B1B5A265200CD52B8 /* TTlogomain.jpg in Resources */,
 				4C9744341BAFD15900B51649 /* Robotrek.png in Resources */,
 				4C97441A1BAF39DD00B51649 /* Cryptoss.png in Resources */,
 				4C97442A1BAF3A2C00B51649 /* Mechanize.png in Resources */,
 				A3435CA41B88BCDF00BB1FFB /* InstagramCustomCell.xib in Resources */,
 				4C9744281BAF3A2000B51649 /* Mechatron.png in Resources */,
 				182922281B236AFB00F95AE0 /* Main.storyboard in Resources */,
+				A3F59AC41BB316DF009CF058 /* iphone6.mov in Resources */,
 				4C9744201BAF39F400B51649 /* Epsilon.png in Resources */,
-				1829222D1B236AFB00F95AE0 /* LaunchScreen.xib in Resources */,
 				4C9744091BAF39BD00B51649 /* Cheminova.png in Resources */,
 				4C9744361BAFD1B200B51649 /* Open Events.png in Resources */,
 				4C9744051BAF39AC00B51649 /* Alacrity.png in Resources */,
@@ -877,6 +880,7 @@
 				1829222A1B236AFB00F95AE0 /* Images.xcassets in Resources */,
 				4CC9F6D11B3DBB4F002F9C1D /* eventViewTableViewCell.xib in Resources */,
 				1863CBE11BB0409A00921C84 /* SocialView.xib in Resources */,
+				A3D8BAF61BB2F810003FA1A4 /* TTLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -987,14 +991,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		1829222B1B236AFB00F95AE0 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1829222C1B236AFB00F95AE0 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -1035,6 +1031,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1069,6 +1066,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1088,9 +1086,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TechTatva15/TechTatva15-Prefix.pch";
 				INFOPLIST_FILE = TechTatva15/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "TectTatva'15";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -1109,9 +1107,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TechTatva15/TechTatva15-Prefix.pch";
 				INFOPLIST_FILE = TechTatva15/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "TectTatva'15";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;

@@ -47,7 +47,7 @@
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
-    
+     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
     
     self.navigationController.navigationBar.layer.shadowColor = [[UIColor blackColor] CGColor];
@@ -141,7 +141,18 @@
     
     cell.textLabel.text = [categoryNames objectAtIndex:indexPath.row];
     
-    cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png",[categoryNames objectAtIndex:indexPath.row]]];
+    NSString * imageFile = [categoryNames objectAtIndex:indexPath.row];
+    NSString *exists = [[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@",imageFile]  ofType:@"png"];
+    
+    //This line checks if anything was stored in the string exists. Nothing would be stored in it if there was no file that existed.
+    if(exists == nil){
+        NSLog(@"Doesn't exist");
+        cell.imageView.image = [UIImage imageNamed:@"TTLogo.png"];
+    }
+    else{
+        NSLog(@"Exists!");
+        cell.imageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png",[categoryNames objectAtIndex:indexPath.row]]];
+    }
 
     return cell;
     

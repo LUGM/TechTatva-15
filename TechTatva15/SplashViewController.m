@@ -6,6 +6,15 @@
 //  Copyright (c) 2015 AppDev. All rights reserved.
 //
 
+#define IS_OS_8_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 8.0)
+#define IS_IPAD (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define IS_IPHONE_5 (IS_IPHONE && ([[UIScreen mainScreen] bounds].size.height == 568.0) && ((IS_OS_8_OR_LATER && [UIScreen mainScreen].nativeScale == [UIScreen mainScreen].scale) || !IS_OS_8_OR_LATER))
+#define IS_STANDARD_IPHONE_6 (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 667.0  && IS_OS_8_OR_LATER && [UIScreen mainScreen].nativeScale == [UIScreen mainScreen].scale)
+#define IS_ZOOMED_IPHONE_6 (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 568.0 && IS_OS_8_OR_LATER && [UIScreen mainScreen].nativeScale > [UIScreen mainScreen].scale)
+#define IS_STANDARD_IPHONE_6_PLUS (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 736.0)
+#define IS_ZOOMED_IPHONE_6_PLUS (IS_IPHONE && [[UIScreen mainScreen] bounds].size.height == 667.0 && IS_OS_8_OR_LATER && [UIScreen mainScreen].nativeScale < [UIScreen mainScreen].scale)
+
 #import "SplashViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
 
@@ -65,13 +74,26 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playbackFinished) name:MPMoviePlayerPlaybackDidFinishNotification object:mMoviePlayer];
-    
-    NSString * stringPath = [[NSBundle mainBundle] pathForResource:@"video" ofType:@"mov"];
+     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    NSString * stringPath;
+
+    if (IS_IPHONE_5) {
+        stringPath = [[NSBundle mainBundle] pathForResource:@"iphone5" ofType:@"mov"];
+    }
+    else if (IS_STANDARD_IPHONE_6) {
+        stringPath = [[NSBundle mainBundle] pathForResource:@"iphone6" ofType:@"mov"];
+    }
+    else if (IS_STANDARD_IPHONE_6_PLUS) {
+        stringPath = [[NSBundle mainBundle] pathForResource:@"iphone6p" ofType:@"mov"];
+    }
+    else {
+        stringPath = [[NSBundle mainBundle] pathForResource:@"iphone4" ofType:@"mov"];
+    }
     
     NSURL * fileUrl = [NSURL fileURLWithPath:stringPath];
     mMoviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:fileUrl];
     [mMoviePlayer setMovieSourceType:MPMovieSourceTypeFile];
-    [mMoviePlayer.view setFrame:CGRectMake(0,0,375,640)];                    //check dimensions once again
+    [mMoviePlayer.view setFrame:self.view.frame];
     [mMoviePlayer setFullscreen:YES];
     [mMoviePlayer setScalingMode:MPMovieScalingModeFill];
     [mMoviePlayer setControlStyle:MPMovieControlStyleNone];

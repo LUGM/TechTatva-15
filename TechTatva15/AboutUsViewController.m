@@ -31,7 +31,7 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
-    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     _aboutUsString = [NSString stringWithFormat:@"TechTatva is the annual, student run, National Level Technical Fest of Manipal Institue of Technology, Manipal. It is one of the largest technical fests of the South Zone of the country, witnessing participation from various prestigious institutes from across the nation. TechTatva comprises of a plethora of events, ranging across the various branches of engineering.\n\nFrugal Innovation – Do More with Less, the theme for this year seeks to extend the mindset of Jugaad, derived from the common Indian experience of innovating frugal, homespun, and simple solutions to the myriad problems that beset everyday life. This October 7th to 10th, TechTatva'15 aims to bear witness to a revamped Jugaadu methodology."];
     
     self.myTableView.backgroundColor = UIColorFromRGB(0xECF0F1);

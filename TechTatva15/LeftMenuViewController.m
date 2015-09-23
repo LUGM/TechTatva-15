@@ -26,6 +26,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     _optionsArray = @[@"Categories",@"Events",@"Favourites", @"Results", @"InstaFeed", @"Online Events", @"Register", @"About Us", @"Developers"];
+    self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
     
     self.view.backgroundColor = [UIColor clearColor];
     

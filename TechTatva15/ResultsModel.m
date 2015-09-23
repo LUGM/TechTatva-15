@@ -13,9 +13,9 @@
 {
     self = [super init];
     if(self) {
-        self.categories = [dict objectForKey:@"Category"];
-        self.name = [dict objectForKey:@"Event"];
-        self.result = [dict objectForKey:@"Result"];
+        self.categories = [dict objectForKey:@"categoryName"];
+        self.name = [dict objectForKey:@"eventName"];
+        self.result = [dict objectForKey:@"result"];
     }
     return self;
 }

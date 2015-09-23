@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -14,15 +14,33 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Zq-hB-JSm">
-                        <rect key="frame" x="8" y="47" width="244" height="194"/>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Zq-hB-JSm">
+                        <rect key="frame" x="8" y="47" width="304" height="194"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="194" id="71x-ps-WZ5"/>
+                            <constraint firstAttribute="width" constant="304" id="F5K-LE-DxF"/>
+                        </constraints>
                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5S-Cz-I93">
-                        <rect key="frame" x="274" y="47" width="32" height="32"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pvw-cU-BSS">
+                        <rect key="frame" x="11" y="8" width="260" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="31" id="NVs-9d-tCz"/>
+                            <constraint firstAttribute="width" constant="260" id="Oej-WO-0kd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5S-Cz-I93">
+                        <rect key="frame" x="280" y="7" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="D1d-3h-d4B"/>
+                            <constraint firstAttribute="height" constant="32" id="PQZ-4K-O0H"/>
+                        </constraints>
                         <state key="normal" image="Favourite">
                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                         </state>
@@ -30,13 +48,17 @@
                             <action selector="favouritedButtonActionPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="HZx-mi-SP6"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pvw-cU-BSS">
-                        <rect key="frame" x="11" y="18" width="298" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
+                <constraints>
+                    <constraint firstItem="j5S-Cz-I93" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="6V6-w7-BCG"/>
+                    <constraint firstAttribute="centerX" secondItem="0Zq-hB-JSm" secondAttribute="centerX" id="Ggc-og-kMF"/>
+                    <constraint firstItem="Pvw-cU-BSS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="3" id="SLA-U2-uhg"/>
+                    <constraint firstItem="j5S-Cz-I93" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-1" id="UAP-SQ-PQ5"/>
+                    <constraint firstItem="Pvw-cU-BSS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="ihL-Rz-R4i"/>
+                    <constraint firstItem="0Zq-hB-JSm" firstAttribute="top" secondItem="Pvw-cU-BSS" secondAttribute="bottom" constant="8" id="sf3-ln-rl9"/>
+                    <constraint firstItem="0Zq-hB-JSm" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="vCI-fH-RDu"/>
+                    <constraint firstItem="0Zq-hB-JSm" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="wQX-Y4-9wi"/>
+                </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="eventDetailsTextView" destination="0Zq-hB-JSm" id="RKr-Bo-V9s"/>

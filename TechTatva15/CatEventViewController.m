@@ -53,7 +53,7 @@
     // Do any additional setup after loading the view.
     
     NSLog(@"CAT ID : %@",self.catid);
-    
+     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
     self.navigationController.navigationBar.layer.shadowColor = [[UIColor blackColor] CGColor];
     self.navigationController.navigationBar.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
@@ -359,6 +359,7 @@
         favouriteEvent.start = event.start;
         favouriteEvent.stop = event.stop;
 //        favouriteEvent.duration = event.duration;
+        favouriteEvent.category = event.category;
         favouriteEvent.desc = event.desc;
         favouriteEvent.contact = event.contact;
         favouriteEvent.date = event.date;

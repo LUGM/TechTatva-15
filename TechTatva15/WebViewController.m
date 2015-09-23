@@ -22,7 +22,7 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     NSURLRequest *urlRequest = [[NSURLRequest alloc] initWithURL:[NSURL URLWithString:self.url]];
     NSLog(@"URL : %@", self.url);
     [self.webViewOutlet loadRequest:urlRequest];

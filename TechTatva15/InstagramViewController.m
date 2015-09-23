@@ -51,7 +51,7 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
     self.navigationController.navigationBar.layer.shadowColor = [[UIColor blackColor] CGColor];
     self.navigationController.navigationBar.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
@@ -77,10 +77,14 @@
     instagramTable.scrollsToTop = YES;
     
     background = [[UIView alloc] initWithFrame:self.view.frame];
-    background.alpha = 0.75;
+    background.alpha = 0.85;
+    background.backgroundColor = UIColorFromRGB(0xff5722);
     [self.view addSubview:background];
-    self.circlesInTriangles = [[PQFCirclesInTriangle alloc] initLoaderOnView:self.view];
+    self.circlesInTriangles = [[PQFCirclesInTriangle alloc] initLoaderOnView:background];
     [self.circlesInTriangles show];
+    
+    instagramTable.backgroundColor = UIColorFromRGB(0xECF0F1);
+    self.view.backgroundColor = UIColorFromRGB(0xECF0F1);
     
     [self sendDataRequest];
     

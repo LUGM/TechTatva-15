@@ -36,7 +36,7 @@
     
     self.title = @"Favourites";
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
-    
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.layer.shadowColor = [[UIColor blackColor] CGColor];
     self.navigationController.navigationBar.layer.shadowOffset = CGSizeMake(1.0f, 1.0f);
     self.navigationController.navigationBar.layer.shadowRadius = 2.0f;
@@ -56,14 +56,12 @@
         UIAlertView *emptyViewAlert = [[UIAlertView alloc] initWithTitle:@"Empty" message:@"No favourites added" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [emptyViewAlert show];
         
-        UIImageView *bgview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SideMenuBackground.png"]];
-        bgview.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-        [self.view addSubview:bgview];
-        
         favouritesTable.separatorStyle = UITableViewCellSeparatorStyleNone;
         
     }
     favouritesTable.separatorColor = [UIColor orangeColor];
+    favouritesTable.backgroundColor = UIColorFromRGB(0xECF0F1);
+
     [favouritesTable reloadData];
     
     
@@ -237,11 +235,6 @@
         
         UIAlertView *emptyViewAlert = [[UIAlertView alloc] initWithTitle:@"Empty" message:@"No Favourites now" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [emptyViewAlert show];
-        
-        UIImageView *bgview = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"SideMenuBackground.png"]];
-        bgview.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
-        [self.view addSubview:bgview];
-        
         favouritesTable.separatorStyle = UITableViewCellSeparatorStyleNone;
         
     }

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -29,7 +28,7 @@
                         <rect key="frame" x="8" y="81" width="304" height="304"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="304" id="VsR-4G-S9U"/>
-                            <constraint firstAttribute="width" secondItem="K5o-Rh-h3H" secondAttribute="height" multiplier="1:1" id="bDA-Jw-O2C"/>
+                            <constraint firstAttribute="width" secondItem="K5o-Rh-h3H" secondAttribute="height" multiplier="1:1" id="XIz-iS-CMB"/>
                             <constraint firstAttribute="height" constant="304" id="sBd-Db-64O"/>
                         </constraints>
                     </imageView>

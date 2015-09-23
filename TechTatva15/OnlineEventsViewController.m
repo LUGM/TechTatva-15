@@ -10,6 +10,7 @@
 #import "MBProgressHUD.h"
 #import "Reachability.h"
 #import "RESideMenu.h"
+#import <Parse/Parse.h>
 
 @interface OnlineEventsViewController ()
 
@@ -22,12 +23,17 @@
     
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"Online Events";
     
+    self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
     if ([self isInternetAvailable])
     {
         
         [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
-        [self loadWebView];
+        [PFConfig getConfigInBackgroundWithBlock:^(PFConfig * config, NSError * error){
+            NSLog(@"CATEGORY URL : %@", config[@"online"]);
+            [self loadWebView:config[@"online"]];
+        }];
         
     }
     else
@@ -49,12 +55,10 @@
     
 }
 
-- (void) loadWebView
+- (void) loadWebView :(NSString*)onlineurl
 {
     
-    UIWebView *registerWebView = [[UIWebView alloc] initWithFrame:self.view.bounds];
-    [registerWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@"http://techtatva.in/onlineevents"]]];
-    [self.view addSubview:registerWebView];
+    [_registerWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:onlineurl]]];
     [MBProgressHUD hideAllHUDsForView:self.navigationController.view animated:YES];
 
     
