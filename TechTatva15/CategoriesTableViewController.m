@@ -63,7 +63,6 @@
     {
         
         NSUserDefaults *catData =[NSUserDefaults standardUserDefaults];
-//        NSLog(@"Data is %@", [catData objectForKey:@"data"]);
         
         if ([catData objectForKey:@"categories"] != nil)
         {
@@ -80,16 +79,16 @@
     {
         
         [PFConfig getConfigInBackgroundWithBlock:^(PFConfig * config, NSError * error){
-            NSLog(@"CATEGORY URL : %@",config[@"categories"]);
-            NSLog(@"SCHEDULE URL : %@",config[@"schedule"]);
-            NSLog(@"RESULTS URL : %@",config[@"results"]);
+            NSLog(@"CATEGORY URL : %@", config[@"categories"]);
+            NSLog(@"SCHEDULE URL : %@", config[@"schedule"]);
+            NSLog(@"RESULTS URL : %@", config[@"results"]);
             
             checkedCategoryUrl = config[@"categories"];
             checkedScheduleUrl = config[@"schedule"];
             checkedResultUrl = config[@"results"];
             
         }];
-        
+        // It is logging the categoriesUrl (initially null) in setCorrectUrls method first and then the config logs, even though the config logs are being called first.
         [self setCorrectUrls];
     
     }

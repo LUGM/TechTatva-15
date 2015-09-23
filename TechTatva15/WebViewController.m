@@ -15,8 +15,6 @@
 
 @end
 
-// The constraints are not okay, it doesn't take up all the screen like it should, works fine though.
-
 @implementation WebViewController
 
 - (void)viewDidLoad

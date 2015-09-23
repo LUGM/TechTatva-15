@@ -22,9 +22,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UIAlertView *startAlert = [[UIAlertView alloc] initWithTitle:@" " message:@"I solemnly swear that I am up to no good" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-    [startAlert show];
-    
     _logoImage.image = [UIImage imageNamed:@"linuxtux.png"];
     self.backgroundImage.image = [UIImage imageNamed:@"devimg.png"];
     

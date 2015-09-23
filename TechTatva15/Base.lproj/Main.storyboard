@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="mmT-Jb-gOW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -715,14 +716,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JQa-ea-csa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JQa-ea-csa">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="573"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T2l-my-bBf">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="T2l-my-bBf">
                                 <rect key="frame" x="46" y="163" width="228" height="228"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNz-qe-Zwm">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sNz-qe-Zwm">
                                 <rect key="frame" x="38" y="457" width="70" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="3uh-aN-49F"/>
+                                    <constraint firstAttribute="width" constant="70" id="DCa-h5-gEx"/>
+                                </constraints>
                                 <state key="normal" image="Facebook">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -730,7 +735,7 @@
                                     <action selector="facebookButtonPressed:" destination="x1d-13-E9K" eventType="touchUpInside" id="bcB-pe-qHE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNL-mD-eBd">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GNL-mD-eBd">
                                 <rect key="frame" x="207" y="457" width="70" height="70"/>
                                 <state key="normal" image="Git">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -739,7 +744,7 @@
                                     <action selector="gitButtonPressed:" destination="x1d-13-E9K" eventType="touchUpInside" id="skX-IA-TFE"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shake again to go back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BpX-rA-AQk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shake again to go back" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BpX-rA-AQk">
                                 <rect key="frame" x="70" y="93" width="181" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -747,6 +752,25 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qVj-Yg-rxB" firstAttribute="top" secondItem="sNz-qe-Zwm" secondAttribute="bottom" constant="41" id="3aU-pJ-LD1"/>
+                            <constraint firstAttribute="trailing" secondItem="JQa-ea-csa" secondAttribute="trailing" id="CcB-Pz-KCA"/>
+                            <constraint firstItem="GNL-mD-eBd" firstAttribute="leading" secondItem="sNz-qe-Zwm" secondAttribute="trailing" constant="99" id="IF5-pF-RhM"/>
+                            <constraint firstItem="JQa-ea-csa" firstAttribute="leading" secondItem="oQH-j6-i6c" secondAttribute="leading" id="IKK-mR-EGl"/>
+                            <constraint firstItem="T2l-my-bBf" firstAttribute="leading" secondItem="oQH-j6-i6c" secondAttribute="leadingMargin" constant="30" id="K5r-4n-FJA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GNL-mD-eBd" secondAttribute="trailing" constant="27" id="L2g-5b-on0"/>
+                            <constraint firstItem="sNz-qe-Zwm" firstAttribute="leading" secondItem="oQH-j6-i6c" secondAttribute="leadingMargin" constant="22" id="SJ5-zt-mCb"/>
+                            <constraint firstItem="sNz-qe-Zwm" firstAttribute="top" secondItem="GNL-mD-eBd" secondAttribute="top" id="Svk-tw-lVJ"/>
+                            <constraint firstItem="T2l-my-bBf" firstAttribute="top" secondItem="BpX-rA-AQk" secondAttribute="bottom" constant="49" id="VPl-zt-CSr"/>
+                            <constraint firstItem="GNL-mD-eBd" firstAttribute="baseline" secondItem="sNz-qe-Zwm" secondAttribute="baseline" id="VdL-F2-M1o"/>
+                            <constraint firstItem="JQa-ea-csa" firstAttribute="top" secondItem="oQH-j6-i6c" secondAttribute="top" id="ais-rN-yo8"/>
+                            <constraint firstItem="BpX-rA-AQk" firstAttribute="top" secondItem="qdm-77-57u" secondAttribute="bottom" constant="29" id="b3N-uH-vq1"/>
+                            <constraint firstItem="sNz-qe-Zwm" firstAttribute="top" secondItem="T2l-my-bBf" secondAttribute="bottom" constant="66" id="egh-wy-ntR"/>
+                            <constraint firstItem="BpX-rA-AQk" firstAttribute="centerX" secondItem="T2l-my-bBf" secondAttribute="centerX" id="hGk-O1-t3n"/>
+                            <constraint firstItem="sNz-qe-Zwm" firstAttribute="firstBaseline" secondItem="GNL-mD-eBd" secondAttribute="firstBaseline" id="i1K-Cf-4Sr"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="JQa-ea-csa" secondAttribute="bottom" constant="-5" id="j9q-NR-IPT"/>
+                            <constraint firstItem="T2l-my-bBf" firstAttribute="centerX" secondItem="JQa-ea-csa" secondAttribute="centerX" id="nll-s7-4qc"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wiD-M6-MZn"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
