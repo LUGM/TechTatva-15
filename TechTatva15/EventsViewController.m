@@ -95,10 +95,8 @@
             checkedCategoryUrl = config[@"categories"];
             checkedScheduleUrl = config[@"schedule"];
             checkedResultUrl = config[@"results"];
-            
+            [self setCorrectUrls];
         }];
-        
-        [self setCorrectUrls];
         
     }
     else
@@ -269,7 +267,7 @@
     }
     NSLog(@"EVENTS ARRAY : %@",eventsArray);
     
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
     
     [eventTable reloadData];
     

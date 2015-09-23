@@ -89,11 +89,10 @@
             checkedCategoryUrl = config[@"categories"];
             checkedScheduleUrl = config[@"schedule"];
             checkedResultUrl = config[@"results"];
-            
+            [self setCorrectUrls];
+
         }];
-        
-        [self setCorrectUrls];
-        
+    
     }
     else
     {
@@ -277,7 +276,7 @@
     
     [self filterEvents];
     
-    [MBProgressHUD hideHUDForView:self.view animated:YES];
+    [MBProgressHUD hideHUDForView:self.navigationController.view animated:YES];
     
 }
 

@@ -87,9 +87,9 @@
             checkedScheduleUrl = config[@"schedule"];
             checkedResultUrl = config[@"results"];
             
+            [self setCorrectUrls];
         }];
-        // It is logging the categoriesUrl (initially null) in setCorrectUrls method first and then the config logs, even though the config logs are being called first.
-        [self setCorrectUrls];
+        // It is logging the categoriesUrl (initially null) in setCorrectUrls method first and then the config logs, even though the config logs are being called first
     
     }
     
