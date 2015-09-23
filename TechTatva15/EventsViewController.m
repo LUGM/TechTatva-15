@@ -387,8 +387,6 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [tableView endUpdates];
-
-
     
 }
 

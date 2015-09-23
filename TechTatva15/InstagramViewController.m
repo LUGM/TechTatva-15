@@ -250,7 +250,7 @@
 
 # pragma mark UITableView Delegate Methods
 
--(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
     [instagramTable deselectRowAtIndexPath:indexPath animated:YES];

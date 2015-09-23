@@ -8,11 +8,15 @@
 
 #import "DevelopersViewController.h"
 #import "RESideMenu.h"
+#import "DevViewTableViewCell.h"
 
-@interface DevelopersViewController ()
+@interface DevelopersViewController () <UITableViewDataSource, UITableViewDelegate>
 {
     
-    NSMutableArray *arrData;
+    NSArray *namesArray;
+    NSArray *jobsArray;
+    NSArray *imagesArray;
+    
     __weak IBOutlet UITableView *devTable;
     
 }
@@ -73,39 +77,50 @@
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     
-    return arrData.count;
+    return namesArray.count;
     
 }
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    static NSString *cellId = @"Cell";
+    static NSString *cellIdentifier = @"Cell";
+    DevViewTableViewCell *cell = (DevViewTableViewCell*)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"DevViewCell" owner:self options:nil];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    if (cell == nil)
-    {
-        
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-        
-    }
+    cell = [nib objectAtIndex:0];
     
-    [cell.textLabel setText:[arrData objectAtIndex:indexPath.row]];
-    [cell.textLabel setTextColor:[UIColor whiteColor]];
-    [cell setBackgroundColor:[UIColor colorWithRed:255/ 255.0 green:98/ 255.0 blue:90/ 255.0 alpha:1.0]];
+    cell.nameLabel.text = [namesArray objectAtIndex:indexPath.row];
+    cell.jobLabel.text = [jobsArray objectAtIndex:indexPath.row];
+    cell.devImage.layer.masksToBounds = YES;
+    cell.devImage.layer.cornerRadius = 45;
+    cell.devImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.png", [namesArray objectAtIndex:indexPath.row]]];
+    [cell.nameLabel setTextColor:[UIColor blackColor]];
     
     return cell;
+    
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    return 100;
+    
+}
+
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    [devTable deselectRowAtIndexPath:indexPath animated:YES];
     
 }
 
 - (void) setData
 {
     
-    arrData = [[NSMutableArray alloc] init];
-    NSInteger iCount = 100;
-    for (NSInteger i = 0; i < iCount; i++) {
-        [arrData addObject:[NSString stringWithFormat:@"TEXT - %ld", (long)i]];
-    }
+    namesArray = @[@"Kartik Arora", @"Yash Kumar Lal", @"Sushant Gakhar", @"Anuraag Baishya", @"Saketh Kaparthi", @"Manoj Bhat", @"Samarth Jain", @"Mayank Bansal", @"Rohil Vijaywargiya"];
+    
+    jobsArray = @[@"Team Leader", @"iOS Developer", @"iOS Developer", @"Android Develeoper", @"Android Developer", @"Graphic Designer", @"Team Co-ordinator", @"Windows Developer", @"Windows Developer"];
     
     [devTable reloadData];
     
@@ -114,6 +129,14 @@
             
         }];
     });
+    
+}
+
+- (UIView *) tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
+{
+    
+    UIView *blankView = [[UIView alloc] initWithFrame:CGRectZero];
+    return blankView;
     
 }
 

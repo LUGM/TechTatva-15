@@ -14,6 +14,17 @@
 		18085BEE1BAA02D9005CCADB /* OnlineEventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18085BED1BAA02D9005CCADB /* OnlineEventsViewController.m */; };
 		182653F21BAA7D43006B30CF /* EasterEggViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182653F11BAA7D43006B30CF /* EasterEggViewController.m */; };
 		182653F41BAA7DC0006B30CF /* linuxtux.png in Resources */ = {isa = PBXBuildFile; fileRef = 182653F31BAA7DC0006B30CF /* linuxtux.png */; };
+		18272B881BB32F9300D3D2A5 /* Anuraag Baishya.png in Resources */ = {isa = PBXBuildFile; fileRef = 18272B7F1BB32F9300D3D2A5 /* Anuraag Baishya.png */; };
+		18272B891BB32F9300D3D2A5 /* Kartik Arora.png in Resources */ = {isa = PBXBuildFile; fileRef = 18272B801BB32F9300D3D2A5 /* Kartik Arora.png */; };
+		18272B8A1BB32F9300D3D2A5 /* Manoj Bhat.png in Resources */ = {isa = PBXBuildFile; fileRef = 18272B811BB32F9300D3D2A5 /* Manoj Bhat.png */; };
+		18272B8B1BB32F9300D3D2A5 /* Mayank Bansal.png in Resources */ = {isa = PBXBuildFile; fileRef = 18272B821BB32F9300D3D2A5 /* Mayank Bansal.png */; };
+		18272B8C1BB32F9300D3D2A5 /* Rohil Vijaywargiya.png in Resources */ = {isa = PBXBuildFile; fileRef = 18272B831BB32F9300D3D2A5 /* Rohil Vijaywargiya.png */; };
+		18272B8D1BB32F9300D3D2A5 /* Saketh Kaparthi.png in Resources */ = {isa = PBXBuildFile; fileRef = 18272B841BB32F9300D3D2A5 /* Saketh Kaparthi.png */; };
+		18272B8E1BB32F9300D3D2A5 /* Samarth Jain.png in Resources */ = {isa = PBXBuildFile; fileRef = 18272B851BB32F9300D3D2A5 /* Samarth Jain.png */; };
+		18272B8F1BB32F9300D3D2A5 /* Sushant Gakhar.png in Resources */ = {isa = PBXBuildFile; fileRef = 18272B861BB32F9300D3D2A5 /* Sushant Gakhar.png */; };
+		18272B901BB32F9300D3D2A5 /* Yash Kumar Lal.png in Resources */ = {isa = PBXBuildFile; fileRef = 18272B871BB32F9300D3D2A5 /* Yash Kumar Lal.png */; };
+		18272B941BB3365300D3D2A5 /* Facebook Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 18272B921BB3365300D3D2A5 /* Facebook Filled-100.png */; };
+		18272B951BB3365300D3D2A5 /* GitHub Filled-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 18272B931BB3365300D3D2A5 /* GitHub Filled-100.png */; };
 		1829221F1B236AFB00F95AE0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1829221E1B236AFB00F95AE0 /* main.m */; };
 		182922221B236AFB00F95AE0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 182922211B236AFB00F95AE0 /* AppDelegate.m */; };
 		182922281B236AFB00F95AE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182922261B236AFB00F95AE0 /* Main.storyboard */; };
@@ -22,6 +33,8 @@
 		182D3F491B56AFB30008F4BB /* InstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D3F481B56AFB30008F4BB /* InstagramViewController.m */; };
 		182D3F4C1B56B0C80008F4BB /* InstagramUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D3F4B1B56B0C80008F4BB /* InstagramUser.m */; };
 		182D3F4F1B56B21C0008F4BB /* InstagramImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D3F4E1B56B21C0008F4BB /* InstagramImage.m */; };
+		18338B361BB323BC00946CA6 /* DevViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18338B351BB323BC00946CA6 /* DevViewCell.xib */; };
+		18338B3C1BB324BC00946CA6 /* DevViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18338B3B1BB324BC00946CA6 /* DevViewTableViewCell.m */; };
 		1835F6A21B961675009E12E5 /* Minus-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 1835F6A11B961675009E12E5 /* Minus-50.png */; };
 		1835F6B01B961691009E12E5 /* NSMutableArray+SWUtilityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = 1835F6A51B961691009E12E5 /* NSMutableArray+SWUtilityButtons.m */; };
 		1835F6B11B961691009E12E5 /* SWCellScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1835F6A71B961691009E12E5 /* SWCellScrollView.m */; };
@@ -147,6 +160,17 @@
 		182653F01BAA7D43006B30CF /* EasterEggViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasterEggViewController.h; sourceTree = "<group>"; };
 		182653F11BAA7D43006B30CF /* EasterEggViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasterEggViewController.m; sourceTree = "<group>"; };
 		182653F31BAA7DC0006B30CF /* linuxtux.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = linuxtux.png; sourceTree = "<group>"; };
+		18272B7F1BB32F9300D3D2A5 /* Anuraag Baishya.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Anuraag Baishya.png"; sourceTree = "<group>"; };
+		18272B801BB32F9300D3D2A5 /* Kartik Arora.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Kartik Arora.png"; sourceTree = "<group>"; };
+		18272B811BB32F9300D3D2A5 /* Manoj Bhat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Manoj Bhat.png"; sourceTree = "<group>"; };
+		18272B821BB32F9300D3D2A5 /* Mayank Bansal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mayank Bansal.png"; sourceTree = "<group>"; };
+		18272B831BB32F9300D3D2A5 /* Rohil Vijaywargiya.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Rohil Vijaywargiya.png"; sourceTree = "<group>"; };
+		18272B841BB32F9300D3D2A5 /* Saketh Kaparthi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Saketh Kaparthi.png"; sourceTree = "<group>"; };
+		18272B851BB32F9300D3D2A5 /* Samarth Jain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Samarth Jain.png"; sourceTree = "<group>"; };
+		18272B861BB32F9300D3D2A5 /* Sushant Gakhar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sushant Gakhar.png"; sourceTree = "<group>"; };
+		18272B871BB32F9300D3D2A5 /* Yash Kumar Lal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Yash Kumar Lal.png"; sourceTree = "<group>"; };
+		18272B921BB3365300D3D2A5 /* Facebook Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook Filled-100.png"; sourceTree = "<group>"; };
+		18272B931BB3365300D3D2A5 /* GitHub Filled-100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GitHub Filled-100.png"; sourceTree = "<group>"; };
 		182922191B236AFB00F95AE0 /* TectTatva'15.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TectTatva'15.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1829221D1B236AFB00F95AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1829221E1B236AFB00F95AE0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -163,6 +187,9 @@
 		182D3F4B1B56B0C80008F4BB /* InstagramUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramUser.m; path = TechTatva15/InstagramUser.m; sourceTree = "<group>"; };
 		182D3F4D1B56B21C0008F4BB /* InstagramImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = InstagramImage.h; path = TechTatva15/InstagramImage.h; sourceTree = "<group>"; };
 		182D3F4E1B56B21C0008F4BB /* InstagramImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = InstagramImage.m; path = TechTatva15/InstagramImage.m; sourceTree = "<group>"; };
+		18338B351BB323BC00946CA6 /* DevViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DevViewCell.xib; sourceTree = "<group>"; };
+		18338B3A1BB324BC00946CA6 /* DevViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DevViewTableViewCell.h; sourceTree = "<group>"; };
+		18338B3B1BB324BC00946CA6 /* DevViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DevViewTableViewCell.m; sourceTree = "<group>"; };
 		1835F6A11B961675009E12E5 /* Minus-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Minus-50.png"; sourceTree = "<group>"; };
 		1835F6A41B961691009E12E5 /* NSMutableArray+SWUtilityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+SWUtilityButtons.h"; sourceTree = "<group>"; };
 		1835F6A51B961691009E12E5 /* NSMutableArray+SWUtilityButtons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+SWUtilityButtons.m"; sourceTree = "<group>"; };
@@ -372,6 +399,22 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		18272B911BB32F9B00D3D2A5 /* Developer Images */ = {
+			isa = PBXGroup;
+			children = (
+				18272B7F1BB32F9300D3D2A5 /* Anuraag Baishya.png */,
+				18272B801BB32F9300D3D2A5 /* Kartik Arora.png */,
+				18272B811BB32F9300D3D2A5 /* Manoj Bhat.png */,
+				18272B821BB32F9300D3D2A5 /* Mayank Bansal.png */,
+				18272B831BB32F9300D3D2A5 /* Rohil Vijaywargiya.png */,
+				18272B841BB32F9300D3D2A5 /* Saketh Kaparthi.png */,
+				18272B851BB32F9300D3D2A5 /* Samarth Jain.png */,
+				18272B861BB32F9300D3D2A5 /* Sushant Gakhar.png */,
+				18272B871BB32F9300D3D2A5 /* Yash Kumar Lal.png */,
+			);
+			name = "Developer Images";
+			sourceTree = "<group>";
+		};
 		182922101B236AFB00F95AE0 = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +465,9 @@
 		1829221C1B236AFB00F95AE0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18272B921BB3365300D3D2A5 /* Facebook Filled-100.png */,
+				18272B931BB3365300D3D2A5 /* GitHub Filled-100.png */,
+				18272B911BB32F9B00D3D2A5 /* Developer Images */,
 				A3D8BAF51BB2F810003FA1A4 /* TTLogo.png */,
 				A314D8121BB3116C0005FF0D /* iphone5.mov */,
 				A3F59AC31BB316DF009CF058 /* iphone6.mov */,
@@ -473,6 +519,16 @@
 			);
 			name = "Instagram Model";
 			path = ..;
+			sourceTree = "<group>";
+		};
+		18338B3D1BB324C800946CA6 /* Developer View Cell */ = {
+			isa = PBXGroup;
+			children = (
+				18338B351BB323BC00946CA6 /* DevViewCell.xib */,
+				18338B3A1BB324BC00946CA6 /* DevViewTableViewCell.h */,
+				18338B3B1BB324BC00946CA6 /* DevViewTableViewCell.m */,
+			);
+			name = "Developer View Cell";
 			sourceTree = "<group>";
 		};
 		1835F6A31B961691009E12E5 /* PodFiles */ = {
@@ -690,6 +746,7 @@
 				18F1BD541B3FE37900473E1A /* Event View Cells */,
 				18F1BD551B3FE38A00473E1A /* Category Event View Cells */,
 				1863CBE81BB0424400921C84 /* About Us Buttons Cell */,
+				18338B3D1BB324C800946CA6 /* Developer View Cell */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -855,11 +912,16 @@
 				4C9744321BAFD13600B51649 /* Turing.png in Resources */,
 				A3F59AC61BB31774009CF058 /* iphone6p.mov in Resources */,
 				4C97441C1BAF39E500B51649 /* Electrific.png in Resources */,
+				18272B8A1BB32F9300D3D2A5 /* Manoj Bhat.png in Resources */,
 				A3F59AC81BB317BE009CF058 /* iphone4.mov in Resources */,
+				18272B951BB3365300D3D2A5 /* GitHub Filled-100.png in Resources */,
+				18272B901BB32F9300D3D2A5 /* Yash Kumar Lal.png in Resources */,
 				1835F6A21B961675009E12E5 /* Minus-50.png in Resources */,
 				A3435C9A1B88BC9000BB1FFB /* CategoryTableViewCell.xib in Resources */,
 				4C9744341BAFD15900B51649 /* Robotrek.png in Resources */,
+				18272B8B1BB32F9300D3D2A5 /* Mayank Bansal.png in Resources */,
 				4C97441A1BAF39DD00B51649 /* Cryptoss.png in Resources */,
+				18272B891BB32F9300D3D2A5 /* Kartik Arora.png in Resources */,
 				4C97442A1BAF3A2C00B51649 /* Mechanize.png in Resources */,
 				A3435CA41B88BCDF00BB1FFB /* InstagramCustomCell.xib in Resources */,
 				4C9744281BAF3A2000B51649 /* Mechatron.png in Resources */,
@@ -875,11 +937,18 @@
 				4C9744301BAFD02E00B51649 /* Acumen.png in Resources */,
 				1863CBEA1BB0532B00921C84 /* newbg.png in Resources */,
 				4C97441E1BAF39EC00B51649 /* Energia.png in Resources */,
+				18272B8C1BB32F9300D3D2A5 /* Rohil Vijaywargiya.png in Resources */,
+				18272B881BB32F9300D3D2A5 /* Anuraag Baishya.png in Resources */,
 				4C9744221BAF39FF00B51649 /* Featured Events.png in Resources */,
+				18272B941BB3365300D3D2A5 /* Facebook Filled-100.png in Resources */,
 				4C9744031BAF39A400B51649 /* Airborne.png in Resources */,
+				18272B8D1BB32F9300D3D2A5 /* Saketh Kaparthi.png in Resources */,
+				18272B8F1BB32F9300D3D2A5 /* Sushant Gakhar.png in Resources */,
 				1829222A1B236AFB00F95AE0 /* Images.xcassets in Resources */,
+				18272B8E1BB32F9300D3D2A5 /* Samarth Jain.png in Resources */,
 				4CC9F6D11B3DBB4F002F9C1D /* eventViewTableViewCell.xib in Resources */,
 				1863CBE11BB0409A00921C84 /* SocialView.xib in Resources */,
+				18338B361BB323BC00946CA6 /* DevViewCell.xib in Resources */,
 				A3D8BAF61BB2F810003FA1A4 /* TTLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -944,6 +1013,7 @@
 				A33D4F251B8645AE0083429E /* RootViewController.m in Sources */,
 				18085BEB1BAA001B005CCADB /* RegisterViewController.m in Sources */,
 				A33D4F201B8645760083429E /* RESideMenu.m in Sources */,
+				18338B3C1BB324BC00946CA6 /* DevViewTableViewCell.m in Sources */,
 				4C01D5B71BAA206D009FDB09 /* InstagramComments.m in Sources */,
 				18085BE81BA9FED9005CCADB /* AboutUsViewController.m in Sources */,
 				18B4FC721B5962E4004647DA /* PQFCirclesInTriangle.m in Sources */,
