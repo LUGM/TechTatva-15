@@ -24,7 +24,7 @@
     
     _logoImage.image = [UIImage imageNamed:@"linuxtux.png"];
     self.backgroundImage.image = [UIImage imageNamed:@"devimg.png"];
-    
+    self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
 }
 
 - (void)didReceiveMemoryWarning

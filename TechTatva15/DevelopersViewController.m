@@ -120,7 +120,7 @@
     
     namesArray = @[@"Kartik Arora", @"Yash Kumar Lal", @"Sushant Gakhar", @"Anuraag Baishya", @"Saketh Kaparthi", @"Manoj Bhat", @"Samarth Jain", @"Mayank Bansal", @"Rohil Vijaywargiya"];
     
-    jobsArray = @[@"Team Leader", @"iOS Developer", @"iOS Developer", @"Android Develeoper", @"Android Developer", @"Graphic Designer", @"Team Co-ordinator", @"Windows Developer", @"Windows Developer"];
+    jobsArray = @[@"Team Leader", @"iOS Developer", @"iOS Developer", @"Android Developer", @"Android Developer", @"Graphic Designer", @"Team Co-ordinator", @"Windows Developer", @"Windows Developer"];
     
     [devTable reloadData];
     

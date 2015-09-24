@@ -214,8 +214,8 @@
     cell.userName.text = user.username;
     
     InstagramImage * img = [imagesArray objectAtIndex:indexPath.row];
-    [cell.mainImage sd_setImageWithURL:[NSURL URLWithString:img.url] placeholderImage:[UIImage imageNamed:@"TT15logomain"]];
-    [cell.userImage sd_setImageWithURL:[NSURL URLWithString:user.profile_picture] placeholderImage:[UIImage imageNamed:@"TT15logomain"]];
+    [cell.mainImage sd_setImageWithURL:[NSURL URLWithString:img.url] placeholderImage:[UIImage imageNamed:@"TTLogo.png"]];
+    [cell.userImage sd_setImageWithURL:[NSURL URLWithString:user.profile_picture] placeholderImage:[UIImage imageNamed:@"TTLogo.png"]];
     
     InstagramLikes *likes = [likesArray objectAtIndex:indexPath.row];
     cell.likesCountLabel.text = [NSString stringWithFormat:@"%@", likes.instaLikes];
