@@ -81,6 +81,7 @@
     if ([self isInternetAvailable])
     {
         
+        [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
         [PFConfig getConfigInBackgroundWithBlock:^(PFConfig * config, NSError * error){
             NSLog(@"CATEGORY URL : %@",config[@"categories"]);
             NSLog(@"SCHEDULE URL : %@",config[@"schedule"]);
@@ -123,7 +124,6 @@
     
     myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
     [myJsonInstance sendRequestWithUrl:eventsUrl];
-    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     
 }
 

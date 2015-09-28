@@ -78,6 +78,7 @@
     else
     {
         
+        [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
         [PFConfig getConfigInBackgroundWithBlock:^(PFConfig * config, NSError * error){
             NSLog(@"CATEGORY URL : %@", config[@"categories"]);
             NSLog(@"SCHEDULE URL : %@", config[@"schedule"]);
@@ -89,7 +90,6 @@
             
             [self setCorrectUrls];
         }];
-        // It is logging the categoriesUrl (initially null) in setCorrectUrls method first and then the config logs, even though the config logs are being called first
     
     }
     
@@ -104,7 +104,6 @@
     
     myJsonInstance =[[SSJSONModel alloc] initWithDelegate:self];
     [myJsonInstance sendRequestWithUrl:categoriesUrl];
-    [MBProgressHUD showHUDAddedTo:self.navigationController.view animated:YES];
     
 }
 
