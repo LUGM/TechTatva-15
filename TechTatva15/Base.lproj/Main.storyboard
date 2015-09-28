@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="aKN-gg-Sec">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -771,7 +770,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JQa-ea-csa">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="JQa-ea-csa">
                                 <rect key="frame" x="0.0" y="-3" width="320" height="573"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbw-vu-UVA">
@@ -820,13 +819,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="JQa-ea-csa" secondAttribute="bottom" constant="-2" id="9HB-WZ-OyX"/>
                             <constraint firstItem="qVj-Yg-rxB" firstAttribute="top" secondItem="Sqj-dn-1n2" secondAttribute="bottom" constant="22" id="E1w-H6-KKS"/>
                             <constraint firstAttribute="centerY" secondItem="T2l-my-bBf" secondAttribute="centerY" id="GOu-CF-dyF"/>
+                            <constraint firstItem="JQa-ea-csa" firstAttribute="leading" secondItem="oQH-j6-i6c" secondAttribute="leading" id="KE4-bH-nEf"/>
                             <constraint firstAttribute="centerX" secondItem="T2l-my-bBf" secondAttribute="centerX" constant="-4" id="SIl-QG-p4u"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Sqj-dn-1n2" secondAttribute="trailing" constant="16" id="Yfp-I7-jAH"/>
                             <constraint firstAttribute="centerX" secondItem="BpX-rA-AQk" secondAttribute="centerX" id="dyP-mo-I7t"/>
                             <constraint firstItem="Dbw-vu-UVA" firstAttribute="leading" secondItem="oQH-j6-i6c" secondAttribute="leadingMargin" constant="30" id="fac-6g-BSM"/>
                             <constraint firstItem="T2l-my-bBf" firstAttribute="top" secondItem="BpX-rA-AQk" secondAttribute="bottom" constant="8" id="j8A-HM-KOd"/>
+                            <constraint firstItem="JQa-ea-csa" firstAttribute="top" secondItem="oQH-j6-i6c" secondAttribute="topMargin" constant="-3" id="mJw-cw-MhY"/>
+                            <constraint firstItem="JQa-ea-csa" firstAttribute="centerX" secondItem="BpX-rA-AQk" secondAttribute="centerX" id="wnu-BD-63u"/>
                             <constraint firstItem="qVj-Yg-rxB" firstAttribute="top" secondItem="Dbw-vu-UVA" secondAttribute="bottom" constant="22" id="wwZ-S9-peS"/>
                         </constraints>
                     </view>
