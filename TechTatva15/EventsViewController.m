@@ -559,9 +559,28 @@
 - (void) callCatHead: (id) sender
 {
     
-    CGPoint pointClicked = [sender convertPoint:CGPointZero toView:self.eventTable];
-    NSIndexPath *requiredIndexPath = [self.eventTable indexPathForRowAtPoint:pointClicked];
-    Event * event = [eventsArray objectAtIndex:requiredIndexPath.row];
+    Event *event = nil;
+    
+    if ([self.searchDisplayController isActive])
+    {
+        
+        CGPoint pointClicked = [sender convertPoint:CGPointZero toView:self.searchDisplayController.searchResultsTableView];
+        NSIndexPath *requiredIndexPath = [self.searchDisplayController.searchResultsTableView indexPathForRowAtPoint:pointClicked];
+        
+        event = [filteredArray objectAtIndex:requiredIndexPath.row];
+        
+    }
+    
+    else
+    {
+        
+        CGPoint pointClicked = [sender convertPoint:CGPointZero toView:eventTable];
+        NSIndexPath *requiredIndexPath = [eventTable indexPathForRowAtPoint:pointClicked];
+        
+        event = [eventsArray objectAtIndex:requiredIndexPath.row];
+        
+    }
+
     
     NSString *getPhoneNumber = [[event.contactNumber componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]] componentsJoinedByString:@""];
     

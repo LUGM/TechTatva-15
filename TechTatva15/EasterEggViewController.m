@@ -9,8 +9,11 @@
 #import "EasterEggViewController.h"
 #import "Reachability.h"
 #import "MBProgressHUD.h"
+#import "AudioController.h"
 
 @interface EasterEggViewController ()
+
+@property (strong, nonatomic) AudioController *audioController;
 
 @end
 
@@ -25,6 +28,10 @@
     _logoImage.image = [UIImage imageNamed:@"linuxtux.png"];
     self.backgroundImage.image = [UIImage imageNamed:@"devimg.png"];
     self.navigationController.navigationBar.barStyle = UIStatusBarStyleLightContent;
+    
+    self.audioController = [[AudioController alloc] init];
+    [self.audioController tryPlayMusic];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -96,6 +103,25 @@
     
 }
 
+- (IBAction)youtubeButtonPressed:(id)sender
+{
+    
+    if ([self isInternetAvailable])
+    {
+        
+        [self loadYoutube];
+        
+    }
+    else
+    {
+        
+        UIAlertView *noNetAlert = [[UIAlertView alloc] initWithTitle:@"No Internet" message:@"Data connection unavailable" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [noNetAlert show];
+        
+    }
+    
+}
+
 - (void) loadFacebook
 {
     
@@ -107,6 +133,13 @@
 {
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/LUGM"]];
+    
+}
+
+- (void) loadYoutube
+{
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.youtube.com/watch?v=5Wqx5_2tSCM"]];
     
 }
 
