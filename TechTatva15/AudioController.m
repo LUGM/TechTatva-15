@@ -40,6 +40,18 @@
      self.backgroundMusicPlaying = YES;
 }
 
+- (void) pauseAudio
+{
+    
+    if (self.backgroundMusicPlaying)
+    {
+        
+        [self.backgroundMusicPlayer pause];
+        
+    }
+    
+}
+
 - (void) configureAudioSession {
     // Implicit initialization of audio session
     self.audioSession = [AVAudioSession sharedInstance];

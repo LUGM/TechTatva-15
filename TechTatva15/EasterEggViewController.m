@@ -19,6 +19,10 @@
 
 @implementation EasterEggViewController
 
+/// There is a much easier method of adding and playing music (can be done in 10 lines, max), but I was getting an error at the time I started implementing it. Now, I realise what my mistake was, but I am too lazy to change it to a smaller implementation.
+
+/// Check www.stackoverflow.com/questions/3631353/iphone-ipod-loop-background-music for that, and define an NSError object beforehand, if you use that code.
+
 - (void)viewDidLoad
 {
     
@@ -126,6 +130,7 @@
 {
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.facebook.com/groups/lug2016/"]];
+    [self.audioController pauseAudio];
     
 }
 
@@ -133,6 +138,7 @@
 {
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://github.com/LUGM"]];
+    [self.audioController pauseAudio];
     
 }
 
@@ -140,6 +146,7 @@
 {
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://www.youtube.com/watch?v=5Wqx5_2tSCM"]];
+    [self.audioController pauseAudio];
     
 }
 

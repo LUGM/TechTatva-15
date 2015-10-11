@@ -11,8 +11,9 @@
 
 @interface AudioController : NSObject
 
-- (instancetype)init;
-- (void)tryPlayMusic;
+- (instancetype) init;
+- (void) tryPlayMusic;
+- (void) pauseAudio;
 
 @property (assign) BOOL backgroundMusicPlaying;
 @property (strong, nonatomic) AVAudioSession *audioSession;

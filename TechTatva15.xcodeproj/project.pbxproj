@@ -59,6 +59,7 @@
 		1882F0531BCA5C4700DC6DE5 /* YouTube-100.png in Resources */ = {isa = PBXBuildFile; fileRef = 1882F0521BCA5C4700DC6DE5 /* YouTube-100.png */; settings = {ASSET_TAGS = (); }; };
 		1897CC321B84EBD0007D779B /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897CC311B84EBD0007D779B /* EventsViewController.m */; };
 		18A3EDFD1BB1E3C8002233C9 /* UITableView+Animations.m in Sources */ = {isa = PBXBuildFile; fileRef = 18A3EDFC1BB1E3C8002233C9 /* UITableView+Animations.m */; };
+		18AB5B621BCAE9A3009EA863 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18AB5B611BCAE9A3009EA863 /* AVFoundation.framework */; };
 		18ADE1781B5ECC4B00CCD46D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ADE1771B5ECC4B00CCD46D /* Reachability.m */; };
 		18B24B6E1BB06AE100FA0885 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B24B6D1BB06AE100FA0885 /* WebViewController.m */; };
 		18B4FC561B5958A5004647DA /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4FC361B5958A5004647DA /* MKAnnotationView+WebCache.m */; };
@@ -229,6 +230,7 @@
 		1897CC311B84EBD0007D779B /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		18A3EDFB1BB1E3C8002233C9 /* UITableView+Animations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableView+Animations.h"; sourceTree = "<group>"; };
 		18A3EDFC1BB1E3C8002233C9 /* UITableView+Animations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableView+Animations.m"; sourceTree = "<group>"; };
+		18AB5B611BCAE9A3009EA863 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		18ADE1761B5ECC4B00CCD46D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		18ADE1771B5ECC4B00CCD46D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		18B24B6C1BB06AE100FA0885 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
@@ -355,6 +357,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18AB5B621BCAE9A3009EA863 /* AVFoundation.framework in Frameworks */,
 				183984201BCAC1B000A74938 /* libz.1.tbd in Frameworks */,
 				180DBBC31BC6E02300526FDA /* libsqlite3.tbd in Frameworks */,
 				18CBB07E1BBAEDFF00FB6370 /* Bolts.framework in Frameworks */,
@@ -667,6 +670,7 @@
 			children = (
 				1839841F1BCAC1B000A74938 /* libz.1.tbd */,
 				180DBBC21BC6E02300526FDA /* libsqlite3.tbd */,
+				18AB5B611BCAE9A3009EA863 /* AVFoundation.framework */,
 				18CBB07D1BBAEDFF00FB6370 /* Bolts.framework */,
 				18CBB07B1BBAEDEF00FB6370 /* Parse.framework */,
 				A3D6E8551BB1D12700951F88 /* Social.framework */,
