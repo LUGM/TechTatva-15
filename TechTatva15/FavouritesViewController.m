@@ -264,29 +264,29 @@
 - (void) callCatHead: (id) sender
 {
     
-    CGPoint pointClicked = [sender convertPoint:CGPointZero toView:self.favouritesTable];
-    NSIndexPath *requiredIndexPath = [self.favouritesTable indexPathForRowAtPoint:pointClicked];
-    Event * event = [favouritesArray objectAtIndex:requiredIndexPath.row];
+//    CGPoint pointClicked = [sender convertPoint:CGPointZero toView:self.favouritesTable];
+//    NSIndexPath *requiredIndexPath = [self.favouritesTable indexPathForRowAtPoint:pointClicked];
+//    Event * event = [favouritesArray objectAtIndex:requiredIndexPath.row];
+//    
+//    NSString *getPhoneNumber = [[event.contactNumber componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]] componentsJoinedByString:@""];
+//    
+//    NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt://+91%@", getPhoneNumber]];
+//    
+//    NSLog(@"Checking phone number to be called is : %@", phoneUrl);
     
-    NSString *getPhoneNumber = [[event.contactNumber componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]] componentsJoinedByString:@""];
+//    if ([[UIApplication sharedApplication] canOpenURL:phoneUrl])
+//    {
+//        
+//        [[UIApplication sharedApplication] openURL:phoneUrl];
+//        
+//    }
+//    else
+//    {
     
-    NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt://+91%@", getPhoneNumber]];
-    
-    NSLog(@"Checking phone number to be called is : %@", phoneUrl);
-    
-    if ([[UIApplication sharedApplication] canOpenURL:phoneUrl])
-    {
-        
-        [[UIApplication sharedApplication] openURL:phoneUrl];
-        
-    }
-    else
-    {
-        
-        UIAlertView *noCallAlert = [[UIAlertView alloc]initWithTitle:@"Sorry" message:@"Calling feature unavailable" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        UIAlertView *noCallAlert = [[UIAlertView alloc]initWithTitle:@"Sorry" message:@"Call feature only in event listing" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
         [noCallAlert show];
         
-    }
+//    }
     
 }
 
