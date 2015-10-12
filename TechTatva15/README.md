@@ -1,3 +1,5 @@
-### TECH TATVA '15
+# TechTatva '15
 
-Official iOS app for TechTatva15.
+The Official App for the annual techfest TechTatva of Manipal Institute of Technology
+
+Download the app at https://goo.gl/T6I4YA
