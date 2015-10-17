@@ -31,8 +31,9 @@
     [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
     
     // Initialize Parse.
-    [Parse setApplicationId:@"3kIBsNTFceZmlpCiPpJA0WTYTiFNSVZVngTGJj7k"
-                  clientKey:@"Msd1PiRbmLovdfpA4PETqFQlImilNd54RSKzMkd6"];
+    [Parse setApplicationId:@""
+                  clientKey:@""];
+    //Contact LUG, Manipal for Client ID and cliednt Key
     
     // [Optional] Track statistics around application opens.
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
