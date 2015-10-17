@@ -43,13 +43,11 @@
 		1835F6B31B961691009E12E5 /* SWTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1835F6AB1B961691009E12E5 /* SWTableViewCell.m */; };
 		1835F6B41B961691009E12E5 /* SWUtilityButtonTapGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 1835F6AD1B961691009E12E5 /* SWUtilityButtonTapGestureRecognizer.m */; };
 		1835F6B51B961691009E12E5 /* SWUtilityButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1835F6AF1B961691009E12E5 /* SWUtilityButtonView.m */; };
-		1835F6B71B961FC6009E12E5 /* Minus-32.png in Resources */ = {isa = PBXBuildFile; fileRef = 1835F6B61B961FC6009E12E5 /* Minus-32.png */; };
 		183984201BCAC1B000A74938 /* libz.1.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1839841F1BCAC1B000A74938 /* libz.1.tbd */; };
 		183C4E181B7FCCF700A07FB0 /* DaySegmentedControlView.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C4E161B7FCCF700A07FB0 /* DaySegmentedControlView.m */; };
 		183C4E191B7FCCF700A07FB0 /* DaySegmentedControlView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 183C4E171B7FCCF700A07FB0 /* DaySegmentedControlView.xib */; };
 		183C4E1D1B7FCD3400A07FB0 /* CatEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183C4E1C1B7FCD3400A07FB0 /* CatEventViewController.m */; };
 		1848173F1B90CD680031F1B9 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1848173E1B90CD680031F1B9 /* CoreData.framework */; };
-		184817421B90CE300031F1B9 /* TechTatva15_Core_Data_Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 184817401B90CE300031F1B9 /* TechTatva15_Core_Data_Model.xcdatamodeld */; };
 		184817451B90D4F70031F1B9 /* CoreDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 184817441B90D4F70031F1B9 /* CoreDataModel.m */; };
 		1848174D1B90D7550031F1B9 /* FavouritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1848174C1B90D7550031F1B9 /* FavouritesViewController.m */; };
 		1863CBE11BB0409A00921C84 /* SocialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1863CBE01BB0409A00921C84 /* SocialView.xib */; };
@@ -82,8 +80,6 @@
 		18B4FC721B5962E4004647DA /* PQFCirclesInTriangle.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4FC6B1B5962E4004647DA /* PQFCirclesInTriangle.m */; };
 		18B4FC731B5962E4004647DA /* UIColor+FlatColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 18B4FC6E1B5962E4004647DA /* UIColor+FlatColors.m */; };
 		18BFC4611BCA531A006BEE9A /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BFC4601BCA531A006BEE9A /* AudioController.m */; settings = {ASSET_TAGS = (); }; };
-		18CBB07C1BBAEDEF00FB6370 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CBB07B1BBAEDEF00FB6370 /* Parse.framework */; };
-		18CBB07E1BBAEDFF00FB6370 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18CBB07D1BBAEDFF00FB6370 /* Bolts.framework */; };
 		18D5D4C51BAEE89200833626 /* Favourites.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D5D4C41BAEE89200833626 /* Favourites.m */; };
 		18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E282721B373C4D0084DCDE /* ResultsViewController.m */; };
 		18FDACA51B76386F00C23742 /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FDACA41B76386F00C23742 /* Event.m */; };
@@ -110,6 +106,7 @@
 		4C97443A1BAFDBDB00B51649 /* devimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C9744391BAFDBDB00B51649 /* devimg.png */; };
 		4CC9F6D01B3DBB4F002F9C1D /* eventViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */; };
 		4CC9F6D11B3DBB4F002F9C1D /* eventViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */; };
+		A30D92A61BD26D3F008E7EBD /* Minus-32.png in Resources */ = {isa = PBXBuildFile; fileRef = A30D92A51BD26D3F008E7EBD /* Minus-32.png */; settings = {ASSET_TAGS = (); }; };
 		A314D8131BB3116C0005FF0D /* iphone5.mov in Resources */ = {isa = PBXBuildFile; fileRef = A314D8121BB3116C0005FF0D /* iphone5.mov */; };
 		A33D4F1F1B8645760083429E /* RECommonFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = A33D4F1A1B8645760083429E /* RECommonFunctions.m */; };
 		A33D4F201B8645760083429E /* RESideMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A33D4F1C1B8645760083429E /* RESideMenu.m */; };
@@ -134,6 +131,9 @@
 		A3D6E8561BB1D12700951F88 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3D6E8551BB1D12700951F88 /* Social.framework */; };
 		A3D8BAF61BB2F810003FA1A4 /* TTLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = A3D8BAF51BB2F810003FA1A4 /* TTLogo.png */; };
 		A3F4B6451B99FE1A001C3DA8 /* ResultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F4B6441B99FE1A001C3DA8 /* ResultsModel.m */; };
+		A3F4E4591BD26F2B003B6C6C /* TechTatva15_Core_Data_Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A30D92A71BD26D98008E7EBD /* TechTatva15_Core_Data_Model.xcdatamodeld */; };
+		A3F4E45B1BD26F64003B6C6C /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F4E45A1BD26F64003B6C6C /* Parse.framework */; };
+		A3F4E45D1BD26F9A003B6C6C /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3F4E45C1BD26F9A003B6C6C /* Bolts.framework */; };
 		A3F59AC41BB316DF009CF058 /* iphone6.mov in Resources */ = {isa = PBXBuildFile; fileRef = A3F59AC31BB316DF009CF058 /* iphone6.mov */; };
 		A3F59AC61BB31774009CF058 /* iphone6p.mov in Resources */ = {isa = PBXBuildFile; fileRef = A3F59AC51BB31774009CF058 /* iphone6p.mov */; };
 		A3F59AC81BB317BE009CF058 /* iphone4.mov in Resources */ = {isa = PBXBuildFile; fileRef = A3F59AC71BB317BE009CF058 /* iphone4.mov */; };
@@ -207,7 +207,6 @@
 		1835F6AD1B961691009E12E5 /* SWUtilityButtonTapGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonTapGestureRecognizer.m; sourceTree = "<group>"; };
 		1835F6AE1B961691009E12E5 /* SWUtilityButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWUtilityButtonView.h; sourceTree = "<group>"; };
 		1835F6AF1B961691009E12E5 /* SWUtilityButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWUtilityButtonView.m; sourceTree = "<group>"; };
-		1835F6B61B961FC6009E12E5 /* Minus-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Minus-32.png"; path = "../Minus-32.png"; sourceTree = "<group>"; };
 		1839841F1BCAC1B000A74938 /* libz.1.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.1.tbd; path = usr/lib/libz.1.tbd; sourceTree = SDKROOT; };
 		183C4E151B7FCCF700A07FB0 /* DaySegmentedControlView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DaySegmentedControlView.h; sourceTree = "<group>"; };
 		183C4E161B7FCCF700A07FB0 /* DaySegmentedControlView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DaySegmentedControlView.m; sourceTree = "<group>"; };
@@ -215,7 +214,6 @@
 		183C4E1B1B7FCD3400A07FB0 /* CatEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CatEventViewController.h; sourceTree = "<group>"; };
 		183C4E1C1B7FCD3400A07FB0 /* CatEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CatEventViewController.m; sourceTree = "<group>"; };
 		1848173E1B90CD680031F1B9 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		184817411B90CE300031F1B9 /* TechTatva15_Core_Data_Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TechTatva15_Core_Data_Model.xcdatamodel; sourceTree = "<group>"; };
 		184817431B90D4F70031F1B9 /* CoreDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataModel.h; path = TechTatva15/CoreDataModel.h; sourceTree = "<group>"; };
 		184817441B90D4F70031F1B9 /* CoreDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataModel.m; path = TechTatva15/CoreDataModel.m; sourceTree = "<group>"; };
 		1848174B1B90D7550031F1B9 /* FavouritesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavouritesViewController.h; sourceTree = "<group>"; };
@@ -277,8 +275,6 @@
 		18B4FC6E1B5962E4004647DA /* UIColor+FlatColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FlatColors.m"; sourceTree = "<group>"; };
 		18BFC45F1BCA531A006BEE9A /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
 		18BFC4601BCA531A006BEE9A /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
-		18CBB07B1BBAEDEF00FB6370 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
-		18CBB07D1BBAEDFF00FB6370 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		18D5D4C31BAEE89200833626 /* Favourites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Favourites.h; sourceTree = "<group>"; };
 		18D5D4C41BAEE89200833626 /* Favourites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Favourites.m; sourceTree = "<group>"; };
 		18E282711B373C4D0084DCDE /* ResultsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsViewController.h; sourceTree = "<group>"; };
@@ -311,6 +307,8 @@
 		4CC9F6CD1B3DBB4F002F9C1D /* eventViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = eventViewTableViewCell.h; sourceTree = "<group>"; };
 		4CC9F6CE1B3DBB4F002F9C1D /* eventViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = eventViewTableViewCell.m; sourceTree = "<group>"; };
 		4CC9F6CF1B3DBB4F002F9C1D /* eventViewTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = eventViewTableViewCell.xib; sourceTree = "<group>"; };
+		A30D92A51BD26D3F008E7EBD /* Minus-32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Minus-32.png"; sourceTree = "<group>"; };
+		A30D92A81BD26D98008E7EBD /* TechTatva15_Core_Data_Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = TechTatva15_Core_Data_Model.xcdatamodel; sourceTree = "<group>"; };
 		A314D8121BB3116C0005FF0D /* iphone5.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = iphone5.mov; sourceTree = "<group>"; };
 		A33D4F191B8645760083429E /* RECommonFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RECommonFunctions.h; sourceTree = "<group>"; };
 		A33D4F1A1B8645760083429E /* RECommonFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RECommonFunctions.m; sourceTree = "<group>"; };
@@ -347,6 +345,8 @@
 		A3D8BAF51BB2F810003FA1A4 /* TTLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TTLogo.png; sourceTree = "<group>"; };
 		A3F4B6431B99FE1A001C3DA8 /* ResultsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResultsModel.h; sourceTree = "<group>"; };
 		A3F4B6441B99FE1A001C3DA8 /* ResultsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResultsModel.m; sourceTree = "<group>"; };
+		A3F4E45A1BD26F64003B6C6C /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = TechTatva15/Parse.framework; sourceTree = "<group>"; };
+		A3F4E45C1BD26F9A003B6C6C /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = TechTatva15/Bolts.framework; sourceTree = "<group>"; };
 		A3F59AC31BB316DF009CF058 /* iphone6.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = iphone6.mov; sourceTree = "<group>"; };
 		A3F59AC51BB31774009CF058 /* iphone6p.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = iphone6p.mov; sourceTree = "<group>"; };
 		A3F59AC71BB317BE009CF058 /* iphone4.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = iphone4.mov; sourceTree = "<group>"; };
@@ -357,10 +357,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3F4E45D1BD26F9A003B6C6C /* Bolts.framework in Frameworks */,
+				A3F4E45B1BD26F64003B6C6C /* Parse.framework in Frameworks */,
 				18AB5B621BCAE9A3009EA863 /* AVFoundation.framework in Frameworks */,
 				183984201BCAC1B000A74938 /* libz.1.tbd in Frameworks */,
 				180DBBC31BC6E02300526FDA /* libsqlite3.tbd in Frameworks */,
-				18CBB07E1BBAEDFF00FB6370 /* Bolts.framework in Frameworks */,
 				A3D6E8561BB1D12700951F88 /* Social.framework in Frameworks */,
 				A3D6E8541BB1D12200951F88 /* Accounts.framework in Frameworks */,
 				A3D6E84E1BB1D10700951F88 /* SystemConfiguration.framework in Frameworks */,
@@ -368,7 +369,6 @@
 				A3D6E8481BB1D0F300951F88 /* QuartzCore.framework in Frameworks */,
 				A3D6E8461BB1D0E700951F88 /* CoreLocation.framework in Frameworks */,
 				A3D6E8441BB1D0E100951F88 /* CoreGraphics.framework in Frameworks */,
-				18CBB07C1BBAEDEF00FB6370 /* Parse.framework in Frameworks */,
 				A3D6E8421BB1D0DA00951F88 /* CFNetwork.framework in Frameworks */,
 				A3D6E8401BB1D0D100951F88 /* AudioToolbox.framework in Frameworks */,
 				1848173F1B90CD680031F1B9 /* CoreData.framework in Frameworks */,
@@ -397,6 +397,7 @@
 		1811F1AA1B75535B00B6BE2E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A30D92A71BD26D98008E7EBD /* TechTatva15_Core_Data_Model.xcdatamodeld */,
 				1848174A1B90D5DD0031F1B9 /* Favourites Data Model */,
 				184817461B90D5A80031F1B9 /* Core Data Model */,
 				1811F1A91B75534900B6BE2E /* Event Data Model */,
@@ -471,7 +472,7 @@
 				4C9744011BAF398600B51649 /* Category Images */,
 				4C9744391BAFDBDB00B51649 /* devimg.png */,
 				182653F31BAA7DC0006B30CF /* linuxtux.png */,
-				1835F6B61B961FC6009E12E5 /* Minus-32.png */,
+				A30D92A51BD26D3F008E7EBD /* Minus-32.png */,
 				1835F6A11B961675009E12E5 /* Minus-50.png */,
 				1811F1AB1B7553EC00B6BE2E /* TechTatva15-Prefix.pch */,
 				1863CBE91BB0532B00921C84 /* newbg.png */,
@@ -560,7 +561,6 @@
 			children = (
 				184817431B90D4F70031F1B9 /* CoreDataModel.h */,
 				184817441B90D4F70031F1B9 /* CoreDataModel.m */,
-				184817401B90CE300031F1B9 /* TechTatva15_Core_Data_Model.xcdatamodeld */,
 			);
 			name = "Core Data Model";
 			path = ..;
@@ -668,11 +668,11 @@
 		18CCAA4F1BC7E5CF00403FC3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A3F4E45C1BD26F9A003B6C6C /* Bolts.framework */,
+				A3F4E45A1BD26F64003B6C6C /* Parse.framework */,
 				1839841F1BCAC1B000A74938 /* libz.1.tbd */,
 				180DBBC21BC6E02300526FDA /* libsqlite3.tbd */,
 				18AB5B611BCAE9A3009EA863 /* AVFoundation.framework */,
-				18CBB07D1BBAEDFF00FB6370 /* Bolts.framework */,
-				18CBB07B1BBAEDEF00FB6370 /* Parse.framework */,
 				A3D6E8551BB1D12700951F88 /* Social.framework */,
 				A3D6E8531BB1D12200951F88 /* Accounts.framework */,
 				A3D6E84D1BB1D10700951F88 /* SystemConfiguration.framework */,
@@ -886,7 +886,7 @@
 		182922111B236AFB00F95AE0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = AppDev;
 				TargetAttributes = {
 					182922181B236AFB00F95AE0 = {
@@ -930,7 +930,6 @@
 			files = (
 				4C9744241BAF3A0A00B51649 /* Gaming.png in Resources */,
 				183C4E191B7FCCF700A07FB0 /* DaySegmentedControlView.xib in Resources */,
-				1835F6B71B961FC6009E12E5 /* Minus-32.png in Resources */,
 				A314D8131BB3116C0005FF0D /* iphone5.mov in Resources */,
 				4C9744261BAF3A1800B51649 /* Kraftwagen.png in Resources */,
 				182653F41BAA7DC0006B30CF /* linuxtux.png in Resources */,
@@ -972,6 +971,7 @@
 				18272B8F1BB32F9300D3D2A5 /* Sushant Gakhar.png in Resources */,
 				1829222A1B236AFB00F95AE0 /* Images.xcassets in Resources */,
 				18272B8E1BB32F9300D3D2A5 /* Samarth Jain.png in Resources */,
+				A30D92A61BD26D3F008E7EBD /* Minus-32.png in Resources */,
 				4CC9F6D11B3DBB4F002F9C1D /* eventViewTableViewCell.xib in Resources */,
 				1863CBE11BB0409A00921C84 /* SocialView.xib in Resources */,
 				18338B361BB323BC00946CA6 /* DevViewCell.xib in Resources */,
@@ -994,6 +994,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3F4E4591BD26F2B003B6C6C /* TechTatva15_Core_Data_Model.xcdatamodeld in Sources */,
 				18B4FC5E1B5958A5004647DA /* SDWebImagePrefetcher.m in Sources */,
 				18E282731B373C4D0084DCDE /* ResultsViewController.m in Sources */,
 				18B4FC621B5958A5004647DA /* UIImage+WebP.m in Sources */,
@@ -1028,7 +1029,6 @@
 				18B4FC5B1B5958A5004647DA /* SDWebImageDownloader.m in Sources */,
 				18085BE51BA9FDF8005CCADB /* DevelopersViewController.m in Sources */,
 				18B4FC601B5958A5004647DA /* UIImage+GIF.m in Sources */,
-				184817421B90CE300031F1B9 /* TechTatva15_Core_Data_Model.xcdatamodeld in Sources */,
 				18B4FC561B5958A5004647DA /* MKAnnotationView+WebCache.m in Sources */,
 				4C01D5B41BAA1FF0009FDB09 /* InstagramLikes.m in Sources */,
 				18B4FC681B595E67004647DA /* FullScreenImageViewController.m in Sources */,
@@ -1112,6 +1112,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1179,12 +1180,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/TechTatva15",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TechTatva15/TechTatva15-Prefix.pch";
 				INFOPLIST_FILE = TechTatva15/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "techtatva.in.techtatva-14";
 				PRODUCT_NAME = "TechTatva'15";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1199,12 +1202,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/TechTatva15",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TechTatva15/TechTatva15-Prefix.pch";
 				INFOPLIST_FILE = TechTatva15/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "techtatva.in.techtatva-14";
 				PRODUCT_NAME = "TechTatva'15";
 				PROVISIONING_PROFILE = "";
 			};
@@ -1224,6 +1229,7 @@
 				);
 				INFOPLIST_FILE = TechTatva15Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "AppDev.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "";
 			};
@@ -1239,6 +1245,7 @@
 				);
 				INFOPLIST_FILE = TechTatva15Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "AppDev.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "";
 			};
@@ -1277,12 +1284,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		184817401B90CE300031F1B9 /* TechTatva15_Core_Data_Model.xcdatamodeld */ = {
+		A30D92A71BD26D98008E7EBD /* TechTatva15_Core_Data_Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				184817411B90CE300031F1B9 /* TechTatva15_Core_Data_Model.xcdatamodel */,
+				A30D92A81BD26D98008E7EBD /* TechTatva15_Core_Data_Model.xcdatamodel */,
 			);
-			currentVersion = 184817411B90CE300031F1B9 /* TechTatva15_Core_Data_Model.xcdatamodel */;
+			currentVersion = A30D92A81BD26D98008E7EBD /* TechTatva15_Core_Data_Model.xcdatamodel */;
 			path = TechTatva15_Core_Data_Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
