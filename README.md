@@ -1,6 +1,6 @@
 ###TechTatva'15
 
-The Official iOS App for TechTatva'15 cultural fest of MIT,Manipal
+The Official iOS App for TechTatva'15, Tech Fest of MIT, Manipal
 
 Open-Source Project
 
