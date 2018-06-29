@@ -1,4 +1,4 @@
-###TechTatva'15
+### TechTatva'15
 
 The Official iOS App for TechTatva'15, Tech Fest of MIT, Manipal
 
